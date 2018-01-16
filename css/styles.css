@@ -1,0 +1,23 @@
+/**************/
+/* Navigation */
+/**************/
+
+.navbar-brand {
+  font-family: Crushed, Verdana, sans-serif;
+}
+
+
+/*************/
+/* Jumbotron */
+/*************/
+.jumbotron>.container-fluid {
+  background-image: url(../images/background_molecules.jpg);
+}
+
+
+/***********/
+/* General */
+/***********/
+body {
+  font-family: "Titillium Web", Verdana, sans-serif;
+}
