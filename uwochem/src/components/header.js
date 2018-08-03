@@ -41,11 +41,11 @@ class Header extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <Link to="/practice1301">Chem 1301</Link>
+                    <Link to="/practice/1301">Chem 1301</Link>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <Link to="/practice1302">Chem 1302</Link>
+                    <Link to="/practice/1302">Chem 1302</Link>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

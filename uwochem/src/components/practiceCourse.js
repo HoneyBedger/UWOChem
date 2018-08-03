@@ -2,21 +2,24 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {Breadcrumb, BreadcrumbItem} from 'reactstrap';
 
-function Practice1301() {
+
+function PracticeCourse(props) {
+  const courseId = props.courseId;
+  const exams = props.exams.filter(exam => exam.courseId === courseId);
+
   return (
     <div className="container mt-5">
       <Breadcrumb>
         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
         <BreadcrumbItem><Link to="/practice">Practice</Link></BreadcrumbItem>
-        <BreadcrumbItem active>1301</BreadcrumbItem>
+        <BreadcrumbItem active>{courseId}</BreadcrumbItem>
       </Breadcrumb>
       <div className="row">
         <div className="col-md-6">
           <ul>
-            <li>Midterm 2013</li>
-            <li>Midterm 2014</li>
-            <li>Final 2014</li>
-            <li>Final 2015</li>
+            {exams.map(exam => {
+              return (<li key={exam.examId}><Link to={`/practice/${courseId}/${exam.examId}`}>{exam.name}</Link></li>);
+            })}
           </ul>
         </div>
         <div className="col-md-6">
@@ -29,4 +32,4 @@ function Practice1301() {
   );
 }
 
-export default Practice1301;
+export default PracticeCourse;
