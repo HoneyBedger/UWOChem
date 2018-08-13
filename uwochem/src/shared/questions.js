@@ -2,6 +2,7 @@ export const QUESTIONS = [
   {
     "id": 0,
     "examId": "1302_Midterm2014",
+    "idInExam": 1,
     "type": "numeric",
     "question": ["{",
 

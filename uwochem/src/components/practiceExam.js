@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import {Breadcrumb, BreadcrumbItem, ListGroup, ListGroupItem,
   Form, FormGroup, Input, Button, Label} from 'reactstrap';
 import {QUESTIONS} from '../shared/questions';
+import {newQuestions} from '../shared/newQuestions';
+import Question from './question';
 
 
 class PracticeExam extends Component {
@@ -11,35 +13,48 @@ class PracticeExam extends Component {
   constructor(props) {
     super(props);
 
-    console.log(window);
-
     this.state = {
-      questions: QUESTIONS,
-      question: Function('React', QUESTIONS[0].question.join('\n'))(React),
-      correct: undefined
+      //questions: QUESTIONS,
+      //question: Function('React', QUESTIONS[0].question.join('\n'))(React),
+      questions: newQuestions,
+      selectedQuestion: newQuestions[0],
+      selectedQuestionCorrect: undefined
     };
     this.checkAnswer = this.checkAnswer.bind(this);
   }
 
-  checkAnswer(event) {
+  selectQuestion(questionId) {
+    this.setState({
+      selectedQuestion: this.state.questions[questionId]
+    });
+  }
+
+  checkAnswer(studentAnswerString) {
+    console.log("Checking answer");
     //TODO: this is just the numeric type. Do string and MC
-    let studentAnswer = Number.parseFloat(this.answer.value);
-    let correctAnswer = Number.parseFloat(this.state.question.answer);
+    let studentAnswer = Number.parseFloat(studentAnswerString);
+    let correctAnswer = this.state.selectedQuestion.question.answer;
     let error = Math.abs(studentAnswer - correctAnswer)/correctAnswer;
     let ansLabel = null;
     if (error < 0.02) { //correct
-      this.setState({correct: true});
+      this.setState({selectedQuestionCorrect: true});
       ansLabel = "fa fa-check fa-lg";
     } else {
-      this.setState({correct: false});
+      this.setState({selectedQuestionCorrect: false});
       ansLabel = "fa fa-times fa-lg";
     }
+    //TODO: this shouldn't be handelled via ReactDOM!
     ReactDOM.render(<span className={ansLabel}></span>, document.getElementById("ansLabel"));
-    event.preventDefault();
-  }
+  };
+
 
   render() {
-
+    let selectedId = this.state.selectedQuestion.id;
+    const questionList = this.state.questions.map(question => {
+      return (<ListGroupItem key={question.id} active={selectedId === question.id}
+        tag="button" onClick={(questionId) => this.selectQuestion(question.id)}
+        action>Question {question.idInExam}</ListGroupItem>);
+    });
     return (
       <div className="container mt-5">
         <Breadcrumb>
@@ -51,25 +66,11 @@ class PracticeExam extends Component {
         <div className="row">
           <div className="col-3">
             <ListGroup>
-            <ListGroupItem active tag="a" href="#" action>Question 1</ListGroupItem>
-            <ListGroupItem disabled tag="a" href="#" action>Question 2</ListGroupItem>
-          </ListGroup>
+              {questionList}
+            </ListGroup>
           </div>
-          <div className="col-9">
-            <div>{this.state.question.description}</div>
-            <Form onSubmit={this.checkAnswer}>
-              <FormGroup>
-                <Label htmlFor="answer">m = </Label>
-                <Input valid={!(this.state.correct === undefined) && this.state.correct}
-                  invalid={!(this.state.correct === undefined) && !this.state.correct}
-                  type="text" name="answer" id="answer" placeholder="Your answer"
-                  innerRef={(input) => this.answer = input}>
-                </Input>
-                <Button type="submit" value="submit" color="primary">Submit</Button>
-                <div id="ansLabel"></div>
-              </FormGroup>
-            </Form>
-          </div>
+          <Question question={this.state.selectedQuestion.question}
+            checkAnswer={this.checkAnswer} correct={this.state.selectedQuestionCorrect}/>
         </div>
       </div>
     );

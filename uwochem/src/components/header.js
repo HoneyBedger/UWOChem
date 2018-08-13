@@ -25,15 +25,15 @@ class Header extends Component {
 
   render() {
     return (
-
       <React.Fragment>
-        <Navbar expand="lg">
+        <Navbar expand="md">
           <NavbarToggler onClick={this.toggleNavbar}><span className="fa fa-angle-double-down fa-lg"></span></NavbarToggler>
-          <NavbarBrand href="/home">CHEM 1301 &amp; 1302</NavbarBrand>
-          <Collapse isOpen={this.state.navbarIsOpen} navbar>
+
             <Nav className="mr-auto" navbar>
+              <Collapse isOpen={this.state.navbarIsOpen} navbar>
+              <NavbarBrand href="/home">CHEM 1301 &amp; 1302</NavbarBrand>
               <NavItem>
-                <NavLink className="nav-link" to="/home">Home</NavLink>
+                <NavLink className="nav-link active" to="/home">Home</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -55,31 +55,31 @@ class Header extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <Link to="/tutorials1301">Chem 1301</Link>
+                    <Link to="/tutorials/1301">Chem 1301</Link>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <Link to="/tutorials1302">Chem 1302</Link>
+                    <Link to="/tutorials/1302">Chem 1302</Link>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink className="nav-link" to="/aboutme">About me</NavLink>
+                <NavLink className="nav-link" to="/aboutme">About</NavLink>
               </NavItem>
-              <NavItem>
-                <Form>
-                  <FormGroup>
-                    <InputGroup>
-                      <Input type="text" placeholder="Search" />
-                      <InputGroupAddon addonType="append">
-                        <Button><span className="fa fa-search"></span></Button>
-                      </InputGroupAddon>
-                    </InputGroup>
-                  </FormGroup>
-                </Form>
-              </NavItem>
+              </Collapse>
+                <NavItem>
+                  <Form>
+                    <FormGroup>
+                      <InputGroup>
+                        <Input type="text" placeholder="Search" />
+                        <InputGroupAddon addonType="append">
+                          <Button><span className="fa fa-search"></span></Button>
+                        </InputGroupAddon>
+                      </InputGroup>
+                    </FormGroup>
+                  </Form>
+                </NavItem>
             </Nav>
-          </Collapse>
           <Nav className="ml-auto">
             <NavItem>
               <FormGroup>

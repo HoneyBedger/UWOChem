@@ -18,7 +18,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
@@ -31,7 +31,7 @@ class Main extends Component {
               examId={match.params.examId} />} />
           <Redirect to="/home"/>
         </Switch>
-      </div>
+      </React.Fragment>
     );
   }
 }
