@@ -33,12 +33,14 @@ class Header extends Component {
               <Collapse isOpen={this.state.navbarIsOpen} navbar>
               <NavbarBrand href="/home">CHEM 1301 &amp; 1302</NavbarBrand>
               <NavItem>
-                <NavLink className="nav-link active" to="/home">Home</NavLink>
+                <NavLink className="nav-link" to="/home">Home</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Practice
-                </DropdownToggle>
+                <NavLink to="/practice">
+                  <DropdownToggle tag="button" nav caret>
+                    Practice
+                  </DropdownToggle>
+                </NavLink>
                 <DropdownMenu>
                   <DropdownItem>
                     <Link to="/practice/1301">Chem 1301</Link>
@@ -50,9 +52,11 @@ class Header extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Tutorials
-                </DropdownToggle>
+                <NavLink to="/tutorials">
+                  <DropdownToggle nav caret>
+                    Tutorials
+                  </DropdownToggle>
+                </NavLink>
                 <DropdownMenu>
                   <DropdownItem>
                     <Link to="/tutorials/1301">Chem 1301</Link>

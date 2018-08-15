@@ -6,13 +6,15 @@ import Practice from './practice';
 import PracticeCourse from './practiceCourse';
 import PracticeExam from './practiceExam';
 import {EXAMS} from '../shared/exams';
+import {CHAPTERS} from '../shared/chapters';
 
 class Main extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      exams: EXAMS
+      exams: EXAMS,
+      chapters: CHAPTERS
     };
   }
 
@@ -22,13 +24,18 @@ class Main extends Component {
         <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
-          <Route exact path="/practice" component={Practice}/>
           <Route exact path="/practice/:courseId"
-            component={({match}) => <PracticeCourse courseId={match.params.courseId} exams={this.state.exams}/>} />
-          <Route path="/practice/:courseId/:examId"
+            component={({match}) => <PracticeCourse courseId={match.params.courseId}
+            exams={this.state.exams} chapters={this.state.chapters}/>} />
+          <Route path="/practice/:courseId/exam/:examId"
             component={({match}) => <PracticeExam courseId={match.params.courseId}
-              examName={this.state.exams.filter(exam => exam.examId === match.params.examId)[0].name}
-              examId={match.params.examId} />} />
+              type="exam"
+              examName={this.state.exams.filter(exam => exam.examId === match.params.examId)[0].name} />} />
+            <Route path="/practice/:courseId/chapter/:chapterId"
+              component={({match}) => <PracticeExam courseId={match.params.courseId}
+                type="chapter"
+                chapterName={this.state.chapters.filter(chapter => chapter.id === Number.parseInt(match.params.chapterId))[0].name}
+                chapter={Number.parseInt(match.params.chapterId)} />} />
           <Redirect to="/home"/>
         </Switch>
       </React.Fragment>

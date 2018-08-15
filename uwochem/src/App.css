@@ -18,28 +18,46 @@ a.navbar-brand[href] {
   color: rgba(255,255,255,0.95);
 }
 .navbar {
-  background-color: #292b2c;
+  background-color: rgb(41, 43, 44);
   color: rgba(255,255,255,.7);
   margin-bottom: -48px;
   padding-bottom: 0px;
   padding-top: 0px;
 }
 .navbar .nav-item {
-  border: 2px solid #fff;
+  line-height: 41px;
 }
 .navbar a {
   color: inherit;
 }
 .navbar a:hover{
   color: rgba(255,255,255);
+  text-decoration: none;
 }
-.navbar a.active{
-  color: #addbb9;
-  text-shadow: 1px 1px 3px #fff;
+.navbar a.active, .navbar a.active button{
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2)
 }
 .nav-item .form-group {
   margin-top: 8px;
   margin-bottom: 8px;
+}
+.navbar .dropdown-toggle {
+  background-color: rgb(41, 43, 44);
+  color: rgba(255,255,255,.7);
+  border: none;
+}
+.navbar .dropdown-menu {
+  border-radius: 0px;
+  background-color: rgba(41, 43, 44, 0.8);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,.7);
+  line-height: 25px;
+}
+.navbar .dropdown-item:hover {
+  color: rgba(255,255,255);
+  background-color: rgba(41, 43, 44, 0.0);
 }
 
 /* handling tiny screens */
@@ -62,6 +80,18 @@ a.navbar-brand[href] {
   }
 }
 
+/**************/
+/* Breadcrumb */
+/**************/
+.breadcrumb {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: rgba(110,146,120, 0.5);
+}
+.breadcrumb a {
+  color: #fff;
+}
+
 /*************/
 /* Inputs    */
 /*************/
@@ -72,7 +102,7 @@ input, .form-control {
 
 
 /*************/
-/* Buttons    */
+/* Buttons   */
 /*************/
 button, .btn {
   border-radius: 0px;
@@ -82,11 +112,11 @@ button, .btn {
 /* Math, Eqn */
 /*************/
 .MJXc-display {
-  display: inline !important;
   font-size: 89% !important;
+  text-align: left !important;
 }
-.MathJax_Preview, .eqn {
-  padding-left: 15px;
+.MJXc-display, .eqn {
+  padding-left: 15px !important;
 }
 
 
@@ -99,4 +129,14 @@ body {
 }
 .nobr {
   white-space: nowrap;
+}
+:focus, input:focus, .form-control:focus {
+  outline: auto #fff 3px;
+}
+.list-group-item, .list-group-item a{
+  color: rgb(110,146,120);
+}
+.list-group-item.active {
+  background-color: #d57e76;
+  border-color: #c95a4f;
 }

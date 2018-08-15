@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {Breadcrumb, BreadcrumbItem} from 'reactstrap';
+import {Breadcrumb, BreadcrumbItem, ListGroup, ListGroupItem} from 'reactstrap';
 
 
 function PracticeCourse(props) {
   const courseId = props.courseId;
   const exams = props.exams.filter(exam => exam.courseId === courseId);
+  const chapters = props.chapters.filter(chapter => chapter.courseId === courseId);
 
   return (
     <div className="container mt-5">
@@ -16,16 +17,28 @@ function PracticeCourse(props) {
       </Breadcrumb>
       <div className="row">
         <div className="col-md-6">
-          <ul>
+          <h4>Choose an exam:</h4>
+          <ListGroup>
             {exams.map(exam => {
-              return (<li key={exam.examId}><Link to={`/practice/${courseId}/${exam.examId}`}>{exam.name}</Link></li>);
+              return (
+                <ListGroupItem key={exam.examId}>
+                  <Link to={`/practice/${courseId}/exam/${exam.examId}`}>{exam.name}</Link>
+                </ListGroupItem>
+              );
             })}
-          </ul>
+          </ListGroup>
         </div>
         <div className="col-md-6">
-          <h4>By topic:</h4>
-          <ol>
-          </ol>
+          <h4>Or a chapter:</h4>
+          <ListGroup>
+            {chapters.map(chapter => {
+              return (
+                <ListGroupItem key={chapter.id}>
+                  <Link to={`/practice/${courseId}/chapter/${chapter.id}`}>Chapter {chapter.id}: {chapter.name}</Link>
+                </ListGroupItem>
+              );
+            })}
+          </ListGroup>
         </div>
       </div>
     </div>
