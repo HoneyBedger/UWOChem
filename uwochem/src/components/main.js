@@ -29,13 +29,13 @@ class Main extends Component {
             exams={this.state.exams} chapters={this.state.chapters}/>} />
           <Route path="/practice/:courseId/exam/:examId"
             component={({match}) => <PracticeExam courseId={match.params.courseId}
-              type="exam"
-              examName={this.state.exams.filter(exam => exam.examId === match.params.examId)[0].name} />} />
-            <Route path="/practice/:courseId/chapter/:chapterId"
-              component={({match}) => <PracticeExam courseId={match.params.courseId}
-                type="chapter"
-                chapterName={this.state.chapters.filter(chapter => chapter.id === Number.parseInt(match.params.chapterId))[0].name}
-                chapter={Number.parseInt(match.params.chapterId)} />} />
+            type="exam" id={match.params.examId}
+            examName={this.state.exams.filter(exam => exam.examId === match.params.examId)[0].name} />} />
+          <Route path="/practice/:courseId/chapter/:chapterId"
+            component={({match}) => <PracticeExam courseId={match.params.courseId}
+            type="chapter" id={Number.parseInt(match.params.chapterId)}
+            chapterName={this.state.chapters.filter(chapter => chapter.courseId === match.params.courseId
+                && chapter.id === Number.parseInt(match.params.chapterId))[0].name} />} />
           <Redirect to="/home"/>
         </Switch>
       </React.Fragment>

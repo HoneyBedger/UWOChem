@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {Nav, Navbar, NavItem, NavbarBrand, NavbarToggler,
   Collapse, UncontrolledDropdown, DropdownToggle, DropdownMenu,
-  DropdownItem, Form, FormGroup, Input, InputGroup,
-  InputGroupAddon, Button} from 'reactstrap';
+  DropdownItem, Input, InputGroup,
+  InputGroupAddon, Button, Label, FormGroup, Form,
+  Row, Col, Modal, ModalHeader, ModalBody,
+  ModalFooter} from 'reactstrap';
 import {Link, NavLink} from 'react-router-dom';
 
 
@@ -11,15 +13,22 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarIsOpen: false
+      navbarIsOpen: false,
+      modalIsOpen: false
     };
-
     this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   toggleNavbar() {
     this.setState({
       navbarIsOpen: !this.state.navbarIsOpen
+    });
+  }
+
+  toggleModal() {
+    this.setState({
+      modalIsOpen: !this.state.modalIsOpen
     });
   }
 
@@ -75,7 +84,7 @@ class Header extends Component {
                   <Form>
                     <FormGroup>
                       <InputGroup>
-                        <Input type="text" placeholder="Search" />
+                        <Input className="search input-oneline" type="text" placeholder="Search" />
                         <InputGroupAddon addonType="append">
                           <Button><span className="fa fa-search"></span></Button>
                         </InputGroupAddon>
@@ -87,10 +96,60 @@ class Header extends Component {
           <Nav className="ml-auto">
             <NavItem>
               <FormGroup>
-                <Button>Login</Button>
+                <Button onClick={this.toggleModal}>Login/Sing up</Button>
               </FormGroup>
             </NavItem>
           </Nav>
+          <Modal isOpen={this.state.modalIsOpen} toggle={this.toggleModal} backdrop={true}>
+            <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+            <ModalBody className="mt-5 mb-5 pl-5 pr-5">
+              <Form>
+                <FormGroup row>
+                  <Label for="email" sm={2}>Email</Label>
+                  <Col sm={10}>
+                    <Input className="input-oneline" type="email" name="email" placeholder="Email" />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Label for="password" sm={2}>Password</Label>
+                  <Col sm={10}>
+                    <Input className="input-oneline" type="password" name="password" placeholder="Password" />
+                  </Col>
+                </FormGroup>
+              </Form>
+              <Row className="mt-5">
+                <Col xs={{size: 10, offset: 2}} className="mb-3">
+                  <p>Or sign in with</p>
+                </Col>
+                <Col xs={{size: 2, offset: 2}} >
+                  <Button className="btn-social-icon btn-facebook btn-lg">
+                    <span class="fa fa-facebook"></span>
+                  </Button>
+                </Col>
+                <Col xs={2}>
+                  <Button className="btn-social-icon btn-twitter btn-lg">
+                    <span class="fa fa-twitter"></span>
+                  </Button>
+                </Col>
+                <Col xs={2}>
+                  <Button className="btn-social-icon btn-google btn-lg">
+                    <span class="fa fa-google"></span>
+                  </Button>
+                </Col>
+              </Row>
+            </ModalBody>
+            <ModalFooter className="pl-5 pr-5">
+              <div className="row">
+                <div className="col-12">
+                  <Button color="primary" onClick={this.toggleModal}>Sign in</Button>{' '}
+                  <Button outline color="secondary" onClick={this.toggleModal}>Cancel</Button>
+                </div>
+                <div className="col-12 mt-3">
+                  <p>Do not have an account? <Link to="#">Sign up</Link></p>
+                </div>
+              </div>
+            </ModalFooter>
+          </Modal>
         </Navbar>
     </React.Fragment>
     );

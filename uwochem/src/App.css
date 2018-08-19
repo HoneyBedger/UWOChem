@@ -1,3 +1,5 @@
+@import "../node_modules/bootstrap-social/bootstrap-social.css" screen;
+
 /*************/
 /* Jumbotron */
 /*************/
@@ -99,6 +101,24 @@ input, .form-control {
   border-radius: 0px;
   margin-left: 10px;
 }
+.input-oneline {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #6c757d;
+}
+.input-oneline:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #6c757d;
+  box-shadow: 0 8px 6px -6px rgba(110,146,120, 0.5);
+}
+.search:focus {
+  color: #fff;
+}
 
 
 /*************/
@@ -106,6 +126,58 @@ input, .form-control {
 /*************/
 button, .btn {
   border-radius: 0px;
+}
+.link-button {
+  font-size: 110%;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f9eded;
+  border: 2px solid #f9eded;
+  border-radius: 0.25rem;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+}
+.link-button:hover {
+  background-color: #fcf2f2;
+}
+.link-button a {
+  color: #588c66;
+}
+
+/**************/
+/* Modal      */
+/**************/
+.modal-content {
+  border-radius: 0px;
+}
+.modal-header {
+  background-color: #d57e76;
+  border-radius: 0px;
+  color: #fff;
+}
+.modal-footer {
+  padding-left: 0px;
+}
+
+
+/*************/
+/* Tables    */
+/*************/
+.data-table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+.data-table th {
+  background-color: rgba(110,146,120, 0.5);
+}
+.data-table td, .data-table th{
+  padding: 15px;
+  text-align: center;
+}
+.data-table tr:nth-child(odd){
+  background-color: rgba(110,146,120, 0.2);
 }
 
 /*************/
@@ -139,4 +211,10 @@ body {
 .list-group-item.active {
   background-color: #d57e76;
   border-color: #c95a4f;
+}
+.correct {
+  color: #2c9118
+}
+.incorrect {
+  color: #d60e0e
 }
