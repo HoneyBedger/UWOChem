@@ -161,6 +161,34 @@ button, .btn {
   padding-left: 0px;
 }
 
+/****************/
+/* Drag-n-Drop  */
+/****************/
+.draggable-start, .droppable {
+  padding: 7px;
+  text-align: center;
+}
+.draggable-start {
+  border: 1px solid rgb(110,146,120);
+  background-color: rgba(110,146,120, 0.2);
+}
+.draggable {
+  background-color: #fff;
+  border: 1px solid rgba(110,146,120, 0.4);
+  border-radius: 4px;
+  cursor: pointer;
+  color: #000;
+  margin: 6px;
+}
+.droppable {
+  background-color: #d57e76;
+  border-color: #c95a4f;
+}
+.droppable-target {
+  background-color: rgba(255,255,255, 0.3);
+  height: 2.5rem;
+}
+
 
 /*************/
 /* Tables    */

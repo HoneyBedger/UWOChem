@@ -13,6 +13,7 @@ class FieldMC extends Component {
 
   //update the value of the input if a new question is selected
   componentDidUpdate(prevProps) {
+    if (this.props.studentAnswer === undefined) this.shuffleOptions();
     if (this.props.studentAnswer !== prevProps.studentAnswer) {
       this.setState({
         studentAnswer: this.props.studentAnswer

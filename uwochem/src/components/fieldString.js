@@ -23,11 +23,11 @@ class FieldString extends Component {
     return (
       <Form inline>
         <FormGroup className="mr-2">
-          <Label htmlFor="answer">{this.props.answer.label} = </Label>
+          {this.props.answer.label ? <Label htmlFor="answer">{this.props.answer.label} = </Label> : null}
           <InputGroup>
             <Input valid={!(this.props.correct === undefined) && this.props.correct}
               invalid={!(this.props.correct === undefined) && !this.props.correct}
-              type="number" placeholder="Your answer"
+              type="text" placeholder="Your answer"
               value={this.state.studentAnswer}
               onChange={(event) => this.setState({studentAnswer: event.target.value})}>
             </Input>

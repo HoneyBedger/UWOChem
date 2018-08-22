@@ -108,6 +108,8 @@ class PracticeExam extends Component {
       correct = this.checkMC(correctAnswer, studentAnswer);
     } else if (this.state.selectedQuestion.type === "MS") {
       correct = this.checkMS(correctAnswer, studentAnswer);
+    } else if (this.state.selectedQuestion.type === "order") {
+      correct = this.checkOrder(correctAnswer, studentAnswer);
     }
     this.setState({
       questionsAnswered: this.state.questionsAnswered.set(this.state.selectedQuestion._id, {correct, studentAnswer}),
@@ -135,6 +137,13 @@ class PracticeExam extends Component {
           !option.correct && (studentAnswers.indexOf(option.id) !== -1)) {
         return false;
       }
+    }
+    return true;
+  }
+
+  checkOrder(correctOrder, studentAnswer) {
+    for (let i = 0; i < correctOrder.length; i++) {
+      if (studentAnswer[i] !== correctOrder[i]) return false;
     }
     return true;
   }

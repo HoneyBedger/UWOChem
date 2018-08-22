@@ -4,6 +4,7 @@ import FieldString from './fieldString';
 import FieldMC from './fieldMC';
 import FieldMS from './fieldMS';
 import FieldBins from './fieldBins';
+import FieldOrder from './fieldOrder';
 
 
 function Question(props) {
@@ -41,6 +42,11 @@ function Question(props) {
   } else if (type === "bins") {
     field = (
       <FieldBins answer={props.questionBody.answer} correct={props.correct}
+        studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
+    );
+  } else if (type === "order") {
+    field = (
+      <FieldOrder answer={props.questionBody.answer} correct={props.correct}
         studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
     );
   }
