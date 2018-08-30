@@ -123,7 +123,7 @@ class PracticeExam extends Component {
   }
 
   checkString(correctAnswer, studentAnswer) {
-    return correctAnswer === studentAnswer;
+    return studentAnswer.match(correctAnswer);
   }
 
   checkMC(options, studentAnswer) {

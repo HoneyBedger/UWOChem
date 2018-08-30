@@ -52,8 +52,10 @@ class FieldOrder extends Component {
 
   onDrop(event, binId) {
     event.preventDefault();
-    for (let item of this.state.items) {
-      if (item.binId === binId) return;
+    if (binId !== -1) {
+      for (let item of this.state.items) {
+        if (item.binId === binId) return;
+      }
     }
     let itemId = event.dataTransfer.getData("text/plain");
     console.log("onDrop called, id: ", itemId);
@@ -74,6 +76,7 @@ class FieldOrder extends Component {
   renderTarget(id, targetWidth) {
       return (
         <Col xs={targetWidth} key={id} className="droppable-target"
+          style={this.props.answer.height ? {height: this.props.answer.height} : null}
           onDragOver={(event) => this.onDragOver(event)}
           onDrop={(event) => this.onDrop(event, id)}>
             {this.state.items.filter(item => item.binId === id).map(item => {
@@ -97,6 +100,7 @@ class FieldOrder extends Component {
               {this.state.items.map(item => {
                 return (
                   <Col xs={itemWidth} key={item.id} className="droppable-target"
+                    style={this.props.answer.height ? {height: this.props.answer.height} : null}
                     onDragOver={(event) => this.onDragOver(event)}
                     onDrop={(event) => this.onDrop(event, -1)}>
                       {item.binId === -1 ?

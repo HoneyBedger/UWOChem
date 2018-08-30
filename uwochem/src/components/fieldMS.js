@@ -41,34 +41,37 @@ class FieldMC extends Component {
 
   render() {
     return (
-      <FormGroup tag="fieldset">
-        {this.props.options.map(option => {
-          return (
-            <FormGroup key={this.props.options.indexOf(option)} check>
-              <Label check>
-                <Input type="checkbox"
-                  id={option.id} value={option.id}
-                  checked={this.state.studentAnswer.indexOf(option.id) !== -1}
-                  valid={!(this.props.correct === undefined) && this.props.correct}
-                  invalid={!(this.props.correct === undefined) && !this.props.correct}
-                  onClick={(event) => this.changeStudentAnswer(option.id)} />{' '}
-                {option.text}
-              </Label>
-              <FormFeedback valid>Correct!</FormFeedback>
-            </FormGroup>
-          );
-        })}
-        <FormGroup check>
-          <Label check>
-            <Input type="radio"
-              checked={!this.state.studentAnswer || this.state.studentAnswer.length === 0}
-              onClick={(event) => {this.setState({studentAnswer: []})}} />{' '}
-            None of the above.
-          </Label>
+      <React.Fragment>
+        <p><i>Select all that apply.</i></p>
+        <FormGroup tag="fieldset">
+          {this.props.options.map(option => {
+            return (
+              <FormGroup key={this.props.options.indexOf(option)} check>
+                <Label check>
+                  <Input type="checkbox"
+                    id={option.id} value={option.id}
+                    checked={this.state.studentAnswer.indexOf(option.id) !== -1}
+                    valid={!(this.props.correct === undefined) && this.props.correct}
+                    invalid={!(this.props.correct === undefined) && !this.props.correct}
+                    onClick={(event) => this.changeStudentAnswer(option.id)} />{' '}
+                  {option.text}
+                </Label>
+                <FormFeedback valid>Correct!</FormFeedback>
+              </FormGroup>
+            );
+          })}
+          <FormGroup check>
+            <Label check>
+              <Input type="radio"
+                checked={!this.state.studentAnswer || this.state.studentAnswer.length === 0}
+                onClick={(event) => {this.setState({studentAnswer: []})}} />{' '}
+              None of the above.
+            </Label>
+          </FormGroup>
+          <Button type="button" value="submit" color="primary" className="mt-3"
+            onClick={() => this.props.checkAnswer(this.props.options, this.state.studentAnswer)}>Submit</Button>
         </FormGroup>
-        <Button type="button" value="submit" color="primary" className="mt-3"
-          onClick={() => this.props.checkAnswer(this.props.options, this.state.studentAnswer)}>Submit</Button>
-      </FormGroup>
+      </React.Fragment>
     );
   }
 }
