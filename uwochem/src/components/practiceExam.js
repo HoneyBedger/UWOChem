@@ -119,7 +119,7 @@ class PracticeExam extends Component {
 
   checkNumeric(correctAnswer, studentAnswer) {
     let error = Math.abs(Number.parseFloat(studentAnswer) - correctAnswer)/correctAnswer;
-    return (error < 0.02) ? true : false;
+    return (error < 0.03) ? true : false;
   }
 
   checkString(correctAnswer, studentAnswer) {
