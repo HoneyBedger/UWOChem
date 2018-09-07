@@ -3447,6 +3447,1023 @@ export const newQuestions = [
       return {description, options, feedback};
     }()
   },
+  //////////////////////////////////////// 1301 FINAL 2014 ///////////////////////////////////////////////////////////////////////
+  {
+    "_id": 501,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 0,
+    "idInExam": 1,
+    "type": "numeric",
+    "questionBody": function() {
+      let compounds = [
+        {name: "manganese(II)", formula: <React.Fragment>Mn(CH<sub>3</sub>COO)<sub>2</sub></React.Fragment>, idx: 2, mmMetal: 54.94},
+        {name: "lead(II)", formula: <React.Fragment>Pb(CH<sub>3</sub>COO)<sub>2</sub></React.Fragment>, idx: 2, mmMetal: 207.2},
+        {name: "lead(IV)", formula: <React.Fragment>Pb(CH<sub>3</sub>COO)<sub>4</sub></React.Fragment>, idx: 4, mmMetal: 207.2},
+        {name: "aluminum", formula: <React.Fragment>Al(CH<sub>3</sub>COO)<sub>3</sub></React.Fragment>, idx: 3, mmMetal: 26.98},
+        {name: "sodium", formula: <React.Fragment>NaCH<sub>3</sub>COO</React.Fragment>, idx: 1, mmMetal: 22.99},
+        {name: "titanium(IV)", formula: <React.Fragment>Ti(CH<sub>3</sub>COO)<sub>4</sub></React.Fragment>, idx: 4, mmMetal: 47.88},
+        {name: "magnesium", formula: <React.Fragment>Mg(CH<sub>3</sub>COO)<sub>2</sub></React.Fragment>, idx: 2, mmMetal: 24.31}
+      ];
+      let i = Math.floor(Math.random(compounds.length));
+      let name = compounds[i].name;
+      let formula = compounds[i].formula;
+      let idx = compounds[i].idx;
+      let mM = compounds[i].mmMetal + idx*(12.01*2 + 16.00*2 + 1.008*3);
+      let mC = idx*2*12.01;
+      let answer = mC/mM*100;
+      let ansString = answer.toPrecision(3);
+
+      var description = (
+        <p>What is the mass percent of carbon in {name} acetate, {formula}?</p>
+      );
+
+      const eqMtot = `\\begin{eqnarray*}
+        m_\\text{tot} & = & (1\\text{ mol})(${mM}\\text{ g mol}^{-1}) \\\\
+        & = & ${mM}\\text{ g}
+        \\end{eqnarray*}`;
+      const eqMC = `\\begin{eqnarray*}
+        m_\\text{C} & = & (${2*idx} \\text{ mol})(12.01\\text{ g mol}^{-1}) \\\\
+        & = & ${mC}\\text{ g}
+        \\end{eqnarray*}`;
+      const eqWC = `\\begin{eqnarray*}
+        \\omega_\\text{C} & = & \\frac{m_\\text{C}}{m_\\text{tot}} \\times 100 \\\\
+        & = & \\frac{${mC}\\text{ g}}{${mM}\\text{ g}} \\times 100 \\\\
+        & = & ${ansString}\\%
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>Consider one mole of the acetate. Its total mass is</p>
+            <MathJax.Node formula={eqMtot} />
+            <p>Each mole of {formula} contains 2&nbsp;&#215;&nbsp;{idx}&nbsp;=&nbsp;{2*idx}&nbsp;moles
+            of carbon. So, the mass of carbon is</p>
+            <MathJax.Node formula={eqMC} />
+            <p>The mass percent of carbon is</p>
+            <MathJax.Node formula={eqWC} />
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: <React.Fragment><i>&omega;</i><sub>C</sub></React.Fragment>,
+        units: "%"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 502,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 0,
+    "idInExam": 2,
+    "type": "numeric",
+    "questionBody": function() {
+      let mI = Number.parseFloat((Math.random()*(3.00 - 0.700) + 0.700).toPrecision(2));
+      let mIString = mI.toPrecision(4);
+      let mAgClString = (Math.random()*(0.600 - 0.200) + 0.200).toPrecision(3);
+      let mAgCl = Number.parseFloat(mAgClString);
+      let nAgCl = mAgCl/143.35;
+      let nAgClString = nAgCl.toPrecision(3);
+      let nSO2Cl2 = nAgCl/2;
+      let nSO2Cl2String = nSO2Cl2.toPrecision(3);
+      let mSO2Cl2 = nSO2Cl2*134.97;
+      let mSO2Cl2String = mSO2Cl2.toPrecision(3);
+      let answer = mI - mSO2Cl2;
+      let ansString = answer.toPrecision(3);
+
+      var description = (
+        <p>All of the chlorine in a {mIString}&nbsp;g sample of a mixture of
+        SO<sub>2</sub> and SO<sub>2</sub>Cl<sub>2</sub> was converted to AgCl.
+        If the mass of the AgCl formed was {mAgCl}&nbsp;g, how many grams of
+        SO<sub>2</sub> were in the original mixture?</p>
+      );
+
+      const eqnAgCl = `\\begin{eqnarray*}
+        n_{\\text{AgCl}} & = & \\frac{${mAgClString} \\text{ g}}{143.35 \\text{ g mol}^{-1}} \\\\
+        & = & ${nAgClString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqnSO2Cl2 = `\\begin{eqnarray*}
+        n_{\\text{SO}_2\\text{Cl}_2} & = & n_{\\text{AgCl}} \\times \\frac{1}{2} \\\\
+        & = & \\frac{${nAgClString} \\text{ mol}}{2} \\\\
+        & = & ${nSO2Cl2String} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqmSO2Cl2 = `\\begin{eqnarray*}
+        m_{\\text{SO}_2\\text{Cl}_2} & = & (${nSO2Cl2String} \\text{ mol})(134.97 \\text{ g mol}^{-1}) \\\\
+        & = & ${mSO2Cl2String} \\text{ g}
+        \\end{eqnarray*}`;
+      const eqmSO2 = `\\begin{eqnarray*}
+        m_{\\text{SO}_2} & = & ${mIString} \\text{ g} - ${mSO2Cl2String} \\text{ g} \\\\
+        & = & ${ansString} \\text{ g}
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>Since one molecule of SO<sub>2</sub>Cl<sub>2</sub> contains 2
+            chlorines, and each AgCl contains only one, we can produce 2 AgCl from
+            one SO<sub>2</sub>Cl<sub>2</sub>:</p>
+            <p className="eqn">SO<sub>2</sub>Cl<sub>2</sub> &#10230; 2 AgCl</p>
+            <p>Regardless of the actual reaction (or reactions) taking place, the 1:2
+            stoichiometric ratio will hold.</p>
+            <p>The number of moles of AgCl produced is</p>
+            <MathJax.Node formula={eqnAgCl}/>
+            <p>Then, using stoichiometry, the number of moles of
+            SO<sub>2</sub>Cl<sub>2</sub> used was</p>
+            <MathJax.Node formula={eqnSO2Cl2}/>
+            <p>Calculate the mass of SO<sub>2</sub>Cl<sub>2</sub>:</p>
+            <MathJax.Node formula={eqmSO2Cl2}/>
+            <p>And subtract it from the total mass of the mixture to find the mass
+            of SO<sub>2</sub>:</p>
+            <MathJax.Node formula={eqmSO2}/>
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: <React.Fragment><i>m</i><sub>SO<sub>2</sub></sub></React.Fragment>,
+        units: "g"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 503,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 0,
+    "idInExam": 3,
+    "type": "numeric",
+    "questionBody": function() {
+      let vol = Number.parseFloat((Math.random()*(900 - 100) + 100).toPrecision(1));
+      let pH = Number.parseFloat((Math.random()*(0.900 - 0.200) + 0.200).toPrecision(2));
+      let pHString = pH.toPrecision(3);
+      let cH = Math.pow(10, -pH);
+      let cHString = cH.toPrecision(3);
+      let volL = vol/1000;
+      let volLString = volL.toPrecision(3);
+      let nH = cH*volL;
+      let nHString = nH.toPrecision(3);
+      let nH2SO4 = nH/2;
+      let nH2SO4String = nH2SO4.toPrecision(3);
+      let mH2SO4 = nH2SO4*98.086;
+      let mH2SO4String = mH2SO4.toPrecision(3);
+      let answer = mH2SO4/1.84;
+      let ansString = answer.toPrecision(3);
+
+      var description = (
+        <p>Pure (100%) sulfuric acid has a density of 1.84&nbsp;g&nbsp;mL<sup>&#8211;1</sup>.
+        How many mL of H<sub>2</sub>SO<sub>4</sub> need to be diluted with water to a total
+        volume of {vol}&nbsp;mL to prepare a solution with pH&nbsp;=&nbsp;{pHString}?</p>
+      );
+
+      const eqnH = `\\begin{eqnarray*}
+        [\\text{H}^+] & = & 10^{-\\text{pH}} \\\\
+        & = & 10^{-${pHString}} \\\\
+        & = & ${cHString} \\text{ M} \\\\
+        n_{\\text{H}^+} & = & [\\text{H}^+] \\times V \\\\
+        & = & (${cHString} \\text{ M})(${volLString} \\text{ L}) \\\\
+        & = & ${nHString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqnH2SO4 = `\\begin{eqnarray*}
+        n_{\\text{H}_2\\text{SO}_4} & = & n_{\\text{H}^+} \\times \\frac{1}{2} \\\\
+        & = & \\frac{${nHString} \\text{ mol}}{2} \\\\
+        & = & ${nH2SO4String} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqVH2SO4 = `\\begin{eqnarray*}
+        m_{\\text{H}_2\\text{SO}_4} & = & (${nH2SO4String} \\text{ mol})(98.086 \\text{ g mol}^{-1}) \\\\
+        & = & ${mH2SO4String} \\text{ g} \\\\
+        V_{\\text{H}_2\\text{SO}_4} & = & \\frac{m_{\\text{H}_2\\text{SO}_4}}{d_{\\text{H}_2\\text{SO}_4}} \\\\
+        & = & \\frac{${mH2SO4String} \\text{ g}}{1.84 \\text{ g mL}^{-1}} \\\\
+        & = & ${ansString} \\text{ mL}
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>Write down the dissociation of H<sub>2</sub>SO<sub>4</sub>:</p>
+            <p className="eqn">H<sub>2</sub>SO<sub>4</sub> &#10230; 2 H<sup>+</sup> + SO<sub>4</sub><sup>2&#8211;</sup></p>
+            <p>The concentration and the number of moles of H<sup>+</sup> ions produced by this dissociation are</p>
+            <MathJax.Node formula={eqnH}/>
+            <p>Note that in the above calculation we converted the volume of the solution
+            to liters.</p>
+            <p>Use stoichiometry to calculate the number of moles of H<sub>2</sub>SO<sub>4</sub> required to
+            produce this much of H<sup>+</sup>:</p>
+            <MathJax.Node formula={eqnH2SO4}/>
+            <p>Now, find the mass of H<sub>2</sub>SO<sub>4</sub> and convert it to volume:</p>
+            <MathJax.Node formula={eqVH2SO4}/>
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: <React.Fragment><i>V</i><sub>H<sub>2</sub>SO<sub>4</sub></sub></React.Fragment>,
+        units: "mL"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 504,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 0,
+    "idInExam": 4,
+    "type": "numeric",
+    "questionBody": function() {
+      let chiString = (Math.random()*(0.90 - 0.10) + 0.10).toPrecision(2);
+      let chi = Number.parseFloat(chiString);
+      let answer = chi/(2 - chi);
+      let ansString = answer.toPrecision(2);
+
+      var description = (
+        <React.Fragment>
+          <p>Consider the reaction:</p>
+          <p className="eqn">N<sub>2</sub>O<sub>5</sub>(g) + H<sub>2</sub>O(l) &#10230; 2 HNO<sub>3</sub>(aq)</p>
+          <p>How many moles of N<sub>2</sub>O<sub>5</sub> must be dissolved in
+          one mole of H<sub>2</sub>O to obtain an aqueous solution of HNO<sub>3</sub> in
+          which the mole fraction of HNO<sub>3</sub> is {chiString}?</p>
+        </React.Fragment>
+      );
+
+      const eqChiHNO3 = `\\begin{eqnarray*}
+        \\chi_{\\text{HNO}_3} & = & \\frac{n_{\\text{HNO}_3}}{n_\\text{tot}} \\\\
+        & = & \\frac{n_{\\text{HNO}_3}}{n_{\\text{HNO}_3} + n_{\\text{H}_2\\text{O}}}
+        \\end{eqnarray*}`;
+      const eqnN2O5 = `\\begin{eqnarray*}
+        ${chiString} & = & \\frac{2x}{2x + (1.0 - x)} \\\\
+        ${chiString}(x + 1.0) & = & 2x \\\\
+        x & = & ${ansString} \\text{ mol}
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>The expression for the mole fraction of HNO<sub>3</sub> is</p>
+            <MathJax.Node formula={eqChiHNO3}/>
+            <p>Let us label the number of moles of N<sub>2</sub>O<sub>5</sub> as <i>x</i>.
+            The number of moles of HNO<sub>3</sub> will be twice the number of
+            moles of N<sub>2</sub>O<sub>5</sub>, that is, 2<i>x</i> (because of the stoichiometry of
+            the reaction). As for the H<sub>2</sub>O, there will not be one mole of it anymore
+            since some of the water reacted with the nitrogen oxide. The amount of
+            water that reacted is <i>x</i> (again, from the stoichiometry).
+            Therefore, the amount left is (1.0 &#8211; <i>x</i>).</p>
+            <p>Substitute the moles of HNO<sub>3</sub> and H<sub>2</sub>O into the
+            equation above and solve for <i>x</i> (the moles of N<sub>2</sub>O<sub>5</sub>):</p>
+            <MathJax.Node formula={eqnN2O5}/>
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: <React.Fragment><i>n</i><sub>N<sub>2</sub>O<sub>4</sub></sub></React.Fragment>,
+        units: "mol"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 505,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 0,
+    "idInExam": 5,
+    "type": "numeric",
+    "questionBody": function() {
+      let mCS2 = Number.parseFloat((Math.random()*(200 - 50) + 50).toPrecision(2));
+      let mCl2 = mCS2*3;
+      let y = Math.floor(Math.random()*(97 - 85) + 85);
+      let nCS2 = mCS2/76.15;
+      let nCS2String = nCS2.toPrecision(3);
+      let nCl2 = mCl2/76.15;
+      let nCl2String = nCl2.toPrecision(3);
+      let nCCl4 = nCS2*y/100;
+      let nCCl4String = nCCl4.toPrecision(3);
+      let answer = nCCl4*153.81;
+      let ansString = answer.toPrecision(3);
+
+      var description = (
+        <React.Fragment>
+          <p>CCl<sub>4</sub> can be prepared by:</p>
+          <p className="eqn">CS<sub>2</sub> + Cl<sub>2</sub> &#10230; CCl<sub>4</sub> + S<sub>2</sub>Cl<sub>2</sub>&#160;&#160;&#160;(unbalanced)</p>
+          <p>A reaction performed using {mCS2}&nbsp;g of CS<sub>2</sub> and {mCl2}&nbsp;g of
+          Cl<sub>2</sub> gave CCl<sub>4</sub> in a {y}% yeild. What mass of
+          CCl<sub>4</sub> was produced by the reaction?</p>
+        </React.Fragment>
+      );
+
+      const eqLR = `\\begin{eqnarray*}
+        n_{\\text{CS}_2} & = & \\frac{${mCS2}\\text{ g}}{76.15 \\text{ g mol}^{-1}} \\\\
+        & = & ${nCS2String} \\text{ mol} \\\\
+        n_{\\text{Cl}_2} & = & \\frac{${mCl2}\\text{ g}}{70.90 \\text{ g mol}^{-1}} \\\\
+        & = & ${nCl2String} \\text{ mol} \\\\
+        \\frac{${nCS2String}}{1} & < & \\frac{${nCl2String}}{3},
+        \\end{eqnarray*}`;
+      const eqnCCl4 = `\\begin{eqnarray*}
+        n_{\\text{CCl}_4} & = & n_{\\text{CCl}_4,\\text{ theor}} \\times \\frac{\\%\\text{ yield}}{100} \\\\
+        & = & (${nCS2String} \\text{ mol})\\frac{${y}}{100} \\\\
+        & = & ${nCCl4String} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqmCCl4 = `\\begin{eqnarray*}
+        m_{\\text{CCl}_4} & = & (${nCCl4String} \\text{ mol})(153.81 \\text{ g mol}^{-1}) \\\\
+        & = & ${Number.parseFloat(ansString)} \\text{ g}
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>First, balance the reaction:</p>
+            <p className="eqn">CS<sub>2</sub> + 3 Cl<sub>2</sub> &#10230; CCl<sub>4</sub> + S<sub>2</sub>Cl<sub>2</sub></p>
+            <p>Since we are given the amounts of more than one reagent, one of
+            them will be limiting. Calculate the number of moles of CS<sub>2</sub> and
+            Cl<sub>2</sub> and determine which one is the limiting reagent.</p>
+            <MathJax.Node formula={eqLR}/>
+            <p>so, CS<sub>2</sub> is the limiting reagent. Because of the 1:1 stoichiometric
+            ratio between CS<sub>2</sub> and CCl<sub>4</sub>, the theoretical number of
+            moles of CCl<sub>4</sub> produced is {nCS2String}&nbsp;mol. The actual
+            number of moles is</p>
+            <MathJax.Node formula={eqnCCl4}/>
+            <p>And the mass of CCl<sub>4</sub> is</p>
+            <MathJax.Node formula={eqmCCl4}/>
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: <React.Fragment><i>m</i><sub>CCl<sub>4</sub></sub></React.Fragment>,
+        units: "g"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 506,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 1,
+    "idInExam": 6,
+    "type": "MC",
+    "questionBody": function() {
+      let incorrectConfigs = [
+        {ion: <React.Fragment>Ni<sup>2+</sup></React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>6</sup> 4<i>s</i><sup>2</sup></React.Fragment>,
+        fbConfig: <React.Fragment>[Ar] 3<i>d</i><sup>8</sup></React.Fragment>},
+        {ion: <React.Fragment>V<sup>3+</sup></React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>0</sup> 4<i>s</i><sup>2</sup></React.Fragment>,
+        fbConfig: <React.Fragment>[Ar] 3<i>d</i><sup>1</sup></React.Fragment>},
+        {ion: <React.Fragment>Fe<sup>3+</sup></React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>3</sup> 4<i>s</i><sup>2</sup></React.Fragment>,
+        fbConfig: <React.Fragment>[Ar] 3<i>d</i><sup>5</sup></React.Fragment>},
+        {ion: <React.Fragment>Co<sup>2+</sup></React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>5</sup> 4<i>s</i><sup>2</sup></React.Fragment>,
+        fbConfig: <React.Fragment>[Ar] 3<i>d</i><sup>7</sup></React.Fragment>},
+        {ion: <React.Fragment>Cu<sup>2+</sup></React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>8</sup> 4<i>s</i><sup>1</sup></React.Fragment>,
+        fbConfig: <React.Fragment>[Ar] 3<i>d</i><sup>9</sup></React.Fragment>}
+      ];
+      let correctConfigs = [
+        {ion: <React.Fragment>Al<sup>3+</sup></React.Fragment>,
+        config: <React.Fragment>[Ne]</React.Fragment>},
+        {ion: <React.Fragment>Ga<sup>3+</sup></React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>10</sup></React.Fragment>},
+        {ion: <React.Fragment>Cu</React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>10</sup> 4<i>s</i><sup>1</sup></React.Fragment>},
+        {ion: <React.Fragment>Cs</React.Fragment>,
+        config: <React.Fragment>[Xe] 6<i>s</i><sup>1</sup></React.Fragment>},
+        {ion: <React.Fragment>Ge<sup>2+</sup></React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>10</sup> 4<i>s</i><sup>2</sup></React.Fragment>},
+        {ion: <React.Fragment>Ti</React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>2</sup> 4<i>s</i><sup>2</sup></React.Fragment>},
+        {ion: <React.Fragment>Cr</React.Fragment>,
+        config: <React.Fragment>[Ar] 3<i>d</i><sup>5</sup> 4<i>s</i><sup>1</sup></React.Fragment>}
+      ];
+      let i = Math.floor(Math.random()*(incorrectConfigs.length));
+      var options = [];
+      while (options.length < 4) {
+        let i = Math.floor(Math.random()*(correctConfigs.length));
+        options.push({
+          text: (<p>{correctConfigs[i].ion} = {correctConfigs[i].config}</p>),
+          correct: false,
+          id: options.length
+        });
+        correctConfigs.splice(i, 1);
+      }
+      options.push({
+        text: (<p>{incorrectConfigs[i].ion} = {incorrectConfigs[i].config}</p>),
+        correct: true,
+        id: 4
+      });
+
+      var description = (
+        <p>Which of the following electronic configurations is NOT correct?</p>
+      );
+
+      var feedback = (
+        <p>In ions of transition metals, such as {incorrectConfigs[i].ion},
+        electrons must be removed from the <i>s</i> orbital first. Therefore,
+        the correct electronic configuration for {incorrectConfigs[i].ion} is {incorrectConfigs[i].fbConfig}.</p>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 507,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 1,
+    "idInExam": 7,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>Which one of the following sets of four quantum numbers could represent
+        the highest-energy electron in ground-state Cr<sup>3+</sup>?</p>
+      );
+
+      var options = [
+        {text: (<p><i>n</i>&nbsp;=&nbsp;3, <i>l</i>&nbsp;=&nbsp;1, <i>m</i><sub>l</sub>&nbsp;=&nbsp;1, <i>m</i><sub>s</sub>&nbsp;=&nbsp;+1/2</p>),
+        correct: false,
+        id: 0},
+        {text: (<p><i>n</i>&nbsp;=&nbsp;3, <i>l</i>&nbsp;=&nbsp;2, <i>m</i><sub>l</sub>&nbsp;=&nbsp;1, <i>m</i><sub>s</sub>&nbsp;=&nbsp;+1/2</p>),
+        correct: true,
+        id: 1},
+        {text: (<p><i>n</i>&nbsp;=&nbsp;3, <i>l</i>&nbsp;=&nbsp;1, <i>m</i><sub>l</sub>&nbsp;=&nbsp;2, <i>m</i><sub>s</sub>&nbsp;=&nbsp;+1/2</p>),
+        correct: false,
+        id: 2},
+        {text: (<p><i>n</i>&nbsp;=&nbsp;4, <i>l</i>&nbsp;=&nbsp;0, <i>m</i><sub>l</sub>&nbsp;=&nbsp;0, <i>m</i><sub>s</sub>&nbsp;=&nbsp;&#8211;1/2</p>),
+        correct: false,
+        id: 3},
+        {text: (<p><i>n</i>&nbsp;=&nbsp;4, <i>l</i>&nbsp;=&nbsp;0, <i>m</i><sub>l</sub>&nbsp;=&nbsp;1, <i>m</i><sub>s</sub>&nbsp;=&nbsp;&#8211;1/2</p>),
+        correct: false,
+        id: 4}
+      ];
+
+      var feedback = (
+        <p>The electronic configuration of Cr<sup>3+</sup> is [Ar] 3<i>d</i><sup>3</sup>. So,
+        the highest-energy electron is in a 3<i>d</i> orbital, for which
+        <i>n</i>&nbsp;=&nbsp;3, <i>l</i>&nbsp;=&nbsp;2, <i>m</i><sub>l</sub> can be -2, -1, 0, 1, or 2,
+        and <i>m</i><sub>s</sub> can be either +1/2 or &#8211;1/2.</p>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 508,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 1,
+    "idInExam": 8,
+    "type": "MS",
+    "questionBody": function() {
+      var description = (
+        <p>Consider N and O. Which of the following statements is/are correct?</p>
+      );
+
+      var options = [
+        {text: (<p>The first ionization energy of N is greater than that of O.</p>),
+        correct: true,
+        id: 0},
+        {text: (<p>O<sup>&#8211;</sup> and N<sup>+</sup> are isoelectronic.</p>),
+        correct: false,
+        id: 1},
+        {text: (<p>The electronegativity of O is greater than that of N.</p>),
+        correct: true,
+        id: 2},
+        {text: (<p>O<sup>+</sup> and N<sup>&#8211;</sup> are isoelectronic.</p>),
+        correct: false,
+        id: 3}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>Electronegativity in general increases from left to right across a period,
+          so, O is more electronegative than N.</p>
+          <p>Even though ionization energy also in general increases from left
+          to right, there are exceptions, and N vs O is one of them. Because nitrogen has
+          a very stable half-filled <i>p</i>-subshell, it is more reluctant to lose
+          en electron than oxygen, which can actually reach this stable half-filled <i>p</i>-subshell
+          by losing an electron.</p>
+          <p>As for the O and N ions being isoelectronic, O<sup>&#8211;</sup> and N<sup>+</sup>, as well
+          as O<sup>+</sup> and N<sup>&#8211;</sup>, have different numbers of electrons and therefore
+          are not isoelectronic.</p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 509,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 1,
+    "idInExam": 9,
+    "type": "MS",
+    "questionBody": function() {
+      var description = (
+        <p>Which of the following statements is/are correct?</p>
+      );
+
+      var options = [
+        {text: (<p>Electronegativity values decrease from top to bottom in group 17.</p>),
+        correct: true,
+        id: 0},
+        {text: (<p>The K<sup>+</sup> ion is smaller then the K atom.</p>),
+        correct: true,
+        id: 1},
+        {text: (<p>For any given element, first ionization energies are always greater than second ionization energies.</p>),
+        correct: false,
+        id: 2},
+        {text: (<p>The Mg<sup>2+</sup> ion is smaller than the Ba<sup>2+</sup> ion.</p>),
+        correct: true,
+        id: 3}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>Electronegativity values decrease from top to bottom in a group in general,
+          including group 17.</p>
+          <p>Second ionization energies are usually (but not always) greater than the
+          corresponding first ionization energies. This is because when an electron is being
+          removed from an already positively charged ion, the electrostatic attraction between
+          that electron and the rest of the ion is higher than in the case of a neutral atom.</p>
+          <p>When an electron is removed from an atom, the rest of the electrons experience
+          less electrostatic repulsion. This makes them come closer to each
+          other and decreases the size of the species, so, K<sup>+</sup> ion is smaller then the K atom.</p>
+          <p>The sizes of atoms increase from top to bottom in a group. This is also true
+          for the same-charge cations like Mg<sup>2+</sup> and Ba<sup>2+</sup>.</p>
+          <p></p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 510,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 3,
+    "idInExam": 10,
+    "type": "MC",
+    "questionBody": function() {
+      let incorrectIons = [
+        (<React.Fragment>Cr<sup>2+</sup></React.Fragment>), (<React.Fragment>Fe<sup>2+</sup></React.Fragment>),
+        (<React.Fragment>Mn<sup>3+</sup></React.Fragment>), (<React.Fragment>Mn<sup>2+</sup></React.Fragment>),
+        (<React.Fragment>Fe<sup>3+</sup></React.Fragment>), (<React.Fragment>Co<sup>2+</sup></React.Fragment>),
+        (<React.Fragment>Co<sup>3+</sup></React.Fragment>), (<React.Fragment>Ni<sup>3+</sup></React.Fragment>)
+      ];
+      let correctIons = [
+        {ion: (<React.Fragment>Ni<sup>2+</sup></React.Fragment>), numD: 8},
+        {ion: (<React.Fragment>Cu<sup>2+</sup></React.Fragment>), numD: 9},
+        {ion: (<React.Fragment>Ti<sup>3+</sup></React.Fragment>), numD: 1},
+        {ion: (<React.Fragment>V<sup>3+</sup></React.Fragment>), numD: 2},
+        {ion: (<React.Fragment>Ti<sup>2+</sup></React.Fragment>), numD: 2},
+        {ion: (<React.Fragment>Cr<sup>3+</sup></React.Fragment>), numD: 3},
+        {ion: (<React.Fragment>V<sup>2+</sup></React.Fragment>), numD: 3}
+      ];
+      let i = Math.floor(Math.random()*correctIons.length);
+      let ion = correctIons[i].ion;
+      let numD = correctIons[i].numD;
+      let config;
+      if (numD === 1) {
+        config = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAABCCAMAAABkWRStAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAADdSURBVGiB7dlBC4QgEIZhb/3/v9hOgWtFZkK32eq0WsHALswcvuec9WYiUc7BjzxLTJdxlCXjUqtwSwAAAAAAAAClSNoFF8Rv7YSLgaN2wsXKWTuhRplzrx1RGZh50I6oJM68aEeUiGOKbOtjVeAueW60MwopukSrqQVF3O1No6kFFeZ9qohMLailP5pctLSgOnc2kaV5OiR77wVoEkLTkzZsX/K43fLloOb+qEp5f5Pon9J5ISpO89QUyg3Ci5r+tNHZeHYlNMmgSQZNMmiSQZMMmmQsNs0v7QKQ+gDrS3AdMGcvGAAAAABJRU5ErkJggg==";
+      } else if (numD === 2) {
+        config = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAABDCAMAAACvBccIAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAE4SURBVGiB7dnNboMwEARg33j/VyRLGgq4GGMptymg/oQ2VLuqts1hvmPkTQYyDgqEQL/UQiN+m5Oimcv1PxwSERERERER0V4S2/r64pPjhuDZNlDB/T92j2QbiGh9knyaUWwDBS8+ST5IQTlbBqqC2SvMmx5AbxmIQDHuCquMgskysN5q8i2UIOVk2UgVptm5UB2a3KLSD0Q85eRbqJxCltlQqDJKvsCzUIJmyTToC1WhkVwXz0J143KqRPSFiilIDtGzUNN5zRSSulBzs2Y6exaqCVsm0Z6n09K8JVMYnC952VjYNZM3ZtJhpiN1d71RhutdX34Xq/fXh3J//WZ/fFH1TGn7INm9zVGmbr/fW1Umw5XzJ4/x3e0xkw4z6TCTDjPpMJMOM+k8YqbxZFv/F5nM/O9n0oFXLQ3T0BVlO9MAAAAASUVORK5CYII=";
+      } else if (numD === 3) {
+        config = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAABDCAMAAACvBccIAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAF9SURBVGiB7ZndTsMwDIVz1/d/xdQd619o6ljanWk2IdGxST4FBEj+Lif79KQ5SbQ0BOeL9GohfeojsfRx/IUhOY7jOI7jOI7jOM6eTFh9PB94SMtINemAyTd64D/2oB1QPWnG5JP2WENlhUZeVDB50VesYaMVZOQkKidEvhEtqKUwCDLySVUnRD6pCrgq6tSp2APFKroi8vWqCQ1U1CL2QJFmzshCanQtcKB6nYqYAzVqx702dvmkL5zRQGUhns2B4hyYChAoWYjPigUq6khM1h2qFjLN9kA12hFHwQLVSyQOqzFQ47K9KiJ7oFIOm3zCApXH2jQstur1VD2FbA5U6ar8CQpULLE2kTFQdYo3T2R9T+2WvE0+zNCR192agBOPwR2QoCP+WJN7suGenhHHywdkvjzkbl9s3n+f5XH9lf34kumb0vVBtJN55mncr/fe5OnZRvcv526Pe7Lhnmy4JxvuyYZ7suGebPxFT0v7o/I3InjxhnLkPtP5Ft4AW/Y81o6LMRIAAAAASUVORK5CYII=";
+      } else if (numD === 8) {
+        config = "data:image/png;base64,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";
+      } else {
+        config = "data:image/png;base64,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";
+      }
+      var options = [];
+      while (options.length < 4) {
+        let i = Math.floor(Math.random()*incorrectIons.length);
+        options.push({text: (<p>{incorrectIons[i]}</p>), correct: false, id: options.length});
+        incorrectIons.splice(i, 1);
+      }
+      options.push({text: (<p>{ion}</p>), correct: true, id: 4});
+
+      var description = (
+        <p>Which metal ion listed below, when it forms a complex with a coordination
+        number of six, always has the same number of unpaired electrons regardless
+        of whether the ligands are weak-field or strong-field.</p>
+      );
+
+      var feedback = (
+        <React.Fragment>
+          <p>In order for an ion to have the same number of unpaired electrons regardless
+          of whether the ligands are weak-field or strong-field, its
+          high-spin and low-spin complexes must have the same configuration. One of such
+          ions is {ion} listed above. Both the high-spin and low-spin complexes
+          of {ion} have the electronic configuration shown below:</p>
+        <p className="eqn"><img src={config} alt="configuration"/></p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 511,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 2,
+    "idInExam": 11,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>Which of the following represents the best Lewis structure for
+        carbon monoxide?</p>
+      );
+
+      var options = [
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAlCAMAAADSrI/MAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAFKSURBVEiJ7VXLkoQgDPTm//8ikMJi0BTLWhyzgIOGUUtmPW3t9AEBTafzALvug2OILy/jY/zWt6l6oiESzjTel2VHEccB1X2qPwcBAO9ZKAB5sK0dJdijd4cAmw28EfW+TESIPo59Wns6hVssTKJBTDtVLMKT7wtl0oXuFEsbPUoAgDWXJfeUKRxNLdERrU0eA91ilIuU50fYQOXIbAtPYZ2HkoBWSC6k08zcch8t6CvpkXid447qooKmzgJL/J7qooLnVNO7Ae6o5PbGbvvypXuPAOTZSrFcKV4QRw3XYtWWlrei3yLsmdpzmLWnsxDGG+1DkU6P7voMxpPm5GrB0pOb3xsAPdHi7vIMqnSLaICAxARmhOLUNmQ967LFYld9oS0imubrKpY6TIhWN7r+19BzqqXA6X6yRpojyZB/9zehcMiq8FPCX+AHSIHB5RNQc0AAAAAASUVORK5CYII=" /></p>),
+        correct: false,
+        id: 0},
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAnCAMAAABNNCSfAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIgSURBVEiJ7VbL2qsgDHTH+78iilhEKGI/3eUEEbWtYLr+zyyU2jAJk4tW1X9k0Pxq3y1Ld7dJOvAwak5m5drbZbG+LxqZJ8Ob6EdBpK3HfqN3hVjco6qUwkXjaxrvU6ZVZ7NGasDLsoSlfJJoH+ZY2y5jxF985z0FUsJZr2worasYY8Yw1lZVrym8L25chMSwMkZqEGjgPV5qmhCNr1oWgfmYMjlZ5U06FNJwICq3/8hYifHES9PhrC9zOe/Tz3mLR4wwj5zVWjVsDYEkA8KxtColxKZubB2xL5pxi7Iv9Rt2Y0gs0448fLgZB6UGfzNSWjcBuOIQ+YRQw6Bu4+BCUGfOhkaIW9FwTAZooroYrF43eFWSoQ6s1nq8rmn2kMVWqypwWhueXJyyic64B88Sf4jYuixi3fbpaMJeEEvwK7GGVCvcgfm0uhIBYO8e1INHD/u4VPAKTusY5LaD0hcO1PHDwxxuBqb0hD/acJsh1+AZ1FuIETJuZ+PyYabP3ilgb4dCL9dm9ov3ph7Uu1iXJXHJe1MPd7zdtBKaX3X44g1p56pND/BTJJqdRnlN+DIRcd+GJuqrYX+HMCu3Pw4yB4S5/nZyHUv+8eZshT+EYKdazkPBMXSb5OT7oEg2xxU2Ul/dzwds/DT/cUf+hajDYBJCGoiB3M6HJsw+KcRsAUrvizmFQ/2g5DrtKNcSl9paq8jjFwtnNtZqSf+w/Vv4B80scFTPJrCaAAAAAElFTkSuQmCC" /></p>),
+        correct: false,
+        id: 1},
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAlCAMAAAAN4vXTAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAFbSURBVEiJ7ZbLkoQgDEXd8f+/iGboRsYUnZnSXYbg2/ZZsprqu0BLySGQBMiyj66roCq0mihPRWyYdZYp5kcqYoGlPMpGpyL+E2kAuGZRAOwE2ngWudO5AC4akF2PTC48RAqtOge0QkMU6GxmRTuAJibVk095WfbTAZwhDVNEOvad79pzdQIIzKZ/dzHVB9d/ZaB84hgwhpZ4U156ebYjnrge3vXzSx51220i9Jv6bl2YxMO8mQe/7fLTvlScSK/AX3bAq0Q7I2aLcKclPn4iqrpNHALrmdoObvydy5ofxBpau07FZB0Vmu7TGDovmXYQ6/nKuZUUpnHa6lTR2KEkoj/vO0zAdEkaiqE8BkrZ+nywcCs9nGwiAKbiyeB7KmSfMgA1blnU/cK7k8eGdr3FVp5o4xDRXjgq87pCdOZzcN3U08tWqKhJRqRY3NWsIO/JvuTGA5js3vNRqz+cW5r5OHyCxwAAAABJRU5ErkJggg==" /></p>),
+        correct: false,
+        id: 2},
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAuCAMAAACfxf7nAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJISURBVFiF7VbBlqsgDGXH//8iglSkYqQe3eURUUtH2uJM563mLgSVXJILCTD2h3eQv8SrAT0OVnycWHQ9D41qB/VpamgYMyZ0pK8+y2yu4THP1NX9txgk51ktxSh2atbr88TN6AFGyOyDGhjnvOs4rxlr7Vli0XeLx/XQHP6ZqwIAH2aG6huKwGWf4xDxIvUmyMWdZI7WCyr/VXA1JNSFgkjfkZ/eV2NCt3LcIW7nl3FGDEYcsfHMzBEiE3JDHvAlW0r1kK6lpp0vTqzMswqxHAbGcYw2y9mU4ZC8RGkfICzwwMltbm++hhiTl2RJ76jhhght5s87AL/33SU3Qih1sjRJpUg9OexbJLtQoaYSbLHSyi4G3ghm+tVKD0fzioid8+HJDz+zMETrHLErpr3VsjauT5hlDEV49HybosjvdgtQOeIWbe/hmuqsMSamRVjlEoBdAbNC3BPLLrlDk6TUBkeaukpcVViSMoDm/uJxoqbDWzJCNDU1EwI7hWp1NEJHcz58rR+MQjLHj6/AH0ILEz0d6Q7UHp+CPDSPqtFCFlM7eIprGfXltnB2ZwU5UNMuEKZOvoVbTRyZVP+q4JKjMK2dMmptMT0TuNPrv/tHwIKj4EECG1OhwWOtplXbFeFF6Wj2HFsci/Nkww18U+yFNCupq6EybEdGsHh5mFoqYUrpDhN3XkFSldRKTe6txbRt29KrqrCbxdvdJbR1zpkTB2M1dc5Z/flb8x8OaIASm/tMKf0p/FJIumwO/hBmoANL5W8ef/hP+AfU1CrXf9Yj1wAAAABJRU5ErkJggg==" /></p>),
+        correct: false,
+        id: 3},
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAnCAMAAABNNCSfAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIiSURBVEiJ7VbLloMgDHXH//8iivigphF7dJcBAWtH0XQ9c8+ZEWy43IQkUhT/yKD60rxZluZ2jUayNBrJpu1HWBaw1yvk8BTuofpR8VglOkKx0l9JxjYOKluyeKHxtn5UY96qe2xD/eTQNlAk3sL0OSv52gXpqRm8q1HkjY8TOFdEQO0CZhi8L/lAxJf7a/0kY9U9FEaUrECUU6GEaCanxJ0a1lne3WQN3b3e4h2ArF417iasOKAoGPGV07fntnpY2jsh7bANWWGIglc11XhRcZBysEZeXVRjrCRtrypUGhSOUBjkNh85jKZpFnze6KhxIsJs6ZxA9QBLLsV2ApRi9pyESqnboLk26WF40XVQZl1gu6s+WXpWAOv++3MuLGURu1fnOQH8mxMvq7CZtGRF4veKAbMIpdkn1xScEGuyK7EhjN5IpOG31VkQiLbqcfGQYYcmvero5Tctg8i4glMXSN17Ymn2j4Gm9Ea2a5rMdNHyz1BGiQE6LBfj8svM7HfnQHw45XY5N4MD700+dJ/BOk2JU96bfLjjbaaVcPg2Dgdef+yy22raXUWC2a6DloybiaJ9K69CfA1t3w0BOv7wJkNi9PUPz01I+ZYO3w37DoTY5XIe3VZIq6qwydFRRzaHkSukvrjvD67wU/93K/LfIeMbk1J6oCDktj9UvvdppWagnfQj5iSHe6GUJq24ziWpDQB07PbrEmceAIzmX2z/Fn4ACP9v9bvZOmwAAAAASUVORK5CYII=" /></p>),
+        correct: true,
+        id: 4}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>CO has 10 valence electrons: C contributes 4 and O contributes 6. First,
+          connect C and O with a single bond and distribute the remaining 8 electrons as
+          lone pairs, to O first since it is more electronegative. This results in a structure
+          where neither C nor O have a full octet. To resolve this, turn 2 lone pairs
+          of oxygen into 2 bonds as shown below.</p>
+          <p className="eqn"><img src="data:image/png;base64,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"/></p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 512,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 2,
+    "idInExam": 12,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>Which one of the following represents the best Lewis structure for
+        nitrate, NO<sub>3</sub><sup>&#8211;</sup>?</p>
+      );
+
+      var options = [
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 0},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 1},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 2},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 3},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: true,
+        id: 4}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>NO<sub>3</sub><sup>&#8211;</sup> has 24 valence electrons: N contributes 5, each O
+          contributes 6, and 1 is from the overall charge. First,
+          connect N and oxygens with single bonds and distribute the remaining electrons as
+          lone pairs, to O first since it is more electronegative. This results in a structure
+          with formal charges that can be minimized. To minimize the formal charges and also
+          give N a full octet, turn a lone pair of one of the oxygens into a bond as shown below.
+          Note that we cannot minimize the formal charges any further (by creating another
+          double bond) since nitrogen is not allowed to have an extended octet.</p>
+          <p className="eqn"><img src="data:image/png;base64,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"/></p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 513,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 2,
+    "idInExam": 13,
+    "type": "MC",
+    "questionBody": function() {
+      let ionic = [
+        <React.Fragment>KCl</React.Fragment>, <React.Fragment>NaCl</React.Fragment>, <React.Fragment>LiF</React.Fragment>,
+        <React.Fragment>BaCl<sub>2</sub></React.Fragment>, <React.Fragment>SrF<sub>2</sub></React.Fragment>
+      ];
+      let covalent = [
+        <React.Fragment>CO</React.Fragment>, <React.Fragment>CO<sub>3</sub><sup>2&#8211;</sup></React.Fragment>,
+        <React.Fragment>HCl</React.Fragment>, <React.Fragment>Br<sub>2</sub></React.Fragment>,
+        <React.Fragment>SO<sub>2</sub></React.Fragment>, <React.Fragment>H<sub>2</sub>O</React.Fragment>,
+        <React.Fragment>NO<sub>3</sub><sup>&#8211;</sup></React.Fragment>, <React.Fragment>N<sub>2</sub></React.Fragment>,
+        <React.Fragment>HSO<sub>4</sub><sup>&#8211;</sup></React.Fragment>
+      ];
+      let i = Math.floor(Math.random()*ionic.length);
+      var options = [];
+      while (options.length < 4) {
+        let i = Math.floor(Math.random()*covalent.length);
+        options.push({text: (<p>{covalent[i]}</p>), correct: false, id: options.length});
+        covalent.splice(i, 1);
+      }
+      options.push({text: (<p>{ionic[i]}</p>), correct: true, id: 4});
+
+      var description = (
+        <p>In which one of the following species is the bonding best described as ionic?</p>
+      );
+
+      var feedback = (
+        <p>Ionic bonding is found in compounds where the atoms have a large (&gt; 1.9)
+        electronegativity difference. The lowest electronegativities are
+        on the left and the largest ones are on the right in the periodic table.
+        So, {ionic[i]} is the compound that should have the largest electronegativity
+        difference and therefore be ionic.</p>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 514,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 2,
+    "idInExam": 14,
+    "type": "MC",
+    "questionBody": function() {
+      let highest = [
+        {formula: <React.Fragment>CO</React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAnCAMAAADHG73eAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIvSURBVEiJ7VbbsqsgDPWN//9FFLGIppE6+pYDVi7O3i3xPO810wot5LLICjbNH/4P3c3lw74P/D0aydFiJXvDuMC+g2PukPNT+IcaF8UzL9FbFocfVhL4OAeda1kOYAhrw6hHxnIzpaF+cuwP0EQHjR2ry+VaEPnUDAfHotPB+fgGn6V4o/ekWoaDVU6IuPrPI0xqy82k8ETL4qh9NUqI4eVD8keMfd1BMTnoreEIOnJTz0AtxYRFEYrmzhnI191DPnJuHTuix5yGLIbOFI6wuoWjZYi13CNPaN1ySlM7lvalReEtC4vc7iXnxQ7Djk9eQCH0FxHWRZmhRoC9WqFFSEoxG11EpxQ3/KNbB1j2DmWPDc6w2nUbzAM4/x2qo3H0EWfvNME4QPilyFvv+QjN6hJ/0pET0VHIAfAj3qIfY7IKCg890RopkP5IU8VbwjNRiZQl8YUfoiRHT1VkyUQGAhai2IHad9jnVo7QkEyeONqiIX/p5iBgio434lxKBdoctIcutv+uIlvGw4G4pOndVdbDDweVKjJXHi+FxHNQqaK7Dua7FP1w8Ks8u3QghoqO3jKUqai8Y7p8BmPRzHzN2rwiW0ViXDgXUmySjip17TWbwnCZI/Eh3ytMUuYRXjQqSqHZQsn+jy3FMDb1XuR7S7yYFBUET654fRgemRcb2qJSeqZ3aNVe1IXOq5XagIpkvmCLAXJfr6WNO5gVKLUFAMO/QJp2mwGs5r/v/6HEP6yHiEDm+xLNAAAAAElFTkSuQmCC"},
+        {formula: <React.Fragment>C<sub>2</sub>H<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAAAbCAMAAADS1UQaAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAE1SURBVFiF7ZbNroMgEEbZ8f6vSCEko9EQFi6nrajhXv4GS9mUb1MSPXJKZgDGRkZGRqLRqz6Hcl3JmAIALmomqiKSVoBwfRCR9jEB6OJQydNRUaKYpNUNXWkQDcD0+tn/+ILpmCjRU1cYNHIfabdaxdUNiJ66gOYswQ2RUo13iGa6iPwaL9PjK0Q7XXJDfkDkdO16xLwf5Apxr8Qt6JZS7YZEjlExK0/XT77N9z6HYPLSzhASOcbErDzdWR3ZSKsbTl5a3ZhucXX/Wnm6lbWriVvnJ0TDVpP+W1IT+ryeaLmRWbzOczbj/BWi6TFhz53+RSjCqRYQPXWFReOm5IgLI9wZAqKn7rsW0UwwWXSHa/lG9p/oqsvEfKwdUO+vtUTS6qGuThWKUlbuVV57Pa8j7lmN/Eye04GHjIqlP8wAAAAASUVORK5CYII="},
+        {formula: <React.Fragment>N<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAaCAMAAAB//6mtAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAADzSURBVEiJ7ZRLE4MgDIRz8///RZTWR5FWx3MaK8hjGJrMeHRP6OznuhAFuHXrciFOfmlxvIhox2dkRx3Z209NukCUtCD2UcCqgr3DmpoC4aTMcq73h5gowFdmb1GJ6Olu6y8sbjrYG1+ZHVAikgDQKrLD7CqzA0pEvEW5XbnK/AAJQXZojuNjT1FCcAKoMirBFCUEK4Aqz5It+kf07zG1H5UlAQUiDE7nywY7vKiyKCAn9Bq+rQcmX/IRv+IsC8gIytvODmazKrOD3g+RPUUR4TTQD6T2PgDTz86dokA4qcF09QCqLNoiLnHa98qyADZxK9EXyhTzEWLk0+AAAAAASUVORK5CYII="},
+        {formula: <React.Fragment>HCN</React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAAAaCAMAAABFA9SbAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAFhSURBVEiJ7ZbdboMwDIVz1/d/xfwMGjasKKtymZkAiRdaMFGl7YJzUahk53whtkGIS5f+v4zJt9oodpoyRp/wkEceMeZbiJa3rLQ+TrLyOHb2gCOPBgyDBB4Af52el9jRfQ4ITzxUX7ZxHkPj5vSC46ar21O3cKqNB67znTnOY/j4WRYKu6HZw63HQjwswvXNGF30+d7GgYeRgYkHPsxH+9MYeda/Maatq9pDW0VCzCrHwvDRHAdtMMRyLK87hciyyr7GYKSkOrK7GLAqBTLKvsZgpIhUkfqNc2OLwUhJtFN7vw0DYlf+8Ab67JGOhXr0Xx/tGKFMZiHzWGJgYGbUxOOGDauqED6GIqcykBlyjIEGrhpfXR3CxkDvlQO3dxPMTll2EIuH8vO7oBFDOuyuYEzAaxrrvE5ZuKkHqayGN6wcyJzhqHjAqxwoBTdA9zRkKxVGgDEwPzeIhwK2x6W/1A8OunRH4iO8FwAAAABJRU5ErkJggg=="}
+      ];
+
+      let others = [
+        {formula: <React.Fragment>C<sub>2</sub>H<sub>4</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAABhCAMAAADhlLMIAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIJSURBVGiB7dpdb4MgFAZg7/z/fxEhpraVGNK4uzNm60dWoxx5D3Mb701d0iNPJxTQFkVOTk6yGLLTMZFJ17CdG2sWhizKoixKJ1omqWiRs4vOd9WyKIv+g0idTXRx+qdF33KhZKTQpCDphvV2eZJ2D14L0iQPqpklsqQDIFnSIZAk6SBIjnQYJEWKAMmQokASpEgQnhQNQpMAICwJAkKSQCAcCQb6IrWAs1Q4UFHUkGXuHQeaUtVN07OuIL+CE/PapduhBVVuRK1VwNP4U9+apvUvpf9T00bKtQp0aqLnylh1RP5/oD42otcqwFFEY8dUjq4iFbz01E3HZRsyavgVvFjqxSt4ebsdsDvWpG8gvJ1/d6wlF+2ONWmRY5+fX8FLu+ynfUhb/ApeanLTcUVUSVTw4r/vpo9st271RFQw0/s5YZgKlJ+ngmZOfgUzNz+q2+e8GfgFzK8Ij7b+w5butbYI7qX8imCQewzLCd1z11+LCnXHXTnMkr3GbbNQewjYNgu3qQGRgLssDAkJgpCwIAAJDYom4UGRJAlQFEkGFEGSAh0myYEOkiRBh0iyoIHEW+YqYZAncW/bXYVBvy/KzP3MmGTP1n13nRurzLKvn/8XCFmURX9F1JkxiUX92O7t9L/1Izsmsagb23Wn70dZlEVZlEKk7fz4ywo9wlzNdW6stvhHcDnJ8gkx3TREpf3y7gAAAABJRU5ErkJggg=="},
+        {formula: <React.Fragment>Ar<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAAuCAMAAAD+3dylAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJNSURBVFiF7VhL06sgDHXn//+LgFUjiBYdu8vlEXx8Vqt27kwXnk3tNPEkB5JAk+TG/4Momf/kUvJv/DOts8/WBeLTP2hEfYHtpL9CRB9ei9heoDvp/0BsQphdV1ygyyPLo20fB+z5EaMdiCtB3rjxaxgg/co/heGEtbBd4Ss66y8+UChqqxbSmudrk0Lt5CzaDuKz7Soo31HASGEQS3pkiMOb1poh9tvzwfbJPr5MW39kK5MnYozIUqAag6vZqAbkSQ65o4H3ORNeiB0xcLsULdLqZcA5gBtDrJ/NB4VdHE3avlVGNVBXRMPMXntnUsdGC9Y3RxO/OGn9F4n91IvHteVOiDSqYW011Gxpsg+DqVMrIzrEqgqpirXASVL5xAwJh1gfIxmR+lyiPPBpk4a4KlID8WwJ1n5DWHl4oNsfsKQ6JzXI6zg4eZiwDeFdSSyCa8GBSudwwQvSzNaA929D2DBu/gWKZ80puBFsSadMtc0GsajM5J8u6Qqjo1KuKKrgZgAoPVjQ2fMVbh/jDO32jJJz6ekFHeum0nZ0r+AWS1l6/6N0it41FqxrZXyLLilDpunUfTKvxkzMuttZdVb6nsumncy8Xgsxm781Uc/KzDg1Ts6GYWYvXegbWyWAz8tscGqcpDM4bSfhmt8unYDZj8y1VtixXsO6zMp0sP09gwO3hBs3fhJMNeHKdPGCp3rtexOr9PbpZgLEc465dH2111H0UZaz49kOZDRrLl3OBQ2fxJ2qDkxn3vahmQh16a+HognuvOlfF9xv/Cz+Adt5UBXBM8XGAAAAAElFTkSuQmCC"},
+        {formula: <React.Fragment>CH<sub>4</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB+CAMAAAAz1J7+AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAFQSURBVGiB7dtBb4MgHIdhb37/rygQE0pkxkN3+4901bl1KhKHTt/foeEAfRQUFWNREHLkKFsPZWtVVtuIH8oiBhv7pHZn++S3x7nSfl/1WMPGzpM97x2ekWYPFRsbGxsbGxsbGxsb+xh2qfezyb9M6pO8Nia68pSRtIKh3GM9s6uXq84ZKfY9uK334bepMtuBvqm+kNdWIn1f1yIxM8x2thM3lH3UkG9ni5QRteLslavhoctX0pPGy1uAUmaiHw1+/PVSi8k3DS/bpN9nUv1mL7WY2e+V461T+ny7Y200mUZdxLezG7FDuZQuqx0mlGEmbUfneg47gO1nr1fuW//nsMPRJq425tZ9za657EL556naxc1wU0bavYO2vn1zkZfv7d80XPXZABsbGxsbGxsbGxv7ODZr9+TU4XsDbOy/tvne4FrjjY19fvsA3xuQpHwAR7dJrJdGRxkAAAAASUVORK5CYII="},
+        {formula: <React.Fragment>Cl<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAvCAMAAAAxdN89AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAG4SURBVFiF7VfLkoMgEPTm//8iYFBEjSFUvM0iIHGzoUIne8jBvjhJTVfzmmaoqgNfDFaWJoc2pPeThCU64b/c0FSSzy1RswYdkS0cX9K6Rq4iIlFAkC5PrUHvAo6JNRu3Lh3oTMbn8bNdMK2qMmTDhNrhVMYomX8ONbjwBw58EcRNKRnLWSqwrjGyNOShfcVMwX5KkSGz9mn5sZHI9EpN7sNRsRyZ2b15qcsQf2ii2geCvG9DYjly6+babkl888/VSTezEp6JiGXJ7iKxaffuYiP1iat0g4nlybzbnZS0jH9uIUQMJLvZP/zj8+vXyJOzaJ7n02vkyahY2cxQMQ7ml5LFoHZVzWK832N2E+8fkN/ky3baV7TWdj7QpNOfkgwmliU7B9l1djPR1Qe7umR+NG8W9QNZk733P0NSdu4WOlMRmizIrvJksdsy3utY4sxN0mil5thlYkYMk1WsnCAPXjE4uVEfXJ4fkQ8c+E+gL6DFmkAZaUS1zqGtqqpT2alfXdMb6toTgY/q9PKUm9m+wjUSViZkH2Gg3nGXwjd11YzxpuvmDtNyW7aEtWgszSj3fTBwTQ4A+AE2mzxG+fqJcwAAAABJRU5ErkJggg=="},
+        {formula: <React.Fragment>CO<sub>3</sub><sup>2&#8211;</sup></React.Fragment>,
+        lewis: "data:image/png;base64,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"},
+        {formula: <React.Fragment>NO<sub>2</sub><sup>&#8211;</sup></React.Fragment>,
+        lewis: "data:image/png;base64,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"},
+        {formula: <React.Fragment>SO<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAAuCAMAAAAyROZOAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAITSURBVFiF7VjbbsMgDM1b/v8XCSwNJKGMRtnbGbemYyqJqSZtmnJeggr2scHY1E1z4lfR8TS48N11D7D05bKjcty/8hvHAHyEwRW4kFRNsCKQAwuN/gO3INEtQE5vAOu/DICmqHKkGP1AgmgvW5Lqi5OQ2dR4J6X6zm7A4AfOk4UdrQ54T6TOjG+7xQaZVFDPXUxDlGAtjbzhk6yUOHHiX0MIUXcVmJP4GY5ew8P0ZEWrDRIz3YASB5v9r9rPGmLR8Gu1dikaRIPLHE5JTES9c4i0/SsQnGYuSdPsLXLIR9VhhlZm9OayhqIIFDlY8iOgi6tQxhw57yK9VtGzIoYCR5KH+WLkGHwxZQRXZ5jshKYdgb7AEaGyetuTtt4X+HmlPoT2OHQ2IwCKOh4vnF5pMVfmeIm9aVoVD1seL61htzT2sFhZGn2ZQ8YnWsIagvog5juxHfkY/DiK+WccETy7/RZrcxjz8kvYhLt0FPPPOLZteRi2kpIdf2Q4Rkt2ZQ6na2TbBClv6y1Zj7Q42eHo3emoVghpkZ3PrjKMTsJXOlqV2+HgOkWIbUmqnISpltjh4FJrraiaPFovMdIfBK9wnDjxPzHo+LedqYoXciU6mVoDl2teFd+QkrVCTX2tg0m12BV3ZHd+uP/g3tzEVkQ1fOsk1FXfOskaJOyaCi63C+mp8gpmLDExTov+he4FPzsmfwafbSYNV1RdMZ8AAAAASUVORK5CYII="},
+        {formula: <React.Fragment>SO<sub>3</sub></React.Fragment>,
+        lewis: "data:image/png;base64,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"}
+      ];
+      let i = Math.floor(Math.random()*highest.length);
+      let options = [];
+      let incorrectSelected = [];
+      while (options.length < 4) {
+        let i = Math.floor(Math.random()*others.length);
+        incorrectSelected.push(others[i].lewis);
+        options.push({text: (<p>{others[i].formula}</p>), correct: false, id: options.length});
+        others.splice(i, 1);
+      }
+      options.push({text: (<p>{highest[i].formula}</p>), correct: true, id: 4});
+
+      var description = (
+        <p>Which one of the following species contains a bond with the highest bond order?</p>
+      );
+
+      var feedback = (
+        <React.Fragment>
+          <p>The Lewis structures of the compounds are shown below:</p>
+          <p className="eqn">
+            {incorrectSelected.map(lewis => <img src={lewis} className="mr-3 mb-3 mt-3" alt="Lewis structure"/>)}
+            {<img src={highest[i].lewis} className="mr-3 mb-3 mt-3" alt="Lewis structure"/>}
+          </p>
+          <p>The highest bond order is 3 and is found in {highest[i].formula}.</p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 515,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 2,
+    "idInExam": 15,
+    "type": "MC",
+    "questionBody": function() {
+      let nEl = Math.floor(Math.random()*(3)) + 6;
+      let elements = [
+        ["S", "Se", "Te"],
+        ["Cl", "Br", "I"],
+        ["Xe", "Rn"]
+      ];
+      let i = Math.floor(Math.random()*elements[nEl-6].length);
+      let correctEl = elements[nEl-6][i];
+      let charge = "";
+      if (nEl === 6) charge = <sup>&#8211;</sup>;
+      if (nEl === 8) charge = <sup>+</sup>;
+
+      elements.splice(nEl-6, 1);
+      let incorrectEls = elements[0].concat(elements[1], ["Ne", "Si", "F", "O", "Ge", "As", "P", "B"]);
+
+      var options = [];
+      while (options.length < 4) {
+        let i = Math.floor(Math.random()*incorrectEls.length);
+        options.push({text: (<p>{incorrectEls[i]}</p>), correct: false, id: options.length});
+        incorrectEls.splice(i, 1);
+      }
+      options.push({text: (<p>{correctEl}</p>), correct: true, id: 4});
+
+      var description = (
+        <p>AF<sub>3</sub>{charge} is a T-shaped molecule. What could element A be?</p>
+      );
+
+      var feedback = (
+        <React.Fragment>
+          <p>One approach for solving this problem is to simply check all the options.
+          However, there is a better solution.</p>
+          <p>We know that fluorine always forms single bonds. Then A must use 3 of its valence electrons
+          to form the 3 bonds with F. In addition, since the molecule has T-shape, there are two lone
+          pairs on A. So far, A has (3 + 2 &#215; 2) = 7 valence electrons.
+          {nEl !== 7 ? " The overall charge cannot reside on fluorine, it must be on A. Thus, the 7 electrons include the effect of the charge, and the actual number of valence electrons that element A has is " + nEl + "." : ""}</p>
+          <p>Just find the group with {nEl} valence electrons and
+          take eny element except the one from the second period (second-period elements
+          cannot have extended octets with 10 electrons around them like in this case).</p>
+          <p>So, the correct element is {correctEl}.</p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 516,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 2,
+    "idInExam": 16,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>Which one of the following correctly describes the shapes of
+        SbF<sub>3</sub>, BeCl<sub>2</sub>, and BF<sub>4</sub><sup>&#8211;</sup>?</p>
+      );
+
+      var options = [
+        {text: (<p>SbF<sub>3</sub>: T-shaped, BeCl<sub>2</sub>: linear, BF<sub>4</sub><sup>&#8211;</sup>: tetrahedral</p>),
+        correct: false,
+        id: 0},
+        {text: (<p>SbF<sub>3</sub>: trigonal pyramidal, BeCl<sub>2</sub>: linear, BF<sub>4</sub><sup>&#8211;</sup>: tetrahedral</p>),
+        correct: true,
+        id: 1},
+        {text: (<p>SbF<sub>3</sub>: trigonal pyramidal, BeCl<sub>2</sub>: bent, BF<sub>4</sub><sup>&#8211;</sup>: tetrahedral</p>),
+        correct: false,
+        id: 2},
+        {text: (<p>SbF<sub>3</sub>: trigonal planar, BeCl<sub>2</sub>: linear, BF<sub>4</sub><sup>&#8211;</sup>: square pyramidal</p>),
+        correct: false,
+        id: 3},
+        {text: (<p>SbF<sub>3</sub>: trigonal planar, BeCl<sub>2</sub>: bent, BF<sub>4</sub><sup>&#8211;</sup>: tetrahedral</p>),
+        correct: false,
+        id: 4}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>The Lewis structures of the three molecules are shown below:</p>
+          <p>
+            <img src="data:image/png;base64,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" className="mr-3 mb-3 mt-3" alt="SbF3"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAuCAMAAAAFpus/AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJhSURBVFiF7Vhde7MgDPWO//8XEeqKFuuoj7vLwoeU7S1KfKe7mOemWSU7pwkkwao68UdQq8Ybb/rtADoR2K7mLgqWvwM4VQIAStb/HxRAbz/5A0CvL69R1M0aDRrNvtIQPcDojEegXcEd4BKM+46yAubYVazXRZm61Lvq+Qaxf35OnDjxi6gbpaZQe6SSJS7o4cA2FCMSncTqbdE7BwWqhCH4IFqitgwdvz5LM1e3+Q+s3dAppfGDUdR1LnY9VV6Obm72Yc27t7C5+ud8AOAEdTL6c4K4HB2HpOvaVszDt3Nj4caGgaquMsESU9xMeeTpYrNHXEbonDHBEF2ZbjaoG5zF/W7SK3FcoEubPRczy/TVf0NmK5+nTnWQkGfcSHQA3060Wy7ZEurqy6nwm3vgXqRlf+3Gs3REdQMs4Vr9U1EM+LxIF7zXbuyn1F0/liCT2GFl6Nx4Haqzy/NrN0FXZ2jLI+K+w2QqDNkTi255Ot7q+Ej0xp9snW7TSW44swyTKWPs1LJ3nq4FMPODG8DDHf7m+Z3NT01Xh8rsba7EaYlOzxU4VYflMf6a3l5HyOoc4Vxk+Urs8nTCjNFV3E3oahMmxevU7ja7Yd+1Li+ugOq1KyqVrrMl3rdl+/uJU4D15r4aa9UagLWJikrHTBhpXDTIE5SfhEInM+s3VDIdNvCt02cT5dh/UuS6he7EiRMJOOVicDSdGkffhmp1WVn6E4h06R0xj0eYt+2r0gNeraV0BbWuD3c1hgX8Y19lKZ2dCQvakrh1vjkOMB5QuEXX+o1nYCS9Q5fHHg92LN2J38UnDxN9yvCmha0AAAAASUVORK5CYII=" className="mr-3 mb-3 mt-3" alt="BeCl2"/>
+            <img src="data:image/png;base64,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" className="mr-3 mb-3 mt-3" alt="BF4-"/>
+          </p>
+          <p>These Lewis structures, correspond to the following VSEPR types and shapes:</p>
+          <ul>
+            <li>SbF<sub>3</sub>: AX<sub>3</sub>E<sub>1</sub>, trigonal pyramidal;</li>
+            <li>BeCl<sub>2</sub>: AX<sub>2</sub>, linear;</li>
+            <li>BF<sub>4</sub><sup>&#8211;</sup>: AX<sub>4</sub>, tetrahedral.</li>
+          </ul>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 517,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 2,
+    "idInExam": 17,
+    "type": "MS",
+    "questionBody": function() {
+      let molecules = [
+        {formula: <React.Fragment>BrF<sub>3</sub></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: false,
+        fb: "all the bonds are spread evenly, their dipole moments cancel out"},
+        {formula: <React.Fragment>CF<sub>4</sub></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: false,
+        fb: "all the bonds are spread evenly, their dipole moments cancel out"},
+        {formula: <React.Fragment>CH<sub>2</sub>F<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: true,
+        fb: "even though the bonds are spread evenly, they are different bonds: the dipole moments of C-H bonds are smaller in magnitude than the dipole moments of the C-F bonds. Therefore, they do not cancel each other"},
+        {formula: <React.Fragment>CH<sub>3</sub>F</React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: true,
+        fb: "even though the bonds are spread evenly, they are different bonds: the dipole moments of C-H bonds are smaller in magnitude than the dipole moment of the C-F bond. Therefore, they do not cancel each other"},
+        {formula: <React.Fragment>CO<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAAaCAMAAACtr6P1AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEWSURBVEiJ7ZXBDsIgEES59f9/sUBIKEJIDz2uK7WEWhcWG73YuRgDMw+WpQhx6dJ/ajQBAGan+RbtZrR4voNkaNgURmZU2ByO6SAZBpdkpBDK4phkwXHi8nR4FpxkSNzAlhohcrICxDGnDgwDzfDF8nFTBn9ukdRjGKuYq+eSm54fJ4KR/xSVsGlag+7yRtCuRJv+jrFK7wqhANp1jKxqF6IZFkI5EUA1wwA6rmadcRhpJ5+na3Lkp3sfdmci05k0ui4czr3Rde8Yq177MbTpU9HzAoLs7vmiEo66i6RUEbZwLkmFcepbhwuxDEOF0f+dxzCw2DlqAt5yaww95/eHBceQ2Psq1hjG977vydHzvn/AuPQl3QEbpEcM/98VRwAAAABJRU5ErkJggg==",
+        polar: false,
+        fb: "the bonds are opposite of each other, their dipole moments cancel out"},
+        {formula: <React.Fragment>NO<sub>2</sub><sup>&#8211;</sup></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: true,
+        fb: "the bonds are all in the bottom part of the structure, their dipole moments do not cancel out"},
+        {formula: <React.Fragment>SF<sub>2</sub></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: true,
+        fb: "the bonds are all in the bottom part of the structure, their dipole moments do not cancel out"},
+        {formula: <React.Fragment>SF<sub>3</sub><sup>+</sup></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: true,
+        fb: "the bonds are all in the bottom part of the structure, their dipole moments do not cancel out"},
+        {formula: <React.Fragment>SO<sub>3</sub><sup>2&#8211;</sup></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: true,
+        fb: "the bonds are all in the bottom part of the structure, their dipole moments do not cancel out"},
+        {formula: <React.Fragment>XeF<sub>4</sub></React.Fragment>,
+        lewis: "data:image/png;base64,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",
+        polar: false,
+        fb: "all the bonds are in the same plane and equidistant from each other, their dipole moments cancel out"}
+      ];
+      let selectedMolecules = [];
+      var options = [];
+      while (selectedMolecules.length < 4) {
+        let i = Math.floor(Math.random()*molecules.length);
+        selectedMolecules.push(molecules[i]);
+        options.push({text: (<p>{molecules[i].formula}</p>), correct: molecules[i].polar, id: options.length});
+        molecules.splice(i, 1);
+      }
+
+      var description = (
+        <p>Which of the species below are polar (have a net dipole moment)?</p>
+      );
+
+      var feedback = (
+        <React.Fragment>
+          <p>Every bond between the atoms of two different elements is polar. However,
+          the polarity of a molecule as a whole depends on its geometry.
+          Dipole moments are vectors, and one can use vector summation rules to
+          determine if the net dipole moment is zero. If you are not familiar with
+          vector summation, you can just check if the bonds are evenly spread in a molecule.
+          Draw the structure and see if one side of the molecule has a larger &ldquo; concentration&rdquo;  of
+          bonds than the other.</p>
+          <p>The geometries of the molecules are shown below:</p>
+          <p className="eqn">
+            <img src={selectedMolecules[0].lewis} className="mb-3 mt-3 mr-3" alt="molecular geometry"/>
+            <img src={selectedMolecules[1].lewis} className="mb-3 mt-3 mr-3" alt="molecular geometry"/>
+            <img src={selectedMolecules[2].lewis} className="mb-3 mt-3 mr-3" alt="molecular geometry"/>
+            <img src={selectedMolecules[3].lewis} className="mb-3 mt-3 mr-3" alt="molecular geometry"/>
+          </p>
+          <p>In {selectedMolecules[0].formula}, {selectedMolecules[0].fb}. It is {selectedMolecules[0].polar ? "polar" : "non-polar"}.</p>
+          <p>In {selectedMolecules[1].formula}, {selectedMolecules[1].fb}. It is {selectedMolecules[1].polar ? "polar" : "non-polar"}.</p>
+          <p>In {selectedMolecules[2].formula}, {selectedMolecules[2].fb}. It is {selectedMolecules[2].polar ? "polar" : "non-polar"}.</p>
+          <p>In {selectedMolecules[3].formula}, {selectedMolecules[3].fb}. It is {selectedMolecules[3].polar ? "polar" : "non-polar"}.</p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+
   //////////////////////////////////////// 1301 MIDTERM 2013 ///////////////////////////////////////////////////////////////////////
   {
     "_id": 100,
@@ -9840,6 +10857,55 @@ export const newQuestions = [
         answer,
         label: (<React.Fragment>orders</React.Fragment>),
         units: ""
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 334,
+    "courseId": "1302",
+    "examName": "Final 2015",
+    "chapterId": 5,
+    "idInExam": 34,
+    "type": "numeric",
+    "questionBody": function() {
+      let kString = (Math.random()*(197 - 105) + 105).toPrecision(3);
+      let k = Number.parseFloat(kString);
+      let cString = (Math.random()*(0.0900 - 0.00500) + 0.00500).toPrecision(3);
+      let c = Number.parseFloat(cString);
+      let answer = k*c;
+      let ansString = answer.toPrecision(3);
+
+      var description = (
+        <p>For the reaction A &#8594; Products, a plot of ln[A] as a function of time
+        gives a straight line with a slope of &#8211;{kString}&nbsp;s<sup>&#8211;1</sup>.
+        What is the rate of the reaction when [A] = {cString}&nbsp;M?</p>
+      );
+
+      const eqRateLaw = `\\ln{[\\text{A}]_t} = -kt + \\ln{[\\text{A}]_{\\circ}}`;
+      const eqRate = `\\begin{eqnarray*}
+        Rate & = & k[\\text{A}] \\\\
+        & = & (${kString} \\text{ s}^{-1})(${cString} \\text{ M}) \\\\
+        & = & ${ansString} \\text{ mol L}^{-1}\\text{ s}^{-1}
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>A straight-line plot of ln[A] as a function of time indicates
+            that the reaction is first order and its integrated rate law is</p>
+            <MathJax.Node formula={eqRateLaw}/>
+            <p>Therefore, the slope is just the negative of the specific rate
+            constant.</p>
+            <p>Given the <i>k</i> value from the slope, use the rate law to find the rate:</p>
+            <MathJax.Node formula={eqRate}/>
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: (<React.Fragment><i>Rate</i></React.Fragment>),
+        units: "mol/(L s)"
       }, feedback};
     }()
   },
