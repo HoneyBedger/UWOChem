@@ -4,11 +4,26 @@
 /* Jumbotron */
 /*************/
 .jumbotron>.container-fluid {
-  background-image: url(./images/background_molecules.jpg);
+  background-image: url("./images/background_molecules.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/*************/
+/* Profile   */
+/*************/
+.profile-header {
+  background: url("./images/connectwork.png") repeat-x;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 3;
+}
+.profile-header>div {
+  background-color: green;
+  opacity: 0.5;
+  line-height: 3;
 }
 
 
@@ -186,7 +201,6 @@ button, .btn {
 }
 .droppable-target {
   background-color: rgba(255,255,255, 0.3);
-  height: 2.5rem;
 }
 
 

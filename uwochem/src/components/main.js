@@ -5,6 +5,7 @@ import HomePage from './homePage';
 import Practice from './practice';
 import PracticeCourse from './practiceCourse';
 import PracticeExam from './practiceExam';
+import UserProfile from './User/Profile';
 import {EXAMS} from '../shared/exams';
 import {CHAPTERS} from '../shared/chapters';
 
@@ -19,6 +20,7 @@ class Main extends Component {
   }
 
   render() {
+    //TODO: Secure routing for user profile
     return (
       <React.Fragment>
         <Header />
@@ -36,6 +38,7 @@ class Main extends Component {
             type="chapter" id={Number.parseInt(match.params.chapterId)}
             chapterName={this.state.chapters.filter(chapter => chapter.courseId === match.params.courseId
                 && chapter.id === Number.parseInt(match.params.chapterId))[0].name} />} />
+            <Route path="/profile" component={UserProfile} />
           <Redirect to="/home"/>
         </Switch>
       </React.Fragment>

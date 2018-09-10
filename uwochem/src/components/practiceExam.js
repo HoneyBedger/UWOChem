@@ -21,7 +21,7 @@ class PracticeExam extends Component {
   }
 
   fetchQuestions() {
-    return fetch('http://localhost:3000/questions')
+    return fetch('/questions')
     .then(response => {
       return response.json();
     })
@@ -52,7 +52,9 @@ class PracticeExam extends Component {
       this.setState({
         isLoading: false,
         questions: questionsFiltered,
-        selectedQuestion: questionsFiltered[0]
+        selectedQuestion: questionsFiltered[0],
+        selectedQuestionCorrect: undefined,
+        questionsAnswered: new Map() // key = questionId, value = {correct: true/false, studentAnswer: String}
       });
     })
     .catch((err) => {
@@ -61,7 +63,8 @@ class PracticeExam extends Component {
         isLoading: false,
         errorLoading: true
       });
-    });*/
+    }); */
+
     if (!newQuestions || newQuestions.length === 0) {
       this.setState({
         isLoading: false,
@@ -82,7 +85,7 @@ class PracticeExam extends Component {
         selectedQuestionCorrect: undefined,
         questionsAnswered: new Map() // key = questionId, value = {correct: true/false, studentAnswer: String}
       });
-    }
+    } 
   }
 
   selectQuestion(question) {
