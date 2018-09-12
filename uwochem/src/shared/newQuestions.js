@@ -3749,7 +3749,7 @@ export const newQuestions = [
           <p>CCl<sub>4</sub> can be prepared by:</p>
           <p className="eqn">CS<sub>2</sub> + Cl<sub>2</sub> &#10230; CCl<sub>4</sub> + S<sub>2</sub>Cl<sub>2</sub>&#160;&#160;&#160;(unbalanced)</p>
           <p>A reaction performed using {mCS2}&nbsp;g of CS<sub>2</sub> and {mCl2}&nbsp;g of
-          Cl<sub>2</sub> gave CCl<sub>4</sub> in a {y}% yeild. What mass of
+          Cl<sub>2</sub> gave CCl<sub>4</sub> in a {y}% yield. What mass of
           CCl<sub>4</sub> was produced by the reaction?</p>
         </React.Fragment>
       );
@@ -4384,9 +4384,9 @@ export const newQuestions = [
     "questionBody": function() {
       let molecules = [
         {formula: <React.Fragment>BrF<sub>3</sub></React.Fragment>,
-        lewis: "data:image/png;base64,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",
-        polar: false,
-        fb: "all the bonds are spread evenly, their dipole moments cancel out"},
+        lewis: "data:image/png;base64,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",
+        polar: true,
+        fb: "the bonds are on the right-hand side of the structure, their dipole moments do not cancel out"},
         {formula: <React.Fragment>CF<sub>4</sub></React.Fragment>,
         lewis: "data:image/png;base64,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",
         polar: false,
@@ -4439,12 +4439,12 @@ export const newQuestions = [
 
       var feedback = (
         <React.Fragment>
-          <p>Every bond between the atoms of two different elements is polar. However,
-          the polarity of a molecule as a whole depends on its geometry.
+          <p>Every bond between atoms of two different elements is polar. However,
+          polarity of a molecule as a whole depends on its geometry.
           Dipole moments are vectors, and one can use vector summation rules to
           determine if the net dipole moment is zero. If you are not familiar with
           vector summation, you can just check if the bonds are evenly spread in a molecule.
-          Draw the structure and see if one side of the molecule has a larger &ldquo; concentration&rdquo;  of
+          Draw the structure and see if one side of the molecule has a larger &ldquo;concentration&rdquo;  of
           bonds than the other.</p>
           <p>The geometries of the molecules are shown below:</p>
           <p className="eqn">
@@ -5102,7 +5102,233 @@ export const newQuestions = [
       return {description, options, feedback};
     }()
   },
+  {
+    "_id": 531,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 4,
+    "idInExam": 31,
+    "type": "MS",
+    "questionBody": function() {
+      var description = (
+        <React.Fragment>
+          <p><i>Oxycodone</i> is structurally related to <i>morphine</i> and <i>heroin</i>.
+          Which set of functional groups is found in all three compounds?</p>
+        <p className="eqn"><img style={{maxWidth: "90%"}} src="data:image/png;base64,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" alt="opioids"/></p>
+        </React.Fragment>
+      );
 
+      var options = [
+        {text: <p>ether</p>, correct: true, id: 0},
+        {text: <p>alkene</p>, correct: false, id: 1},
+        {text: <p>ester</p>, correct: false, id: 2},
+        {text: <p>hydroxyl</p>, correct: false, id: 3},
+        {text: <p>carbonyl</p>, correct: false, id: 4},
+        {text: <p>aryl</p>, correct: true, id: 5},
+        {text: <p>primary amine</p>, correct: false, id: 6},
+        {text: <p>tertiary amine</p>, correct: true, id: 7}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>All three componds contain an aryl group (benzene ring),
+          an ether group (R&#8211;O&#8211;R), and a tertiary amine group
+          (R<sub>3</sub>N). Note that the double bonds in the benzene
+          ring are not alkene bonds.</p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 532,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 4,
+    "idInExam": 32,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>When a bond absorbs an IR photon and undergoes a vibrational excitation...</p>
+      );
+
+      var options = [
+        {text: <p>the maximum bond length becomes shorter.</p>, correct: false, id: 0},
+        {text: <p>the bond vibration frequency decreases.</p>, correct: false, id: 1},
+        {text: <p>the minimum bond length becomes longer.</p>, correct: false, id: 2},
+        {text: <p>the electrons are promoted into a higher-energy orbital.</p>, correct: false, id: 3},
+        {text: <p>the average bond length remains about the same.</p>, correct: true, id: 4}
+      ];
+
+      var feedback = (
+        <p>When a bond absorbs an IR photon, its vibrational level increases, and
+        the bond starts vibrating with a larger amplitude. This means that
+        the minimum bond length becomes smaller and the maximum bond length becomes larger.
+        However, the <i>average</i> bond length remains the same.</p>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 533,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 4,
+    "idInExam": 33,
+    "type": "string",
+    "questionBody": function() {
+      var description = (
+        <p>How many constitutional isomers are possible for a secondary amine that
+        has the molecular formula C<sub>4</sub>H<sub>11</sub>N?</p>
+      );
+
+      let answer = RegExp('^\\s*3\\s*$')
+
+      var feedback = (
+        <React.Fragment>
+          <p>Start with a straight carbon chain with the &#8211;NHCH<sub>3</sub> group at
+          the end and draw all possible constitutional isomers, by changing the
+          carbon skeleton and moving the amino group.</p>
+          <p>
+            <img style={{maxWidth: "30%"}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAA8CAMAAAD48GC1AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJTSURBVGiB7ZjbboMwDIZ7x/u/YiiHQQdtaaTdeUkIh9GcMWzR8kmVooq6P84f23C5JP4FTTMvq6b4RSE+AMzLHhrDhX+JJPoskuiziFR0MzFEJHpFPKKjzPS8jMnT8zKJPpQk+iyS6LOI8iEgcRYA7bSMx9NsTJqcHJXogYzLqERPBolJdDYZJCbRl04aJCrRRBrkMNHFB8ENyNs4M0h2OUx0/gnPoUYNKWaPDoAcJJq0FB78gzkiCNHMIN0xoqsBeJZZtuEzR4s6TnnCIPiir3eg7ejn4gEULbwcTW/MINiiCUtvv6S3fsFQ4USWoskAHbLohhm5XH9Bvijcrxihp4eAYnpZU+GUp+wJr7eSkfcAtz3xybhV85NLO4rO6ft/+XPtgSrVlexewvezflFht1k0M4jIdLO/PJEbhV7ng+YFzywo7HKWl2fEQr7LI3vLU22WZbwlPaJqGqy1qlT+lA+rAbh5vvzi8x5lO8S8JwSVJ37UTPlY4nsdHTc9Lne261dvBdGA+87bPKSg9tmfTesxX+h+xgq7OzeX09Z+2YJbAn22RGCpA2uCak49jlMGlD3KJoV1Xqc9DKzuxDy0BpQZQe7yu8qaMX18/dERBT2wYVh3iHszJB+SUjO0enhTBeu8+rOwJx8S1dDq0KMskJv2lBlvyDn+dmh17FEWNOWpDDjcSvL1WBjW2VQoOmmuG0BDyOah1atH2djcvyiHKPmQjEOr6FGI70l+lKdi3+FWwc90h/rYLuBpkErJcMBbkuv9gfqCRFIPyHnYgOm3RMKdb1jqrnGsJ6glAAAAAElFTkSuQmCC" className="m-3" alt="isomer"/>
+            <img style={{maxWidth: "30%"}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAABwCAMAAAD2UBgpAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIYSURBVGiB7ZndjoIwEEa58/1fsQV0qwgViN7Ntggu2Z1IZySBbL5zZZTCgfnpELMMABAoXDF9tM5taZI5el2/INrSBCosUOHYlUrtRi6bq8zZWGVHT2VHuQKVv0CFAyocOxqdAEfYg+z4cetcCSr1flTovh+VMUTbqzg/hmgHKvkYoh2oTFUkVsnXV8k8eYXKkWq7fJRQJYTIyVXyhvqHWVklhihX5Mqxpe60ssoQIk3aup58sXyYRCWGSFVBtiKq1kmZaV65h4rWFXPhqT9/mjJmppLVz1cy0xzE5zm11B4/ESl9NVexT5Wyp1rcL8yjp0bdZWwdKnGuEkNE0w/i5x1WUaWKkjlPtzGbbesxVw43TYmWIWUUA+lScF1HvpSftaNWmGj5sr8Jr/JXcYmaiyzRTJUU1djV5SWah0S7pK5Kb4+hq7fylImJ9pV0oOj0TlWi8WYXEy2X1qlNC+YvYgq8Hx+GpJKmYqEq0YXx4aQq0GHdTb4XvBkfQgPqlG/Esasr9oIzXx9WUmNrLefGh58ur6ZU7QXD+DD/4uMtfEC/F7yundDl01AV4Gx8SOzyaej2gnF8WHMIjuj2gjg+3DQL3xNvTv6UnW/WfGEaMdVVscq3q4togQoHVDigwgEVDqhwQIUDKhxQ4YAKB1Q4oMIBFQ6ocECFAyocUOGACgdUOKDCARUOqHBAhQMqHFDhKDT/+4P/wTckRqr3oDfFUAAAAABJRU5ErkJggg==" className="m-3" alt="isomer"/>
+            <img style={{maxWidth: "30%"}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALUAAAA1CAMAAAAwPVpDAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIcSURBVGiB7ZjbjoIwEIa98/1fsYWFrUAFJHo3O+UQBQo9MJh00y8xJEamP3P4W7xcIhFCfn/OiMoFOyPsSNY2IDl1VPbq6k5QR51I7tC91Ic2MfkDWoGfjDTqCCuhz3PWwiOnC/tTg8oz5hvuCV3YEcxGPfa06KBOaaLyCqAcSscldAVtFa8NPN6dxzHtJUF7s9sswfNFDpOs0pBiXW9Hw+btspmxoA2RSbGiA7lqufWSjvQPvuyIfi0Kk1IjftV8vyivI2yryRIKkxpHXAvOzzRKruwN9GGTMunCZ/KZH9TV7uk6ZFI2PYD90+j6ZwfVA6uGXqzsb1K5ISPjAtpZ3RdkMW/aWTVjf5vyRev5+disDHiYlFuJ1PZgNT/WP+w1uJqU8zhYpdCpKIqP/d6Mj/Wo4lS7xfHaQPaMd4avzRuswcNs7O9jhdWIa9mxYU9j7xW9jCYlPDMy3Y7zoEn3wUOoYR6OHxV5WakLS4fksFSVLXFz9A1hG1Vcn0e9SQH4cO2TUB0o38iGSZG+AqFqOVzJTvlq4FYmlZO+bqJqeF5IVWtMytoWLUG1teoRUtVLkyq9z8kboNpE9Qix6rlJiZr4nV6pfWKPkKvGPbgijvimVyuB06s+k14tBxmgauyRKkDV2CMhquZhqU7ksGNl8pQ/SiMfcJHOrmEwOV6IzhdVf4NQVUuhKKLq0wm1Q6LqbxFVf48wzyGRf8QfO+5yBB3wrckAAAAASUVORK5CYII=" className="m-3" alt="isomer"/>
+          </p>
+          <p>Any further attempts lead to the isomers that we already have. So, there are 3 constitutional
+          isomers.</p>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: "",
+        units: "isomers"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 534,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 4,
+    "idInExam": 34,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <React.Fragment>
+          <p>Which one of the following is the same chemical compound as the one
+          shown below?</p>
+        <p className="text-center"><img src="data:image/png;base64,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" alt="structure"/></p>
+        </React.Fragment>
+      );
+
+      var options = [
+        {text: (<p><img  src="data:image/png;base64,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" alt="another structure"/></p>), correct: true, id: 0},
+        {text: (<p><img src="data:image/png;base64,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" alt="another structure"/></p>), correct: false, id: 1},
+        {text: (<p><img src="data:image/png;base64,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" alt="another structure"/></p>), correct: false, id: 2},
+        {text: (<p><img src="data:image/png;base64,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" alt="another structure"/></p>), correct: false, id: 3},
+        {text: (<p><img src="data:image/png;base64,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" alt="another structure"/></p>), correct: false, id: 4}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>There is a number of methods to approach this problem.
+          The most straighforward one is to construct each structure using a
+          molecular kit and compare. When constructing them, remember that
+          rotations around the C&#8211;C bond do not change the coumpound.
+          Instead of molecular kit models, you can look at the 3D structures
+          shown below (click and drag to rotate them).</p>
+          <p>However, modeling all 6 molecules is quite time-consuming. Instead, you can
+          convert each Newman projection into a Fischer projection: rotate to create a staggered
+          conformation with CH<sub>3</sub> and CH<sub>2</sub>CH<sub>3</sub> behind each other,
+          then look at the molecule from the top to write the Fischer projection.
+          </p>
+          <p>Finally, notice that all the structures have the same connectivity:
+          one carbon is attached to H, CH<sub>3</sub>, and Br, and the other one
+          is attached to H, Cl, and CH<sub>2</sub>CH<sub>3</sub>. Therefore,
+          the only difference between the listed structures is their stereochemistry.
+          There are two chiral carbons (labelled 1 and 2 below), and if the configurations
+          of both carbons match those in the target structure, the two structures
+          represent the same compound.</p>
+          <p>All three methods are shown below.</p>
+          <p><b>Target structure</b></p>
+          <p className="eqn"><img style={{maxWidth: "80%"}} src="data:image/png;base64,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" alt="target structure"/></p>
+          <iframe style={{width: "500px", height: "300px"}} frameborder="1" src="https://embed.molview.org/v1/?mode=balls&smiles=[C@@]([H])(Cl)([C@@]([H])(Br)C)CC&bg=white"></iframe>
+          <hr/>
+          <p className="eqn"><img style={{maxWidth: "80%"}} src="data:image/png;base64,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" alt="structure" /></p>
+          <iframe style={{width: "500px", height: "300px"}} frameborder="1" src="https://embed.molview.org/v1/?mode=balls&cid=13663927&bg=white"></iframe>
+          <hr/>
+          <p className="eqn"><img style={{maxWidth: "80%"}} src="data:image/png;base64,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" alt="structure" /></p>
+          <iframe style={{width: "500px", height: "300px"}} frameborder="1" src="https://embed.molview.org/v1/?mode=balls&smiles=[C@@](Br)([H])([C@@]([H])(Cl)CC)C&bg=white"></iframe>
+          <hr/>
+          <p className="eqn"><img style={{maxWidth: "40%"}} src="data:image/png;base64,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" alt="structure" /></p>
+          <iframe style={{width: "500px", height: "300px"}} frameborder="1" src="https://embed.molview.org/v1/?mode=balls&smiles=[C@@](Br)([H])([C@@]([H])(Cl)CC)C&bg=white"></iframe>
+          <hr/>
+          <p className="eqn"><img style={{maxWidth: "40%"}} src="data:image/png;base64,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" alt="structure" /></p>
+          <iframe style={{width: "500px", height: "300px"}} frameborder="1" src="https://embed.molview.org/v1/?mode=balls&cid=13663928&bg=white"></iframe>
+          <hr/>
+          <p className="eqn"><img style={{maxWidth: "40%"}} src="data:image/png;base64,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" alt="structure" /></p>
+          <iframe style={{width: "500px", height: "300px"}} frameborder="1" src="https://embed.molview.org/v1/?mode=balls&smiles=[C@@]([H])(Cl)([C@@]([H])(Br)C)CC&bg=white"></iframe>
+          <hr/>
+          <p>So, the last structure is identical to the target one.</p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 535,
+    "courseId": "1301",
+    "examName": "Final 2014",
+    "chapterId": 4,
+    "idInExam": 35,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <React.Fragment>
+          <p>An unknown compound with the molecular formula C<sub>6</sub>H<sub>10</sub>O
+          has the IR spectrum shown below.</p>
+        <p className="eqn"><img style={{width: "80%"}} src="data:image/png;base64,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h4WFYXr16lURklCqVKlG5mQFEZG+cAwWkRPcSbCQK2CakpIiQguXL1/GNDw8XIRERFSk8BIhkRPcSbDq16+PqfEil0UP1po1azAVbYiIqKjhJUIiJ7iTYD300EOYfvDBBzmmHzBNSkrKO++8g5k+ffqIEiIiKlJ4iZDICe4kWEOHDm3QoMGaNWvuueeexMRE0YOVlJQ0d+7chg0b7tu3r06dOkOGDBGNiYioSAkMVNq1U6dGTLCIrLiTYAUHBy9ZsqRJkyZLly5t37696MeqVq3ao48+ijSrdu3aixcvDg0NFY1J2Llz513mZAURke4kJio3bsh5YIJFZMWdBAuio6M3btw4a9asLl26REVFBQQElC1btk2bNh9//PGWLVtq1Kgh21EepKHXzckKIiJ9EYkULxESOeRnMBjkLHlNx44dMV27dq0IiYh07OhRBWfRX32lDBwoSzZvVpo3VxYvVnr0kCVE+uTB47WbPVhERFRMsQeLyAnuJFhNmzadPn16cnKyjImIqPgQiZRIqgQmWERW3Emwtm3bNmzYsCpVqgwYMGDVqlW8yEhEVIzwPlhETnAnwfrhhx/uvvvuzMzMefPmde7c+dZbbx03blxSUpKsJiKiIoyXCImc4E6C9eCDDy5fvvzYsWPvvPNObGzs0aNHx44dW7169W7duv34449IvGQ7MpGWlnbYnKwgItIX9mAROcGdBEuIjo5GXoVEYeXKlf369QsKCkLW9dBDD1WpUuWll17avXu3bEeaf/75J86crCAi0hf2YBE5wWO3aUhJSfn222+/+OKLbdu2iRKOzTLq2LHjuXPnXn/9dRlrHn30UTlHRKQjV64oZcsqH32kvPSSLFm2TOneXfn7b6VFC1lCpE++eJuGsmXLPvfcc1u3bv3yyy95G3drFStWREZlSlYQEemL6KniJUIihzyWYKWkpMyYMSM+Pn7QoEFpaWmylIiIihheIiRyws0mWAaDYfXq1QMGDKhcubLowYqMjHzhhRd27twpWxARUVHCQe5ETnA/wUpKSho3btytt9565513zps3LzMz8+677/7+++9Pnz79ySefNGjQQLYjIqKihD1YRE5wJ8H68ccfu3XrVr169bFjxx49ehQz77zzzrFjx8S3CIOCgmQ7IiIqetiDReQEd75F6Ofnh2lISMj9998/ePDgO++8U5SQPR07djx8+PDDDz8sY82HH34o54iI9AU51tixyttvy/Dbb5VHHlEOHlR4AxrSOQ9+i9CdBKtJkyZPPPHEgAEDypUrJ4vIIbxh69evR0oqY83169flHBGRvgQEKKNHK+PGyXDOHGXgQOXIESU2VpYQ6VMh36ZB/BYhsyuXtG3bFhmVKVlBRKQ7/v4cg0XkmPuD3ImIqJgqUYJjsIgcY4JFREQuYg8WUX6YYBERkYvYg0WUH6cSLL88FqFjojERERU1yKWYYBE5xB4sIiJyES8REuXHqQTLkMcidEw0JiExMbGkOVlBRKQ7vERIlB/2YBWQW265ZZg5WUFEpDvswSLKjzs3GiVXefDGZUREhe+WW5QePZSZM2U4YYLy+utKRobCn0ojnSvkG43mO4Y93wZERKRj/hzkTpQPXiIkIiIX2bxEKH4Emog0nv88XLt2DdPg4GAREhFRUWM9yB0lvHBBZMLDCRayq08//RQzMTExooSIiIoa6x4sXh8kMudsgiWGVQnWJUbh4eEjR45E7YABA0QzEs6dO/e1OVlBRKQ71j1YTLCIzDn7LUIkT3LOodDQ0Li4uL59+7722msBAQGytNjr2LFjQkKCDPLw+5tEpFf16qn/fvhBhq++qnz6qXL9ugyJdKsQvkWo3jk0j3WJ0Y0bN3bu3Pn6668zu7LQsmXLI+ZkBRGR7lhfIuQIdyJz/EgUkJCQkFhzsoKISHcsLhEi2eIlQiJz7iRYorNKBkREVNxwkDtRftiDRURELrLowSpXTomPl/NEpHE/wVq+fPkDDzxQrVq1kJAQ8RVCC7IdEREVMf7md3I/e1bZvVvOE5HGzQRr+PDh3bp1W7BgQVJSUkZGhiwlIqLioEQJy0uE/GITkTl3Eqyff/552rRpISEhn3/++eXLl0VhVlbW7t2777//fsyPHj2ag7QsbNu2rZU5WUFEpDsWPVjZ2RyDRWTBnQQLeRWmyKKGDBlSrlw5URgQEFCvXj3kXm3atJkwYcLSpUtFeQHIzc2dPn16ixYtwjWYmTFjBgpltXOOHz8+bNiwuLg4JI6RkZGdOnX69ttvZZ0t6enpn3zySdu2baOiooKCgmrUqIG18ddff8lqK1g/Zc3JCiIi3bEe5M4eLCJzzt5o1BRSiosXLx44cKBmzZoIxXArJDRiZsWKFXfffXfPnj1/++03tbWXZWZm4m/98ccfMs7TtWvXRYsWBQYGytihlStX9u7dW/yKoqm+ffsizSphdX+XvXv39urVy+a9rGyuTw/euIyIqPDdcYeaVBnvn9y3r7Jjh7JvnwyJdKsQbjRqKiUlBdPo6GgRinuKpqeni7BRo0aYbtq0SYTeNnr0aGRXyPnmzZuHJwaYQbh8+fIxY8bIRg6dOnWqT58+yK4GDRqErDEjIwPTgQMHomr+/Pnjx48XzYySkpI6deqE7Kpbt27IzJKTk/GQQ4cOTZs2rUmTJrIREVERZt2DxUuERBbUW1q5qEyZMnhgamqqCCMjIxEePXpUhNe1X0sIDAwUoVchNwoKCvL390c+J4s0//zzDwpDQkLOnj0ri+x7+eWX8YR79Ogh4zxdu3ZFeVhY2MWLF2WRpnv37igfPny4jJ3QQSMDIiK9u+suw+23y3m47z5Do0ZynkjPPHi8dqcH67bbbsPUeIGsTp06mG7dulWE27Ztw1QkYd62YMGCzMzM++67r1mzZrJI07x5cxSmp6ejgSyyb9myZZiOGjVKhEajR4/GFHnkL7/8Ikpgx44dS5cujY2N/fDDD2UREVFxYzHInT1YRFbcSbA6deqEaWJiogh79uyJ6XvvvZekefXVVxG2b99eq/QucZUUuZQITd17772Yrl69WoQOHDt2DNO6deuK0Kh+/fpiZuXKlWIGxMj3J554IigoSJQQERU7HOROlB93EqyHH34Y06+//lqEzzzzTExMzLZt26ppNm7cGBwc/Oabb4par9q7dy+mjRs3FqEpUbjPiUGXhvyG+e/Zs0fOKYr4nuAdd9yBmXvuuad8+fKhoaFxcXFYCYcPHxZtbDp//vw8c1utyKZERD7O4k7uvE0DkTVxpfAmHTt27MEHHyxbtmxISEjbtm3//PNPWeFl4mYHKSkpMjaRnJyMqoiICBnbJ74LuX79ehnnWbdunbqCFCUyMlIWGQwVK1ZEyQcffOBvtTcpWbLk4sWLZTtzHTp0kI0ckq2JiHzc/febDbq6805Du3ZynkjPPDgGy53bNPiOoKCgLI34JqMpFKIW8r3R/HPPPTdjxoxevXotWrRIFml69Ogh7uZluhBkkJgPDAzE8gcNGjR69OiYmJjjx4+PHz/+66+/LlWq1K5du6pXry4aG3Xs2BE56COPPCJjTYsWLeRcnnvuuUfOERH5sj59lH//VXbtkmHHjoqfn7JmjQyJdMuDt2lggqUcOnSoYcOGaWlpQ4YMGTlypEiYJkyYMHv2bJFIIalCrWgs/iJmrG/01a1bt+XLlw8fPnzKlCmyKA/vg0VERcrDD6vZlTZIQ9WuHc4+Fav7ERLpTiHfB8t3hIWFYZqamipCU6KwVKlSInQgLi5u7ty5yKJmzZpVs2ZNpFCYIrvy9/cXN8Eyveu6cYFIxcSM0euvv46p9S1PiYiKGotB7hyDRWTFqQTLzy3ywd5UuXJlTJOSkkRoShSKBvnq3bv3jh07nnzyydjY2ODg4IiIiF69eiUmJrZu3Rq1tWrVEs2gSpUqYsb6W4f16tXD9Pjx4yIkIiqyLAa581uERFb03YMlbsG1fft2EZoShaKBM5BFzZw588iRI+np6ZcuXVq0aNHtt9++RhtSgBnRBkQW5UDBZJZERIWJPVhE+XEqwdKGw7tMPtibxB25Fi5cKEJTv/76K6aigXsyMzNnz56NmQEDBogSuOOOO8SMuEOEqd27d2MaExMjQiKiIos9WET50XcPVu/evYOCgpBgbd68WRZpNm3ahMLg4GA0kEWuGzFixNGjR3v27NmgQQNZpP3FkiVLYmbixImixGjChAmYduvWTYQWDhw48KQ5WUFEpDv+5ndyZw8WkRV9J1hVqlR59tlnc3Jyunfv/t13313RYKZHjx4oHD58eKVKlWRTjb3BYfHx8Z999hnSqaysLCxh1apVWMLUqVMrVKjw6aefykaaqKgocav6JUuWPPHEE4cOHcJDDh48OGjQoOXLl5cpU0b8sqG1S5cuLTUnK4iIdMfiEiGSLSZYRObcv03Djh07Jk+enJCQcObMGSQZBXNN0FpGRgayK+ufxOnSpcvixYuDzH/QRmRX1k/VZtZVo0aN3377zXowO1K3vn37/vTTTzLOU7p06QULFnTu3FnGJnibBiIqUp55RvnlF+XsWRnGxSm33658840MiXSr8G/TMHv27GbNmn3zzTcnTpwQ94Uyio+PR77izG/UeERwcPCKFSumTJmCv1tKgyc2derUZcuWWWRXDmzYsGHw4MGxsbGBgYERERGtW7dG7rh7927r7Ar8/f1//PHHOXPmtG/fvly5cvgrSMWeeeaZnTt32syuiIiKGvZgEeXHnR6srVu3tmzZMjc398033xwyZEh0dDQKjctBajJixIh33323YH6OUBfYg0VERcrzzyvffqtcuiTDatWUu+5SZs2SIZFuFXIP1ocffpidnT18+PC33367atWqsjSP+N295cuXi5CIiIoafw5yJ8qHOwlWQkICpkOHDhWhBfHbyfv37xchEREVNdaXCHmbBiJz7iRY58+fxzQ2NlaEFiPExc/XXL16VYQkGAyGbHOygohIdyzug8UeLCIr7iRY4vf4UlJSRGjh8uXLmIaHh4uQhHXr1gWakxVERLrDHiyi/LiTYNWvXx9T4w/UWPRgiZ+XEW3IqHr16uPMyQoiIt1hDxZRftxJsB566CFMP/jggxzTD5gmJSXlnXfewUyfPn1ECQkxMTFjzMkKIiLdQTpluv9nDxaRFXcSrKFDhzZo0GDNmjX33HNPYmKi6MFKSkqaO3duw4YN9+3bV6dOnSFDhojGRERU1JQowR97JnLMnQQrODh4yZIlTZo0Wbp0afv27UU/VrVq1R599FGkWbVr1168eHFoaKhoTERERY1Ip4w5FnuwiKy4k2BBdHT0xo0bZ82a1aVLl6ioqICAgLJly7Zp0+bjjz/esmVLjRo1ZDsiIip6SmjHDnGVEGmWwcAeLCILbiZYEBQU9MQTT6xYseL8+fNZWVnJycnr169/8cUXS5YsKVsQEVGRZNqDJW46wwSLyJz7CRa55NSpU1PNyQoiIt0x7cESUyZYROaYYBWQQ4cOPW9OVhAR6Y5pD5ZIsDgGi8ic5xOs69evz5w5s1mzZjImTevWrS+akxVERLojEiyRWvESIZEtnkywNm/ePHTo0MqVKz/11FNbtmyRpaQJDAyMNCcriIh0x/oSIXuwiMw5m2ClpaWNHz++QYMGJUuWLFOmTIsWLb744gtRZTAY5s+fj5LmzZt//vnn169fb9eu3dy5c0UtEREVNaaXCNmDRWSLUwlWdnZ2t27dxowZs3v3bmRaV69e3bRp05AhQ0aMGHHmzJm2bdv269cPJZGRkS+99NK+ffvWrVs3YMAA+WAiIipi2INFlB+nEqzZs2cnJCSEhoZ++umnZ8+eRVI1derUkJCQTz75pHPnzhs2bAgPD//4449PnTr10Ucf1a5dWz6MiIiKJPZgEeXHqQTr+++/x3T06NFPP/10xYoVK1WqNGzYsJEjR+bk5Ozduzc2Nnb79u0vvvhicHCwaE9EREWZSKfYg0Vkn1MJ1s6dOzHt27evCIX+/fuLmYkTJyLHEvNkz6ZNm+qYkxVERLpjeomQPVhEtjiVYCUnJ2MaHR0tQqFatWpiplOnTmKGHAgLC2toTlYQEelOaCgOCbwPFpEDTiVY4uecQ0JCRCgYw6ioKDFDDtStW/d7c7KCiEh3cFBISpJ9V+zBIrLFqQSLiIjofwID1WlWljoVPVhMsIjMMcEiIiIXiQuCou+KlwiJbHEhwfKzYq9cELVERFTUiB4sXiIkso89WERE5CLRX2V6iZA9WETmnEqwDG6RDyZNSkrKWnOygohId9iDRZQf9mAVkB07dnQyJyuIiHSHPVhE+WGCVUAaNWq0xpysICLSHfZgEeWHCVYBKVu2bEdzsoKISHfYg0WUHyZYRETkIvZgEeWHCRYREbmIPVhE+WGCRURELmIPFlF+mGAREZGL2INFlB8mWAVk7969D5uTFUREuiPSKfZgEdnHBKuApKam7jQnK4iIdEdcIjTtwWKCRWSOCVYBad68+T5zsoKISHdMe7B4iZDIFiZYRETkItMerBIllNtvZ4JFZIEJFhERuci0B+v6deWvv2TKRUR5mGAREZGLTG/TIPqxmGARmWOCRURELhI9WCK1EtOgIHVKRHmYYBWQ7Ozsy+ZkBRGR7pj2YGVmqlP2YBGZY4JVQP78889Ic7KCiEh3/PzU+zLwEiGRfUywCkhcXNx/zMkKIiI9Cgj43yVCJFsleDQhMuNnMBjkLHlNx44dMV27dq0IiYh0r3Rp5emnlQ8+UEaNUnDGmJYmy4n0zIPHa55zEBGR60x7sDjCncgKEywiInJdYOD/BrlzABaRFSZYRETkOtMeLCZYRFaYYBERkeuMPVi8REhkCxOsAnL8+PH3zMkKIiI9MvZg8RIhkS38FmFB6NixY0JCggzycM0TkY7ddpsSH6/Mm6f07avs2KHs2yfLifSM3yLUn/bt22eZkxVERHpkeomQPVhEVphgFRA/P78Ac7KCiEiPTC8RcgwWkRUmWERE5Dr2YBE5xASLiIhcx9s0EDnEBIuIiFxn7MHiJUIiW5hgERGR69iDReQQE6wC8tdff91iTlYQEekRx2AROVQUEqzc3Nzp06e3aNEiXIOZGTNmoFBWO+f48ePDhg2Li4sLCQmJjIzs1KnTt99+K+vM+dknW9iCZXY3JyuIiPTItAeLlwiJrOj+RqOZmZk9e/b8448/ZJyna9euixYtCnTuvGrlypW9e/e+du2ajPP07dsXaVaJEmZpqINEyt7K9OCNy4iIfMJ99yknTihbtyq1aytNmijffSfLifSMNxr9n9GjRyO7ioqKmjdvXooGMwiXL18+ZswY2cihU6dO9enTB9nVoEGDDhw4kJGRgenAgQNRNX/+/PHjx4tmFpBLWZN1RERFHsdgETmk7wTr9OnT06ZN8/f3X7p0ab9+/cpoMLNkyRIUTpky5dy5c7KpfR999NGVK1d69Ogxe/bsmjVrBgUFYfrVV1917doVtZMmTbp06ZJoSUREkukYLF4iJLKi7wRrwYIFmZmZ9913X7NmzWSRpnnz5ihMT09HA1lk37JlyzAdNWqUCI1Gjx6NaWpq6i+//CJKiIhIMr2TO3uwiKzoO8ESV0mRS4nQ1L333ovp6tWrRejAsWPHMK1bt64IjerXry9mVq5cKWaIiEgy7cFigkVkRd+D3JEV7du3b9euXcZkyAiFDRs2rFev3u7du2WRHaGhoenp6ZcuXYqIiJBFmsuXL0dGRmIGC8fSRCGIQe6tWrVCIdZe9erVu3Xr9vLLL1epUkU0sNaxY0ekcY888oiMNS1atJBzee655x45R0Tk44YOVZYsUU6dUsLD1fkPP5TlRHrmwUHu+k6wypUrJwa2lylTRhblQSFqkTPlO4KqVq1aBw8eXL9+fZs2bWSRJjExsX379phBmnXx4kVRCDa/RYi/tWDBAvHGWEN5QkKCDOzjMHki0o1nn1V+/lk5d04JCVFeekmZMEGWE+kZv0UopaamYhoWFiZCU6Lw+vXrInSgS5cumE6aNEmERhMnThQzFrdvaNu27Zdffnn06NHMzMzLly8vWrSoadOmycnJ999//ymczNlRp06db81tsSKbEhH5vsqVlaZN1RleIiSyRd89WEFBQVmagIAAWZQHhaiFjIwMWWTHoUOHGjZsmJaWNmTIkJEjR8bExBw/fnzChAmzZ88ODAzEckJCQlArW9uCP9GhQ4e///775Zdfnjx5siw14cGMmIjIJ4wcqUydihNQdbT7u+8qb74py4n0jD1YkuimEv1YFkRhqVKlROhAXFzc3LlzkUXNmjXLeJsGZFf+/v7iJlhly5YVLe0JDg4WLcUXEomIir6QECU9Xf0KIbAHi8iKvhOsypUrY5qUlCRCU6JQNMhX7969d+zY8eSTT8bGxiJbioiI6NWrV2JiYuvWrVFbq1Yt0cyBVq1aYSq+kEhEVPQhwTIYcC6rzvM+WERW9J1g1alTB9Pt27eL0JQoFA2cgSxq5syZR44cEd8oXLRo0e23375mzRpUYUa0yZfjnyMkIio6QkPV6dWr6pQ9WERW9J1gderUCdOFCxeK0NSvv/6KqWjgnszMzNmzZ2NmwIABosSBDRs2YBoTEyNCIqIiLiREnYovEjHBIrKi7wSrd+/eQUFBSLA2b94sizSbNm1CYXBwMBrIIteNGDHi6NGjPXv2bNCggSyyIy0t7fXXX8dM9+7dRYm1Xbt2dTUnK4iI9Ej0YIkEi5cIiazoO8GqUqXKs88+m5OTg8zmu+++u6LBTI8ePVA4fPjwSpUqyaYaP40MTMTHx3/22WdIp7KysrCEVatWYQlTp06tUKHCp59+KhtpmjVr9vHHH2/ZsgXN8CcuXrz4888/t2zZEhleRETEK6+8IttZyc7OFrfsMpIVRER6xB4sIof0fZsGyMjIQHZl/ZM4Xbp0Wbx4cZD5eZXIrqxfss2sq0aNGr/99pvFT+jYbAnI5BYsWGBvtBZv00BERc2iRcq996r3Gn3gAeW775S+fWU5kZ7xNg3/ExwcvGLFiilTpsTHx5fSNGvWbOrUqcuWLbPIrhzYsGHD4MGDY2NjAwMDIyIiWrduPXny5N27d1v/QOG2bdtGjRrVqlWrsmXL+vv7lytXDknV+PHj9+zZ4/xYeCIi3TP2YHXooJQurRUR0f/ovgdLF9iDRURFzbp1amo1daoyfLiybJnCcaVUJLAHi4iICpXpbRps/V4ZUTHHBIuIiFwnLhEywSKygwlWAUlPTz9qTlYQEemR6MESv4XvxI+SERU3TLAKyN9//13DnKwgItIj09s0sAeLyAoTrAJSu3btr8zJCiIiPTK90SgTLCIrTLAKSMWKFQeakxVUdH399dd+fn68HEweNH/+fGxU+/fvl3EhEj1YN26oUyZYerZw4UJsVDZ/1ZduBhMsIiJynTHBCgzkndyJrDHBIiIi1/n7qz9BmJbG7isim5hgERGRW0JCmGAR2cMEi4iI3BIaqqSnM8EisokJVgE5cuTIa+ZkBRGRToWEKBkZTLCIbGKCVUBOnTo1zZwof/rppytVqiTmXXXvvfc2adJEBi5q0aJF9+7dZeCi6OjoJ554QgYuCggIGDNmjAxcceHCBT8/v+nTp8vYFbt27cJjf/75Zxm7YsWKFXjshg0bZOyK9evXY5qUlCRCl0ycOBF/Nz09XcaueOGFF8qVKycDFz300EPWv3HupPbt299xxx0ycFHNmjUHDBggAxeVKlVqxIgRMnDFtWvXsJInT54sY1ccOHAAj503b56MXZGQkIDHrlmzRsauEJsiTthE6JJPPvkEfzclJUXGrhg5cmSouC+DKSRYmZn5JliPPfaY23f+69KlS5s2bWTgovr16/fp00cGLoqMjBw+fLgMXJGZmYmV/P7778vYFSdOnMBjZ8+eLWNX/P3333jssmXLZOwKPBbTf//9V4Qu+fTTT/F3z507J2NXjB07tkQJN5OQJ5988pZbbpGBi3r27NmsWTMZeBMTrALSrl27G+ZkBRGRTiHlciLBIiqemGAREZFb6tdXDAYmWEQ2McEiIiK3lCyp/tgzpkRkhQkWERG5pV07JTdXHedORFb8DAaDnCWv6dix444dOxo1aiRjEwcOHLh06dLtt98uY1fs3r07IyMjPj5exq7YunVrYGBggwYNZOyKjRs3litX7rbbbpOxK9atWxcdHR0bGytjp2VlZW3YsKFmzZpVqlSRRU5LTU3dvHlz3bp1o6KiZJHTkpOTd+7c2aRJk/DwcFnkNLy5Z86cady4cZkyZWSR006cOHH06NF27dq5MQj00KFD586dc29o8N69e7G6mjdvLmNXbN++3c/Pz+Z2nq9//vmndOnSderUkbEr1q9fX7ly5VtvvVXGTsvJycFj8cCqVavKIqelpaXhOeMJV6hQQRY5LSUlRewQypYtK4uchjf31KlT+ORGRETIIqedPHny8OHD2DACAgJkkdOOHDmCv4sNUsaaihkZ32/c+HdExEiHe5L9+/dfuXKlZcuWMnYFPn14m9z7Ng8+9SVLlnTvSxt//vlnxYoV4+LiZOw0HFKxl8Murlq1arLIadifY++KXasb33y6evXqtm3b3NswsKvBDse9jfn06dMHDx7EISwoKEgWOe3YsWPHjx/v0KGDjF1xk4fOzMzMpk2bytic+GyuXbtWxjeBCVYBQY4l54iIiorS2dnXXE/XiHyZR7IrYIJFRERE5GEcg0VERETkYUywiIiIiDyMCRYRERGRhzHBIiIiIvIwJlhEREREHsYEi4iIiMjDmGAREREReRgTLCIiIiIPY4JFRERE5GFMsIiI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" alt="IR spectrum"/></p>
+          <p>Furthermore, it is known that two stereoisomers of the compound
+          exist. One stereoisomer rotates plane-polarized light to the left, while
+          the other stereoisomer rotates plane-polarized light to the right. What
+          could the structure of the compound be?</p>
+        </React.Fragment>
+      );
+
+      var options = [
+        {text: <p><img src="data:image/png;base64,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" alt="compound"/></p>, correct: false, id: 0},
+        {text: <p><img src="data:image/png;base64,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" alt="compound"/></p>, correct: false, id: 1},
+        {text: <p><img src="data:image/png;base64,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" alt="compound"/></p>, correct: false, id: 2},
+        {text: <p><img src="data:image/png;base64,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" alt="compound"/></p>, correct: false, id: 3},
+        {text: <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAABVCAMAAAAoqRvFAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAPjSURBVHic7ZrRtqogEIa96/1fETENUyRj7e7mgG5PmpjATAfPWn13tQ0H+PlngJ1lX74cFNa2LHUMGM49QH9OHUU8tdZCaF2njiOSvIO+yLKihy5PHUsM5R1G/bMW7mXqaIJhV9DV9KHScP3P1jJXoPjzY778iKcoio+OyMUM+fKbB+gLVeulBIv6mC6t6E+vX56nJUHQugle2k6oz5iDMf/OESqTNClBAYih+dIkmU/oyJq/+y8kKUEATKuJKZDo9l75NX83HJ8SGMCz+fzZGSrK90pnDTYllKBmn65Am+UX5u8GmxJqmOuznGmoFeglzX3cHpkS5KIDBcDfdrVxJYFS1Nr83cSlBFZJa82bHbAPmD7covvgNH834SmBXWxwVu+vHegXz1Wt7cMjpg8b5r8RT1BKMNGbpCVHiYvFLP9A+/p01d7NHuSx6YQbbJu/G++UkAtlo79Mg8MXyauHH8dvTo3tQxPQh7fm78YrJXAbvZbVfGrlbAp+NlPxqbF7wcZT0zvm72Y3JXBxe42esWEKJh828b9pobB9uDf7acfD/N28Swn8Yd6u23m71mXsiJZGUvWpKIR5Ysf1iuuqFcer4n19KyWMY7eMfljIt0ESfKymjUQ8FDKNxKZCfM3fTb1OCedx5uex5WKonZ8Oz4WUsvYUeMbrlRb/EmD+boz7zpfPr38so1dPE41lWE8zL5u93t/83cxSwujgC/fjLyaKgDsGItT83VxsSmBDDu2vy+i3pz6KcTLV1IcI83fDb9DbJbmoAHYXXxz5aAZ2OUWZvxuTEqCdR1+sTZSOX0OLNX835SwlFGsbosamlK4j3czlcjwkCSsBEDCt9h8KQWkWUYQhkLTb6RzUWAZTb9I3qWi30wIwm6kYiDXUQf0vox9fSfhGpju6xjy5AEEWfjZGdvLrDamGOp3g+qADsrPhFAqyxkGmoRQKGqybqilJN5khKCrhkqd1TwTVxFeUhhZADkRLL5GCyDSUSkH2TIFEQ8RlVQCc5oqqJb8n8oZEQ+kUZDVEsK0skymISEMJFZRlPV5DTPf7D32Mx7vzbT9O8KCIJBK+vuIJpUmpIAoN3VMqyF6VIzWUVkFZdoYG10ADif+psb/jfp9YQVZDuAsOzP0OCUgNXVMryGgApSGsAglArUK0BxBwwqgYuYJowPjIARSE0hA/gIJsPR+tIYJakABEPUxQjVMQvSMhqGVJKGPrsWMoCKGh2zEUFH3hR3QqQ0DkyRTJmQYJkSc7ZKfbeKI0dBwFRWroOAqK1NCBFBR14Ud2u0BCxKUx2f0OCUZDEMihFGSqAhVM2vOgL18W/AGp1hpC9jZ0KgAAAABJRU5ErkJggg==" alt="compound"/></p>, correct: true, id: 4}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>First, check that the compounds have the correct molecular formula.
+          For example, the compound below has 7 carbons while it should have 6:</p>
+          <p className="eqn"><img src="data:image/png;base64,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" alt="compound"/></p>
+          <p>Next, study the IR spectrum. Only pay attention to the prominent minima in
+          the fingerprint region, do not try to interpret every single quirk.
+          There is a deep minimum around 1700 which corresponds to a carbonyl group,
+          a minimum just below 3000 corresponds to an alkyl CH stretch (which is in fact present
+          in all the listed compounds). Also note that there is <i>no</i> broad minimum
+          around 3300, so the compound does not contain any OH groups.</p>
+          <p>Finally, use the information about the stereoisomers. Since they rotate
+          plane-polarized light in opposite directions, they are a pair of enantiomers.
+          So, the compound must have a chiral carbon, that is, a carbon connected to four different
+          substituents. The only compound that matches this description is</p>
+          <p className="eqn"><img src="data:image/png;base64,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" alt="compound"/></p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
   //////////////////////////////////////// 1301 MIDTERM 2013 ///////////////////////////////////////////////////////////////////////
   {
     "_id": 100,
@@ -6065,724 +6291,45 @@ export const newQuestions = [
       return {description, options, feedback};
     }()
   },
-
-  ////////////////////////// 1302 FINAL 2014 //////////////////////////////////////////////////////////////////////////////////
   {
-    "_id": 201,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 1,
-    "idInExam": 1,
-    "type": "numeric",
-    "questionBody": function() {
-      let vH2 = 1.00;
-      let vHe = 5.00;
-      let pIH2String = (Math.random()*(5.00 - 1.50) + 1.50).toPrecision(3);
-      let pIH2 = Number.parseFloat(pIH2String);
-      let pIHeString = (Math.random()*(6.00 - 2.00) + 2.00).toPrecision(3);
-      let pIHe = Number.parseFloat(pIHeString);
-      let tempString = (Math.random()*(330 - 280) + 280).toPrecision(3);
-      let temp = Number.parseFloat(tempString);
-      let pH2 = pIH2*vH2/(vH2 + vHe);
-      let pH2String = pH2.toPrecision(3);
-      let pHe = pIHe*vHe/(vH2 + vHe);
-      let pHeString = pHe.toPrecision(3);
-      let answer = pHe + pH2;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A {vH2.toPrecision(3)}&nbsp;L bulb containing {pIH2String}&nbsp;atm
-        of hydrogen gas at {tempString}&nbsp;K is connected by a stopcock to
-        a {vHe.toPrecision(3)}&nbsp;L bulb containing {pIHeString}&nbsp;atm
-        of helium gas at {tempString}&nbsp;K. What is the total pressure of the
-        system after the stopcock has been opened?</p>
-      );
-
-      const eqPH2 = `\\begin{eqnarray*}
-        P_{\\text{H}_2} & = & \\frac{P_{\\text{i, H}_2} V_{\\text{i, H}_2}}{V_{\\text{tot}}} \\\\
-        & = & \\frac{(${pIH2String} \\text{ atm})(${vH2.toPrecision(3)} \\text{ L})}
-        {(${vH2.toPrecision(3)} + ${vHe.toPrecision(3)}) \\text{ L}} \\\\
-        & = & ${pH2String} \\text{ atm}
-        \\end{eqnarray*}`;
-      const eqPHe = `\\begin{eqnarray*}
-        P_{\\text{He}} & = & \\frac{P_{\\text{i, He}} V_{\\text{i, He}}}{V_{\\text{tot}}} \\\\
-        & = & \\frac{(${pIHeString} \\text{ atm})(${vHe.toPrecision(3)} \\text{ L})}
-        {(${vH2.toPrecision(3)} + ${vHe.toPrecision(3)}) \\text{ L}} \\\\
-        & = & ${pHeString} \\text{ atm}
-        \\end{eqnarray*}`;
-      const eqP = `\\begin{eqnarray*}
-        P_{\\text{tot}} & = & P_{\\text{H}_2} + P_{\\text{He}} \\\\
-        & = & ${pH2String} \\text{ atm} + ${pHeString} \\text{ atm} \\\\
-        & = & ${ansString} \\text{ atm}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Notice that the two gases are at the same temperature, therefore,
-            during the mixing process only the pressures and volumes change.
-            Calculate the pressure of hydrogen after expanding in the total
-            volume:</p>
-          <MathJax.Node formula={eqPH2}/>
-            <p>Repeat the calculation for the pressure of helium:</p>
-            <MathJax.Node formula={eqPHe}/>
-            <p>The total pressure of the system is just the sum of the partial
-            pressures of hydrogen and helium.</p>
-          <MathJax.Node formula={eqP}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>P</i><sub>total</sub></React.Fragment>),
-        units: "atm"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 202,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 1,
-    "idInExam": 2,
-    "type": "numeric",
-    "questionBody": function() {
-      let mString = (Math.random()*(20.0 - 5.00) + 5.00).toPrecision(3);
-      let m = Number.parseFloat(mString);
-      let mol = m/70.13;
-      let molString = mol.toPrecision(3);
-      let molCO2 = mol*5;
-      let molCO2String = molCO2.toPrecision(3);
-      let answer = molCO2*22.4;
-      let ansString = answer.toPrecision(2);
-
-      var description = (
-        <p>In the presence of excess oxygen, cyclopentane (C<sub>5</sub>H<sub>10</sub>)
-        burns to produce only carbon dioxide and water. What volume of carbon
-        dioxide, measured at 1.0&nbsp;atm and 0&nbsp;&#176;C, would be produced
-        by complete combustion of {mString}&nbsp;g of cyclopentane?</p>
-      );
-
-      const eqMolCyc = `\\begin{eqnarray*}
-        mol_{\\text{C}_5\\text{H}_{10}} & = & \\frac{m_{\\text{C}_5\\text{H}_{10}}}{MM} \\\\
-        & = & \\frac{${mString} \\text{ g}}{70.13 \\text{ g/mol}} \\\\
-        & = & ${molString} \\text{ mol}
-        \\end{eqnarray*}`;
-      const eqMolCO2 = `\\begin{eqnarray*}
-        mol_{\\text{CO}_2} & = & \\frac{mol_{\\text{C}_5\\text{H}_{10}} \\times 10}{2} \\\\
-        & = & \\frac{${molString} \\text{ mol} \\times 10}{2} \\\\
-        & = & ${molCO2String} \\text{ mol}
-        \\end{eqnarray*}`;
-      const eqV = `\\begin{eqnarray*}
-        V_{\\text{CO}_2} & = & mol_{\\text{CO}_2} V_\\text{m} \\\\
-        & = & (${molCO2String} \\text{ mol})(22.4 \\text{ L/mol}) \\\\
-        & = & ${ansString} \\text{ L}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Let us first write down the combustion reaction of cyclopentane:</p>
-            <p className="eqn">2 C<sub>5</sub>H<sub>10</sub> + 15 O<sub>2</sub> &#8594; 10 CO<sub>2</sub> + 10 H<sub>2</sub>O</p>
-            <p>Now we need to do stoichiometry, so, calculate the number of moles
-            of cyclopentane:</p>
-            <MathJax.Node formula={eqMolCyc}/>
-            <p>Then, using the stiochiometric coefficients in the reaction, find the number
-            of moles of CO<sub>2</sub> produced:</p>
-            <MathJax.Node formula={eqMolCO2}/>
-            <p>To convert these moles into volume, one could use the ideal gas law,
-            but since the pressure and temperature happen to be standard, we can use
-            the molar volume of an ideal gas under standard conditions.</p>
-          <MathJax.Node formula={eqV}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>V</i><sub>CO<sub>2</sub></sub></React.Fragment>),
-        units: "L"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 203,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 1,
-    "idInExam": 3,
-    "type": "numeric",
-    "questionBody": function() {
-      let dString = (Math.random()*(1.75 - 1.20) + 1.20).toPrecision(3);
-      let volString = Number.parseFloat((Math.random()*(5 - 0.5) + 0.5).toPrecision(1)).toPrecision(3);
-      let vol = Number.parseFloat(volString);
-      let answer = 1.00*vol/(0.0821*298.15);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>The density of a gaseous mixture of CO and CO<sub>2</sub> was {dString}&nbsp;g&nbsp;L<sup>&#8211;1</sup> at
-        1.00&nbsp;atm and 25&nbsp;&#176;C. How many moles of carbon are present in {volString}&nbsp;L
-        of the mixture under these conditions?</p>
-      );
-
-      const eqMol = `\\begin{eqnarray*}
-        mol_\\text{tot} & = & \\frac{PV}{RT} \\\\
-        & = & \\frac{(1.00 \\text{ atm})(${volString} \\text{ L})}
-        {(0.0821 \\text{ L atm mol}^{-1}\\text{ K}^{-1})(298.15 \\text{ K})} \\\\
-        & = & ${ansString} \\text{ mol}
-        \\end{eqnarray*}`;
-      const eqMolC = `mol_{\\text{CO}_2} = mol_\\text{tot} = ${ansString} \\text{ mol}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Let us first calculate how many moles of gases in total are
-              present in {volString}&nbsp;L of the mixture:</p>
-            <MathJax.Node formula={eqMol}/>
-            <p>Now comes the tricky part of the question: both CO and CO<sub>2</sub> have
-            exactly one carbon atom in their formulas. So, if we have, say, 1 mole of CO
-            and 1 mole of CO<sub>2</sub> or, say, just 2 moles of CO in a mixture, the
-            moles of carbon atoms are exactly the same: 2 moles. In other words,
-            the density and the composition of the mixture do not matter. The moles
-            of carbon are just the total moles of the two gases:</p>
-            <MathJax.Node formula={eqMolC}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>mol</i><sub>C</sub></React.Fragment>),
-        units: "mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 204,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 1,
-    "idInExam": 4,
-    "type": "numeric",
-    "questionBody": function() {
-      let pIString = (Math.random()*(95 - 60) + 60).toPrecision(2);
-      let pI = Number.parseFloat(pIString);
-      let pFString = (Math.random()*(20) + (pI - 30)).toPrecision(2);
-      let pF = Number.parseFloat(pFString);
-      let pSO2 = -(pF - pI)/0.5;
-      let pSO2String = pSO2.toPrecision(2);
-      let answer = pSO2/pI;
-      let ansString = answer.toPrecision(2);
-
-      var description = (
-        <React.Fragment>
-          <p>SO<sub>2</sub> gas mixed with excess O<sub>2</sub> exerted a total
-          initial pressure of {pIString}&nbsp;kPa at a certain volume and
-          temperature. After the following reaction was complete:</p>
-          <p className="eqn">2 SO<sub>2</sub>(g) + O<sub>2</sub>(g) &#8594; 2 SO<sub>3</sub>(g)</p>
-          <p>the pressure dropped to {pFString}&nbsp;kPa at the same volume and
-          temperature. What was the mole fraction of SO<sub>2</sub> in the original
-          reactant mixture?</p>
-        </React.Fragment>
-      );
-
-      const eqPtot = `\\begin{eqnarray*}
-        ${pFString} \\text{ kPa} & = & (0 + (${pIString} - 1.5x) + x) \\text{ kPa} \\\\
-        x & = & ${pSO2String} \\text{ kPa}
-        \\end{eqnarray*}`;
-      const eqChi = `\\begin{eqnarray*}
-        \\chi_{\\text{SO}_2} & = & \\frac{P_{\\text{SO}_2}}{P_{\\text{tot}}} \\\\
-        & = & \\frac{${pSO2String} \\text{ kPa}}{${pIString} \\text{ kPa}} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>This is clearly a stoichiometry question and, since the volume and
-            temperature of the mixture do not change, we can do pressure-pressure
-            stoichiometry. So, let us construct an ICF table:</p>
-            <table className="ice">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>2 SO<sub>2</sub>(g)</th>
-                  <th>+</th>
-                  <th>O<sub>2</sub>(g)</th>
-                  <th>&#8594;</th>
-                  <th>2 SO<sub>3</sub>(g)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>initial</td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td>({pIString} &#8211; <i>x</i>)</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>&#8211;0.5<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>final</td>
-                  <td>0</td>
-                  <td></td>
-                  <td>({pIString} &#8211; 1.5<i>x</i>)</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>In the above table, we did not know the initial pressure of SO<sub>2</sub>,
-            so we just labeled it as <i>x</i> and, since the total pressure
-            was {pIString}&nbsp;kPa, the pressure of oxygen must have been ({pIString} &#8211; <i>x</i>)&nbsp;kPa.
-            SO<sub>2</sub> was said to be the limiting reagent, so we used its amount
-            to calculate all the changes. The final pressures must add up to the total
-            pressure after the reaction, that is, </p>
-            <MathJax.Node formula={eqPtot}/>
-            <p>Now, using the initial pressure of SO<sub>2</sub>, we can find
-              the molar fraction of SO<sub>2</sub> in the original mixture:</p>
-            <MathJax.Node formula={eqChi}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>&chi;</i><sub>SO<sub>2</sub></sub></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 205,
-    "courseId": "1302",
-    "examName": "Final 2014",
+    "_id": 119,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
     "chapterId": 2,
-    "idInExam": 5,
-    "type": "numeric",
-    "questionBody": function() {
-        let tempCuString = (Math.random()*(90.0 - 60.0) + 60.0).toPrecision(3);
-        let tempCu = Number.parseFloat(tempCuString);
-        let tempH2OString = (Math.random()*(23.0 - 15.0) + 15.0).toPrecision(3);
-        let tempH2O = Number.parseFloat(tempH2OString);
-        let tempString = (Math.random()*(30.0 - 24.0) + 24.0).toPrecision(3);
-        let temp = Number.parseFloat(tempString);
-        let volString = (Math.random()*(190 - 110) + 110).toPrecision(2);
-        let vol = Number.parseFloat(volString);
-        let qH2O = vol*1.00*4.184*(temp - tempH2O);
-        let qH2OString = qH2O.toPrecision(3);
-        let qCu = -qH2O;
-        let qCuString = qCu.toPrecision(3);
-        let answer = qCu/(0.386*(temp - tempCu));
-        let ansString = answer.toPrecision(3);
-
-        var description = (
-          <React.Fragment>
-            <p>A piece of copper metal is heated to {tempCuString}&nbsp;&#176;C
-            and is then dropped into {vol}&nbsp;mL of water at {tempH2OString}&nbsp;&#176;C.
-            When thermal equilibriuum is reached, the temperature is {tempString}&nbsp;&#176;C.
-            What was the mass of the copper?</p>
-            <p>Specific heat of copper = 0.386&nbsp;J&nbsp;g<sup>&#8211;1</sup>&nbsp;&#176;C<sup>&#8211;1</sup></p>
-            <p>Specific heat of water = 4.184&nbsp;J&nbsp;g<sup>&#8211;1</sup>&nbsp;&#176;C<sup>&#8211;1</sup></p>
-            <p>Density of water = 1.00&nbsp;g&nbsp;mL<sup>&#8211;1</sup></p>
-          </React.Fragment>
-        );
-
-        const eqQ = "q_\\text{copper} = - q_\\text{water}";
-        const eqQH2O = `\\begin{eqnarray*}
-          q_\\text{water} & = & m_\\text{water} c_\\text{water} \\Delta T_\\text{water} \\\\
-          & = & (${vol} \\text { mL} \\times 1.00 \\text{ g/mL})
-          (4.184 \\text{ J g}^{-1}\\,^{\\circ}\\text{C}^{-1})
-          (${tempString}\\,^{\\circ}\\text{C} - ${tempH2OString}\\,^{\\circ}\\text{C}) \\\\
-          & = & ${Number.parseFloat(qH2OString)} \\text{ J}
-          \\end{eqnarray*}`;
-        const eqQCu = `q_\\text{copper} = -(${Number.parseFloat(qH2OString)} \\text{ J})`;
-        const eqMassCu = `\\begin{eqnarray*}
-          ${Number.parseFloat(qCuString)} \\text{ J} & = & m_\\text{Cu} c_\\text{Cu} \\Delta T_\\text{Cu} \\\\
-          & = & m_\\text{Cu} (0.386 \\text{ J g}^{-1}\\,^{\\circ}\\text{C}^{-1})
-          (${tempString}\\,^{\\circ}\\text{C} - ${tempCuString}\\,^{\\circ}\\text{C}) \\\\
-          m_\\text{Cu} & = & ${ansString} \\text{ g}
-          \\end{eqnarray*}`;
-
-        var feedback = (
-          <React.Fragment>
-            <MathJax.Provider>
-              <p>When the copper and the water are combined, copper is losing heat and
-              water is gaining it, so</p>
-              <MathJax.Node formula={eqQ}/>
-              <p>We have all the necessary data to find the heat gained by the water:</p>
-              <MathJax.Node formula={eqQH2O}/>
-              <p>Therefore, the heat lost by the copper is</p>
-              <MathJax.Node formula={eqQCu}/>
-              <p>We can now use it to find the unknown mass of correr:</p>
-              <MathJax.Node formula={eqMassCu}/>
-            </MathJax.Provider>
-          </React.Fragment>
-        );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>m</i><sub>Cu</sub></React.Fragment>),
-        units: "g"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 206,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 2,
-    "idInExam": 6,
-    "type": "numeric",
-    "questionBody": function() {
-      let answer = 715 + (-394 - 2*286);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>The standard enthalpy of combustion of methanol, CH<sub>3</sub>OH(l), is
-          &#8211;715&nbsp;kJ&nbsp;mol<sup>&#8211;1</sup>. What is the standard enthalpy of
-          formation of CH<sub>3</sub>OH(l)?</p>
-        <table className="data-table mb-5">
-          <tbody>
-            <tr>
-              <th>Species</th>
-              <th>&#916;<i>H</i>&#176;<sub>f</sub> (kJ&nbsp;mol<sup>&#8211;1</sup>)</th>
-            </tr>
-            <tr>
-              <td>H<sub>2</sub>O(l)</td>
-              <td>&#8211;286</td>
-            </tr>
-            <tr>
-              <td>CO<sub>2</sub>(g)</td>
-              <td>&#8211;394</td>
-            </tr>
-          </tbody>
-        </table>
-        </React.Fragment>
-      );
-
-      const eqdH = `\\begin{eqnarray*}
-        \\Delta H^{\\circ}_\\text{rxn} & = & \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{products})} -
-        \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{reactants})} \\\\
-        -715 \\text{ kJ/mol} & = & [(1)(-394) + (2)(-286)] \\text{ kJ/mol} -
-        [\\Delta H^{\\circ}_\\text{f}(\\text{CH}_3\\text{OH}) + (3/2)(0)] \\text{ kJ/mol} \\\\
-        \\Delta H^{\\circ}_\\text{f}(\\text{CH}_3\\text{OH}) & = & ${ansString} \\text{ kJ/mol}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>First, write down the combustion reaction for methanol:</p>
-            <p className="eqn">CH<sub>3</sub>OH(l) + 3/2 O<sub>2</sub>(g) &#8594; CO<sub>2</sub>(g) + 2 H<sub>2</sub>O(l)</p>
-            <p>As stated in the question, the enthalpy of this reaction is &#8211;715&nbsp;kJ&nbsp;mol<sup>&#8211;1</sup>.
-            So, express this enthalpy in terms of the enthalpies of formation of
-            the reactants and products and find the unknown enthalpy of formation:</p>
-            <MathJax.Node formula={eqdH}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>&#916;<i>H</i>&#176;<sub>f</sub>(CH<sub>3</sub>OH(l))</React.Fragment>),
-        units: "kJ/mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 207,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 2,
-    "idInExam": 7,
-    "type": "numeric",
-    "questionBody": function() {
-      let answer = 103 + 2*(-36.0);
-
-      var description = (
-        <React.Fragment>
-          <p>Consider:</p>
-          <p className="eqn">Br<sub>2</sub>(g) + H<sub>2</sub>(g) &#8594; 2 HBr(g)&#160;&#160;&#160;has &#916;<i>H</i>&#176; = &#8211;103&nbsp;kJ</p>
-          <p>Determine the enthalpy of vaporization of liquid bromine.</p>
-          <p>&#916;<i>H</i>&#176;<sub>f</sub> of HBr(g) = &#8211;36&nbsp;kJ&nbsp;mol<sup>&#8211;1</sup></p>
-        </React.Fragment>
-      );
-
-      const eqdH = `\\begin{eqnarray*}
-        \\Delta H^{\\circ}_\\text{rxn} & = & \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{products})} -
-        \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{reactants})} \\\\
-        -103 \\text{ kJ/mol} & = & [(2)(-36.0)] \\text{ kJ/mol} -
-        [\\Delta H^{\\circ}_\\text{f}(\\text{Br}_2(\\text{l})) + (1)(0)] \\text{ kJ/mol} \\\\
-        \\Delta H^{\\circ}_\\text{f}(\\text{Br}_2(\\text{l})) & = & ${answer} \\text{ kJ/mol}
-        \\end{eqnarray*}`;
-      const eqdHVap = `\\begin{eqnarray*}
-        \\Delta H^{\\circ}_\\text{rxn} & = & ${answer} \\text{ kJ/mol} - 0 \\text{ kJ/mol} \\\\
-        & = & ${answer} \\text{ kJ/mol}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Let us express the enthalpy of the reaction in terms of the enthalpies
-            of formation of its reactants and products and substitute all the available data:</p>
-          <MathJax.Node formula={eqdH}/>
-          <p>Now, write down the equation that corresponds to the vaporization of bromine:</p>
-          <p className="eqn">Br<sub>2</sub>(l) &#8594; Br<sub>2</sub>(g)</p>
-          <p>The enthalpy of formation of liquid bromine is zero since it is the standard state.
-          So, the enthalpy of vaporization is just</p>
-        <MathJax.Node formula={eqdHVap}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>&#916;<i>H</i>&#176;<sub>vap</sub>(Br<sub>2</sub>)</React.Fragment>),
-        units: "kJ/mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 208,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 2,
-    "idInExam": 8,
-    "type": "numeric",
-    "questionBody": function() {
-      let answer = 536;
-      var description = (
-        <React.Fragment>
-          <p>POCl<sub>3</sub> has the structure shown below. The P&#8211;Cl bond
-          enthalpy is 329&nbsp;kJ&nbsp;mol<sup>&#8211;1</sup>. Calculate the bond
-          enthalpy of (P=O) in this molecule.</p>
-        <p className="eqn"><img src="data:image/png;base64,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" alt="POCl3"/></p>
-        <table className="data-table mb-5">
-          <tbody>
-            <tr>
-              <th>Species</th>
-              <th>&#916;<i>H</i>&#176;<sub>f</sub> (kJ&nbsp;mol<sup>&#8211;1</sup>)</th>
-            </tr>
-            <tr>
-              <td>POCl<sub>3</sub>(g)</td>
-              <td>&#8211;592</td>
-            </tr>
-            <tr>
-              <td>P(g, at)</td>
-              <td>316</td>
-            </tr>
-            <tr>
-              <td>O(g, at)</td>
-              <td>249</td>
-            </tr>
-            <tr>
-              <td>Cl(g, at)</td>
-              <td>122</td>
-            </tr>
-          </tbody>
-        </table>
-        </React.Fragment>
-      );
-
-      const eqTBEdH = `\\begin{eqnarray*}
-        TBE & = & \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{products})} -
-        \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{reactants})} \\\\
-        & = & [(1)(316) + (1)(249) + (3)(122)] \\text{ kJ/mol} - (1)(-592) \\text{ kJ/mol} \\\\
-        & = & 1523 \\text{ kJ/mol}
-        \\end{eqnarray*}`;
-      const eqTBE = `\\begin{eqnarray*}
-        TBE & = & \\sum{BE(\\text{reactants})} - \\sum{BE(\\text{products})} \\\\
-        1523 \\text{ kJ/mol} & = & [(3)(329) + BE(\\text{P=O})] \\text{ kJ/mol} - 0 \\text{ kJ/mol}
-        \\end{eqnarray*}`;
-      const eqBE = `BE(\\text{P=O}) = 536 \\text{ kJ/mol}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Write down the reaction that corresponds to the TBE of POCl<sub>3</sub>.
-            This reaction will help to connect the data that we are given.</p>
-            <p className="eqn">POCl<sub>3</sub>(g) &#8594; P(g, at) + O(g, at) + 3 Cl(g, at)</p>
-            <p>Express the TBE in terms of the enthalpies of formation of the reactant and the products:</p>
-            <MathJax.Node formula={eqTBEdH}/>
-            <p>The same TBE can be expressed using bond enthalpies (note that the bond enthalpies of
-            the products are zero since they are all in atomic states):</p>
-            <MathJax.Node formula={eqTBE}/>
-            <p>Thus,</p>
-            <MathJax.Node formula={eqBE}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>BE</i>(P=O)</React.Fragment>),
-        units: "kJ/mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 209,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 2,
-    "idInExam": 9,
-    "type": "MS",
-    "questionBody": function() {
-      var description = (
-        <p>Which of the following statements is/are correct?</p>
-      );
-
-      let statements= [
-        {text: (<p>A reaction in which the entropy of the system increases can be spontaneous only if it is exothermic.</p>),
-        correct: false},
-        {text: (<p>A reaction in which the entropy of the system increases can be spontaneous only if it is endothermic.</p>),
-        correct: false},
-        {text: (<p>A reaction in which the entropy of the system decreases can be spontaneous only if it is endothermic.</p>),
-        correct: false},
-        {text: (<p>A reaction in which the entropy of the system decreases can be spontaneous only if it is exothermic.</p>),
-        correct: true},
-        {text: (<p>A reaction in which the entropy of the system increases can be spontaneous regardless of it being exothermic or endothermic.</p>),
-        correct: true},
-        {text: (<p>A reaction in which the entropy of the system decreases can be spontaneous regardless of it being exothermic or endothermic.</p>),
-        correct: false}
-      ];
-      let statementsSelected = [];
-      while (statementsSelected.length < 3) {
-        let i = Math.floor(Math.random()*statements.length);
-        statementsSelected.push(statements[i]);
-        statements.splice(i, 1);
-      }
-
-      var options = statementsSelected.map(statement => {
-        return {text: statement.text, correct: statement.correct, id: statementsSelected.indexOf(statement)};
-      });
-
-      var feedback = (
-        <p>If a reaction is entropically-driven (the entropy increases), then in can
-        be spontaneous regardless of it being exo- or endothermic. But if it is not
-        entropically-driven (the entropy decreases), then it has to be
-        enthalpically-driven in order to be spontaneous, meaning that it
-        has to be exothermic.</p>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 210,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 2,
-    "idInExam": 10,
-    "type": "numeric",
-    "questionBody": function() {
-      let tempString = (Math.random()*(299.50 - 260.00) + 260.00).toPrecision(5);
-      let temp = Number.parseFloat(tempString);
-      let answer = -114.1 - temp*(-0.146);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>Calculate &#916;<i>G</i> at {tempString}&nbsp;K for the reaction:</p>
-          <p className="eqn">2 NO(g) + O<sub>2</sub>(g) &#8594; 2 NO<sub>2</sub>(g)</p>
-          <p>&#916;<i>H</i>&#176; = &#8211;114.1&nbsp;kJ and &#916;<i>S</i>&#176; = &#8211;146&nbsp;kJ&nbsp;K<sup>&#8211;1</sup></p>
-        </React.Fragment>
-      );
-
-      const eqdG = `\\begin{eqnarray*}
-        \\Delta G^{\\circ} & = & \\Delta H^{\\circ} - T\\Delta S^{\\circ} \\\\
-        & = & -114.1 \\text{ kJ} - (${tempString} \\text{ K})(-0.146 \\text{ kJ/K}) \\\\
-        & = & ${ansString} \\text{ kJ}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Use the Gibbs equation and simply substitute all the data. Remember
-            to convert the entropy to kJ in order to have consistent energy units.</p>
-          <MathJax.Node formula={eqdG}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>&#916;<i>G</i></React.Fragment>),
-        units: "kJ"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 211,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 11,
+    "idInExam": 19,
     "type": "MC",
     "questionBody": function() {
       var description = (
-        <React.Fragment>
-          <p>The following gas-phase equilibria have the equilibrium constants shown.
-          What is the correct expression for <i>K</i><sub>3</sub> in terms
-          of <i>K</i><sub>1</sub> and <i>K</i><sub>2</sub>?</p>
-        <table className="mb-5">
-            <tbody>
-              <tr>
-                <td><p className="eqn">2 H<sub>2</sub>(g) + O<sub>2</sub>(g) &#8644; 2 H<sub>2</sub>O(g)</p></td>
-                <td className="pl-3"><p><i>K</i><sub>1</sub></p></td>
-              </tr>
-              <tr>
-                <td><p className="eqn">H<sub>2</sub>(g) + O<sub>2</sub>(g) &#8644; H<sub>2</sub>O<sub>2</sub>(g)</p></td>
-                <td className="pl-3"><p><i>K</i><sub>2</sub></p></td>
-              </tr>
-              <tr>
-                <td><p className="eqn">H<sub>2</sub>O<sub>2</sub>(g) + H<sub>2</sub>O(g) &#8644; 1/2 O<sub>2</sub>O(g)</p></td>
-                <td className="pl-3"><p><i>K</i><sub>3</sub></p></td>
-              </tr>
-            </tbody>
-          </table>
-        </React.Fragment>
+        <p>Which of the following correctly describes the structure of the
+        covalent phosphonium ion, [PH<sub>4</sub><sup>+</sup>]?</p>
       );
 
       var options = [
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"K_3 = \\frac{(K_2)^2}{K_1}"}/></MathJax.Provider></p>),
+        {text: <p>Formal charge of +1 on hydrogen; one non-bonding pair on phosphorus.</p>,
         correct: false,
         id: 0},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"K_3 = \\frac{K_1}{(K_2)^2}"}/></MathJax.Provider></p>),
-        correct: false,
-        id: 1},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"K_3 = \\frac{(K_1)^{0.5}}{K_2}"}/></MathJax.Provider></p>),
+        {text: <p>Formal charge of +1 on phosphorus; four single P&#8211;H bonds; no non-bonding pair on phosphorus.</p>,
         correct: true,
+        id: 1},
+        {text: <p>Formal charge of +1 shared by four hydrogens; three covalent P&#8211;H bonds and one ionic P&#8211;H bond.</p>,
+        correct: false,
         id: 2},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"K_3 = \\frac{K_1}{(K_2)^{0.5}}"}/></MathJax.Provider></p>),
+        {text: <p>Formal charge of +1 on phosphorus; three single P&#8211;H bonds and one P=H double bond.</p>,
         correct: false,
         id: 3},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"K_3 = \\frac{K_1}{K_2}"}/></MathJax.Provider></p>),
+        {text: <p>Formal charge of +1 on phosphorus; three P&#8211;H single bonds; one non-bonding pair on P.</p>,
         correct: false,
         id: 4}
       ];
 
       var feedback = (
         <React.Fragment>
-          <p>In order to produce the target reaction, we need to take a half of the first
-          reaction (since we need only one mole of H<sub>2</sub>O(g) on the right-hand side)
-          and add the reverse of the second reaction (since we need one mole of H<sub>2</sub>O<sub>2</sub>(g)
-          on the left-hand side instead). Multiplying a reaction by a factor translates
-          into raising the corresponting <i>K</i> to a power, and reversing means
-          multiplying by (-1), so, the target constant is</p>
-          <MathJax.Provider>
-            <MathJax.Node formula={"K_3 = (K_1)^{0.5}(K_2)^{-1} = \\frac{(K_1)^{0.5}}{K_2}"}/>
-          </MathJax.Provider>
+          <p>Draw the Lewis structure for [PH<sub>4</sub><sup>+</sup>]. There are
+          8 valence electrons (5 from P, 1 from each H, and &#8211;1 due to the positive
+          overall charge). Once all the atoms are connected with single bonds,
+          there are no more electrons left. P has only 4 electrons that belong to it,
+          so its formal charge is +1.</p>
+          <p className="eqn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB+CAMAAAAz1J7+AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHDSURBVGiB7dvRkkMwGAXg3Hn/VyShQkVYs+6ybQirS0ZN/bp1zo1WJ/NJJKExGEOQt04iI/dRyITWVka4j9Io2LA/1c5lH0Vv/8qp6n3WvgYbNk2OvHfoos0RKmzYsGHDhg37M2x+yYLwEDtvapXrpqa6gRptrrOuyrzMaeo+2HEVDzszTYI7O6z4fcMv9pu8UtpXaTdp0e8O6Gxes4ktKjrbmW7LGoIz3tt9k482RaP39o0Kv9ziSxONB7NnRFc/1fXvsd5uB0HcoBrsmpPZgZ7aYUNGs1CLid22dDbjlR1UvLuOiKcm1ef/yQu3shfYklkx/hRVYq7EkvH8CoYcVzTtBSzTrnul9fzgXjK22Kqrd2FMft8RV2WbBOm1KhYa/JW2mz4SY2xjhklb6kLOtvde9m1y+15TYhdbmVUz6E71XjUylu2H1fA48ISzv+db+ApEs8ZgPzwFqI0nBRv7eaaNPQrtK5DOGkv1lq0nFzYZ37YBUl8B4a/35vEt1s6fu/Q12LD/ib3l3mHxgrWQVz9peJ91B9iwYcOGDRs2bNiwYZ/VFhQPhBDksOB9A9iw97bxvsG5zjds2J9vH/++AbIpP0NXw+8cUP0qAAAAAElFTkSuQmCC" alt="Lewis structure"/></p>
         </React.Fragment>
       );
 
@@ -6790,65 +6337,115 @@ export const newQuestions = [
     }()
   },
   {
-    "_id": 212,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 12,
-    "type": "MS",
+    "_id": 120,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 2,
+    "idInExam": 20,
+    "type": "MC",
     "questionBody": function() {
-      let pSO2String = (Math.random()*(100 - 1.00) + 1.00).toPrecision(3);
-      let pSO2 = Number.parseFloat(pSO2String);
-      let pO2String = (Math.random()*(100 - 1.00) + 1.00).toPrecision(3);
-      let pO2 = Number.parseFloat(pO2String);
-      let pSO3String = (Math.random()*(995 - 10.0) + 10.0).toPrecision(3);
-      let pSO3 = Number.parseFloat(pSO3String);
-      let q = pSO3/(pSO2*Math.sqrt(pO2));
-      let qString = q.toPrecision(3);
-      let words = ["greater than", "there is too much product in the mixture, so the reactants will be produced when time passes."];
-      if (Math.abs(q - 440)/440 < 0.003) words = ["essentially equal to", "the mixture is at equlibrium."];
-      else if ((q - 440)/440 < -0.003) words = ["less than", "there is too much reactants in the mixture, so the product will be produced when time passes."];
+      let planars = [
+        {name: <React.Fragment>BrF<sub>4</sub><sup>&#8211;</sup></React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>C<sub>2</sub>H<sub>2</sub></React.Fragment>,
+        structure: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK0AAAA5CAMAAABzhlskAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIbSURBVGiB7ZnLjoMwDEXZ8f+/mNRCchARyoKlxzEQmA6F0IZHNbmLNgVuc5TmYbtFkZWVdYIAQvMBOtqmAR77OtrleEVFFJqWMO67FDryQhXb+17HK6o3aIG7ddbya+tH60ErKpccZ9IynX0MDC2/6XZFsOQ4k9ZRPXF3xziS0VbkQhvJHOJIR9vE9feRY4UWRrVRtI5g+6EPHS+pfq1gjFjh9Nz3fse6p1ygmmjtKLm+ucL/9L3fse6BBaqJNjTj5u1C38kd6VaZpWr6ELXX73eko+3IhrYiiggt9jvS0erZD2tmO2lKR8KzzITOO1nA23HCs+NMWtXyiu0AOn73J+p2nPDsOJO2UGZhJ0zreEVlpxVgbFXESXeNtU0XHd7udrxFlZWVlZV1vTTyro2xp9nVAh8Hzk7Ie0tov2tsv0ZhbAFBVVj1AQu3cEhmVInY+URBI+jx/lUK8xapkWBwquBJsaMKISKQGW7fgpb50FEjOU2Dxkmmz4E3Ioffytfq3NUTfE6rhK4oasluOVXgUUZJG1rOcSAuczxUM1rTc/kaEnrZMQ1T4IQ2rgx6pGa08itbmhWEwJfD7dC8w+6xSOuwl/aFA56ujbsxraOwTxmqtVy9L23dJ+Alj20/d6s7zwTeGFq/bTlf53BGZm55W9qilIXl/7jxFQ/f5Jt3oA0RI/Q7ayXM/uQdakfSUvyUPJmVlZWVlfXv9QOy7kLZ+F5EMwAAAABJRU5ErkJggg=="},
+        {name: <React.Fragment>ClF<sub>3</sub></React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>CO<sub>2</sub></React.Fragment>,
+        structure: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAA5CAMAAADDVb9TAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAImSURBVFiF7ZhRj4MgDMf3xvf/iiAxqURCeHBvvRbEY8k4u825uxz/h4WJ5Qe1luLl0tX1EWlr7YMmg7XmAIZeIrJmOd+4ZBFHMbnBGAJd9J5/nZYNtdC9wXseTGbRYpiyAA3UL2VPpjQkBk2Gx1DmMiCCbKji7hFxEFi0GArx2w80Vu5vKfJdDt33sLyia9sgze0OI8vdOC6iIt9cm0qTRr6plmobXPV9RlbAOv6cwO+mmrpMTQbedIAg5OzD8CbjV8HdZU/Dy/CN4bHOUjMu+9GOWOVVjua9aL/DyFpqR5t08160zzdvatyP9juMLI3VtGZRihur1zYIntMPDEqRqxu0k+UrIgazWUi2tjaD/kawVk2IKNulOCjcaO0UpRZthoprcHjRuknGlwBU+zfvMdTkvQcpmjUAWTjxdv4Uo6ur61/IAm3GIKlq3yDgDfTh+uFI+EdX/iltK6eHr0cYcx1BrbJJGGqmqwasKf1HwvmZA85bVZbLvHQUmPJWqbisnVBYjjwBJxxEnFMdNgOVEpBqqombIdXU8eDgqOF6Pa+4VI7oQE0FXEdpvmplNdWT8ORmJtKaWb7U40ZleDiYXcOTSz3y31WWP1LkmorhsuP9q/AIWYZ9jRjcifBYF+4Lt0+Er58HONhy4j1z5RTyASDwUWnmFtfF+iw4f+jgRz2UdBMjxd4b4NuWmhqUVdIUOL3mA4NeONEO1Em59Wh4V1dX15/UF9Oer8/Tg7hXAAAAAElFTkSuQmCC"},
+        {name: <React.Fragment>H<sub>2</sub>O</React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>SeF<sub>3</sub><sup>&#8211;</sup></React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>SO<sub>2</sub></React.Fragment>,
+        structure: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAABXCAMAAAA5xzuvAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAANySURBVGiB7VjLduMgDM3O//+LPIoHbFNKctydRgJMsJvmCZ5Z5C5qndrhgt7icHjjH4Glh7Zde7JP8JyePcCRtSZTAKBJGFAQrdn4CSBoUHgYW5MdDt3YL8Ttyd544/+ElLJ5HknoLBCc2oNMI5O1xDi0JxMAcxBmgPan0/lIGtwObDpJwtrmbPMOheYM5tAdtdyNLgWA2emIQkfCaa8IP4gZNdrcS5jMJlPt/UUCZNnmYGiGIoM4EodW7Yn+4iFNJl2iJjn+OX23cJaPLzh2Md4mJaWysbFUHnx/88cPgls4DeEQbIKEZDV9Alc12tn3CWx2QKEna6c5K5CNAGM98/VH+Lo4YvSJUTo4VfLPj2IpaUuX6MEvDtr7s/wC0GAwJgo+piEggZkTfIqf8rO4tR7x573gvoZXoqHUj7qsq9JkqPPj0+ajhUySxSfKlzde+tCf3/zpFnjh19d9vIwPNqD8cDSQkXLMUvx+XPta5NiPWngwmfVFPuowZd3MTeVH6tGxVeft0bbv2mqpAH1Tl5zy0aAWd46PYIY7o4iMuzGZ1NhVm59uk3qbc64N+DVlXcbGcYVPS/rNGoLaeqwjM5Lm5PTxePYr6w9ddphOSo2kpvyIeXBJB3KZJsqUdT/Il8flAIubbkYGAy6vK1JxHp9Me3yMgeOKGQjpin3n6k8Y4mfstYosVgS+OJwEX3xXtlXPQ6/GOw1Tlud1H0rdzcuYVs5dnkdv2Sq0GXbDdtbXvmxqxcaq2G1YsXUFA1/5j6oy4a5XGcr4Xh3bV2nvWWkPvjKOLIJ9WB30eejzCIT99coxDKaZ4PbSVvERArbwOuwbk+fmAHTn4sOdC9S6Cg8tvAtrum0O5EMsDrrixCKnK3dUQsrqw9iO92/PQdmbLX5FpeibEahrpJ+72aoku3/FJgZrom24waaN/Ezgf4ydVOg5wZrrazzCFgOHYlTAImKFDKKhxFfxYggTje0wVH1ItkZKQyJyeCXxHWMoymr3QumWdcKkNsd73hlFGTsKR3m1rt1CvHXoLBNlPmsdijIqT9dnC2VBIkXRwO/Chr02gTdkM/ExYyHMSawdW/R4oAOFOJhtt2JzVdksOBcnlYkqJFAxLtnw/VyPTQ7LZMdMCGW+1qSqGN0cK6LIVZGlostiQPPwgtcvxG+88cYbv+EvSNTkjTVouXMAAAAASUVORK5CYII="},
+        {name: <React.Fragment>XeF<sub>2</sub></React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>XeF<sub>4</sub></React.Fragment>,
+        structure: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAABPCAMAAAD7nFamAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAT5SURBVGiB7Vlbl6MgDPaN//8XFWobrQ5lPfWNzQUUbWcqHTtz9mzz4DBiwkduJLQo3vSmN60I/EzmFQv0yQJ7Iaj2RgBZAovK+Q8elE23BXL/aGPZCEhpNQ1a792vIFDeD5WI9kO5P4LDY5nHs5JP3bAFfC4CZzcI3URxKxsQROrxP+07fOgdAEC00BwLn2hsiQD8sSjGPRLD6NVmBOlE7xG5HXB0fH7xsgNy2DGKzPKD4YICSBvan59HMHwEUfkIjG9x9/TmROY45GU/Ik3AP8gHWJ3ZCNh4Z69Tc+TR6A8kUwWXykZgCbyjTMfmGNAcVT196GOMXL2/px1TB/OzKqMdsxCUgw0BaYh9NofA8070qn308wUxd8GPP+QDzj2BQOEulVVBj2fi7cgcx1IWbvkr55sbMQSJNdjTg5k60dmT54JWKOJMGcJFc7DyaaHO25vUDbTM6CP20x98mHEbggfEatF9dCrc23XyB9Nhmun4HzXgF3o8EEN+AGXAwcRpwtlcFHVIdfXXTPuSohU7GSMUqIoqCZEfocbHgEB3uPJfEP/8KUIniG4Yq77yk/LvNaTJChKK5lEB+hLCTNBBKKl/B0FH0Wg9HzlmubBSG0rGbDoopWAcR85MBTsBbr+SaCgXZ4MWZVystR1yAHJuzkPrjuU49ijm4hekwyoQgFAU2BCWimp2vWJgkpIzu2cabyVdOCOiEwRddLx9w/mwrAVPcbzF0GxFsDwXzFrO5ZiuW4gBaHsxJ8Z0cIPBBAS5J9Nwd/14LDEpsQefC32SlJcYQnmTj6C/t/5WSjH0zyI4TSLcM/XyjOH0LAId1z89sX6KQW9GsNJa4b61/oQh9tWZPRPR+ZvrBwyx38jsmZj72+uzlMOEILtOfJDg68PX82va/QbjHLU5Dh+bKsLdEWDC4oaQcudt0f4TCM5h4WqYIv6HERTHWCr3zaaSYH8EufQPIHjTm3akGl7ZMm+h3/f4fxRBWcM1GE/TCDDdGmBBNWepqgaouUODyoASFkhuC5BDBxmCYOKocEpF8aUCGVZgKpln4tsIOWVaLuuoSAoZsqfeopHKhu+GqJKKJeR8ImKpTi/qiGDmMN7aOFVPFZLxjU8uPJxvoeH/UXwLzq0QIGMDjaPmBD/ocVPUMdKbKY175IGWWxNCkHDQ2d1CT7ArGgH3u/jWASQbYP1quovAR2lXCBTHF99PgJSdLW8JP5xEcL9UUwNJCBIOIx2Tw6cWw1ocmuVNKG5I7KSlBTVrK7ArKEHQiNaAaHY66ePxfeKJwmGkbW3i29I4RrD4/YTNY8n7glrXCKpWytzp7VT0TgikvO4jgpnDyBRfM5bQBy4z1eNCuhW/+gQBt7C2TRE4EKruI0g4EgQltx+du4OAQKCPRStwLKi4WzLctQzDgMD5VVEU2vFohYQjQdD4tioixBRBxQHO3I4DpKNp+eZKQkR8qoNWGnU164CvDq7RExOOBIF4SH1rhZJCC4Ok5czQUrj0HDo9dJ5wdd4CUAdXRgQ4aYll+p3Tk4zOy+8RJuVIEFy9a9gT1NoKkij4dlDySvipi4b9lH4c2S9WcpLErJ4RQJqREo7UD6xwoYy1H1CKDZcS1RU1K9MVORpn5fJKKZjCOeTqBUvwAxOyLJ/OMwdl5YLTOc8hU0kpDb6+g7511Ee0903iGwGftbkcL2413vSm/4D+AicmWkneWY7iAAAAAElFTkSuQmCC"}
+      ];
+      let nonPlanars = [
+        {name: <React.Fragment>BrF<sub>4</sub><sup>+</sup></React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>ClF<sub>5</sub></React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>CF<sub>4</sub></React.Fragment>,
+        structure: "data:image/png;base64,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"},
+        {name: <React.Fragment>PF<sub>3</sub></React.Fragment>,
+        structure: "data:image/png;base64,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"}
+      ];
+      let i = Math.floor(Math.random()*nonPlanars.length);
+      let correctName = nonPlanars[i].name;
+      let correctStructure = nonPlanars[i].structure;
+      let planarsSelected = [];
+      var options = [];
+      while (planarsSelected.length < 4) {
+        let i = Math.floor(Math.random()*planars.length);
+        planarsSelected.push(planars[i]);
+        options.push({text: <p>{planars[i].name}</p>, correct: false, id: options.length});
+        planars.splice(i, 1);
+      }
+      options.push({text: <p>{correctName}</p>, correct: true, id: 4});
 
       var description = (
+        <p>Which one of the following molecules does not have all its atoms in the same plane?</p>
+      );
+
+      var feedback = (
         <React.Fragment>
-          <p>Consider the gas phase equilibrium</p>
-          <p className="eqn">SO<sub>2</sub> + 1/2 O<sub>2</sub> &#8644; SO<sub>3</sub>&#160;&#160;&#160;<i>K</i><sub>p</sub> = 440 at 1400&nbsp;K</p>
-          <p>At a given point in time, a reaction mixture at 1400&nbsp;K contained {pSO2String}&nbsp;atm of SO<sub>2</sub>,
-          {pO2String}&nbsp;atm of O<sub>2</sub> and {pSO3String}&nbsp;atm of SO<sub>3</sub>. Which of the
-          following statements describing this mixture is/are correct?</p>
+          <p>Predict the shapes of the molecules by drawing their Lewis structures
+          and determining the VSEPR types:</p>
+          <p>{planarsSelected.map(molec => <img src={molec.structure} className="m-3" key={planarsSelected.indexOf(molec)} alt="geometry"/>)}
+          <img src={correctStructure} className="m-3" alt="geometry"/></p>
+          <p>Note that molecules that consist of 3 atoms or less are planar regardless
+          of their VSEPR type simply because of a mathematical fact: three points (or less)
+          are always on the same plane.</p>
+          <p>So, the only non-planar molecule is {correctName}.</p>
         </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 121,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 2,
+    "idInExam": 21,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>Compound XCl<sub>3</sub> is non-polar (i.e., it has no net dipole moment).
+        What is the identity of element X?</p>
       );
 
       var options = [
-        {text: (<p>The mixture is at equilibrium.</p>),
-        correct: (Math.abs(q - 440)/440 < 0.003),
-        id: 0},
-        {text: (<p>The mixture is not at equilibrium and more SO<sub>3</sub> will be formed as time passes.</p>),
-        correct: ((q - 440)/440 < -0.003),
-        id: 1},
-        {text: (<p>The mixture is not at equilibrium and more SO<sub>2</sub> will be formed as time passes.</p>),
-        correct: ((q - 440)/440 > 0.003),
-        id: 2},
-        {text: (<p><i>K</i><sub>p</sub> would not change if extra O<sub>2</sub> were added to the mixture.</p>),
-        correct: true,
-        id: 3},
+        {text: <p>B</p>, correct: true, id: 0},
+        {text: <p>I</p>, correct: false, id: 1},
+        {text: <p>N</p>, correct: false, id: 2},
+        {text: <p>P</p>, correct: false, id: 3},
+        {text: <p>As</p>, correct: false, id: 4}
       ];
-
-      const eqQ = `\\begin{eqnarray*}
-        Q & = & \\frac{P_{\\text{SO}_3}}{P_{\\text{SO}_2} (P_{\\text{O}_2})^{0.5}} \\\\
-        & = & \\frac{${pSO3String}}{(${pSO2String})(${pO2String})^{0.5}} \\\\
-        & = & ${Number.parseFloat(qString)}
-        \\end{eqnarray*}`;
 
       var feedback = (
         <React.Fragment>
-          <MathJax.Provider>
-            <p>To determine if the mixture is at equilibrium, calculate the reaction quotient:</p>
-            <MathJax.Node formula={eqQ}/>
-            <p>Since <i>Q</i> is {words[0]} <i>K</i><sub>p</sub>, {words[1]}</p>
-            <p>As for the addition of extra O<sub>2</sub>, it will only change the
-              reaction quotient but not the constant.</p>
-          </MathJax.Provider>
+          <p>Every bond between atoms of two different elements is polar. However,
+          polarity of a molecule as a whole depends on its geometry.
+          Dipole moments are vectors, and one can use vector summation rules to
+          determine if the net dipole moment is zero. If you are not familiar with
+          vector summation, you can just check if the bonds are evenly spread in a molecule.
+          Draw the structure and see if one side of the molecule has a larger &ldquo;concentration&rdquo; of
+          bonds than the other.</p>
+          <p>The geometries of the possible compounds are shown below, and only BCl<sub>3</sub> has its
+          B&#8211;Cl bonds spread evenly, therefore, it is non-polar.</p>
+          <p>
+            <img src="data:image/png;base64,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" className="m-3" alt="BCl3"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAB/CAMAAABYFyW1AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGwSURBVGiB7ZrRjoIwEEV56///YgsBK1AMMfo2WxoFy0bhbmY2Uee+2DbkZCydab22KFQqVNZ476tbx3s+sGspaTSpS8RGNpHae9+ORJ4XXUawTa0YfMWKDtTemz2dONExaHtvu+A50Z761Qgbuqf1WmNDh7dEt3Loy+NrNMYyoh2Rmzsj1bwpM4ft0xrnTXR3J18K1vJUx/IUYnmKHynlGdFFGW5FtS640fFd1t1wlNgKJl2p5AUqWtGKVrSiFa3oD0A3C44ZPRA1Mmg7nfVk0IJRZ3P95bKHTmouDvGcLoSOPy7O9nGgDEeM8NT3qUbqsierZYXv0Uvfx+bPYmjI94HQmO8DoTHfB0GDvg+CBn2fhHZmU1Oigb5PQh9oU1O8oDmDRP0X9E6Bvg+CBn0fBA36PmDKIL4PnOj7fR+sPG34PnnpA4vqK9+nHHOWrS+rMrshVz/7C2D6LtnuyHcOadY7GB/a+mCygTc6BEuiOzo5GXRMK7rKoN15PgazT0gzHK0QepGiFa1oRSta0XJo1QdI7+I8SO/i5NK7OP+H1rs4a+ldnF8SvosjtBV8uX4AgKvxgxjTdxMAAAAASUVORK5CYII=" className="m-3" alt="ICl3"/>
+            <img src="data:image/png;base64,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" className="m-3" alt="NCl3"/>
+            <img src="data:image/png;base64,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" className="m-3" alt="PCl3"/>
+            <img src="data:image/png;base64,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" className="m-3" alt="AsCl3"/>
+          </p>
         </React.Fragment>
       );
 
@@ -6856,924 +6453,368 @@ export const newQuestions = [
     }()
   },
   {
-    "_id": 213,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 13,
-    "type": "numeric",
+    "_id": 122,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 2,
+    "idInExam": 22,
+    "type": "MC",
     "questionBody": function() {
-      let dG = 4000 - (298.15*44);
-      let dGString = dG.toPrecision(2);
-      let lnK = -dG/(8.314*298.15);
-      let lnKString = lnK.toPrecision(3);
-      let answer = Math.exp(lnK);
-      let ansString = answer.toPrecision(2);
-
       var description = (
-        <React.Fragment>
-          <p>Consider the dissolution of sodium chloride:</p>
-          <p className="eqn">NaCl(s) &#8644; Na<sup>+</sup>(aq) + Cl<sup>&#8211;</sup>(aq)</p>
-          <p>&#916;<i>H</i>&#176;<sub>rxn</sub> = 4.0&nbsp;kJ&#160;&#160;&#160;&#916;<i>S</i>&#176;<sub>rxn</sub> = 44&nbsp;J&nbsp;K<sup>&#8211;1</sup></p>
-          <p>Calculate the equilibrium constant for this process.</p>
-        </React.Fragment>
+        <p>According to VSEPR theory, which of the following statements correctly
+        describes the shapes of IF<sub>3</sub> and PF<sub>3</sub>?</p>
       );
 
-      const eqdG = `\\begin{eqnarray*}
-        \\Delta G^{\\circ}_\\text{rxn} & = & \\Delta H^{\\circ}_\\text{rxn} - T \\Delta S^{\\circ}_\\text{rxn} \\\\
-        & = & 4000 \\text{ J} - (298.15 \\text{ K})(44 \\text{ J K}^{-1}) \\\\
-        & = & ${Number.parseFloat(dGString)} \\text{ J}
-        \\end{eqnarray*}`;
-      const eqK = `\\begin{eqnarray*}
-        \\Delta G^{\\circ}_\\text{rxn} & = & -RT \\ln{K} \\\\
-        \\ln{K} & = & -\\frac{\\Delta G^{\\circ}_\\text{rxn}}{RT} \\\\
-        & = & -\\frac{${Number.parseFloat(dGString)} \\text{ J}}
-        {(8.314 \\text{ J mol}^{-1}\\text{ K}^{-1})(298.15 \\text{ K})} \\\\
-        & = & ${lnKString} \\\\
-        K & = & e^{${lnKString}} = ${ansString}
-        \\end{eqnarray*}`;
+      var options = [
+        {text: <p>IF<sub>3</sub> is trigonal planar and PF<sub>3</sub> is trigonal pyramidal.</p>, correct: false, id: 0},
+        {text: <p>IF<sub>3</sub> is trigonal pyramidal and PF<sub>3</sub> is T-shaped.</p>, correct: false, id: 1},
+        {text: <p>IF<sub>3</sub> is T-shaped and PF<sub>3</sub> is trigonal pyramidal.</p>, correct: true, id: 2},
+        {text: <p>IF<sub>3</sub> is trigonal pyramidal and PF<sub>3</sub> is trigonal bipyramidal.</p>, correct: false, id: 3},
+        {text: <p>IF<sub>3</sub> is T-shaped and PF<sub>3</sub> is trigonal planar.</p>, correct: false, id: 4}
+      ];
 
       var feedback = (
         <React.Fragment>
-          <MathJax.Provider>
-            <p>First, calculate the Gibbs free energy change of the reaction. Remember
-            to convert the enthalpy change to joules in order to have consistent
-            energy units. The temperature in the equation has to be standard, 298.15&nbsp;K.</p>
-            <MathJax.Node formula={eqdG}/>
-            <p>Now we can calculate the constant by rearranging the following equation:</p>
-            <MathJax.Node formula={eqK}/>
-          </MathJax.Provider>
+          <p>Draw the Lewis structures of the two molecules:</p>
+          <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAB/CAMAAACkAg5/AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEfSURBVGiB7drNCoMwEARgb77/K8ZIo1ZURPS2FfGHiIWEjhCbmaPYj1gl2SxJEoaZUzVHUGYjR3DmmG/BmTCK5mJ265f0AppbSqC5fUsZ0HzKO6IZuqlzBTdvi07xg51E06RJkyZNmv9jmsNBma2IAZtqrrb3zWDA47T+z3iiihr+2IVIjzbfIoNVG+qm8vj5ZWci76W27srFp23xpTNxqmB9TZfOhK/psquI3sxSh+jEtTOxmIU4ZEpcOxO+43TpTDzqHdH8wbQnJoSpextRr9Fj/37dmZgnentBB6zv5rx4AExVNql1Ieha8Razli4Dm3qdD5FmNuzVIu7ZTVsptHmEJk2aNGmGYzLRhecZsInb5HkGZGjGaT7qPEN4+QDpx14C9NN9dQAAAABJRU5ErkJggg==" className="m-3" alt="IF3"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAABGCAMAAADM34v3AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJkSURBVFiF7ZjJloMgEEXZ+f+/CBiH1hBETrOrBoSAicahDT0c3yZkvFKvqiyC0KlfIOIXNBFQQV/YRQeCLHz2EGEJwMwiA4A6BVFvDZR5JBp9SUKkbY2HhSqSAE+d+jPKnVL1OITgrganIjIrDiDSIAHcggJ8pCWiAkRiYh6W/5Z4hWsi4lCPnwwgTU2GeoRE90dfj82nqcZboweR7N3E6Ak1E0gNpR64Wvyu6S6qR00jGsKkhglh+DqVLupo7p2IBXA7PnJuKqVFqILKZDAd+Lga0HnQ5mvJR0QzP/bWQuIiewUSbTZzw2WUamwbrxCSjIh6WHaTpN6e6eqyMzC/WeWKx6ea1qY+TG8gP/CYiPT9w0XWyEW2dJHtXNfd15lwI4ENP82i0JAefGTNRV0zA9OX1RsbfUfaRax74JPzd2btUdEr0qdRaSK7k3jh0Jcz7ymLDJFFZRWn0S4iYSBfzBfcIvtR27nZAu2QJ/riWDUyYKUNfFVG1sqHyOLS5awjeuUrgKUAsdA1M/dzfHyYtDnriL44lhtAzkEuHxGVQ44ji6iP4XofcQvQrgk991FTk29PE0nU/ByklsDXBD5Y+RTZV8QaHvwttIFzFfGk7P7dfsL0OaJgkb+UuZa2Uipc73Nk54hRhkQtba14QD5FdpmIu5mW9kLBSh3ZB/dX7LGqNvJQbCXcHuxgk3fF+tt/zbRzwBnV0HzzWIj5JmBUHRsHgyAqtwCj6th/QCu3AA/wERkr1wOPIeImNO9Flw4hBv0EcfEjJ/EdxIIdevpM9AfBiLhlfPurxESgk3gST+KpRX0BLKsS/aobrKcAAAAASUVORK5CYII=" className="m-3" alt="PF3"/></p>
+          <p>The VSEPR type of IF<sub>3</sub> is AX<sub>3</sub>E<sub>2</sub>, therefore, it is T-shaped.
+          The VSEPR type of PF<sub>3</sub> is AX<sub>3</sub>E<sub>1</sub>, therefore, it is trigonal pyramidal.</p>
         </React.Fragment>
       );
 
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>K</i></React.Fragment>),
-        units: ""
-      }, feedback};
+      return {description, options, feedback};
     }()
   },
   {
-    "_id": 214,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 14,
-    "type": "numeric",
+    "_id": 123,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 2,
+    "idInExam": 23,
+    "type": "MC",
     "questionBody": function() {
-      let slopeString = (Math.random()*(150000 - 10000) + 10000).toPrecision(5);
-      let slope = Number.parseFloat(slopeString);
-      let answerJ = -slope*8.314;
-      let ansJString = answerJ.toPrecision(3);
-      let answer = answerJ/1000;
-      let ansString = answer.toPrecision(3);
+      let j = Math.floor(Math.random()*2);
+      let nEl, charge;
+      if (j === 0) nEl = 6;
+      else nEl = 8;
+      let elements = [
+        ["S", "Se", "Te"],
+        ["Xe", "Rn"]
+      ];
+      let i = Math.floor(Math.random()*elements[nEl/2-3].length);
+      let correctEl = elements[nEl/2-3][i];
+      if (nEl === 6) charge = <sup>&#8211;</sup>;
+      else charge = <sup>+</sup>;
+
+      elements.splice(nEl-6, 1);
+      let incorrectEls = elements[0].concat(["Ne", "Si", "F", "O", "Ge", "As", "P", "B"]);
+
+      var options = [];
+      while (options.length < 4) {
+        let i = Math.floor(Math.random()*incorrectEls.length);
+        options.push({text: (<p>{incorrectEls[i]}</p>), correct: false, id: options.length});
+        incorrectEls.splice(i, 1);
+      }
+      options.push({text: (<p>{correctEl}</p>), correct: true, id: 4});
 
       var description = (
-        <p>For a particular equilibrium reaction, a plot of ln<i>K</i> versus
-          1/<i>T</i> yields a straight line with a slope of {Number.parseFloat(slopeString)}&nbsp;K.
-          What is &#916;<i>H</i>&#176; for this reaction?</p>
+        <p>The ion AF<sub>3</sub>{charge} is T-shaped. Which one of the following
+        elements could A be?</p>
       );
-
-      const eqLnK = "\\ln{K} = \\frac{-\\Delta H^{\\circ}}{R} \\Big( \\frac{1}{T} \\Big) + \\frac{\\Delta S^{\\circ}}{R}";
-      const eqSlope = `${Number.parseFloat(slopeString)} \\text{ K} = \\frac{-\\Delta H^{\\circ}}{R}`;
-      const eqdH = `\\begin{eqnarray*}
-        \\Delta H^{\\circ} & = & -(${Number.parseFloat(slopeString)} \\text{ K})(8.314 \\text{ J mol}^{-1}\\text{ K}^{-1}) \\\\
-        & = & ${Number.parseFloat(ansJString)} \\text{ J mol}^{-1} \\\\
-        & = & ${Number.parseFloat(ansString)} \\text{ kJ mol}^{-1}
-        \\end{eqnarray*}`;
 
       var feedback = (
         <React.Fragment>
-          <MathJax.Provider>
-            <p>The equation that describes ln<i>K</i> as a function of 1/<i>T</i> is</p>
-            <MathJax.Node formula={eqLnK}/>
-            <p>Comparing this equations to the general equation of a straight line,
-            (<i>y</i> = slope &#215; <i>x</i> + intercept) shows that the slope is</p>
-          <MathJax.Node formula={eqSlope}/>
-          <p>So, the &#916;<i>H</i>&#176; is</p>
-          <MathJax.Node formula={eqdH}/>
-          </MathJax.Provider>
+          <p>One approach for solving this problem is to simply check all the options.
+          However, there is a better solution.</p>
+          <p>We know that fluorine always forms single bonds. Then A must use 3 of its valence electrons
+          to form the 3 bonds with F. In addition, since the molecule has T-shape, there are two lone
+          pairs on A. So far, A has (3 + 2 &#215; 2) = 7 valence electrons.
+          The overall charge cannot reside on fluorine, it must be on A. Thus,
+          the 7 electrons include the overall charge, and the actual number of
+          valence electrons element A has is  {nEl}.</p>
+          <p>Just find the group with {nEl} valence electrons and
+          take eny element except the one from the second period (second-period elements
+          cannot have extended octets with 10 electrons around them like in this case).</p>
+          <p>So, the correct element is {correctEl}.</p>
         </React.Fragment>
       );
 
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>&#916;<i>H</i>&#176;</React.Fragment>),
-        units: "kJ/mol"
-      }, feedback};
+      return {description, options, feedback};
     }()
   },
   {
-    "_id": 215,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 15,
-    "type": "numeric",
-    "questionBody": function() {
-      let sString = (Math.random()*(2.9e-8 - 2.5e-8) + 2.5e-8).toPrecision(2);
-      let s = Number.parseFloat(sString);
-      let cPO4 = s*2/3;
-      let cPO4String = cPO4.toPrecision(2);
-      let answer = Math.pow(s, 3)*Math.pow(cPO4, 2);
-      let ansString = answer.toPrecision(2);
-
-      var description = (
-        <p>At 25&nbsp;&#176;C, a saturated solution of Ba<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub> has
-        [Ba<sup>2+</sup>] = {sString}&nbsp;M. What is the <i>K</i><sub>sp</sub> for Ba<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>?</p>
-      );
-
-      const eqK = `\\begin{eqnarray*}
-        K_\\text{sp} & = & [\\text{Ba}^{2+}]^3 [{\\text{PO}_4}^{2-}]^2 \\\\
-        & = & (${sString})^3(${cPO4String})^2 \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Write down the equilibrium corresponding to the dissolution of Ba<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub> and
-            construct an ICE table (all quantities in the ICE table should be in mols per liter). When
-            filling the table, start with the known equilibrium concentration of Ba<sup>2+</sup> and
-            figure out what the change should be to achieve this concentration, then use stoichiometry
-            to calculate the change for PO<sub>4</sub><sup>2&#8211;</sup>.</p>
-            <table className="ice">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Ba<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>(s)</th>
-                  <th>&#8644;</th>
-                  <th>3 Ba<sup>2+</sup>(aq)</th>
-                  <th>+</th>
-                  <th>2 PO<sub>4</sub><sup>2&#8211;</sup>(aq)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>initial</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;(1/3)({sString})</td>
-                  <td></td>
-                  <td>+{sString}</td>
-                  <td></td>
-                  <td>+(2/3)({sString})</td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>{sString}</td>
-                  <td></td>
-                  <td>(2/3)({sString})</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Now use the equilibrium concentrations to calculate the <i>K</i><sub>sp</sub>:</p>
-            <MathJax.Node formula={eqK}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>K</i><sub>sp</sub></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 216,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 16,
-    "type": "numeric",
-    "questionBody": function() {
-      let k = 5.6e-12;
-      let kString = k.toPrecision(2);
-      let pHString = (Math.random()*(12.50 - 10.50) + 10.50).toPrecision(4);
-      let pH = Number.parseFloat(pHString);
-      let cOH = Math.pow(10, (pH-14));
-      let cOHString = cOH.toPrecision(2);
-      let answer = k/Math.pow(cOH, 2);
-      let ansString = answer.toPrecision(2);
-
-      var description = (
-        <p>What is the solubility of Mg(OH)<sub>2</sub> (<i>K</i><sub>sp</sub> = {kString}&nbsp;)
-        in a solution with pH {pHString}?</p>
-      );
-
-      const eqOH = `\\begin{eqnarray*}
-        [\\text{OH}^-] & = & 10^{-\\text{pOH}} \\\\
-        & = & 10^{-(14 - ${pHString})} \\\\
-        & = & ${cOHString} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqS = `\\begin{eqnarray*}
-        K_\\text{sp} & = & [\\text{Mg}^{2+}] [\\text{OH}^-]^2 \\\\
-        ${kString} & = & (x)(${cOHString})^2 \\\\
-        x & = & ${ansString} \\text{ M}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>First, let us find the concentration of OH<sup>-</sup> ions
-            in the solution:</p>
-            <MathJax.Node formula={eqOH}/>
-            <p>Write down the equilibrium and construct an ICE table (all quantities
-              should be in moles per liter):</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>Mg(OH)<sub>2</sub>(s)</th>
-                  <th>&#8644;</th>
-                  <th>Mg<sup>2+</sup>(aq)</th>
-                  <td>+</td>
-                  <th>2 OH<sup>&#8211;</sup>(aq)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>{cOHString}</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+2<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td>({cOHString} + 2<i>x</i>)</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Since <i>x</i> is negligibly small compared to {cOHString}&nbsp;M,
-            the equilibrium concentration of OH<sup>&#8211;</sup> is approximately {cOHString}&nbsp;M.</p>
-            <p>Substitute the equilibrium concentrations into the expression
-            for <i>K</i><sub>sp</sub> and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqS}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>s</i></React.Fragment>),
-        units: "M"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 217,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 17,
-    "type": "numeric",
-    "questionBody": function() {
-      let k = 3.4e-11;
-      let kString = k.toPrecision(2);
-      let volString = (Math.random()*(900 - 200) + 200).toPrecision(1);
-      let vol = Number.parseFloat(volString);
-      let cFString = (Math.random()*(0.400 - 0.150) + 0.150).toPrecision(3);
-      let cF = Number.parseFloat(cFString);
-      let cCaString = (Math.random()*(0.090 - 0.030) + 0.030).toPrecision(2);
-      let cCa = Number.parseFloat(cCaString);
-      let cNewF = cF/2;
-      let cNewFString = cNewF.toPrecision(3);
-      let cNewCa = cCa/2;
-      let cNewCaString = cNewCa.toPrecision(2);
-      let cNew2F = cNewF - 2*cNewCa;
-      let cNew2FString = cNew2F.toPrecision(2);
-      let answer = k/Math.pow(cNew2F, 2);
-      let ansString = answer.toPrecision(2);
-
-      var description = (
-        <React.Fragment>
-          <p>{vol}&nbsp;mL of each of {cFString}&nbsp;NaF and {cCaString}&nbsp;M CaCl<sub>2</sub> are
-          mixed. Calculate the concentration of Ca<sup>2+</sup> remaining in the solution
-          after the precipitation of CaF<sub>2</sub> is complete.</p>
-        <p><i>K</i><sub>sp</sub> of CaF<sub>2</sub> = {kString}</p>
-        </React.Fragment>
-      );
-
-      const eqCa = `\\begin{eqnarray*}
-        K_\\text{sp} & = & [\\text{Ca}^{2+}] [\\text{F}^-]^2 \\\\
-        ${kString} & = & (x)(${cNew2FString})^2 \\\\
-        x & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>After the mixing, the concentrations of the two solutions changed,
-            and since the volume exactly doubled, the two concentrations were halved,
-            so, <i>c</i><sub>NaF</sub> = {cNewFString}&nbsp;M and <i>c</i><sub>CaCl<sub>2</sub></sub> = {cNewCaString}&nbsp;M.</p>
-            <p>We will treat the process as a two-step one: first, F<sup>&#8211;</sup> from
-            NaF and Ca<sup>2+</sup> from CaCl<sub>2</sub> will react completely to form precipitate,
-            then some of this precipitate will be dissolved. So, the first step is</p>
-          <table className="ice">
-            <tbody>
-              <tr>
-                <th></th>
-                <th>Ca<sup>2+</sup>(aq)</th>
-                <th>+</th>
-                <th>2 F<sup>&#8211;</sup>(aq)</th>
-                <th>&#8594;</th>
-                <th>CaF<sub>2</sub>(s)</th>
-              </tr>
-              <tr>
-                <td>initial</td>
-                <td>{cNewCaString}</td>
-                <td></td>
-                <td>{cNewFString}</td>
-                <td></td>
-                <td>&#10006;</td>
-              </tr>
-              <tr>
-                <td>change</td>
-                <td>&#8211;{cNewCaString}</td>
-                <td></td>
-                <td>&#8211;2 &#215; {cNewCaString}</td>
-                <td></td>
-                <td>+{cNewCaString}</td>
-              </tr>
-              <tr>
-                <td>final</td>
-                <td>0</td>
-                <td></td>
-                <td>({cNewFString} &#8211; 2 &#215; {cNewCaString})</td>
-                <td></td>
-                <td>&#10006;</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>The above process is not an equilibrium, so we determined that
-          Ca<sup>2+</sup> was the limiting reagent and used its amount to
-          calculate all the changes.</p>
-          <p>In the second step, some of the calcium fluoride will dissolve:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>CaF<sub>2</sub>(s)</th>
-                  <th>&#8644;</th>
-                  <th>Ca<sup>2+</sup>(aq)</th>
-                  <th>+</th>
-                  <th>2 F<sup>&#8211;</sup>(aq)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>{cNew2FString}</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+2<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td>({cNew2FString} + 2<i>x</i>)</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Since <i>x</i> is very small compared to {cNew2FString}&nbsp;M, the equilibrium
-            concentration of F<sup>&#8211;</sup> is approximately {cNew2FString}&nbsp;M.
-            We can now substitute the equilibrium concentrations into the expression
-            for <i>K</i><sub>sp</sub> and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqCa}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>c</i><sub>Ca<sup>2+</sup></sub></React.Fragment>),
-        units: "M"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 218,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 18,
-    "type": "numeric",
-    "questionBody": function() {
-      let k = 6.4e-5;
-      let kString = k.toPrecision(2);
-      let cString = (Math.random()*(0.300 - 0.100) + 0.100).toPrecision(3);
-      let c = Number.parseFloat(cString);
-      let cH = Math.sqrt(k*c);
-      let cHString = cH.toPrecision(3);
-      let answer = -Math.log10(cH);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>Calculate the pH of a {cString}&nbsp;M solution of benzoic acid,
-        C<sub>6</sub>H<sub>5</sub>COOH. The <i>K</i><sub>a</sub> for benzoic
-        acid is {kString}.</p>
-      );
-
-      const eqH = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^+][\\text{C}_6\\text{H}_5\\text{COO}^-]}
-        {\\text{C}_6\\text{H}_5\\text{COOH}} \\\\
-        ${kString} & = & \\frac{x^2}{${cString}} \\\\
-        x & = & ${cHString} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqpH = `\\begin{eqnarray*}
-        \\text{pH} & = & -\\log{[\\text{H}^+]} \\\\
-        & = & -\\log{(${cHString})} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Write down the equilibrium and construct an ICE table:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>C<sub>6</sub>H<sub>5</sub>COOH(aq)</th>
-                  <th>&#8644;</th>
-                  <th>H<sup>+</sup>(aq)</th>
-                  <th></th>
-                  <th>C<sub>6</sub>H<sub>5</sub>COO<sup>&#8211;</sup>(aq)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{cString}</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({cString} &#8211; <i>x</i>)</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Since <i>x</i> is very small compared to {cString}&nbsp;M,
-            the equilibrium concentration of C<sub>6</sub>H<sub>5</sub>COOH is
-            approximately {cString}&nbsp;M.</p>
-            <p>Substitute the equilibrium concentrations into the expression
-            for <i>K</i><sub>a</sub> and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqH}/>
-            <p>Recall that [H<sup>+</sup>] = <i>x</i> = {cHString}&nbsp;M. Therefore,
-            the pH is</p>
-            <MathJax.Node formula={eqpH}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>pH</React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 219,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 19,
-    "type": "numeric",
-    "questionBody": function() {
-      let molString = (Math.random()*(0.080 - 0.030) + 0.030).toPrecision(2);
-      let mol = Number.parseFloat(molString);
-      let rString = (Math.random()*(0.55 - 0.30) + 0.30).toPrecision(2);
-      let r = Number.parseFloat(rString);
-      let c = mol/0.5;
-      let cString = c.toPrecision(2);
-      let x = r*c/(1+r);
-      let xString = x.toPrecision(2);
-      let answer = Math.pow(x, 2)/(c - x);
-      let ansString = answer.toPrecision(2);
-
-      var description = (
-        <p>When {molString}&nbsp;mole of a weak acid (HA) is dissolved in
-        500&nbsp;mL of water, the ratio of [A<sup>&#8211;</sup>] to [HA] at
-        equilibrium is found to be {rString}. Calculate the <i>K</i><sub>a</sub> for
-        this acid.</p>
-      );
-
-      const eqC = `\\begin{eqnarray*}
-        c & = & \\frac{mol}{V} \\\\
-        & = & \\frac{${molString} \\text{ mol}}{0.5 \\text{ L}} \\\\
-        & = & ${cString} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqX = `\\begin{eqnarray*}
-        \\frac{[\\text{A}^-]}{[\\text{HA}]} & = & \\frac{x}{${cString} - x} = ${rString} \\\\
-        x & = & ${xString} \\text{ mol}
-        \\end{eqnarray*}`;
-      const eqK = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^{+}][\\text{A}^-]}{[\\text{HA}]} \\\\
-        & = & \\frac{(${xString})^2}{${cString} - ${xString}} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>First, let us calculate the initial concentration of the acid:</p>
-            <MathJax.Node formula={eqC}/>
-            <p>Write down the equilibrium and construct an ICE table.</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>HA(aq)</th>
-                  <th>&#8644;</th>
-                  <th>H<sup>+</sup></th>
-                  <th>+</th>
-                  <th>A<sup>&#8211;</sup></th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{cString}</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({cString} &#8211; <i>x</i>)</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Since the ratio of [A<sup>-</sup>] to [HA] is fairly high, the
-            acid must be not a very weak one, hence, we cannot neglect <i>x</i> when
-            comparing to the initial concentration.</p>
-            <p>Let us express the [A<sup>-</sup>] to [HA] ratio and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>Finally, substitute the equilibrium concentrations to find the <i>K</i><sub>a</sub>:</p>
-            <MathJax.Node formula={eqK}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>K</i><sub>a</sub></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 220,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 20,
-    "type": "numeric",
-    "questionBody": function() {
-      let k1 = 7.1e-3;
-      let k1String = k1.toPrecision(2);
-      let k2 = 6.3e-8;
-      let k2String = k2.toPrecision(2);
-      let k3 = 4.5e-13;
-      let k3String = k3.toPrecision(2);
-      let cString = (Math.random()*(0.250 - 0.100) + 0.100).toPrecision(3);
-      let c = Number.parseFloat(cString);
-      let kB = 1e-14/k1;
-      let kBString = kB.toPrecision(2);
-      let x = Math.sqrt(k2*c);
-      let xString = x.toPrecision(3);
-      let answer = -Math.log10(x);
-
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>Calculate the pH of a {cString}&nbsp;M solution of KH<sub>2</sub>PO<sub>4</sub>.</p>
-          <p>For H<sub>3</sub>PO<sub>4</sub>, <i>K</i><sub>a1</sub> = {k1String}, <i>K</i><sub>a2</sub> = {k2String}, <i>K</i><sub>a3</sub> = {k3String}</p>
-        </React.Fragment>
-      );
-
-      const eqKb = `\\begin{eqnarray*}
-        K_\\text{b} & = & \\frac{K_\\text{w}}{K_\\text{a1}} \\\\
-        & = & \\frac{10^{-14}}{${k1String}} \\\\
-        & = & ${kBString}
-        \\end{eqnarray*}`;
-      const eqX = `\\begin{eqnarray*}
-        K_\\text{a2} & = & \\frac{[\\text{H}^+][{\\text{HPO}_4}^{2-}]}{[{\\text{H}_2\\text{PO}_4}^-]} \\\\
-        ${k2String} & = & \\frac{x^2}{${cString}} \\\\
-        x & = & ${xString}
-        \\end{eqnarray*}`;
-      const eqpH = `\\begin{eqnarray*}
-        \\text{pH} & = & -\\log{[\\text{H}^+]} \\\\
-        & = & -\\log{(${xString})} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The H<sub>2</sub>PO<sub>4</sub><sup>&#8211;</sup> ion from KH<sub>2</sub>PO<sub>4</sub> is
-            a weak acid and a weak base at the same time. As an acid, it dissociates
-            in the following way:</p>
-            <p className="eqn">H<sub>2</sub>PO<sub>4</sub><sup>&#8211;</sup> &#8644; H<sup>+</sup> + HPO<sub>4</sub><sup>2&#8211;</sup></p>
-            <p>This equilibrium corresponds to <i>K</i><sub>a2</sub> of H<sub>3</sub>PO<sub>4</sub>.</p>
-            <p>And as a base:</p>
-            <p className="eqn">H<sub>2</sub>PO<sub>4</sub><sup>&#8211;</sup> + H<sub>2</sub>O &#8644; H<sub>3</sub>PO<sub>4</sub> + OH<sup>&#8211;</sup></p>
-            <p>So, H<sub>2</sub>PO<sub>4</sub><sup>&#8211;</sup> is a conjugate base of H<sub>3</sub>PO<sub>4</sub>, which means that
-              its <i>K</i><sub>b</sub> is</p>
-            <MathJax.Node formula={eqKb}/>
-            <p>Since <i>K</i><sub>a2</sub> is higher than the calculated <i>K</i><sub>b</sub>, the
-            acidic behavior of H<sub>2</sub>PO<sub>4</sub><sup>&#8211;</sup> dominates in the solution.
-            Therefore, we will set up an ICE table for H<sub>2</sub>PO<sub>4</sub><sup>&#8211;</sup> as an acid.</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>H<sub>2</sub>PO<sub>4</sub><sup>&#8211;</sup></th>
-                  <th>&#8644;</th>
-                  <th>H<sup>+</sup></th>
-                  <th>+</th>
-                  <th>HPO<sub>4</sub><sup>2&#8211;</sup></th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{cString}</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({cString} &#8211; <i>x</i>)</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>We can now substitute the equilibrium concentrations into the
-            expression for <i>K</i><sub>a2</sub> (neglect <i>x</i> when compared
-            to the initial concentration) and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>Finally, calculate the pH:</p>
-            <MathJax.Node formula={eqpH}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>pH</React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 221,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 21,
+    "_id": 124,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 2,
+    "idInExam": 24,
     "type": "MS",
     "questionBody": function() {
-      let cString = (Math.random()*(0.90 - 0.10) + 0.10).toPrecision(2);
-
       var description = (
+        <p>Which of the following statements is/are correct for ICl<sub>2</sub><sup>&#8211;</sup>?</p>
+      );
+
+      var options = [
+        {text: <p>There are only 2 lone pairs of electrons on the I atom.</p>,
+        correct: false,
+        id: 0},
+        {text: <p>The shape is bent.</p>,
+        correct: false,
+        id: 1},
+        {text: <p>The I atom has a formal charge of &#8211;1.</p>,
+        correct: true,
+        id: 2}
+      ];
+
+      var feedback = (
         <React.Fragment>
-          <p>Consider a solution containing {cString}&nbsp;M H<sub>2</sub>CO<sub>3</sub> and {cString}&nbsp;M
-          HCl. Which of the following statements about this muxture, when at equilibrium,
-          is/are correct?</p>
-        <p><i>K</i><sub>a</sub> (H<sub>2</sub>CO<sub>3</sub>) = {4.4e-7}, <i>K</i><sub>a</sub> (HCO<sub>3</sub><sup>&#8211;</sup>) = {4.7e-11}</p>
+          <p>The Lewis structure of ICl<sub>2</sub><sup>&#8211;</sup> is shown below:</p>
+          <p className="eqn"><img src="data:image/png;base64,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" alt="ICl2-"/></p>
+          <p>There are 3 lone pairs on the I atom. I has 2 electrons from the 2 bonds
+          plus 6 from the lone pairs. The total is greater than its number
+          of valence electrons by one, so, the formal charge of I is &#8211;1.</p>
+          <p>The VSEPR type of ICl<sub>2</sub><sup>&#8211;</sup> is AX<sub>2</sub>E<sub>3</sub> and
+          its shape is linear.</p>
         </React.Fragment>
       );
 
-      let statements = [
-        {text: (<p>The [HCO<sub>3</sub><sup>&#8211;</sup>] = {4.7e-11}&nbsp;M</p>),
-        correct: false},
-        {text: (<p>The [HCO<sub>3</sub><sup>&#8211;</sup>] = {4.4e-7}&nbsp;M</p>),
-        correct: false},
-        {text: (<p>The [CO<sub>3</sub><sup>2&#8211;</sup>] = {4.4e-7}&nbsp;M</p>),
-        correct: false},
-        {text: (<p>The undissociated [H<sub>2</sub>CO<sub>3</sub>] = {cString}&nbsp;M</p>),
-        correct: true},
-        {text: (<p>The undissociated [H<sub>2</sub>CO<sub>3</sub>] = {cString}&nbsp;M</p>),
-        correct: true},
-        {text: (<p>The undissociated [H<sub>2</sub>CO<sub>3</sub>] = {4.4e-7}&nbsp;M</p>),
-        correct: false},
-        {text: (<p>[H<sub>3</sub>O<sup>+</sup>] = {cString}&nbsp;M</p>),
-        correct: true},
-        {text: (<p>The [HCO<sub>3</sub><sup>&#8211;</sup>] = {cString}&nbsp;M</p>),
-        correct: false}
-      ];
-      let statementsSelected = [];
-      while (statementsSelected.length < 3) {
-        let i = Math.floor(Math.random()*statements.length);
-        statementsSelected.push(statements[i]);
-        statements.splice(i, 1);
-      }
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 125,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 2,
+    "idInExam": 25,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>Which one of the following represents the best Lewis structure for
+        carbon monoxide?</p>
+      );
 
-      var options = statementsSelected.map(statement => {
-        return {text: statement.text,
-        correct: statement.correct,
-        id: statementsSelected.indexOf(statement)};
+      var options = [
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAuCAMAAAC4a38PAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAFuSURBVEiJ7VbLcoUgDHXn//8ij9Ii11xK77BMeYhA1RGHTdvxLDSiOZyEBBmGG/tgZDHeeplmfAl/Jwa/aBcTeSHO3hgR8aNPlUaUiZP1UREposGmTqYbvxCEc37Ng3G+V+jC1ZyDam4CroKDkaQep54IwLjr6J8NHkJHD+lpAPxIFYvrSTMmSq8L9CEewWNKAXCouRTqRSbRsUvPokMU2RlzjDRKWT6CBiodeznCoF1tmxLQCloKGUThrso5WjBW0h3xasOG6mQFZZ2FIvFbqpMVPKaarwa4oaL5jcrj9Ef17oGjKZ5YkStWLojOFXOMqixVWYomRzgWao8h15oOQgpe52+TdJyG8x50nabp6lGkJxS/kZyLGeN0pz3I/C4iOLeAhcAAmyZVDVkPulTy2Kw+EQoA5IV/NrUzgBKNU9/4v2AzhP+KOxy9d1I9ED+DoXdq9Bpch4V9xh/6nn1U7GlE4mzYlBpJ+87HfwnfBGnb27zwFIsAAAAASUVORK5CYII=" /></p>),
+        correct: false,
+        id: 0},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 1},
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAuCAMAAABuzqVqAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGISURBVEiJ7ZbLlsIgDIbd9f1fkUtRpERET91lgJZLz1hLj8xmTv9NEclHAglwOh36WoxO3364tIO+EAONPBDPzagW0fgvQ0TVjAoRptHSZlQiL2RqtWMe+qcinPN9FozzjbwSBr1UdfpxFQysJIuJtGbpB/VMAFeH2NVBpScCeHAZoeuA2CYWbRfpVd5eY1gcFtj7fD54KTRzHMSgroByRJGNMS9CZ20MlhYO8hCBxVUFVwzKPIXF8d3MY/Z6FphVDZMbxR6JX+ZzDPJd97q6vCXTHO8GwV6qXFBPyzT4W6r+mpo2Wz4MS4OKq4f6fdjIAY62gLK8ruSJOOTuvKXGZ+JGDixjVkWKO3deuZ2WoKsqLpnKJviUp+hBpT8cak5kVzTXbagvcUOTxdrVrfzhw7nQWDjxSeEdIDgf4ZPFGDdDVUGdtypafMofIhQAyB23Ox01gBKVXhw6VCd5m57YRA5sY2i9XI1joLkb/N6MenbU3jdcxT6bFQKB53SO9o+q42i3jid80g8nJMQYTm48GQAAAABJRU5ErkJggg==" /></p>),
+        correct: false,
+        id: 2},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 3},
+        {text: (<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAnCAMAAADHG73eAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIxSURBVEiJ7VZdk6sgDPWN//8XQYQqSiM6+pYLVj7cbUu8z3tmdotOkpMcSLBp/vB/aG+a633XdB8F6HA2nOwwzHbfrSN68OnJ/I8cZkkLz8FHZgcPqQh4nIvWCRKB1cE2rDogmPdjWqonJb62TSRozFA152sh5FMRCA6jk+D8+QZfJXuh86IaAsHKRwBY/d8jPNTM+1HCCUHSSCyNZEwvPiW/xdDVCYqHQ94ajqSjNvUK5Fw8kCQC1tzZA77c3eSjZuHIGT2mtCQpdJZwpNXOlF628Sx3QGu0dj5bUzlS73MDzEdmBqjTi0+z0XqHJy2hkPqCCPWmzJCDtXv1hBYpSUkcdBGtlNT0j2kdYMge0hwOrv+4xaqoToTw1jr/P5yOxuFHnLOzD8GtDW+KuvWYg44+3bjmDh2LRKEGCx/xavohFittwcAQ1yTBipj61yCchXLA3BJf9EFM7eiliiqFstJ7X0GcQOKV9ulKaTTAPj843GIgV3rrxLUh5VIqIHLSHqpwf7/jpsyHAnYp09NV7O0vgsop6q86Xg4SjaByiu4STHcl+kXwrj1bM4hkX0x0QRi+Ess7ps17YFy+G32DTNkiRwUkXDgXUUwK1Pk90vH1UjSayxqx9/X+QJ8680gvsl0Ielzj11yIevaKb9Ghqc8iP1vixSSLkXOR6CK2CWNRSjXhK7XqLGrD5FVSbhaLYr5giwlSP6+5iR7EE8iVsdb29AukEdtkrVH07/0/lPgHSsWKEF4CjjkAAAAASUVORK5CYII=" /></p>),
+        correct: true,
+        id: 4}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>CO has 10 valence electrons: C contributes 4 and O contributes 6. First,
+          connect C and O with a single bond and distribute the remaining 8 electrons as
+          lone pairs, to O first since it is more electronegative. This results in a structure
+          where neither C nor O have a full octet. To resolve this, turn 2 lone pairs
+          of oxygen into 2 bonds as shown below.</p>
+          <p className="eqn"><img src="data:image/png;base64,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"/></p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 126,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 2,
+    "idInExam": 26,
+    "type": "MC",
+    "questionBody": function() {
+      var description = (
+        <p>Which one of the following shows the best Lewis structure for the
+        nitrate ion, NO<sub>3</sub><sup>&#8211;</sup>?</p>
+      );
+
+      var options = [
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 0},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 1},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 2},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: false,
+        id: 3},
+        {text: (<p><img src="data:image/png;base64,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" /></p>),
+        correct: true,
+        id: 4}
+      ];
+
+      var feedback = (
+        <React.Fragment>
+          <p>NO<sub>3</sub><sup>&#8211;</sup> has 24 valence electrons: N contributes 5, each O
+          contributes 6, and 1 is from the overall charge. First,
+          connect N and oxygens with single bonds and distribute the remaining electrons as
+          lone pairs, to O first since it is more electronegative. This results in a structure
+          with formal charges that can be minimized. To minimize the formal charges and also
+          give N a full octet, turn a lone pair of one of the oxygens into a bond as shown below.
+          Note that we cannot minimize the formal charges any further (by creating another
+          double bond) since nitrogen is not allowed to have an extended octet.</p>
+          <p className="eqn"><img src="data:image/png;base64,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"/></p>
+        </React.Fragment>
+      );
+
+      return {description, options, feedback};
+    }()
+  },
+  {
+    "_id": 127,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 0,
+    "idInExam": 27,
+    "type": "numeric",
+    "questionBody": function() {
+      let m = Number.parseFloat((Math.random()*(500 - 10) + 10).toPrecision(2));
+      let mol = m/137.36;
+      let molString = mol.toPrecision(3);
+      let molCl = mol*3;
+      let molClString = molCl.toPrecision(3);
+      let mol37Cl = molCl*24.6/100;
+      let mol37ClString = mol37Cl.toPrecision(3);
+      let answer = mol37Cl*6.02e23;
+      let ansString = answer.toPrecision(3);
+
+      var description = (
+        <p>The isotopic abundance of <sup>37</sup>Cl in naturally occuring chlorine is
+        24.6&nbsp;mole percent. How many <sup>37</sup>Cl atoms are there in a {m}&nbsp;g
+        sample of CFCl<sub>3</sub>?</p>
+      );
+
+      const eqMol = `\\begin{eqnarray*}
+        n_{\\text{CFCl}_3} & = & \\frac{${m} \\text{ g}}{137.36 \\text{ g mol}^{-1}} \\\\
+        & = & ${molString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqMolCl = `\\begin{eqnarray*}
+        n_\\text{Cl} & = & ${molString} \\text{ mol} \\times 3 \\\\
+        & = & ${molClString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqMol37Cl = `\\begin{eqnarray*}
+        n_{^{37}\\text{Cl}} & = & \\chi_{^{37}\\text{Cl}} n_\\text{Cl} \\\\
+        & = & \\frac{24.6}{100} (${molClString} \\text{ mol}) \\\\
+        & = & ${mol37ClString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqAt37Cl = `\\begin{eqnarray*}
+        N_{^{37}\\text{Cl}} & = & n_{^{37}\\text{Cl}} N_A \\\\
+        & = & (${mol37ClString} \\text{ mol})(${6.02e23} \\text{ atoms mol}^{-1}) \\\\
+        & = & ${ansString} \\text{ atoms}
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>First, find the number of moles of CFCl<sub>3</sub>:</p>
+            <MathJax.Node formula={eqMol}/>
+            <p>Each molecule of CFCl<sub>3</sub> contains 3 atoms of Cl, so, the
+            number of moles of Cl in the sample is</p>
+            <MathJax.Node formula={eqMolCl}/>
+            <p>The amount of chlorine above refers to naturally occuring chlorine.
+            The number of moles of <sup>37</sup>Cl is then</p>
+            <MathJax.Node formula={eqMol37Cl}/>
+            <p>Finally, the number of atoms of <sup>37</sup>Cl is</p>
+            <MathJax.Node formula={eqAt37Cl}/>
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: <React.Fragment><i>N</i><sub><sup>37</sup>Cl</sub></React.Fragment>,
+        units: "atoms"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 128,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 0,
+    "idInExam": 28,
+    "type": "MC",
+    "questionBody": function() {
+      let oxides = [
+        {name: <React.Fragment>V<sub>2</sub>O<sub>3</sub></React.Fragment>,
+        nV: 2, nO: 3},
+        {name: <React.Fragment>VO<sub>2</sub></React.Fragment>,
+        nV: 1, nO: 2},
+        {name: <React.Fragment>V<sub>2</sub>O<sub>5</sub></React.Fragment>,
+        nV: 2, nO: 5},
+        {name: <React.Fragment>VO</React.Fragment>,
+        nV: 1, nO: 1},
+        {name: <React.Fragment>V<sub>3</sub>O<sub>4</sub></React.Fragment>,
+        nV: 3, nO: 4}
+      ];
+      let i = Math.floor(Math.random()*oxides.length);
+      let correctOxide = oxides[i].name;
+      let nV = oxides[i].nV;
+      let nO = oxides[i].nO;
+      let wString = (nV*50.94/(nV*50.94 + nO*16)*100).toPrecision(4);
+      let w = Number.parseFloat(wString);
+      let mV = w;
+      let mVString = mV.toPrecision(4);
+      let mO = 100 - mV;
+      let mOString = mO.toPrecision(4);
+      let molV = mV/50.94;
+      let molVString = molV.toPrecision(4);
+      let molO = mO/16.00;
+      let molOString = molO.toPrecision(4);
+      let molODiv = molO/molV;
+      let molODivString = molODiv.toPrecision(4);
+
+      var options = oxides.map(oxide => {
+        return {text: <p>{oxide.name}</p>, correct: oxides.indexOf(oxide) === i, id: oxides.indexOf(oxide)};
       });
 
-      var feedback = (
-        <React.Fragment>
-          <p>The concentration of H<sub>3</sub>O<sup>+</sup> will be determined by the strong acid, HCl,
-            that is, [H<sub>3</sub>O<sub>+</sub>] = {cString}&nbsp;M. The contribution
-            of H<sub>2</sub>CO<sub>3</sub> to this concentration will be negligible.</p>
-          <p>Most of H<sub>2</sub>CO<sub>3</sub> will be present in the undissociated form,
-            so, [H<sub>2</sub>CO<sub>3</sub>] = {cString}&nbsp;M.</p>
-          <p>The [HCO<sub>3</sub><sup>&#8211;</sup>] and [CO<sub>3</sub><sup>2&#8211;</sup>]
-            would have to be calculated from an ICE table, but there is no reason
-          for them to be equal to <i>K</i><sub>a</sub> values.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 222,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 22,
-    "type": "order",
-    "questionBody": function() {
-      let acids = [
-        ["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABMCAMAAACSyk82AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHgSURBVGiB7Zlbs4IgEMd76/t/RcQwvGy4zdAbB0Wd7HhjaeJc+D+E1bj7k72gcjolJf0JMQ3QiHj+zwZErlHxSP65qbqBKWRxABp0Y250HAA3AVaoovjPjRyOwPxPAB4bYAo9m5Lhw5Imn42fl+o9a1NG8t9dewsYqQidmkeecYwJcLXVkAASQAJIAAkgASSABJAAEkAC+L0AQjoFPNmFAYCJDkD3nADeBBCaAhagqIIBigAAaBXgnQ7QfTIFGdEAq+42BDkC8V3tmAMFPkjvWiWWbDBQkQxMScge6B+Hi6qnmWMlwcCsCjJQF69zX0/wNvAC0F2QRyosTdlFNb65JOTsazGGdFcrSXM9bGBFrDoUyXx1rg4a2BAHtdeWsro9bxoI3D45t/VWJG26y42/OwNYB+6fyA0X4kjBbxk4JFbj8kYYv90Oza81sBGlI1r0tMq1ZEBRu/Mo8S2SnhNbuDfYzN72DbMhxXzc09whMbW0UbJE7CvLgPttHHf1VG/U4pKmv9qq31bwBug7TueX3F6ycVMJkQbg1llJbrDa8KcDEoBtPHfvJWZSMy52/QafQfcQ4AcQJPhhAKQQBOkdORCkbNzQpFdBoEL7QLi0ASmpnfAt6taC4RbHdy348/oCAakVSloqN5UAAAAASUVORK5CYII=",
-        "data:image/png;base64,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"],
-        ["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAABMCAMAAABu32T8AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIlSURBVGiB7ZnRsoIgEEB78/9/ESGNVMJtht72gqhXL2UIztDcOC/aNG2n3QUSTqdM5oshSoiuSm2hKVBUTIGkqUUoNuZCJJDEJh3YK0OVVuRkU6IBmdRDp4KPdwKTinyQCf0Yk7k9yNwwqeDIVteEyEFB4TW1iMlGLyD1GLZ0D1ZSSG1h6C56DGWTFdnEJZu4ZBOXbOKSTVyyiUs2cckmLtnEJZu4/CcTyuyjLGFxG1OxJhWAgGHPgUU+XEeaNFgYHfNgndZk2qBrsExs0o07QKRMnRMUv/fxJnXzGSailwLuR5nUogyMRJq7rg4DEbhdLqZssjEnNTyCZhUOV/u5GpqgAAptDgo9hmx1yAPq3WHOsp1zSa4BAcym5VAeIpHMfVIKua9h9AfOW6/9oAgVqyTSZcee+9a/XZ4l8Sy7/f1GVCeEMqWli2aby/6WF4118Q7wDtJ4VZvJV4PNM4AP9H27lG1fbAY46gCs6NutDOtBwjfeNgFgM8Ae+MZ3VT4Tx1aAfZAWnh930tvNK/U6wEYBd/H0K18KPgsgQxcAB7cMO3Ne22MFUnE+5odX66s369YM7EOFkl8BhvE4LbzLBdiPxXANHZsch9/fDBN5uMkwhRmB4PmqnA4KASJN7HLvvwj8RSFd3MSZ6JnsHrCujUx/mO15LgIfCDSJQnyqSVx1oji0T6IopxPtA8ZOJIfNJ/EoFJxHz7GHYNad8b9X8LrzPfwArNxB/Fa9AE4AAAAASUVORK5CYII=",
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI0AAABMCAMAAABnNMSGAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAI2SURBVGiB7Zlbk4IgFIB76///RYQ0Ulk6zdDbWW7WWtIqMIOzy/eCk4lfXA4nOBwqlcobRAkxtqUtPEcULVMgaWkRA8XeFEQCKa2iGcGVDFVZEYtrGg3Ioh4WhtxfCSwqYtmXDd2VzWO4kMcAKglHNisLI62GwktpEQfHq4A9zG/HeGcNhdIWE+NZz61qs0i1CVNtwlSbMNUmTLUJU23CVJsw1SZMtQlTbcL8IZuGkVl5YCxtzy7J5uV/PEcQCMd92GT4U5/PhiOdfVjWBoT7MGUzKNFGMUOvbZocG2XjuesTbKQwgLbJsokorlLALdrm2VMZbEh/0z3FQMSFiZ82JHnzmcPFha0O+pi9/dkoHtFVwVBR6DbXdZJDM12TS0QFc5ufhxaNkKdNNb0+sLmCVxtzoHNkrT/QOUnRfHp0Brm/t8VJjusrsLR+vPnSHHb1j8OuDu4rez/wzfM0jrKw9IsXYMFWJH3M8AlChfxtlWiG64dlVleQ8yDveB0+9b6ePPzDbVMBDDlP8nQUCd5r1wQW/pvwJnTvLx/j0q+vVd1AhqScadVr9TtWnzVTGblYLNO+9f7G9u/cakNazn078XZebmL+9sixqVDyC4Cdp+jTqancBnlO5dh5y9G2Q28jf5qNDXNGIjqmPfI5gAw2LlXg0fFe+cTbXaTb6Gh327oWPhmnLM4mdgjckmCThNizTXpPJZF93CTRTJl3pjmVSNZ4k45CwXmWWJwFs075/C1pnfpffAPMD3HcD7iMfAAAAABJRU5ErkJggg==",
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAABxCAMAAAAtQEcVAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH/SURBVGiB7ZvbkoIwDIa98/1fsbSA5RBL3MG7buU06gLS1Cnubv6bMgL5bNKmTjIeDizWx0u0AHW2B/loIVMtGhmdLG15G4RBERtdYz8q28ZG95N2QhOZrKwersD+H7TcDz2FWExBjyZt1cMYU6ZjtraITr7NtwGMvrV61VeVSNwHfXIrndGMZjSjGc1oRjOa0YxmNKMZ/XFoeQpE5yUVLarmGICGxgBeqG8rA9RCoygvzmkKyQYOOZakSqPGQgQZcBIF5t4vpaZKggwMSsCkQS94G7hTaiB5/dQgcf05y9TU2w08KcfrxogtPHkaY++vubnMSC36R5T0kEswrwp/yWoicAbIG+3YVGsRc0tZr9y+GcCK3BNwu3XxXrZlA+tX325ZLmLzTRx5Pm/ypqiQnJxnGc7g5raSpCdn59nniHm6Me9rtiLTevCAzh7HZT2iiIuntUYXiN2usdB/No4rujtOqVtG226GZVc290BPxyk5USRjcwTRF92fhpqcHlsr7y480S6FfNEPhXpsBHVtKYu601a0cxa9Vwofg/Z0eBA6LNZB6GRsvVFWeBg6YF8Ho52nQWv/bPYOdJfDhx8f23P4e9BBYjSjGc1oRjOa0Yxm9JPoRRnWL5JQg+KjlUXotAeaXPZjNA1d7rTKpmW2C/p/xprRUSVhl3+T/GV9A1+hVUDoHyoUAAAAAElFTkSuQmCC"],
-        ["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAnCAMAAADjLvBbAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGnSURBVFiF7ZfZjoMgFIa94/1f8QDVUYQik7R3Z8SlVSuWLTWT9Ltxif7+ng0tii9f/hVcKNVQu6fKE22AwhsnEq0HrE80ohDsRiI91wjHMR1U8nONNEifB2caUbg4SDVC5e9PLiPA4n3UpqZSX+JuFhsjrGup8+JDStPasr9oFSVQIh935G1KTW0aCNdh1+scy8rcIwQA5bDl1sRYIyBMFarSmsUshHuwQGFDUvf+GWp4FitTmodo9MWxPhEqMEAMKo3CRvPZNaRrvcNL9soqROAB5Xy8iS8EX97SgfPlfQXess6766KDevIS8GLRCQ6q4w57L+DLNBsceIyMshMRrbyHO9NU+QxRaHKVCm07sv8Az1nRC0RO/S1cq5dMVyYg5FzLTPnZPnbP2rGAvR1qg6jHRprX2tWa68EqEY5kvYMZTQooUUGCkWVpxg4qrYeoMmySjMzNetzQBxCcwijsR3KKEVsqbfyEahBmR2WqkQJkxPJebB45fHAonIkWzGVkc/ZziJypSYFMP1A5ijUNbTK1byr9QOP2yzRxoGVgGPEqbcR/+TR/at16g5lQF8kAAAAASUVORK5CYII=",
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAABGCAMAAAAghiykAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHkSURBVGiB7ZjJkoMgEEC9+f+/CBIdFwiSquTWIy4T7bggUONMVb9LEkvbJ71oTBKC+FeIWqmK228qv1CDKXiKVIJ1gPJCEQXMfkjg14oIGNLBpbhWpAL+/nGliILZj1ARLh9fsURY5u9RmpJLffM7uEYiWdvwzZ13yU1jy/6mlVeAHMTwRT7H1JSmYufjZPf7tJaFeXkEYCD7T2ElhhphtSnORmnMbBay1+kAiV2SsvPPQLN3sWZKizMxuuJYbjgboCc1oDTUdjXfXZO2jfPypmtldSbAD1yI4SAxC/hxlRtsXrxrgEOWed/aaaeenAI4MeuEDYr9DjsO4Mo4GzZwGBl5W3u08hrbmebKZYiyKlap8KZN10/gOCu6AJ5THyO0+sh0YU4sudAyUn7wadfU9gPYw1lpAPTQSNO9dnHPdWCRiI1kHZEZnSYsB8UCROal6TuotO5XNYMqSGRq1v2G3iGFcRlr+5AcImJLRfpPqArYZJSHiiTsUXtqzE7ZP3AomPCLpn2qdF0Ebf09kTpmakJE0vEPVIxiDRJJtInUvqEi3UAT9sk0cKCFiwwjXoWN+CgiMSERDIlgSARDIhgSwZAIhkQwJIIhEQyJYEgEQyIYEsGQCObPiKhIb9WDifRKnTjkG27EoCUFmTIkAAAAAElFTkSuQmCC"],
-        ["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAAAfCAMAAACrmB11AAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAG+SURBVFiF7ZfRloIgEIa54/1fETRcRAnZc+puFhVLCXSMzuFi+24opPFn+BmIkC+lYf3vT1YAnhsAibSS9+ZSMAAOYTvmmovRvFAAHNX1WvmPjb2zAgFwMGXF6tvdNmcDdJkBkEjbbpPAtanPBZDbjupkABwX070aiw6RzgTRsa7zwxZw6Ytv1pdEJ0im7yXRWew5iqlBpJ6tBu0E2Jg3j4NdutrPyQC7iT8OgKM2+iiOr5EJEKVTDCrbrqwbKGJY2m1Jh29f0+baFe33xIycAmTN5N2QccDur2pAzCWNPbGqtelRg+seANRoKAlzz2mjh7oQDg8CjD9n0gKYuRxoL2VpRxTcGKkMVIvS7dGJw6318zrHcQ4PqayhhAnQLK5UwBSVgfZKsRU94Hmde7eiGzO9t4I2rtSauaV0VtrjT8mAuSadcvgaCn4hFLCYUj7NwCOBZNHY7v1S3oKfIQURU1rDaqlylbq/L+/f5h6aJkkaFsi6eyFbaQ6h0qDX7aQPrn4W6mD13Y6b25srU0WVTgJHEjvqUaWsLZxTYux+lXJTkNvKXwpX+esxc6nK757p8DQtxHSa6vRp+uWf8gcEl7TysNEfpgAAAABJRU5ErkJggg==",
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAAA+CAMAAABnaMvmAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIESURBVGiB7ZrBkoMgDEC5+f+/iFpdRSnSmfaWRbGtUtEo6To7w7vQosYnhOBBxiJnw9vbT1CANDQAkkpXaasuJwbAUeiGm+aiZHpSABzZ9ZqNP0v94CcEwMGFLib/HrrcG6AJDICk0vV8EFKp8n0BqnlHtjMAjotqPhMr6RY6PSyeazqJU8AM3/Ji/RhoD97h+xjoINYyiouu8B2bnLQSYJa8YWys0sl69gZYHfjtADhyJbfijDXSA6J0Fp0ITlfedAniNH+2eTN8fps6NF3R+e55ImOArJlp0wVssOuz6rCUJaXeMau5alEn5y0AiD6hKrA9uxPd9UJkuBOgv5xXGkDZciBHlWfbI+DOWaYge5rOt04cZq7fr3MpLsNdMq0SxguQfNm0gCEqBzmaYiu6w/t17mhFV2q4bwb1sqlWtk0Sa9rid0kHW5N2ZfiUBMaJEMCXTNPhCUYqYEGUuj1eymsYnzCBYsk0h8lUhZoyfhOHr305DUoSnrBp95NgU6aOLCWLa+r0mpVEOPtBpmJj9s2Ks+3dlKlTTQfBHs+KelUprU8eU6b0epUyj1DNK38IIaam8uf9yPkqvzkm3d30OCGmdjeV/t2UlCDTPyWa0hNN6Ymm9ERTeqIpPdGUnmhKTzSlJ5rSE03piab0RFN6oik90ZSe/2Mqv/6JERVf+2YnQs4vvDPalGcsHmEAAAAASUVORK5CYII=",
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAABjCAMAAADXeNDPAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJFSURBVHic7Zpdc6sgEIa98///RdSYY1SK9Ex7t8WPtEokrvK2Tjv73Jghuj7AsjijSfJnUeXZBlxSc7YBFzHFI6Z4xBSPmOIRUzxiikdM8YgpHjHFI6Z4xBSPmOIRUzxiikdM8YgpHjHFI6ZwlP7/LypA1r7GBWBS2SprzeXEADxK2yh3uBidnRSAR/7ykk8/r/ZdnRCAh6rt7O2eerfXvQGayABMKntbDkKmTbEvQLVsyHcG4HExzWNipd1KY4DVc10jOAXc8K0v1oeBDhAcvoeBjuJZRqm623417TI8HGCRvHFsrNLZeg4GeDrw2wF4FEZvxZlqZABG6Sy7OjpdVdOljNPC2RbM8OVtbrHpys73QI+cAbNmZk0XscE+n1WPtSy52h2zWpiWdXLRElHdJ1RFY8vuRPe9GBnuBegvV5UlMmM50JPK/dhT05tKckP53XS5dfJwc/31OJfxMtwntyZNVElarZuWNERVpCdTbkX3+HqcO1rRjRnum9Nt3dROj/FpOpq2/F3SY6xJuzJ8TkrTRNSk1kyzoQcTFSVRXG17vJTfaOphSuWaaUGzqYo1TdRrffjaT6dBSdOdZN58J9o0MUeW0ohv6rW6lQSc/SjTemP23Yobj2+uTJ1qOgj2BFbUZ5Wy9uQxTYx9XqVcF6pl5Y8hxtRV/qIfuVDld/9pfzc9TozpuJvq8G4KJcr0RxFTPGKKR0zxiCkeMcUjpnjEFI+Y4hFTPGKKR0zxiCkeMcUjpnh+j6n+9k+MUHzbNzsCnA/TYwBGxt7urQAAAABJRU5ErkJggg=="]
-      ];
-
-      let selectedIdxs = [];
-      let items = [];
-      for (let i = 0; i < 4; i++) {
-        let idx = Math.floor(Math.random()*acids[i].length);
-        selectedIdxs.push(idx);
-        items.push({
-          text: (<img style={{width: '80%'}} src={acids[i][idx]} />),
-          id: i
-        });
-      }
-
       var description = (
-        <p>Rank the following compounds from the smallest <i>K</i><sub>a</sub> to
-        the largest <i>K</i><sub>a</sub>.</p>
+        <p>An oxide of vanadium, V, is found to contain {wString}% vanadium by mass.
+        What is the empirical formula of the oxide?</p>
       );
 
-      var feedback = (
-        <React.Fragment>
-          <p>In all of the below compounds the acidic hydrogen is in the OH group.
-          The presence of C=O bond near it makes the acid stronger since
-          the corresponding anion is stabilized by resonance. Any electronegative
-          atoms or groups also make the acid stronger (though this factor
-          has less impact than the C=O bond), while any donor groups (like CH<sub>3</sub>)
-          make it weaker. The closer the electronegative
-          atom is to the acidic OH group, the stonger the acid. Therefore,
-          the ordering is</p>
-        <p className="eqn"><img className="p-3" src={acids[3][selectedIdxs[3]]}/>&#160;&lt;&#160;
-          <img className="p-3" src={acids[2][selectedIdxs[2]]}/>&#160;&lt;&#160;
-          <img className="p-3" src={acids[1][selectedIdxs[1]]}/>&#160;&lt;&#160;
-          <img className="p-3" src={acids[0][selectedIdxs[0]]}/></p>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        items,
-        correctOrder: [3, 2, 1, 0],
-        leftLabel: (<React.Fragment>Smallest <i>K</i><sub>a</sub></React.Fragment>),
-        rightLabel: (<React.Fragment>Largest <i>K</i><sub>a</sub></React.Fragment>),
-        height: "110px"
-      }, feedback}
-    }()
-  },
-  {
-    "_id": 223,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 23,
-    "type": "MS",
-    "questionBody": function() {
-      var description = (
-        <p>A buffer is prepared by dissolving 0.15&nbsp;mol of weak acid HA and
-        0.15&nbsp;mol of its potassium salt, KA, in 1.00&nbsp;L solution.
-        Acid HA has a p<i>K</i><sub>a</sub> of 5.2. Which of the following
-        statements is/are correct about this buffer?</p>
-      );
-
-      var options = [
-        {text: (<p>Its pH is equal to 5.2.</p>),
-        correct: true,
-        id: 0},
-        {text: (<p>Dilution of the solution from 1.00&nbsp;L to 2.00&nbsp;L has little or no effect on its pH.</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>A small amount of added strong acid will be absorbed by reaction with A<sup>&#8211;</sup> ions.</p>),
-        correct: true,
-        id: 2},
-        {text: (<p>A small amount of added strong acid will be absorbed by reaction with HA.</p>),
-        correct: false,
-        id: 3}
-      ];
-
-      const eqH = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^+][\\text{A}^-]}{[\\text{HA}]} \\\\
-        [\\text{H}^+] & = & K_\\text{a} \\frac{[\\text{HA}]}{[\\text{A}^-]} \\\\
-        & = & K_\\text{a} \\frac{mol_\\text{HA}}{mol_{\\text{A}^-}} \\\\
-        pH & = & \\text{p}K_\\text{a} - \\log{\\frac{mol_\\text{HA}}{mol_{\\text{A}^-}}} \\\\
-        & = & \\text{p}K_\\text{a} - \\log{\\frac{0.15}{0.15}} \\\\
-        & = & \\text{p}K_\\text{a} = 5.2
+      const eqMassV = `m_\\text{V} = \\frac{${wString}}{100}(100 \\text{ g}) = ${mVString} \\text{ g}`;
+      const eqMassO = `m_\\text{O} = 100 \\text{ g} - ${wString} \\text{ g} = ${mOString} \\text{ g}`;
+      const eqRatio = `\\begin{eqnarray*}
+        n_\\text{V} : n_\\text{O}
+        & = & \\frac{${mVString} \\text{ g}}{50.94 \\text{ g mol}^{-1}} : \\frac{${mOString} \\text{ g}}{16.00 \\text{ g mol}^{-1}} \\\\
+        & = & ${molVString} \\text{ mol} : ${molOString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqRatioInteger = `\\begin{eqnarray*}
+        n_\\text{V} : n_\\text{O} & = & \\frac{${molVString}}{${molVString}} \\text{ mol} : \\frac{${molOString}}{${molVString}} \\text{ mol} \\\\
+        & = & 1 \\text{ mol} : ${molODivString} \\text{ mol} \\\\
+        & \\approx & ${nV} : ${nO}
         \\end{eqnarray*}`;
 
       var feedback = (
         <React.Fragment>
           <MathJax.Provider>
-            <p>The concentration of H<sup>+</sup> and the pH can be found from the expression
-            for the <i>K</i><sub>a</sub>:</p>
-            <MathJax.Node formula={eqH}/>
-            <p>As you can see in the above equation, it is the ratio of
-            moles of the acid and the salt that determines the pH, and not the
-            actual concentrations. When the solution is diluted, the ratio
-            does not change, so the pH does not change either.</p>
-            <p>A strong acid added to the buffer will react with the weak base, A<sup>&#8211;</sup>,
-            and an added strong base will react with the weak acid, HA.</p>
+            <p>Consider a sample of 100&nbsp;g of the oxide. The mass of V in
+            this sample is</p>
+            <MathJax.Node formula={eqMassV}/>
+            <p>The remaining mass is the oxygen:</p>
+            <MathJax.Node formula={eqMassO}/>
+            <p>Find the mole ratio between V and O:</p>
+            <MathJax.Node formula={eqRatio}/>
+            <p>Divide the larger number of moles by the smaller one and find the smallest integer ratio:</p>
+            <MathJax.Node formula={eqRatioInteger}/>
+            <p>The smallest integer ratio represents the indices in the empirical
+            formula, so, the oxide is {correctOxide}.</p>
           </MathJax.Provider>
         </React.Fragment>
       );
@@ -7782,4142 +6823,220 @@ export const newQuestions = [
     }()
   },
   {
-    "_id": 224,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 24,
+    "_id": 129,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 0,
+    "idInExam": 29,
     "type": "numeric",
     "questionBody": function() {
-      let kB = 4.2e-4;
-      let kBString = kB.toPrecision(2);
-      let molBString = (Math.random()*(0.060 - 0.030) + 0.030).toPrecision(2);
-      let molB = Number.parseFloat(molBString);
-      let molAString = (Math.random()*(0.090 - 0.050) + 0.050).toPrecision(2);
-      let molA = Number.parseFloat(molAString);
-      let molOHString = (Math.random()*(0.039 - 0.010) + 0.010).toPrecision(2);
-      let molOH = Number.parseFloat(molOHString);
-      let volString = (Math.random()*(900 - 200) + 200).toPrecision(1);
-      let vol = Number.parseFloat(volString);
-      let mol2B = molB + molOH;
-      let mol2BString = mol2B.toPrecision(2);
-      let mol2A = molA - molOH;
-      let mol2AString = mol2A.toPrecision(2);
-      let cOH = kB*mol2B/mol2A;
-      let cOHString = cOH.toPrecision(2);
-      let answer = 14 + Math.log10(cOH);
+      let mPString = (Math.random()*(1.40 - 0.700) + 0.700).toPrecision(3);
+      let mP = Number.parseFloat(mPString);
+      let mHgString = (Math.random()*(3.00 - 1.80) + 1.80).toPrecision(3);
+      let mHg = Number.parseFloat(mHgString);
+      let p = Math.floor(Math.random()*(96 - 50) + 50);
+      let mProdString = (p/100*mP/195.87/2*137.94).toPrecision(3);
+      let mProd = Number.parseFloat(mProdString);
+      let molP = mP/195.87;
+      let molPString = molP.toPrecision(3);
+      let molHg = mHg/200.6;
+      let molHgString = molHg.toPrecision(3);
+      let molProd = molP/2;
+      let molProdString = molProd.toPrecision(3);
+      let mTheorProd = molProd*137.94;
+      let mTheorProdString = mTheorProd.toPrecision(3);
+      let answer = mProd/mTheorProd*100;
+      let ansString = answer.toPrecision(3);
+
+      var description = (
+        <React.Fragment>
+          <p>PF<sub>2</sub>I and Hg may be reacted to produce P<sub>2</sub>F<sub>4</sub> according to:</p>
+          <p className="eqn">2 PF<sub>2</sub>I + 2 Hg &#10230; P<sub>2</sub>F<sub>4</sub> + Hg<sub>2</sub>I<sub>2</sub></p>
+          <p>When {mPString}&nbsp;g of PF<sub>2</sub>I and {mHgString}&nbsp;g of Hg are
+          used, {mProdString}&nbsp;g of P<sub>2</sub>F<sub>4</sub> are produced.
+          What is the percent yield of P<sub>2</sub>F<sub>4</sub> in this reaction?</p>
+        </React.Fragment>
+      );
+
+      const eqMol = `\\begin{eqnarray*}
+        n_{\\text{PF}_2\\text{I}} & = & \\frac{${mPString} \\text{ g}}{195.87 \\text{ g mol}^{-1}} \\\\
+        & = & ${molPString} \\text{ mol} \\\\
+        n_{\\text{Hg}} & = & \\frac{${mHgString} \\text{ g}}{200.6 \\text{ g mol}^{-1}} \\\\
+        & = & ${molHgString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqLR = `\\begin{eqnarray*}
+        \\text{PF}_2\\text{I} : \\text{Hg} & = & \\frac{${molPString}}{2} : \\frac{${molHgString}}{2} \\\\
+        \\frac{${molPString}}{2} & < & \\frac{${molHgString}}{2},
+        \\end{eqnarray*}`;
+      const eqMolProd = `\\begin{eqnarray*}
+        n_{\\text{P}_2\\text{F}_4}
+        & = & n_{\\text{PF}_2\\text{I}} \\times \\frac{\\text{coef}_{\\text{P}_2\\text{F}_4}}{\\text{coef}_{\\text{PF}_2\\text{I}}} \\\\
+        & = & ${molPString} \\text{ mol} \\times \\frac{1}{2} \\\\
+        & = & ${molProdString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqMassProd = `\\begin{eqnarray*}
+        m_{\\text{P}_2\\text{F}_4} & = & (${molProdString} \\text{ mol})(137.94 \\text{ g mol}^{-1}) \\\\
+        & = & ${mTheorProdString} \\text{ g}
+        \\end{eqnarray*}`;
+      const eqYield = `\\begin{eqnarray*}
+        \\%\\text{ yield} & = & \\frac{\\text{actual mass}}{\\text{theoretical mass}} \\times 100 \\\\
+        & = & \\frac{${mProdString} \\text{ g}}{${mTheorProdString} \\text{ g}} \\times 100 \\\\
+        & = & ${ansString} \\%
+        \\end{eqnarray*}`;
+
+      var feedback = (
+        <React.Fragment>
+          <MathJax.Provider>
+            <p>First, calculate the number of moles of the two reagents:</p>
+            <MathJax.Node formula={eqMol}/>
+            <p>Since we are given the moles of more than one reagent, one of them
+            must be limiting. Divide the moles by the stoichiometric coefficients and
+            compare:</p>
+            <MathJax.Node formula={eqLR}/>
+            <p>so, PF<sub>2</sub>I is the limiting reagent. Use its moles to
+            calculate the maximum (theoretical) moles of P<sub>2</sub>F<sub>4</sub> that
+            could be produced.</p>
+            <MathJax.Node formula={eqMolProd}/>
+            <p>Then the theoretical mass of P<sub>2</sub>F<sub>4</sub> that
+            could be produced is</p>
+            <MathJax.Node formula={eqMassProd}/>
+            <p>And the percent yield is</p>
+            <MathJax.Node formula={eqYield}/>
+          </MathJax.Provider>
+        </React.Fragment>
+      );
+
+      return {description, answer: {
+        answer,
+        label: "% yield",
+        units: "%"
+      }, feedback};
+    }()
+  },
+  {
+    "_id": 130,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 0,
+    "idInExam": 30,
+    "type": "numeric",
+    "questionBody": function() {
+      let mM = Math.random()*(195.0 - 98.00) + 98.00;
+      let cOHString = (Math.random()*(0.1950 - 0.1100) + 0.1100).toPrecision(4);
+      let cOH = Number.parseFloat(cOHString);
+      let vOHString = (Math.random()*(50.00 - 20.00) + 20.00).toPrecision(4);
+      let vOH = Number.parseFloat(vOHString);
+      let mAString = (cOH*vOH/1000/3*mM).toPrecision(4);
+      let mA = Number.parseFloat(mAString);
+      let molOH = cOH*vOH/1000;
+      let molOHString = molOH.toPrecision(4);
+      let molA = molOH/3;
+      let molAString = molA.toPrecision(4);
+      let answer = mA/molA;
       let ansString = answer.toPrecision(4);
 
       var description = (
-        <React.Fragment>
-          <p>A buffer solution containing only {molBString}&nbsp;mol of
-          CH<sub>3</sub>NH<sub>2</sub> and {molAString}&nbsp;mol of CH<sub>3</sub>NH<sub>3</sub>Cl
-          has a total volume of {vol}&nbsp;mL. What is the pH after the
-          addition of {molOHString}&nbsp;mol of solid NaOH to this buffer?</p>
-          <p><i>K</i><sub>b</sub>(CH<sub>3</sub>NH<sub>2</sub>) = {kBString}</p>
-        </React.Fragment>
+        <p>A triprotic acid, H<sub>3</sub>A, is titrated with {cOHString}&nbsp;M KOH.
+        If {mAString}&nbsp;g of the acid required {vOHString}&nbsp;mL of KOH to
+        reach the equivalence point, what is the molar mass of the acid?</p>
       );
 
-      const eqX = `\\begin{eqnarray*}
-        K_\\text{b} & = & \\frac{[\\text{CH}_3\\text{NH}_3^+][\\text{OH}^-]}{[\\text{CH}_3\\text{NH}_2]} \\\\
-        & = & \\frac{mol_{\\text{CH}_3\\text{NH}_3^+}[\\text{OH}^-]}{mol_{\\text{CH}_3\\text{NH}_2}} \\\\
-        ${kBString} & = & \\frac{x(${mol2AString})}{${mol2BString}} \\\\
-        x & = & ${cOHString} \\text{ M}
+      const eqMolOH = `\\begin{eqnarray*}
+        n_{\\text{KOH}} & = & c_{\\text{KOH}} \\times V_{\\text{KOH}} \\\\
+        & = & (${cOHString} \\text{ M})\\frac{${vOHString} \\text{ mL}}{1000 \\text{ mL L}^{-1}} \\\\
+        & = & ${molOHString} \\text{ mol}
         \\end{eqnarray*}`;
-      const eqpH = `\\begin{eqnarray*}
-        \\text{pH} & = & 14 - \\text{pOH} \\\\
-        & = & 14 + \\log{[\\text{OH}^-]} \\\\
-        & = & 14 + \\log{(${cOHString})} \\\\
-        & = & ${ansString}
+      const eqMolA = `\\begin{eqnarray*}
+        n_{\\text{H}_3\\text{A}} & = & n_{\\text{KOH}} \\times \\frac{\\text{coef}_{\\text{H}_3\\text{A}}}{\\text{coef}_{\\text{KOH}}} \\\\
+        & = & (${molOHString} \\text{ mol}) \\times \\frac{1}{3} \\\\
+        & = & ${molAString} \\text{ mol}
+        \\end{eqnarray*}`;
+      const eqMM = `\\begin{eqnarray*}
+        MM & = & \\frac{m_{\\text{H}_3\\text{A}}}{n_{\\text{H}_3\\text{A}}} \\\\
+        & = & \\frac{${mAString} \\text{ g}}{${molAString} \\text{ mol}} \\\\
+        & = & ${ansString} \\text{ g mol}^{-1}
         \\end{eqnarray*}`;
 
       var feedback = (
         <React.Fragment>
           <MathJax.Provider>
-            <p>CH<sub>3</sub>NH<sub>2</sub> is a weak base, and
-            CH<sub>3</sub>NH<sub>3</sub><sup>+</sup> from CH<sub>3</sub>NH<sub>3</sub>Cl
-            is its conjugate acid, so the solution is a buffer. However, we are
-            not interested in the pH of this initial buffer, instead, we want
-            to know the composition and the pH of the solution after a stong base
-            was added. NaOH will be neutralized by the weak acid, CH<sub>3</sub>NH<sub>3</sub><sup>+</sup>,
-            the corresponding reaction and the ICF table (all amounts are in moles) are given below:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>CH<sub>3</sub>NH<sub>3</sub><sup>+</sup></th>
-                  <th>+</th>
-                  <th>OH<sup>&#8211;</sup></th>
-                  <th>&#8594;</th>
-                  <th>CH<sub>3</sub>NH<sub>2</sub></th>
-                  <th>+</th>
-                  <th>H<sub>2</sub>O</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{molAString}</td>
-                  <td></td>
-                  <td>{molOHString}</td>
-                  <td></td>
-                  <td>{molBString}</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;{molOHString}</td>
-                  <td></td>
-                  <td>&#8211;{molOHString}</td>
-                  <td></td>
-                  <td>+{molOHString}</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>final</td>
-                  <td>({molAString} &#8211; {molOHString})</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>({molBString} + {molOHString})</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Note that the above reaction is not an equilibrium, so we found the
-            limiting reagent, OH<sup>&#8211;</sup>, and used its amount to
-            calculate the change.</p>
-            <p>The last row of the ICF table above shows that after the neutralization
-            of NaOH, the solution is still a buffer, so we set up the corresponding
-            equilibrium and fill in an ICE table in moles (this would not be allowed
-            if we did not have a buffer):</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>CH<sub>3</sub>NH<sub>2</sub></th>
-                  <th>+</th>
-                  <th>H<sub>2</sub>O</th>
-                  <th>&#8644;</th>
-                  <th>CH<sub>3</sub>NH<sub>3</sub><sup>+</sup></th>
-                  <th>+</th>
-                  <th>OH<sup>&#8211;</sup></th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{mol2BString}</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>{mol2AString}</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({mol2BString} &#8211; <i>x</i>)<br/>&#8776; {mol2BString}</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>({mol2AString} + <i>x</i>)<br/>&#8776; {mol2BString}</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium amounts from the above table into the
-            expression for <i>K</i><sub>b</sub> and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>Since [OH<sup>&#8211;</sup>] = <i>x</i>, the pH of the solution is</p>
-            <MathJax.Node formula={eqpH}/>
+            <p>The neutralization reaction for this titration is</p>
+            <p className="eqn">H<sub>3</sub>A + 3 KOH &#10230; K<sub>3</sub>A + 3 H<sub>2</sub>O</p>
+            <p>Calculate the number of moles of KOH that reacted (remember that
+            volumes must be in liters when using molar concentrations):</p>
+            <MathJax.Node formula={eqMolOH}/>
+            <p>Use the stoichiometry of the reaction to find the number of moles of
+            the acid that reacted:</p>
+            <MathJax.Node formula={eqMolA}/>
+            <p>Then the molar mass of the acid is</p>
+            <MathJax.Node formula={eqMM}/>
           </MathJax.Provider>
         </React.Fragment>
       );
 
       return {description, answer: {
         answer,
-        label: (<React.Fragment>pH</React.Fragment>),
-        units: ""
+        label: <React.Fragment><i>MM</i></React.Fragment>,
+        units: "g/mol"
       }, feedback};
     }()
   },
   {
-    "_id": 225,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 3,
-    "idInExam": 25,
-    "type": "MC",
-    "questionBody": function() {
-      let concentrations = [
-        {c: 1.0,
-        indicator: (<React.Fragment>Methyl Yellow (p<i>K</i><sub>a</sub> = 3.3)</React.Fragment>)},
-        {c: 0.10,
-        indicator: (<React.Fragment>Bromphenol Blue (p<i>K</i><sub>a</sub> = 3.8)</React.Fragment>)},
-        {c: 0.010,
-        indicator: (<React.Fragment>Methyl Orange (p<i>K</i><sub>a</sub> = 4.2)</React.Fragment>)},
-        {c: 0.0010,
-        indicator: (<React.Fragment>Bromocresol Green (p<i>K</i><sub>a</sub> = 4.7)</React.Fragment>)},
-        {c: 0.00010,
-        indicator: (<React.Fragment>Resorcin Blue (p<i>K</i><sub>a</sub> = 5.3)</React.Fragment>)}
-      ];
-      let incorrectIndicators = [
-        (<p>Thymol Blue (p<i>K</i><sub>a</sub> = 2.0)</p>),
-        (<p>Methyl Purple (p<i>K</i><sub>a</sub> = 5.1)</p>),
-        (<p>Phenol Red (p<i>K</i><sub>a</sub> = 7.6)</p>),
-        (<p>Phenolphtalein (p<i>K</i><sub>a</sub> = 9.2)</p>),
-        (<p>Bromocresol Purple (p<i>K</i><sub>a</sub> = 6.4)</p>),
-        (<p>Bromothymol Blue (p<i>K</i><sub>a</sub> = 7.3)</p>),
-        (<p>Malachite green (p<i>K</i><sub>a</sub> = 1.3)</p>),
-        (<p>Thymolphtalein (p<i>K</i><sub>a</sub> = 9.9)</p>)
-      ];
-
-      let idx = Math.floor(Math.random()*concentrations.length);
-      let c = concentrations[idx].c;
-      let cString = c.toPrecision(2);
-      let indicator = concentrations[idx].indicator;
-      let k1 = 4.4e-7;
-      let k1String = k1.toPrecision(3);
-      let k2 = 4.7e-11;
-      let k2String = k2.toPrecision(3);
-      let cNew = c/2;
-      let cNewString = cNew.toPrecision(2);
-      let x = Math.sqrt(k1*cNew);
-      let xString = x.toPrecision(2);
-      let pH = -Math.log10(x);
-      let pHString = pH.toPrecision(3);
-
-      var options = [];
-      while (options.length < 4) {
-        let i = Math.floor(Math.random()*incorrectIndicators.length);
-        options.push({text: incorrectIndicators[i], correct: false, id: i});
-        incorrectIndicators.splice(i, 1);
-      }
-      options.push({text: (<p>{indicator}</p>), correct: true, id: 4});
-
-      var description = (
-        <React.Fragment>
-          <p>Consider the titration of {cString}&nbsp;M
-            NaHCO<sub>3</sub> with {cString}&nbsp;M HCl. Which one of the
-            following indicators would be most suitable for the detection of the
-            equivalence point in the titration?</p>
-          <p><i>K</i><sub>a</sub>(H<sub>2</sub>CO<sub>3</sub>) = {k1String}&#160;&#160;&#160;
-            <i>K</i><sub>a</sub>(HCO<sub>3</sub><sup>&#8211;</sup>) = {k2String}</p>
-        </React.Fragment>
-      );
-
-      const eqX = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^+][\\text{HCO}_3^-]}{[\\text{H}_2\\text{CO}_3]} \\\\
-        ${k1String} & = & \\frac{x^2}{${cNewString}} \\\\
-        x & = & ${xString}
-        \\end{eqnarray*}`;
-      const eqpH = `\\begin{eqnarray*}
-        \\text{pH} & = & -\\log{[\\text{H}^+]} \\\\
-        & = & -\\log{(${xString})} \\\\
-        & = & ${pHString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The titration reaction is</p>
-            <p className="eqn">HCO<sup>&#8211;</sup> + H<sup>+</sup> &#8594; H<sub>2</sub>CO<sub>3</sub></p>
-            <p>At the equivalence point, only the product, H<sub>2</sub>CO<sub>3</sub>,
-            is present in the solution (plus the spectator ions that do not affect the pH in any way).</p>
-            <p>First, we need to calculate the concentration of H<sub>2</sub>CO<sub>3</sub>.
-            We are not given any volumes for this titration, they can actually be arbitrary, so, let us
-            take 1.0&nbsp;L of NaHCO<sub>3</sub>. Then the number of moles of NaHCO<sub>3</sub> is {cString}&nbsp;mol,
-            and it would require {cString}&nbsp;mol of HCl. So, the volume of HCl is 1&nbsp;L too.
-            The final concentration of H<sub>2</sub>CO<sub>3</sub> is {cString}&nbsp;mol/(1&nbsp;L + 1&nbsp;L)
-            = {cNewString}&nbsp;M.</p>
-            <p>Write down the equilibrium and construct an ICE table:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>H<sub>2</sub>CO<sub>3</sub></th>
-                  <th>&#8644;</th>
-                  <th>HCO<sup>&#8211;</sup></th>
-                  <th>+</th>
-                  <th>H<sup>+</sup></th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{cNewString}</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({cNewString} &#8211; <i>x</i>)<br/>
-                    &#8776; {cNewString}</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equibrium concentrations into the expression
-            for <i>K</i><sub>a</sub> and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>And now use this H<sup>+</sup> concentration to calculate the pH:</p>
-            <MathJax.Node formula={eqpH}/>
-            <p>The indicator with the p<i>K</i><sub>a</sub> value closest to this
-            pH is {indicator}.</p>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 226,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 4,
-    "idInExam": 26,
-    "type": "string",
-    "questionBody": function() {
-      var description = (
-        <React.Fragment>
-          <p>Balance the following disproportionation reaction, which occurs in
-          basic solution.</p>
-        <p className="eqn">N<sub>2</sub>H<sub>4</sub> + Cl<sup>&#8211;</sup> &#8594; NH<sub>3</sub> + NH<sub>2</sub>Cl</p>
-        <p>What are the coefficients for N<sub>2</sub>H<sub>4</sub>, OH<sup>&#8211;</sup>, and NH<sub>3</sub>?</p>
-        <p><i>Enter the coefficients separated by commas.</i></p>
-        </React.Fragment>
-      );
-
-      var feedback = (
-        <React.Fragment>
-          <p>Since this is a disproportionation reaction, the same compound,
-          N<sub>2</sub>H<sub>4</sub>, will be reduced and oxidized. The first
-          half-reaction (reduction) is</p>
-        <p className="eqn">N<sub>2</sub>H<sub>4</sub> &#8594; NH<sub>3</sub></p>
-        <p>Start by balancing nitrogen:</p>
-        <p className="eqn">N<sub>2</sub>H<sub>4</sub> &#8594; 2 NH<sub>3</sub></p>
-        <p>There are no oxygens to balance, so go directly to hydrogen:
-        the left hand side has 2 too few, so we add 2 H<sub>2</sub>O molecules, and
-        the right hand side has 2 too many, so we add 2 OH<sup>&#8211;</sup>:</p>
-        <p className="eqn">N<sub>2</sub>H<sub>4</sub> + 2 H<sub>2</sub>O &#8594; 2 NH<sub>3</sub> + 2 OH<sup>&#8211;</sup></p>
-        <p>Finally, add 2 electrons to the left hand side to balance the charge:</p>
-        <p className="eqn">N<sub>2</sub>H<sub>4</sub> + 2 H<sub>2</sub>O + 2 <i>e</i><sup>&#8211;</sup> &#8594; 2 NH<sub>3</sub> + 2 OH<sup>&#8211;</sup></p>
-        <p>Now, the oxidation half-reaction (with balanced N and Cl):</p>
-        <p className="eqn">N<sub>2</sub>H<sub>4</sub> + 2 Cl<sup>&#8211;</sup> &#8594; 2 NH<sub>2</sub><sup>Cl</sup></p>
-        <p>The hydrogens are already balanced, so we just add electrons to the right hand side:</p>
-        <p className="eqn">N<sub>2</sub>H<sub>4</sub> + 2 Cl<sup>&#8211;</sup> &#8594; 2 NH<sub>2</sub><sup>Cl</sup> + 2 <i>e</i><sup>&#8211;</sup></p>
-        <p>Both half-reactions have 2 electrons involved, so we do not need to multiply any of them
-        before adding together:</p>
-      <p className="eqn">2 N<sub>2</sub>H<sub>4</sub> + 2 H<sub>2</sub>O + 2 Cl<sup>&#8211;</sup> &#8594; 2 NH<sub>3</sub> + 2 NH<sub>2</sub><sup>Cl</sup> + 2 OH<sup>&#8211;</sup></p>
-      <p>But now we notice that all the coefficients can be divided by 2:</p>
-      <p className="eqn">N<sub>2</sub>H<sub>4</sub> + H<sub>2</sub>O + Cl<sup>&#8211;</sup> &#8594; NH<sub>3</sub> + NH<sub>2</sub><sup>Cl</sup> + OH<sup>&#8211;</sup></p>
-        </React.Fragment>
-      );
-
-      let answer = RegExp('^\\s*1,?\\s*1,?\\s*1,?\\s*$');;
-
-      return {description,
-        answer: {
-          answer,
-          label: (<React.Fragment>coefficients</React.Fragment>),
-          units: ""
-        }, feedback};
-    }()
-  },
-  {
-    "_id": 227,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 4,
-    "idInExam": 27,
-    "type": "string",
-    "questionBody": function() {
-      let i = Math.floor(Math.random()*4);
-      let compound;
-      if (i === 0) {
-        compound = {
-          image: "data:image/png;base64,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",
-          oxStates: [2, 0]
-        };
-      } else if (i === 1) {
-        compound = {
-          image: "data:image/png;base64,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",
-          oxStates: [2, -2]
-        };
-      } else if (i === 2) {
-        compound = {
-          image: "data:image/png;base64,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",
-          oxStates: [3, 0]
-        };
-      } else {
-        compound = {
-          image: "data:image/png;base64,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",
-          oxStates: [3, -1]
-        };
-      }
-
-      var description = (
-        <React.Fragment>
-          <p>Determine the oxidation states of the two carbon atoms indicated
-          in the diagram below.</p>
-          <p className="eqn"><img alt="compound" src={compound.image}/></p>
-          <p><i>Enter the two oxidation states separated by a comma.</i></p>
-        </React.Fragment>
-      );
-      let a1 = compound.oxStates[0];
-      let a2 = compound.oxStates[1];
-      let answer = RegExp('^\\s*\\+?' + a1 + ',?\\s*' + a2 + '\\s*$');
-
-      var feedback = (
-        <React.Fragment>
-          <p>Each bond with an oxygen or a nitrogen atom pulls one electron from a carbon, increasing
-          its oxidation state by 1. If it is a double bond, the oxidation state increases
-          by 2. A bond with another carbon does not change the oxidation state.
-          A bond with a hydrogen (remember to draw all the implicit hydrogens not
-          shown in this formula) decreases the oxidation state by 1.</p>
-          <p>Following these rules, the first carbon has the oxidation state of +{a1}, and the second one has {a2}.</p>
-        </React.Fragment>
-      );
-
-      return {description,
-        answer: {
-          answer,
-          label: "",
-          units: ""
-        }, feedback};
-    }()
-  },
-  {
-    "_id": 228,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 4,
-    "idInExam": 28,
-    "type": "MS",
-    "questionBody": function() {
-      var options = [];
-      let i = Math.floor(Math.random()*3);
-      if (i === 0) options.push({text: (<p>The cell potential is 2.25&nbsp;V.</p>), correct: true, id: 0});
-      else if (i === 1) options.push({text: (<p>The cell potential is &#8211;2.25&nbsp;V.</p>), correct: false, id: 0});
-      else options.push({text: (<p>The cell potential is 0.77&nbsp;V.</p>), correct: false, id: 0});
-
-      i = Math.floor(Math.random()*4);
-      if (i === 0) options.push({text: (<p>The anode is platinum metal.</p>), correct: false, id: 1});
-      else if (i === 1) options.push({text: (<p>The anode is chromium  metal.</p>), correct: true, id: 1});
-      else if (i === 2) options.push({text: (<p>The cathode is chromium  metal.</p>), correct: false, id: 1});
-      else options.push({text: (<p>The cathode is platinum  metal.</p>), correct: true, id: 1});
-
-      options.push({text: (<p>Electrons flow from Cr(s) to Pt(s) in the external circuit.</p>), correct: true, id: 2});
-
-      i = Math.floor(Math.random()*3);
-      if (i === 0) options.push({text: (<p>Cr(s) is deposited at the cathode.</p>), correct: false, id: 3});
-      else if (i === 0) options.push({text: (<p>Cr(s) is dissolved at the anode.</p>), correct: true, id: 3});
-      else options.push({text: (<p>Pt(s) is dissolved at the anode.</p>), correct: false, id: 3});
-
-      var description = (
-        <React.Fragment>
-          <p>Consider the following voltaic cell:</p>
-          <p className="eqn">Cr(s) &#124; Cr<sup>3+</sup>(aq) &#8214; MnO<sub>4</sub><sup>&#8211;</sup>(aq), Mn<sup>2+</sup>(aq) &#124; Pt(s)</p>
-          <p>Which of the following statements about this cell is/are correct?</p>
-        </React.Fragment>
-      );
-
-      const eqEcell = `\\begin{eqnarray*}
-        E^{\\circ}_\\text{cell} & = & E^{\\circ}_\\text{cathode} - E^{\\circ}_\\text{anode} \\\\
-        & = & E^{\\circ}_{\\text{Cr}^{3+}/\\text{Cr}} - E^{\\circ}_{\\text{MnO}_4^{-}/\\text{Mn}^{2+}} \\\\
-        & = & 1.51 \\text{ V} - (-0.71 \\text{ V}) \\\\
-        & = & 2.25 \\text{ V}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <p>In a voltaic cell diagram, the anode is always placed on the left-hand side
-          and the cathode is on the right-hand side. So, Cr(s) is the anode, it is being dissolved,
-          and Pt(s) is the cathode.</p>
-          <p>Electrons always flow from the anode to the cathode in voltaic cells, that is,
-          from Cr(s) to Pr(s).</p>
-          <p>The cell potential is</p>
-          <MathJax.Provider>
-            <MathJax.Node formula={eqEcell}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 229,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 4,
-    "idInExam": 29,
-    "type": "MS",
-    "questionBody": function() {
-      let metals = [
-        {name: "Ni", dissolves: true},
-        {name: "Ag", dissolves: false},
-        {name: "Au", dissolves: false},
-        {name: "Cu", dissolves: false},
-        {name: "Mg", dissolves: true},
-        {name: "Zn", dissolves: true},
-        {name: "Sn", dissolves: true},
-        {name: "Cr", dissolves: true},
-        {name: "Hg", dissolves: false}
-      ];
-      let selectedMetals = [];
-      let correctMetals = [];
-      while (selectedMetals.length < 4) {
-        let i = Math.floor(Math.random()*metals.length);
-        if (metals[i].dissolves) correctMetals.push(metals[i].name);
-        selectedMetals.push(metals[i]);
-        metals.splice(i, 1);
-      }
-      correctMetals = correctMetals.join(', ');
-
-      var options = selectedMetals.map(metal => {
-        return {text: (<p>{metal.name}</p>), correct: metal.dissolves, id: selectedMetals.indexOf(metal)};
-      });
-
-      var description = (
-        <p>Which of the following metals would react with (or dissolve in)
-        1.0&nbsp;M HCl?</p>
-      );
-
-      var feedback = (
-        <p>HCl dissociates into H<sup>+</sup> and Cl<sup>&#8211;</sup>.
-        Only H<sup>+</sup> can act as an oxidizing agent, and its reduction
-        potential <i>E</i>&#176;<sub>H<sup>+</sup>/H<sub>2</sub></sub> = 0.00&nbsp;V.
-        So, H<sup>+</sup> is a cathode, and, in order to have a positive
-        cell potential, we need an anode with a reduction potential less than zero.
-        {correctMetals !=="" ? " In the above list, " + correctMetals + " can be dissolved." : ""}</p>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 230,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 4,
-    "idInExam": 30,
-    "type": "numeric",
-    "questionBody": function() {
-      let eCellString = (Math.random()*(1.150 - 1.000) + 1.000).toPrecision(4);
-      let eCell = Number.parseFloat(eCellString);
-      let lnQ = -(eCell - 1.10)*2/0.0257;
-      let lnQString = lnQ.toPrecision(3);
-      let q = Math.exp(lnQ);
-      let qString = q.toPrecision(3);
-      let answer = 1.000/q;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>Calculate [Cu<sup>2+</sup>] for a Daniel cell which is found to have
-        a cell voltage of {eCellString}&nbsp;V at 25&nbsp;&#176;C, and for
-        which [Zn<sup>2+</sup>] is 1.000&nbsp;M.</p>
-      );
-
-      const eqEcell = `\\begin{eqnarray*}
-        E^{\\circ}_\\text{cell} & = & E^{\\circ}_\\text{cathode} - E^{\\circ}_\\text{anode} \\\\
-        & = & E^{\\circ}_{\\text{Cu}^{2+}/\\text{Cu}} - E^{\\circ}_{\\text{Zn}^{2+}/\\text{Zn}} \\\\
-        & = & 0.34 \\text{ V} - (-0.76 \\text{ V}) \\\\
-        & = & 1.10 \\text{ V}
-        \\end{eqnarray*}`;
-      const eqNernst = `E_\\text{cell} = E^{\\circ}_\\text{cell}  - \\frac{0.0257 \\text{ V}}{n}\\ln{Q} `;
-      const eqQ = `\\begin{eqnarray*}
-        ${eCellString} \\text{ V} & = & 1.10 \\text{ V} - \\frac{0.0257 \\text{ V}}{2}\\ln{Q} \\\\
-        \\ln{Q} & = & ${lnQString} \\\\
-        Q & = & e^{${lnQString}} \\\\
-        & = & ${qString}
-        \\end{eqnarray*}`;
-      const eqCCu = `\\begin{eqnarray*}
-        Q & = & \\frac{[\\text{Zn}^{2+}]}{[\\text{Cu}^{2+}]} \\\\
-        ${qString} & = & \\frac{1.000 \\text{ M}}{[\\text{Cu}^{2+}]} \\\\
-        [\\text{Cu}^{2+}] & = & ${ansString} \\text{ M}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>In a Daniel cell, the half-reaction at the cathode is</p>
-            <p className="eqn">Cu<sup>2+</sup>(aq) + 2 <i>e</i><sup>&#8211;</sup> &#8594; Cu(s)</p>
-            <p>And the anode half-reaction is</p>
-            <p className="eqn">Zn(s) &#8594; Zn<sup>2+</sup>(aq) + 2 <i>e</i><sup>&#8211;</sup></p>
-            <p>The overall reaction is</p>
-            <p className="eqn">Cu<sup>2+</sup>(aq) + Zn(s) &#8594; Cu(s) + Zn<sup>2+</sup>(aq),</p>
-            <p>where 2 electrons are transferred.</p>
-            <p>The cell potential under stadard conditions
-            (25&nbsp;&#176;C and all concentrations are 1&nbsp;M) is</p>
-            <MathJax.Node formula={eqEcell}/>
-            <p>How did we know that Cu was the cathode and Zn was the anode? Since the
-            cell described is a galvanic cell, its cell potential must be above zero.
-            If we made Zn the cathode, we would have a negative cell potential,
-            which is wrong.</p>
-            <p>To calculate various properties of a cell under non-standard conditions,
-            use the Nernst equation:</p>
-            <MathJax.Node formula={eqNernst}/>
-            <p>Substitute all the data and solve for <i>Q</i>:</p>
-            <MathJax.Node formula={eqQ}/>
-            <p>Express <i>Q</i> as the the product concentrations divided by the
-            reactant concentrations (leave out the solids) and solve for [Cu<sup>2+</sup>]</p>
-            <MathJax.Node formula={eqCCu}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>[Cu<sup>2+</sup>]</React.Fragment>),
-        units: "M"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 231,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 4,
+    "_id": 131,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 0,
     "idInExam": 31,
     "type": "MC",
     "questionBody": function() {
       var description = (
-        <p>A 1.0&nbsp;M aqueous solution of MgSO<sub>4</sub> undergoes electrolysis
-        in 1.0&nbsp;M HCl. Ignoring any effects related to overpotential, determine
-        the product that will be formed at the anode.</p>
+        <p>Which one of the following best describes decanting?</p>
       );
 
       var options = [
-        {text: (<p>Mg(s)</p>),
-        correct: false,
-        id: 0},
-        {text: (<p>SO<sub>2</sub>(g)</p>),
-        correct: false,
-        id: 1},
-        {text: (<p>H<sub>2</sub>(g)</p>),
-        correct: false,
-        id: 2},
-        {text: (<p>O<sub>2</sub>(g)</p>),
-        correct: true,
-        id: 3},
-        {text: (<p>Mg<sup>2+</sup>(aq)</p>),
-        correct: false,
-        id: 4}
+        {text: <p>To stir and pour quickly into a flask.</p>, correct: false, id: 0},
+        {text: <p>To filter a solution by vacuum filtration.</p>, correct: false, id: 1},
+        {text: <p>To heat a solution without spattering.</p>, correct: false, id: 2},
+        {text: <p>To pour off the liquid and leave the solid behind.</p>, correct: true, id: 3},
+        {text: <p>To crush the solid precipitate with a scoopula.</p>, correct: false, id: 4}
       ];
 
       var feedback = (
-        <React.Fragment>
-          <p>When multiple product are possible during electrolysis,
-          the one that is actually produced is determined by the principle
-          of least effort: we want to have the least negative cell potential,
-          which means that we will need to apply the least voltage to the cell
-          to overcome it. In order to have the highest possible (least negative)
-          cell potential, the anode should have the lowest possible reduction potential.</p>
-          <p>So, let us list all the things in the solution that can be oxidized,
-          together with the corresponding reduction potentials:</p>
-          <ul>
-            <li>Cl<sup>&#8211;</sup>, <i>E</i>&#176;<sub>Cl<sub>2</sub>/Cl<sup>&#8211;</sup></sub> = 1.36&nbsp;V</li>
-            <li>H<sub>2</sub>O, <i>E</i>&#176;<sub>O<sub>2</sub>/H<sub>2</sub>O</sub> = 1.23&nbsp;V</li>
-          </ul>
-          <p>Therefore, H<sub>2</sub>O will be oxidized to O<sub>2</sub> (the product) at the anode.</p>
-          <p>Note that we have acidic conditions (due to the HCl in the solution).
-          Also note that both Mg<sup>2+</sup> and SO<sub>4</sub><sup>2&#8211;</sup> are
-          in their most oxidized forms, so they cannot be oxidized any further. The
-          Mg(s) and SO<sub>2</sub>(g) listed in the options are the products of
-          reduction, not oxidation.</p>
-        </React.Fragment>
+        <p>Decanting is separating solid from liquid by carefully pouring off the liquid and leaving
+        the solid behind. The solid precipitate should be settled down before one
+        starts decanting.</p>
       );
 
       return {description, options, feedback};
     }()
   },
   {
-    "_id": 232,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 4,
+    "_id": 132,
+    "courseId": "1301",
+    "examName": "Midterm 2013",
+    "chapterId": 0,
     "idInExam": 32,
-    "type": "numeric",
-    "questionBody": function() {
-      let tString = (Math.random()*(39.0 - 20.0) + 20.0).toPrecision(3);
-      let t = Number.parseFloat(tString);
-      let iString = (Math.random()*(3.50 - 1.50) + 1.50).toPrecision(3);
-      let i = Number.parseFloat(iString);
-      let tSec = t*60;
-      let tSecString = tSec.toPrecision(3);
-      let nE = i*tSec/96485;
-      let nEString = nE.toPrecision(3);
-      let nAl = nE/3;
-      let nAlString = nAl.toPrecision(3);
-      let answer = nAl*26.98;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A solution of AlCl<sub>3</sub> is electrolyzed for {tString}&nbsp;minutes
-        using a current of {iString}&nbsp;amperes. What is the maximum mass of
-        Al that could be deposited at the cathode?</p>
-      );
-
-      const eqF = `\\begin{eqnarray}
-        I t & = & n_e F \\\\
-        n_e & = & \\frac{I t}{F} \\\\
-        & = & \\frac{(${iString} \\text{ A})(${Number.parseFloat(tSecString)} \\text{ s})}{96485 \\text{ C/mol}} \\\\
-        & = & ${nEString} \\text{ mol}
-        \\end{eqnarray}`;
-      const eqMolAl = `\\begin{eqnarray}
-        n_\\text{Al} & = & \\frac{n_e \\times 1}{3} \\\\
-        & = & ${nAlString} \\text{ mol}
-        \\end{eqnarray}`;
-      const eqMassAl = `\\begin{eqnarray}
-        m_\\text{Al} & = & n_\\text{Al} \\times MM \\\\
-        & = & (${nAlString} \\text{ mol})(26.98 \\text{ g/mol}) \\\\
-        & = & ${ansString} \\text{ g}
-        \\end{eqnarray}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>During the electrolysis, aluminum will be reduced at the cathode:</p>
-            <p className="eqn">Al<sup>3+</sup>(aq) + 3 <i>e</i><sup>&#8211;</sup> &#8594; Al(s)</p>
-            <p>To calculate how much substance is produced (or consumed) during electrolysis,
-            use Faraday&#8217;s First Law of Electrolysis:</p>
-            <MathJax.Node formula={eqF}/>
-            <p>The stoichiometric ratio between moles of aluminum and moles of electrons
-            is 1:3, so, the number of moles of Al deposited is</p>
-            <MathJax.Node formula={eqMolAl}/>
-            <p>Finally, the mass of aluminum is</p>
-            <MathJax.Node formula={eqMassAl}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>m</i><sub>Al</sub></React.Fragment>),
-        units: "g"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 233,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 33,
-    "type": "string",
-    "questionBody": function() {
-      let orderX = Math.floor(Math.random()*3);
-      let orderY = Math.floor(Math.random()*3);
-      let orderZ = Math.floor(Math.random()*3);
-      let cX1 = 0.40;
-      let cX2 = cX1*4;
-      let cX3 = cX1;
-      let cX4 = cX1*8;
-      let cY1 = 0.30;
-      let cY2 = cY1;
-      let cY3 = cY1*4;
-      let cY4 = cY1*6;
-      let cZ1 = 0.35;
-      let cZ2 = cZ1;
-      let cZ3 = cZ1;
-      let cZ4 = cZ1*2;
-      let rate1 = 2.5e-6;
-      let rate2 = rate1*Math.pow(4, orderX);
-      let rate3 = rate1*Math.pow(4, orderY);
-      let rate4 = rate1*Math.pow(8, orderX)*Math.pow(6, orderY)*Math.pow(2, orderZ);
-      let rate1String = rate1.toPrecision(2);
-      let rate2String = rate2.toPrecision(2);
-      let rate3String = rate3.toPrecision(2);
-      let rate4String = rate4.toPrecision(2);
-      let answer = RegExp('^\\s*' + orderX.toString() + ',?\\s*' + orderY.toString() + ',?\\s*' + orderZ.toString() + '\\s*$');
-
-      var description = (
-        <React.Fragment>
-          <p>Using the kinetic data below, find the orders for each of reactants
-          X, Y, and Z. All runs were performed under identical conditions.</p>
-          <p className="eqn">X + Y + Z &#8594; Products</p>
-          <table className="data-table mb-5">
-            <tbody>
-              <tr>
-                <th>Run</th>
-                <th>Initial [X]</th>
-                <th>Initial [Y]</th>
-                <th>Initial [Z]</th>
-                <th>Initial Rate (M<sup>&#8211;1</sup>&nbsp;s<sup>&#8211;1</sup>)</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>{cX1.toPrecision(2)}</td>
-                <td>{cY1.toPrecision(2)}</td>
-                <td>{cZ1.toPrecision(2)}</td>
-                <td>{rate1String}</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>{cX2.toPrecision(2)}</td>
-                <td>{cY2.toPrecision(2)}</td>
-                <td>{cZ2.toPrecision(2)}</td>
-                <td>{rate2String}</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>{cX3.toPrecision(2)}</td>
-                <td>{cY3.toPrecision(2)}</td>
-                <td>{cZ3.toPrecision(2)}</td>
-                <td>{rate3String}</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>{cX4.toPrecision(2)}</td>
-                <td>{cY4.toPrecision(2)}</td>
-                <td>{cZ4.toPrecision(2)}</td>
-                <td>{rate4String}</td>
-              </tr>
-            </tbody>
-          </table>
-          <p><i>Enter the orders for X, Y, Z separated by commas.</i></p>
-        </React.Fragment>
-      );
-
-      const eqRate = `Rate = k [\\text{X}]^x [\\text{Y}]^y [\\text{Z}]^z`;
-      const eqX = `\\begin{eqnarray*}
-        \\Big( \\frac{[\\text{X}]_2}{[\\text{X}]_1} \\Big)^x & = & \\frac{Rate_2}{Rate_1} \\\\
-        \\Big( \\frac{${cX2.toPrecision(2)}}{${cX1.toPrecision(2)}} \\Big)^x & = & \\frac{${rate2String}}{${rate1String}} \\\\
-        ( ${(cX2/cX1).toPrecision(2)} )^x & = & ${(rate2/rate1).toPrecision(2)} \\\\
-        x & = & ${orderX}
-        \\end{eqnarray*}`;
-      const eqY = `\\begin{eqnarray*}
-        \\Big( \\frac{[\\text{Y}]_3}{[\\text{Y}]_1} \\Big)^y & = & \\frac{Rate_3}{Rate_1} \\\\
-        \\Big( \\frac{${cY3.toPrecision(2)}}{${cY1.toPrecision(2)}} \\Big)^y & = & \\frac{${rate3String}}{${rate1String}} \\\\
-        ( ${(cY3/cY1).toPrecision(2)} )^y & = & ${(rate3/rate1).toPrecision(2)} \\\\
-        y & = & ${orderY}
-        \\end{eqnarray*}`;
-      const eqZ = `\\begin{eqnarray*}
-        \\Big( \\frac{[\\text{X}]_4}{[\\text{X}]_1} \\Big)^x \\Big( \\frac{[\\text{Y}]_4}{[\\text{Y}]_1} \\Big)^y
-        \\Big( \\frac{[\\text{Z}]_4}{[\\text{Z}]_1} \\Big)^z & = & \\frac{Rate_4}{Rate_1} \\\\
-        \\Big( \\frac{${cX4.toPrecision(2)}}{${cX1.toPrecision(2)}} \\Big)^${orderX}
-        \\Big( \\frac{${cY4.toPrecision(2)}}{${cY1.toPrecision(2)}} \\Big)^${orderY}
-        \\Big( \\frac{${cZ4.toPrecision(2)}}{${cZ1.toPrecision(2)}} \\Big)^z
-        & = & \\frac{${rate4String}}{${rate1String}} \\\\
-        (${(Math.pow(cX4/cX1, orderX)*Math.pow(cY4/cY1, orderY)).toPrecision(2)})(${(cZ4/cZ1).toPrecision(2)})^z
-        & = & ${(rate4/rate1).toPrecision(2)} \\\\
-        z & = & ${orderZ}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The rate law for this reaction is</p>
-            <MathJax.Node formula={eqRate}/>
-            <p>To find <i>x</i>, the order of the reaction for X, consider
-            the first two runs: the concentrations of Y and Z are kept constant,
-            so, the only thing that affects the initial rate is the change of
-            concentration of X:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>Similarly, in runs 1 and 3, the concentrations of X and Z are kept
-            constant, so, we can use these runs to find the order for Y:</p>
-            <MathJax.Node formula={eqY}/>
-            <p>There are no two runs with the concentrations of X and Y kept
-            constant, but this is fine since we already know the order of the reaction for
-            X and Y. We can use any two runs to find <i>z</i>:</p>
-            <MathJax.Node formula={eqZ}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>orders</React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 234,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 34,
-    "type": "numeric",
-    "questionBody": function() {
-      let kString = (Math.random()*(0.0500 - 0.0100) + 0.0100).toPrecision(3);
-      let k = Number.parseFloat(kString);
-      let tString = (Math.random()*(89.5 - 30.0) + 30.0).toPrecision(3);
-      let t = Number.parseFloat(tString);
-      let lnFrac = -k*t + Math.log(1);
-      let lnFracString = lnFrac.toPrecision(3);
-      let molRemain = Math.exp(lnFrac);
-      let molRemainString = molRemain.toPrecision(3);
-      let answer = 1 - molRemain;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A first order decomposition reaction has a specific rate constant
-          of {kString}&nbsp;min<sup>&#8211;1</sup>. What fraction of the reactant will
-          have decomposed after {tString}&nbsp;minutes?</p>
-      );
-
-      const eqRate = `\\ln{[\\text{A}]_t} = -kt + \\ln{[\\text{A}]_0}`;
-      const eqFrac = `\\begin{eqnarray}
-        \\ln{[\\text{A}]_t}
-        & = & -(${kString} \\text{ min}^{-1})(${tString} \\text{ min}) + \\ln{1} \\\\
-        & = & ${lnFracString} \\\\
-        [\\text{A}]_t & = & e^{${lnFracString}} \\\\
-        & = & ${molRemainString} \\text{ mol}
-        \\end{eqnarray}`;
-      const eqFracD = `\\begin{eqnarray}
-        1 \\text{ mol}  - ${molRemainString} \\text{ mol} = ${ansString} \\text{ mol}
-        \\end{eqnarray}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The integrated rate law for a first order reaction is</p>
-            <MathJax.Node formula={eqRate}/>
-            <p>Note that for the first order reactions we can use moles,
-            masses, etc. instead of concentrations.</p>
-            <p>So, assume that we had 1&nbsp;mole of reactant initially.
-            Substitute all the data in the rate law and find the moles
-            of reactant remaining:</p>
-            <MathJax.Node formula={eqFrac}/>
-            <p>The amount of the reactant decomposed is the difference between
-              the initial and the remaining moles:</p>
-            <MathJax.Node formula={eqFracD}/>
-            <p>Since the initial amount was 1&nbsp;mole, the fraction
-            remaining is {ansString}/1 = {ansString}.</p>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>&chi;</i></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 235,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 35,
-    "type": "numeric",
-    "questionBody": function() {
-      let t12String = (Math.random()*(30.0 - 5.00) + 5.00).toPrecision(3);
-      let t12 = Number.parseFloat(t12String);
-      let cFString = (Math.random()*(9.00 - 0.500) + 0.500).toPrecision(3);
-      let cF = Number.parseFloat(cFString);
-      let k = Math.log(2)/t12;
-      let kString = k.toPrecision(3);
-      let answer = -(Math.log(cF) - Math.log(100))/k;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A first order reaction has a half-life of {t12String}&nbsp;seconds.
-        How long will it take for the reactant concentration to decrease
-        to {cFString}% of its initial value?</p>
-      );
-
-      const eqK = `\\begin{eqnarray*}
-        k & = & \\frac{\\ln{2}}{t_{1/2}} \\\\
-        & = & \\frac{\\ln{2}}{${t12String} \\text{ s}} \\\\
-        & = & ${kString} \\text{ s}^{-1}
-        \\end{eqnarray*}`;
-      const eqT = `\\begin{eqnarray*}
-        \\ln{[\\text{A}]_t} & = & -kt + \\ln{[\\text{A}]_0} \\\\
-        \\ln{(${cFString})} & = & -(${kString} \\text{ s}^{-1})t + \\ln{(100)} \\\\
-        t & = & ${Number.parseFloat(ansString)} \\text{ s}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Using the given half-life, we can calculate the specific rate
-            constant as</p>
-            <MathJax.Node formula={eqK}/>
-            <p>Assume that we had 100&nbsp;M of the reactant initially.
-            Then the remaining amount is {cFString}&nbsp;M. Substitute
-            these amounts into the inegrated rate law (remember that we can use
-            moles or even masses instead of concentrations for first order
-            reactions). Solve for <i>t</i>.</p>
-            <MathJax.Node formula={eqT}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>t</i></React.Fragment>),
-        units: "s"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 236,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 36,
-    "type": "MS",
-    "questionBody": function() {
-      let orders = [
-        {order: 0,
-        name: "zero",
-        image: "data:image/png;base64,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",
-        fb: "For a zeroth-order reaction, the plot of concentration versus time should be linear. And since A is being used, its concentration must decrease."},
-        {order: 1,
-        name: "first",
-        image: "data:image/png;base64,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",
-        fb: "For a first-order reaction, the plot of the logarithm of the concentration versus time should be linear."},
-        {order: 2,
-        name: "second",
-        image: "data:image/png;base64,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",
-        fb: "For a second-order reaction, the plot of the inverse concentration (1/[A]) versus time should be linear. Since A is being used, [A] must decrease, but the inverse must increase."}
-      ];
-      let idx = Math.floor(Math.random()*3);
-
-      var description = (
-        <p>For the reaction A &#8594; Products, which of these plots
-          represent {orders[idx].name}-order kinetics?</p>
-      );
-
-      var options = orders.map(order => {
-        return {
-          text: (<p m-3><img src={order.image} alt="plot"/></p>),
-          correct: order.order === idx,
-          id: order.order
-        };
-      }).concat([
-        {
-          text: (<p m-3><img src="data:image/png;base64,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"
-          alt="plot"/></p>),
-          correct: false,
-          id: 3
-        },
-        {
-          text: (<p m-3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAAC1CAYAAAA0oZETAAAGRklEQVR4nO3dT6hUZRzG8e9V61ppIGpkuBBC7Q9BLfpDti0iSBeFtAiiqzshiCChjbrLNlF7V7WpnRIt2rQpCsuFiyIXtnFVVIso2jkt3jnNqHemmblzfu973vP9wDBy595zX8WH3znnmXMG+uNU7gVIfTLIvQBpU+4FSH1i4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEB9C9zh3AuQ+mIAnAfO5V6I1AeD4fMa8BtwKONapOoNxv68E/gKOJtpLeqpvh3DNX4Hnhk+/wQczLscqT6DCV8/SArd24FrUU/1dcKNuwI8wGg3c2fe5Uh1mDThxh0inVBZa3ktUvVmCVzjHKlCkLSgeQIHqSQfYFkuLWTewDUsy6UFLBo4sCyX5raRwIFluZbAWmB2luXSHDY64cZZlmshTrjFWJZL/2OZE26cZbk6b7WFbbYVuIZluTrnAPAp8FYL2247cGBZro7YAnxE+s86AE608DsiAtewLFfxVoF91BE4sCxXB+ynnsCBZbluYi3QLstyFa22CTfOslxOuECW5SpOzRNunGV5Tznh8vga2EUKnmV5jxi4vI6R+jrL8p4oLXDNW7puz7qKWBeAFUbhk0KcYPROkwHwCbBtidsv6RhuEstyVaMLgQPL8qqVtkspy3JVoisTbpxleWWccGWzLFdndXHCjbMsr8BKy9t/Yvho28XhY5oB7f99I5wjleZHci9E89vS8vZ3kXaJ2vZzwO8oxTFGV5YfIfV4UnG6vku5Hq8sV7FqDBxYlqtQtQYOLMs7o8RaoI1b5NXOslw32Ap8PnxcAk5O+L5dwDXgjgmvnwa+GG7jwpTvW0/NE26cZbnYCvzA6H6Tk86OvkoKxvMTXt88fF4DfgF2zLGGvgSucRbL8t5qAjftSu5V4DIpGBeYXlm8jIGbhWV5YUo6hnsSuBf4FngReDjvcqrgleWFKSVwK8A7wFFGx3fHqeOdISXwyvJClBK4+0kT7SLphMiPwGvA3pyLqoxXlheglMC9DrwH/AP8DXwIbCcdq2m5jpB2NS3LKzbtpMndwFVuvL1C87g2fP1mnjTZOMvyDEqYcM8B3wN7SB/msY+0K/nx8PnZfEurmmV5xSZNuE2k47an1vmZp0lT6Qq3VgROuOWyLA+Se8K9RJpsl9d5rfnaATyz1javLK/MehPuBUbHat+QTpI0VoHPuPF47pWx151w7bEsr0ATuONL2t5hDFzb/MzyFkTtUjbvgXyMtAt534Lb2UN6N8ojy1iUprIsb0HUOzlWgTdItzC/i3Rm7H3g+pzbOUo6wfLH8Gc/IPV2s6jlniY5nCftZh7LvRB1h7uUG+OV5ZqLgds4y/INyl0LqFssyzUzJ9xyWZYvwAmnRVmWayonXHssy3ULA9c+y3L9x8DFaG7DblnecwYulrdh7zkDF8+yvMcMXB6W5WOsBdQ2y/KecsLl1/uy3AmnSJblPeKEK4tleeUMXJksyytl4MplWV4hA1c+y/KKGLhusCyvhIHrjmrLcmsBlciyvAJOuG6qqix3wql0luUd5YTrPsvyDjFw9bAs7wADVxfL8sIZuDpZlhfKwNXLsrxABq5unSjLrQVUC8vywjjh+qPYstwJpxpZlhfACddPluWZGLh+sywPZuB0GDiVexF9YeCUnSdNpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCmTgpEAGTgpk4KRABk4KZOCkQAZOCrQl9wICfYm3WVA+p4EzuRchSZIkSZIkSdLs3gQukT6HTVKLVhh1mQ9lXotUtR2k4nYwfLwL3JN1RVLFHmQUtgHwJ7A764qkyq2RwnYG34O7MP/hNKtHh8/fAddzLkSq3W3ARdKE2595LVL19pLCdhW4PfNaOs1dSs1i2/B5N3AS2JxxLZ1m4DSLv4Bfge3A43hdodS6zcCd9OuiZUmSJKk0/wJ4U0qauctzAAAAAABJRU5ErkJggg=="
-          alt="plot"/></p>),
-          correct: false,
-          id: 4
-        }
-      ]);
-
-      var feedback = (
-        <React.Fragment>
-          <p>{orders[idx].fb} Therefore, the only correct plot is</p>
-          <p className="eqn"><img src={orders[idx].image} alt="correct plot"/></p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 237,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 37,
-    "type": "numeric",
-    "questionBody": function() {
-      let cI1String = (Math.random()*(0.300 - 0.215) + 0.215).toPrecision(3);
-      let cI1 = Number.parseFloat(cI1String);
-      let cF1String = (Math.random()*(0.200 - 0.100) + 0.100).toPrecision(3);
-      let cF1 = Number.parseFloat(cF1String);
-      let cI2String = (Math.random()*(0.500 - 0.315) + 0.315).toPrecision(3);
-      let cI2 = Number.parseFloat(cI2String);
-      let k = (1.0/cF1 - 1.0/cI1)/30;
-      let kString = k.toPrecision(3);
-      let answer = k*Math.pow(cI2, 2);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>The rate law for the reaction A &#8594; Products is Rate = <i>k</i>[A]<sup>2</sup>.
-        When the initial [A] = {cI1String}&nbsp;M, after 30&nbsp;minutes, the
-        [A] = {cF1String}&nbsp;M. What is the rate of the reaction when
-        [A] = {cI2String}&nbsp;M?</p>
-      );
-
-      const eqRate = `\\frac{1}{[\\text{A}]_t} = kt + \\frac{1}{[\\text{A}]_0}`;
-      const eqK = `\\begin{eqnarray*}
-        \\frac{1}{${cF1String} \\text{ M}} & = & k(30 \\text{ min}) + \\frac{1}{${cI1String} \\text{ M}} \\\\
-        k & = & ${kString} \\text{ L mol}^{-1}\\text{ min}^{-1}
-        \\end{eqnarray*}`;
-      const eqRateNew = `\\begin{eqnarray*}
-        Rate & = & k[\\text{A}]^2 \\\\
-        & = & (${kString} \\text{ L mol}^{-1}\\text{ min}^{-1})(${cI2String} \\text{ M})^2 \\\\
-        & = & ${ansString} \\text{ mol L}^{-1}\\text{ min}^{-1}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The given rate law shows that the reaction is second-order. The integrated
-            rate law for a second-order reaction is</p>
-            <MathJax.Node formula={eqRate}/>
-            <p>Using the data related to the first run, we can calculate the
-            specific rate constant:</p>
-            <MathJax.Node formula={eqK}/>
-            <p>And now use the rate law with the new initial concentration to
-              calculate the rate:</p>
-            <MathJax.Node formula={eqRateNew}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>Rate</i></React.Fragment>),
-        units: "mol/(L min)"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 238,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 38,
-    "type": "MS",
-    "questionBody": function() {
-      let M1 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAAC2CAYAAAABfcunAAAWuElEQVR4Xu2dC9R1RV3Gf6ZZmZIYYkalkhZKJSArL4FohpI3Eio0AVEwvJCJaZZmXLxUQppIGYKoKRWQoimJpWipaV5K7SKoeUeltDRRMjNbj8wsx80+79n77L3Pnpn9zFrv+t73O3P5zzPznLn9L9fByQgYgaoQuM7EvTkJOGXiNly9ETACCQJTk/prwNRteECNgBEwqT0HjEC9CEy9inqlrnfuuGeZImBSZzowCxLr+4G7Ad8L7AFcH7gaeHf4ec+CsBilqyb1KDC6kg0QOAx4OLA38Ebgk8AVwAeBHwb2CT//AVwEPHeDNhZZpFRS/wTw5jBirwUeDHw2/K3fXxp+/03gqcnIfgfwbOCWjTKLHPyZOn0o8ATgSuBs4JIOcpwB/DTwGOA1HfIvOksNpNb27AjgciCS9vgWUuvb/3zg9kDzi2DRk2CLnX8hsCtwFPCFnu3eGnh++MI+t2fZRWWvgdQasCOB88K2LRJX/x9X6riy6wtAK4Qu8NLVfVGDPkNn7wJcDJwIvGhg+1qt9wUeOrCeaouXTuqzwlb6I2HC7Be25SLzqQ1S/yRwurffW5/LB4ed1OOBz43U+nHAHcOZfKQq66mmdFKLvEpaibXyPir8/jzgFQmp44j5TL3duXtv4LHAPSdo9pHAj4Yxn6D6cqusgdQfCuesnwE00Fq1Xwb8pUk968TUhdgvAveZUAptwfcEnjJhG8VVXQOpLwgXYDor3ww4LRBbt+O+/Z5nSn4foN3S/bbQvMb/wvCzhebyb6IGUv9BuCS7V4D7gPCvST3P/Nsf0C23tsbbSlJW0a36f2+rwZzbqYHUeofW9ksXY/Gpaq/kwszv1NudgV8FvhX4vy02q8s4vX1PcXbfYjfGaaoWUscnq+YTlrff48yTrrW8NbxCvK1rgRHzSUHlA9Y8m94s0gYdI87azKv6PeDDwHNmlFOXpAcBH51RhtmbLnWlnh04C/BNCBwO3BnQW/ScSVqDzwAkz2KTSb3YoR+t4zo/fzFYV41W6YCKpJD0rqBSOqCacoua1OWOXS6S/2mwopJ6bg7phsCngBvlIMwcMpjUc6BeT5v3BWQ8s4336D6onRz0+xfpH8+k7jNVnLeJgHS5bwF8PkNoZAV2c+CqDGWbVCSTelJ4q678TOB9wO9n2kupqN4h7CQyFXEasUzqaXCtvVZpjT26APNH2djraPD+2gck7Z9JvaTRHq+vbwJ+PfE+M17N49aU65l/3F42ajOpJ4W3ysq18sm32P0L6Z1cJskxw1sKkXewmCb1YAg7VaC3XPlFkyXZf3UqkW8mnaMfAFyWr4jfJJlsunVUmNIENCsoTOrph0Ohh2TnLTLLNFQE/3Rw4vC46ZsftQXZLx8IPGzUWqev7J+C95V/nr6p+VswqacbA5FZ76V6K9W/Mcn7yvcAdwXOCY4EZKpYQvp34LbAZ0oQNpHxaOAewEMKk3sjcU3qjWBbW+i3gN06+NC6XlBnlKnozwOfWFvzfBlk2nhT4FfnE2FQyzr6yMb73wbVUkBhk3r8QZLnFU0gOTnsmmQM8XRADvXkninHdCkg542lpl8JyihzG51Mjp9JPS7EQ8+cCjWjLWJuoWYUHUNvvlI4KTnN4cBh63iZ1ONBLpe1siW+08AqFXZGrpn+dWA9YxWXOeMrAR0RSk+/Dfwn8Duld2Qn+U3qcUZ3l+D8UKFhxki6HVckEW3j507yyqojxV/NLcgI7d8keEf57hHqyrYKk3qcoZnC64cMEfQEJlvluZIUTI4F5O63lqQXB7ldekEtHWr2w6QePrLfFdzn3Hh4VdeqYe7LKbkF0rv0xybo21xV6klOQRIPmUuAqds1qYcj/LshBOuzhld1rRp2B/4xrNgTVL9jlaU/Ye3Uub8FdBuuFbu6ZFIPG9JteNn4EeBPtuxHW3bICluky78a0zHBQWGVQfZM6mFT9pmAtKx0kTRl0vvwk4NW1JTtxLoV6/s2gAK+15q+HFwe/U9tHTSpNx9RqXtq8t9g8yp6lXxQsA3+hV6l+md+HSCNuNf3L1pUiVre3q8Fukm9+TyUMcb1Ab19bivJkEJRKB44UYPSgpPTPt0T1J6kMqqY5j9WW0dN6s1H9B+C5w9pgW0zaSsulVJFJRkztI2297oZPnKbnZm5rTkjikzWdZN6M2h/MMTtuvVmxQeXktaajP4VjUKBAIemp4UviBjve2h9pZQfqtabZT9N6s2G5dcAvU/Lpc+cSW6FXj1Q7VFv4To/a/VfYvoKoPuR/62l8yb1ZiP5zuClUpEg5k46098uONTvY5e9b3inlWrrG+buxIztyxuqnCcoJHIVyaTuP4y3Civbnv2LTlZiP+CE4N1Dt7pShGmzG9alkC7ZdJP+N8FBg552lpykY/9iYJ9aQDCp+49kzppWel77JUBeNDVZ5dBebpT0r2615SdNYXKkzKIIkU7XIHBBOMLksPMaPCYmdX8I3x4c2b2jf9GtllAsKf3Igkz/Xg3IV5fTtRGQY0Ld/Gu3U3wyqfsNoULM/HVY8fqVdO6cEdg12K/LNLP4ZFL3G0K5G9JZ+kn9ijl3AQj8BaD7iNcUIOuOIprU/UZQZ1F5AdG51KkuBB4M6CWgeOUbk7rfxPw4ICeBOXv97Ncj504R+BowNScmR3zqDlQBUhgFn6cnn46zNyBd8IuBP55dkgECmNTdwatme9a9y4vLqdA8iqaiJ8Fik0ndfeieF1z3/mH3Is5ZIAKfA7Qr+3yBsn9dZJO6+8jJrZA0sfzW2x2zEnMWrzZqUnebdlM6F+wmgXNtC4G7BE82Mm0tMpnU3YatirNWt646V1ChlVmrvKkWl9aRWk7PdSP41A2Ddtdy+y33PjpjbdPLSXGTqSKBZYYqf+vPKLFP60gd+/QU4FTgLODEoEfcpb+1kFp2y7KdHsMhQRfcnGdeBGTKeiGw97xibNZ6V1LH2hVX6fxgASTNG63iO6VaSD23U/3NRtelhiAgtVFZ5BUXqL4vqVOQ4uqt/ztgxfa8BlIXf3EyZGYvuOxJ4XXo5NIw6EvqlMjyZ6WztpL+f4+WrXkNpFY8Y8W00re203IQKNbbaBdSS5PqpWEsXwvob/m7TpO25fpGkz1q+lkNpH458JLgLmg5U9o9FQIfCEYeCi9cTFpHat9+Q05hZYuZWJUIqjjWWqQUiaWYtI7UQztS+kot22nFZZZLYKflIfDjwca6qJhi60gdV+p7rRnP9HydZi2d1LrhV9+PWt58do8DAjKzFamvKAWRdaRWP3SG1qROz9KR7Dpr6llLF2VK8eIs9r90UsttrHS+ZczhtEwEzghna3lFKSKtI/VOZ2rpxorMIvtulV6UKaTOQ4J1VhEDaiFHR+BugJ637j56zRNVaFKvBlbudhWm9jsnwt7VloNAUaF915G66/Zbq/WBlb1T/xTwRODgcuaeJZ0IgbOBvwPOmaj+UavtQmo1qK12U+85apHpM9mgHgFc3pCu5DO1Lv+uG7Zeo4LuyopDQA4JFSTh3iVI3pXUm/alZFJL4Ubf0PLz7WQEvgTojklBEbJO60itaIDPDhpVCp3aN5VK6m8Lppbf3rfDzl8tAvqSl0/wdUZMswOwjtT6Zjoz3Gw3t9ZdhC+V1IeFW/3Du3TSeRaBQDFzYh2pNVq6BJNmVfMNustIlkrqFwSrs3O7dNJ5FoNAESa460i9TqNslYFHHOVSSW1978XwtFdH5ThB/gT+rFepLWdeR+qh4pRI6jsEDy/7D+28y1eHgF54HhBifGfbua6kTs0v9ZSlJNXRda6NSiS1n7Kyna6zC6Ynzi8D15tdkh0E6ELq6ADhyYAcsknfWzfhq/S90+ZKJPXbgF8OygY5j51lmweBi4AXA6+Yp/n1ra4jdXr7/bHG89Yqxwglk1r91S2/dNmdjEAbAtmHXxpC6tSgo+kJpdSLsqOBewQjDk9pI9CGQPY6DOtIrU5Fve50+31ZeISPpperhr+07bcUbV4PvNrz2QjsgMCrwmVqlvOkC6nVtzbd79pcBN8oGMLv4ulsBNYgIHNcmWIekyNSXUm9qewlrdS6HLsV8NhNO+tyi0FA5rhXAjfMsccm9TdG5T3hme69OQ6UZcoOAemBPwe4JDfJupA6jcrRlL8WjTIrnOQ2M/OX51jgzsBxuYm6jtTRSktO12rW/ZbRyvuCXXhuY2R58kQg2/DG60i9FCutYmxl85zfi5VK7qPlG/x1OSGwjtRLsKd+IHAo8KCcBsayFIHA8cC+wCNyknYdqSXrKv9jXfpRwu33xcCzwvt0lz45jxGICOwawjHJ42g2aR2paze9LDYIWjYzyIJoUZCPPoW+zSKtI/VQIXNfqaWU/0LglUM76vKLReBng9PNn8sFgSWT2s9YuczC8uX4AnBz4KocutKV1DXaU2u7pFAqUiJwMgJDEMgqNE8XUtdoT32nYEYq5QEnIzAUAd2Ay6/dfkMrGqP8OlLXak+d5fviGAPqOmZDIBs14yGkLtWe+q5BO+6g2YbfDdeIgAyBbhFcfM3av3WklnC12VN/AFAYlQ/Oirwbrw2BbNRGu5Ba4NdiT53VhUZts9r94eXBh5/8mM2WupJ6UwFzeqcuKsjZpoC73KwI3A94OHD/OaVYEqlz+oKZc8zd9rQIfAaQufIqv33Ttg4shdQyZJdBu9+kJ59Si2/gtOAV5fS5kFgCqaWXK2cOfz4XyG53UQjcFngRcMe5el07qWV9JVvp35gLYLe7SATeAJwCvHGO3tdMakVReHfQHJsDW7e5XATuC8jWWhdnW0+1klr+mC8A/mjriLpBI3ANAu8H7gNIL2KrqTZSPxJ4NPBEQHauTkZgLgRm84pSC6kfCjwt2EUraqWeFZyMwNwIfBG4abjX2ZosJZJat4vx53aA/Kh9LlyGfXJryLkhI7AegVOBr2zoiXd97StylEbqk4KXCbnz1c+/AG+3HvfG4++C0yJwY+DDgHyZbS2VRuqtAeOGjMBICMjOWvHczx2pvrXVmNRrIXIGIzAIAR0RLwT2HlRLj8ImdQ+wnNUIbIiA1JQVJlmajZMnk3pyiN2AEeBg4AnAPbeBhUm9DZTdhhG4ZpV+EvCuqcEokdSpZ9MUH/mIOgK4PDxzabtzy+C5JTWDiw4fDggXGFNj7PrLRaDNOUjsTZw/cT62zSd9phVa83J34OmA3GlNmkol9Z4tb38C8KiExG0RO2NYXmmd6UbSyQjshIBIrTl1InB1klH/L+u/uIjI467+T3MwLiAxuo2ixca5pqARug2f1GKwJlK3gRhJLBtXuZrR6r1pWF5P/+UhsIrUccF4E3AeEOeeyBtDPovoSmkI6NsE9eUfmhLK2kkt7OIK/pEAZPNbd0p8XXfZCHQltXqZHuv0t0idrtwRibPCufr5U0FTE6mb2++IWfxWlQP/uF2aCk/XWxcCXbffsdeag0cDNwuGRW1HvBuF3eIuU0FVKqlf2gKIbhfbvhnjFvz2wJFhuzQVnq63LgRWXZSll7Jpj9vucdoQkQOFrwLSDR89lUrq9KIsPTfrfLMK5Esblxujg+kKq0OguVK3nZ2bnda2+0MdFo/JLLhqIHXzPJNueZq3km23lNXNRHdoNATatt87LSLxLN2F1LL9V3z0R40mbaioFlJHMA9Pzs3NZwfl6fJNOzbGrq9cBFadqXd6m+66UgsVPW3pHVu6FaOlmkgdzzNSOJE7YIWqbTtDx3OSz9ejTaNqK1pF6rZFJILQh9Q/AOhZTDG4Rkslknq0zrsiI5ABAtp+y4JLClGjJJN6FBhdiREYhIB2lc8dK9iEST1oLFzYCIyCwLcEt0fXHaM2k3oMFF2HERiOgILqHQscOrQqk3oogi5vBMZDQKqj7wDOHlKlST0EPZc1AuMjIEuuE4CPb1q1Sb0pci5nBKZDQMZHBwEf3aQJk3oT1FzGCEyPwCdC5EyZCvdKJnUvuJzZCGwVgU8DMkS6sk+rJZI61RxrWmXFz4SB7ab7zATnXYXAKg3Ebc01hZCSjvinug5RiaRW31bpcGsAonH6IUCbieYqs7mumDnf8hBosyPQPNsjLB6HTTzXLgLeCjyzC/Slklp9azoQbHNn1AUD5zECXRBILfz2msGM9/QQGve4df71Sia1BiIFOpqwpT6hugyW8xiBLgjEReO9wX/3HM4r9WVyToh5/TDga22Cl07qeK5RIDL9tHk+6TJgzmMEuiAQd4cKlzzn4nFM8HJ6E+Cdyc/XfYqXTmr1wW5/u0xH5xkDAe0M5YJoleusMdroU8c+wP7Jz6uAU2ogtbZFZwInj21s3gdd560egXhZplXyETm7mjapq5+L7uAICDRdGK1zaTRCk5tXYVJvjp1LLgOBVR5C05A6o7ojGgqrST0UQZevGYEuik5t8dpmxaQGUs8KoBs3ArkhYFLnNiKWxwgMRMCkHgigixuB3BAwqXMbEctjBAYiYFIPBNDFjUBuCJjUuY2I5TECAxEwqQcC6OJGIDcETOrcRsTyGIGBCJjUAwF0cSOQGwImdW4jYnmMwEAETOqBALq4EcgNAZM6txGxPEZgIAIm9UAAXdwI5IaASZ3biFgeIzAQAZN6IIAubgRyQ2BqUl8K3D23TlseI1ApAnLpNbmPskqxc7eMQL4ITL1S59tzS2YEKkXApK50YN2t5SJgUi937N3zShEwqSsdWHdruQiY1HmOfTNAgdzRHlhheN5mUENFwFAaGtJm0QEeTOoySJ2nlMOlmipSqUk9fGwWUYNWy92Be4WfA4C/B54NHB8QOKuxmsZIDrcPnzdjYzc/PxK4BDgvtKFiake+pdOVOpJBsiipnMooSU61t0siV/p522DFGFH6rBknSvXFON/Nz6Jf7Nj/NHCc+nZsaOwJQPwsrU94qW9amd8SopjGlVoyXZXgHbFQPqVV2CpIexM/lWliNneQu8lI45W6O7TNiAxxQr8pIVS6fWwG7ov51eKJwA1CuTih01XrskZ8sHT7Hcu9JJSP5eLfkTT6MtBkbguYnva6ubVP/1Yw9aOSaKL6LP79pfCFdkUgZTOSRVtomrT8ZwOJFXAuyprip98PB44IMdLSsrsB5wMxnGwbtml8teaOoG3sus+EzHOa1N0HqDn5RRZNcBH06lDNum1fkzCrzsk7nalFtGY5ySISqP5DVqzq8csj7fFO29+2z1IyfCRpUwSNq+cZwGPC3/F3haVpI9JOZ+rm+VpfEml9zZFrfvGlpNZnezbO6qpPGlgnAFH+7rMh45wmdffBaVvR4rY0raW5xW5u++IW/fGhUNul0E6kbiuXTtA+pN6JKKs+E9k+FGRvfrmkcitLSsKdviS0y2jbfsetePMLI8auWoWtdjMpqdPjRTpWuYSk7T4LO+Q0qTuAFLLstE2NK3XbKqhzbzzTpnWY1N9YvfuSOj03t2HbRur0C6L7qBeY06TuPmht2++45W3bvrVtz739hvQOYtPtt87UzaPPuu13jU+CrbPXpN6c1G0hTtOz7V6NM6c+ezMQt9/Ni7L0zKkb8OaZME7KLhdlbTflbWdq9X6nLytt5YdclDXPwCk+XS7KVm2/Rer0C7UN27aLsniZ2Nbv7jMh85wmdfcBalMAaZ7pmme09CwnMr8MOC250W0+y6TPLLGstpdKfZ60+pBadadyNu8EhjxptV1spfU9LjxZrXrS2ulMvQ7bFD89cTWxbj4/dp8Jmec0qTMfIItnBPoiYFL3Rcz5jUDmCJjUmQ+QxTMCfREwqfsi5vxGIHMETOrMB8jiGYG+CPw/LrV2AhgcDFAAAAAASUVORK5CYII=";
-      let M2 = "data:image/png;base64,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";
-
-      var description = (
-        <React.Fragment>
-          <p>The reaction coordinate digrams below represent two possible
-          mechanisms (M1 and M2) for the substitution of an alkyl halide (RX).
-          Which of the statements is/are correct?</p>
-          <p className="eqn"><img className="mr-3" src={M1} alt="M1"/><img src={M2} alt="M2"/></p>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>Both reaction coordinate diagrams show an exothermic reaction.</p>),
-        correct: true,
-        id: 0},
-        {text: (<p>The first step in the mechanism M1 is the rate-determining step.</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>The rate laws for the two mechanisms are identical because both mechanisms involve the same reactants and the same products.</p>),
-        correct: false,
-        id: 2}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>To determine if a reaction is exothermic, compare the energy of the
-          reactants to the energy of the products. In both M1 and M2, the products
-          are lower in energy than the reactants, so both diagrams are exothermic
-          (energy is released).</p>
-          <p>The rate-determining step is the one with the highest activation energy
-          (and hence slowest). Activation energy is the difference between the
-          energy of a transition state (a maximum in the diagram) and the energy of a reactant or
-          indermediate (a minimum in the diagram). In the M1 diagram, the jump from
-          RX to the first maximum is larger than from the intermediate to the second maximum, so,
-          the first step is indeed rate-determining.</p>
-          <p>The rate laws for the two mechanisms are determined by the elementary steps
-          of each mechanism. Even though they might happen to be the same, the same
-          reactants and products do not guarantee that.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 239,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 39,
-    "type": "numeric",
-    "questionBody": function() {
-      let t121String = (Math.random()*(4.95 - 4.65) + 4.65).toPrecision(3);
-      let t121 = Number.parseFloat(t121String);
-      let t122String = (Math.random()*(2.50 - 2.30) + 2.30).toPrecision(3);
-      let t122 = Number.parseFloat(t122String);
-      let answerJ = Math.log(t121/t122)*8.314/(1.0/298.15 - 1.0/308.15);
-      let ansJString = answerJ.toPrecision(3);
-      let answer = answerJ/1000;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>The first-order decomposition of N<sub>2</sub>O<sub>5</sub>(g) has a
-        half-life of {t121String}&nbsp;minutes at 25&nbsp;&#176;C, and a
-        half-life of {t122String}&nbsp;minutes at 35&nbsp;&#176;C. Calculate
-        the activation energy of this reaction in kJ&nbsp;mol<sup>&#8211;1</sup>.</p>
-      );
-
-      const eqT12 = `k = \\frac{\\ln{2}}{t_{1/2}}`;
-      const eqArr = `\\ln{\\left( \\frac{k_2}{k_1} \\right)} =
-        \\ln{\\left( \\frac{t_{1/2, 1}}{t_{1/2, 2}} \\right)} =
-        \\frac{E_\\text{a}}{R} \\left( \\frac{1}{T_1} - \\frac{1}{T_2} \\right)`;
-      const eqEa = `\\begin{eqnarray*}
-        \\ln{\\left( \\frac{${t121String} \\text{ min}}{${t122String} \\text{ min}} \\right)} & = &
-        \\frac{E_\\text{a}}{8.314 \\text{ J mol}^{-1}\\text{ K}^{-1}}
-        \\left( \\frac{1}{298.15 \\text{ K}} - \\frac{1}{308.15 \\text{ K}} \\right) \\\\
-        E_\\text{a} & = & ${Number.parseFloat(ansJString)} \\text{ J mol}^{-1} \\\\
-        & = & ${ansString} \\text{ kJ mol}^{-1}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>A half-life for a first-order reaction is related to its
-            specific rate constant as</p>
-            <MathJax.Node formula={eqT12}/>
-            <p>That is, a specific rate constant is inversely proportional to
-            the corresponding half-life.</p>
-            <p>The dependence of the specific rate constant (or the half-life) on temperature is
-            described by the following equation:</p>
-            <MathJax.Node formula={eqArr}/>
-            <p>Substitute the half-lives and temperatures into the above equation and
-            solve for the activation energy. Remember that the temperatures must be
-            in Kelvins.</p>
-            <MathJax.Node formula={eqEa}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>E</i><sub>a</sub></React.Fragment>),
-        units: "kJ/mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 240,
-    "courseId": "1302",
-    "examName": "Final 2014",
-    "chapterId": 5,
-    "idInExam": 40,
     "type": "MC",
     "questionBody": function() {
       var description = (
-        <React.Fragment>
-          <p>For the reaction:</p>
-          <p className="eqn">CHCl<sub>3</sub> + Cl<sub>2</sub> &#8594; CCl<sub>4</sub> + HCl</p>
-          <p>The mechanism is:</p>
-          <table className="data-table ml-3 mb-3">
-            <tbody>
-              <tr>
-                <td className="text-left">Step 1:</td>
-                <td className="text-left">Cl<sub>2</sub> &#8644; 2 Cl</td>
-                <td className="text-left">(fast equilibrium)</td>
-              </tr>
-              <tr>
-                <td className="text-left">Step 2:</td>
-                <td className="text-left">CHCl<sub>3</sub> + Cl &#8594; CCl<sub>3</sub> + HCl</td>
-                <td className="text-left">(slow)</td>
-              </tr>
-              <tr>
-                <td className="text-left">Step 3:</td>
-                <td className="text-left">CCl<sub>3</sub> + Cl &#8594; CCl<sub>4</sub></td>
-                <td className="text-left">(fast)</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Which of the following best represents the rate law for this
-          reaction?</p>
-        </React.Fragment>
+        <p>When titrating an acid with a base using phenolphthalein as an indicator,
+        which one of the following indicates the endpoint?</p>
       );
 
       var options = [
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"Rate = k [\\text{CHCl}_3][\\text{Cl}_2]^2"} /></MathJax.Provider></p>),
-        correct: false,
-        id: 0},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"Rate = k [\\text{CHCl}_3][\\text{Cl}_2]"} /></MathJax.Provider></p>),
-        correct: false,
-        id: 1},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"Rate = k [\\text{CHCl}_3][\\text{Cl}_2]^{0.5}"} /></MathJax.Provider></p>),
-        correct: true,
-        id: 2},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"Rate = k [\\text{CHCl}_3]^2[\\text{Cl}_2]"} /></MathJax.Provider></p>),
-        correct: false,
-        id: 3},
-        {text: (<p><MathJax.Provider><MathJax.Node inline formula={"Rate = k [\\text{CHCl}_3]^{0.5}[\\text{Cl}_2]"} /></MathJax.Provider></p>),
-        correct: false,
-        id: 4}
-      ];
-
-      const eqCl = `\\begin{eqnarray*}
-        K_1 & = & \\frac{[\\text{Cl}]^2}{[\\text{Cl}_2]} \\\\
-        [\\text{Cl}] & = & \\sqrt{K_1 [\\text{Cl}_2]}
-        \\end{eqnarray*}`;
-      const eqRate = `\\begin{eqnarray*}
-        Rate & = & k_2[\\text{CHCl}_3]\\sqrt{K_1 [\\text{Cl}_2]} \\\\
-        & = & k [\\text{CHCl}_3] [\\text{Cl}_2]^{0.5}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The rate of the overall reaction is determined by the rate of the slow step:</p>
-            <MathJax.Node formula={"Rate = k_2[\\text{CHCl}_3][\\text{Cl}]"}/>
-            <p>However, this rate law contains the concentration of Cl, which is
-            an intermediate (it does not appear in the overall equation and is not
-            a catalyst). The concentration of Cl has to be expressed from the previous
-            step so that only stable species (reactants, products, or catalysts)
-            appear in the rate law. Step 1 is an equilibrium, so we can write the
-            equilibrium constant expression for it and find [Cl]:</p>
-            <MathJax.Node formula={eqCl}/>
-            <p>Substitute this [Cl] into the above rate law, simplify, and
-            absorb the constants (i.e. a product of constants is just another constant):</p>
-            <MathJax.Node formula={eqRate}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  {
-    "_id": 301,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 1,
-    "idInExam": 1,
-    "type": "numeric",
-    "questionBody": function() {
-      let volString = (Math.random()*(9.00 - 2.00) + 2.00).toPrecision(3);
-      let vol = Number.parseFloat(volString);
-      let mString = (Math.random()*(4.00 - 1.00) + 1.00).toPrecision(3);
-      let m = Number.parseFloat(mString);
-      let tempString = (Math.random()*(40 - 20) + 20).toPrecision(2);
-      let temp = Number.parseFloat(tempString);
-      let mol = m/4.00;
-      let molString = mol.toPrecision(3);
-      let answer = mol*8.314*(273.15 + temp)/vol;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A {volString}&nbsp;L flask contains  {mString}&nbsp;g of He gas at a
-        temperature of {tempString}&nbsp;&#176;C. What is the pressure in the flask?</p>
-      );
-
-      const eqMol = `\\begin{eqnarray*}
-        n & = & \\frac{m}{MM} \\\\
-        & = & \\frac{${mString} \\text{ g}}{4.00 \\text{ g mol}^{-1}} \\\\
-        & = & ${molString} \\text{ mol}
-        \\end{eqnarray*}`;
-      const eqP = `\\begin{eqnarray*}
-        P & = & \\frac{nRT}{V} \\\\
-        & = & \\frac{(${molString} \\text{ mol})(8.314 \\text{ L kPa mol}^{-1}\\text{ K}^{-1})(273.15 + ${tempString} \\text{ K})}
-        {${volString} \\text{ L}} \\\\
-        & = & ${ansString} \\text{ kPa}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Find the number of moles of He:</p>
-            <MathJax.Node formula={eqMol}/>
-            <p>Use the ideal gas law to find the pressure:</p>
-            <MathJax.Node formula={eqP}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>P</i></React.Fragment>),
-        units: "kPa"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 302,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 1,
-    "idInExam": 2,
-    "type": "numeric",
-    "questionBody": function() {
-      let molO2String = (Math.random()*(1.95 - 1.00) + 1.00).toPrecision(3);
-      let molO2 = Number.parseFloat(molO2String);
-      let molN2String = (Math.random()*(0.995 - 0.500) + 0.500).toPrecision(3);
-      let molN2 = Number.parseFloat(molN2String);
-      let molCl2String = (Math.random()*(0.450 - 0.200) + 0.200).toPrecision(3);
-      let molCl2 = Number.parseFloat(molCl2String);
-      let pString = (Math.random()*(90.0 - 30.0) + 30.0).toPrecision(3);
-      let p = Number.parseFloat(pString);
-      let chi = molCl2/(molO2 + molN2 + molCl2);
-      let chiString = chi.toPrecision(3);
-      let answer = chi*p;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A gaseous mixture contains {molO2String}&nbsp;moles of
-          O<sub>2</sub>, {molN2String}&nbsp;moles of N<sub>2</sub>,
-          and {molCl2String}&nbsp;moles of Cl<sub>2</sub> with a total pressure
-          of {pString}&nbsp;kPa. What is the partial pressure of Cl<sub>2</sub>?</p>
-      );
-
-      const eqChiCl2 = `\\begin{eqnarray*}
-        \\chi_{\\text{Cl}_2} & = & \\frac{n_{\\text{Cl}_2}}{n_\\text{tot}} \\\\
-        & = & \\frac{n_{\\text{Cl}_2}}{n_{\\text{O}_2} + n_{\\text{N}_2} + n_{\\text{Cl}_2}} \\\\
-        & = & \\frac{${molCl2String} \\text{ mol}}
-        {${molO2String} \\text{ mol} + ${molN2String} \\text{ mol} + ${molCl2String} \\text{ mol}} \\\\
-        & = & ${chiString}
-        \\end{eqnarray*}`;
-      const eqPCl2 = `\\begin{eqnarray*}
-        P_{\\text{Cl}_2} & = & \\chi_{\\text{Cl}_2} P_\\text{tot} \\\\
-        & = & (${chiString})(${pString} \\text{ kPa}) \\\\
-        & = & ${ansString} \\text{ kPa}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>First, find the mole fraction of Cl<sub>2</sub> in the mixture:</p>
-            <MathJax.Node formula={eqChiCl2}/>
-            <p>The partial pressure of Cl<sub>2</sub> is proportional to its
-              mole fraction:</p>
-            <MathJax.Node formula={eqPCl2}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>P</i><sub>Cl<sub>2</sub></sub></React.Fragment>),
-        units: "kPa"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 303,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 1,
-    "idInExam": 3,
-    "type": "string",
-    "questionBody": function() {
-      let compounds = [{x: 1, y: 4, z: 1}, {x: 2, y: 6, z: 1}, {x: 2, y: 4, z: 1}, {x: 2, y: 4, z: 2}, {x: 3, y: 8, z: 1}];
-      let idx = Math.floor(Math.random()*compounds.length);
-      let x = compounds[idx].x;
-      let y = compounds[idx].y;
-      let z = compounds[idx].z;
-      let vComp = 2;
-      let vO2 = (2*x + y/2 - z);
-      let vCO2 = x*2;
-      let vH2O = y;
-      let answer = RegExp('^\\s*' + x.toString() + ',?\\s*' + y.toString() + ',?\\s*' + z.toString() + '\\s*$');
-
-      var description = (
-        <React.Fragment>
-          <p>For the gas-phase combustion of the compound C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>,
-          the following volume relationships were found at constant temperature
-          and pressure.</p>
-        <table className="data-table mb-3 ml-3">
-            <tbody>
-              <tr>
-                <td>C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>(g)</td>
-                <td>+</td>
-                <td>O<sub>2</sub>(g)</td>
-                <td>&#8594;</td>
-                <td>CO<sub>2</sub>(g)</td>
-                <td>+</td>
-                <td>H<sub>2</sub>O(g)</td>
-              </tr>
-              <tr>
-                <td>{vComp} vols</td>
-                <td></td>
-                <td>{vO2} vols</td>
-                <td></td>
-                <td>{vCO2} vols</td>
-                <td></td>
-                <td>{vH2O} vols</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>From these data, what are <i>x</i>, <i>y</i>, and <i>z</i>?</p>
-          <p><i>Enter the values of x, y, z separated by commas.</i></p>
-        </React.Fragment>
-      );
-
-      const eqCO2 = `\\begin{eqnarray*}
-        \\frac{V_{\\text{C}_x\\text{H}_y\\text{O}_z}}{V_{\\text{CO}_2}} & = & \\frac{1}{x} \\\\
-        \\frac{${vComp}}{${vCO2}} & = & \\frac{1}{x} \\\\
-        x & = & ${x}
-        \\end{eqnarray*}`;
-      const eqH2O = `\\begin{eqnarray*}
-        \\frac{V_{\\text{C}_x\\text{H}_y\\text{O}_z}}{V_{\\text{H}_2\\text{O}}} & = & \\frac{1}{y/2} \\\\
-        \\frac{${vComp}}{${vH2O}} & = & \\frac{1}{y/2} \\\\
-        y & = & ${y}
-        \\end{eqnarray*}`;
-      const eqO2 = `\\begin{eqnarray*}
-        \\frac{V_{\\text{C}_x\\text{H}_y\\text{O}_z}}{V_{\\text{O}_2}} & = & \\frac{1}{(2x + y/2 - z)/2} \\\\
-        \\frac{${vComp}}{${vO2}} & = & \\frac{1}{(${2*x + y/2} - z)/2} \\\\
-        z & = & ${z}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Since the question is about stoichiometric ratios, we should
-            balance the equation. Just treat <i>x</i>, <i>y</i>, and <i>z</i> as
-            numbers. Calculate the coefficients for CO<sub>2</sub> and H<sub>2</sub>O
-            first, then, given a fixed number of O atoms on the right-hand side,
-            calculate how many O<sub>2</sub> molecules need to be added to the left-hand side.</p>
-            <p className="eqn">C<sub>x</sub>H<sub>y</sub>O<sub>z</sub>(g) +
-              (2<i>x</i> + <i>y</i>/2 - <i>z</i>)/2 O<sub>2</sub>(g) &#8594; <i>x</i> CO<sub>2</sub>(g) + <i>y</i>/2 H<sub>2</sub>O(g)</p>
-            <p>All the volume of the compounds in the equations are proportional to
-              their stoichiometric coefficients, so, the ratios of volumes must be equal
-              to the ratios of corresponding coefficients.</p>
-            <p>For the compound and CO<sub>2</sub>,</p>
-            <MathJax.Node formula={eqCO2}/>
-            <p>Similarly, for H<sub>2</sub>O,</p>
-            <MathJax.Node formula={eqH2O}/>
-            <p>And, finally, for O<sub>2</sub> (substitute previously found <i>x</i> and <i>y</i>),</p>
-            <MathJax.Node formula={eqO2}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>x, y, z</i></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 304,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 2,
-    "idInExam": 4,
-    "type": "numeric",
-    "questionBody": function() {
-      let tFString = (Math.random()*(7.0 - 4.0) + 3.0).toPrecision(2);
-      let tF = Number.parseFloat(tFString);
-      let mH2OString = (Math.random()*(12.0 - 9.00) + 9.00).toPrecision(3);
-      let mH2O = Number.parseFloat(mH2OString);
-      let tFreezString = (Math.random()*(-8.00 + 12.0) - 12.0).toPrecision(3);
-      let tFreez = Number.parseFloat(tFreezString);
-      let qIce = mH2O*2.11*(0 - tFreez) + mH2O*334 + mH2O*4.184*(tF - 0);
-      let qIceString = qIce.toPrecision(3);
-      let answer = qIce/(2.05*(tF - tFreez));
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>You are interested in cooling a certain volume of a special
-          beverage from room temperature (25.0&nbsp;&#176;C) down to {tFString}&nbsp;&#176;C.
-          You use ice and, being an aspiring chemist, accurately weigh
-          out {mH2OString}&nbsp;g of H<sub>2</sub>O(s) from the freezer
-          ({tFreezString}&nbsp;&#176;C) to successfully accomplish the exact
-          temperature decrease.</p>
-          <p>Your rommate suggests using &#8220;cooling stones&#8221;, since these
-          pieces of limestone (CaCO<sub>3</sub>) do not melt and dilute the
-          beverage. These too are kept in the freezer at {tFreezString}&nbsp;&#176;C.
-          How many grams of &#8220;cooling stones&#8221; would you require to cool
-          the same initial amount of beverage to the same temperature?
-          (ignore contribution from the glass)</p>
-          <table className="data-table mb-5 ml-3">
-            <tbody>
-              <tr>
-                <td className="text-right"><i>c</i><sub>H<sub>2</sub>O(l)</sub></td>
-                <td className="text-left">4.184&nbsp;J&nbsp;g<sup>&#8211;1</sup>&nbsp;&#176;C<sup>&#8211;1</sup></td>
-              </tr>
-              <tr>
-                <td className="text-right"><i>c</i><sub>H<sub>2</sub>O(s)</sub></td>
-                <td className="text-left">2.11&nbsp;J&nbsp;g<sup>&#8211;1</sup>&nbsp;&#176;C<sup>&#8211;1</sup></td>
-              </tr>
-              <tr>
-                <td className="text-right"><i>c</i><sub>CaCO<sub>3</sub>(s)</sub></td>
-                <td className="text-left">2.05&nbsp;J&nbsp;g<sup>&#8211;1</sup>&nbsp;&#176;C<sup>&#8211;1</sup></td>
-              </tr>
-              <tr>
-                <td className="text-right">&#916;<i>H</i><sub>fus</sub> (H<sub>2</sub>O(s)) at 0&nbsp;&#176;C</td>
-                <td className="text-left">6.01&nbsp;kJ&nbsp;mol<sup>&#8211;1</sup> (or 334&nbsp;J&nbsp;g<sup>&#8211;1</sup>)</td>
-              </tr>
-            </tbody>
-          </table>
-        </React.Fragment>
-      );
-
-      const eqQBev = "q_\\text{ice} = -q_\\text{beverage}";
-      const eqQStones = `\\begin{eqnarray*}
-        q_\\text{stones} & = & -q_\\text{beverage} \\\\
-        q_\\text{stones} & = & q_\\text{ice}
-        \\end{eqnarray*}`;
-      const eqQIce = `\\begin{eqnarray*}
-        q_\\text{ice} & = & m_{\\text{H}_2\\text{O}} c_\\text{ice} (0\\,^{\\circ}\\text{C} - (${tFreezString}\\,^{\\circ}\\text{C})) + \\\\
-        & + & m_{\\text{H}_2\\text{O}} \\Delta H_\\text{fus} + \\\\
-        & + & m_{\\text{H}_2\\text{O}} c_\\text{water} (${tFString}\\,^{\\circ}\\text{C} - 0\\,^{\\circ}\\text{C}) \\\\
-        & = & (${mH2OString} \\text{ g})(2.11 \\text{ J g}^{-1}\\,^{\\circ}\\text{C}^{-1})(0\\,^{\\circ}\\text{C} - (${tFreezString}\\,^{\\circ}\\text{C})) + \\\\
-        & + & (${mH2OString} \\text{ g})(334 \\text{ J g}^{-1}) + \\\\
-        & + & (${mH2OString} \\text{ g})(4.184 \\text{ J g}^{-1}\\,^{\\circ}\\text{C}^{-1})(${tFString}\\,^{\\circ}\\text{C} - 0\\,^{\\circ}\\text{C}) \\\\
-        & = & ${Number.parseFloat(qIceString)} \\text{ J}
-        \\end{eqnarray*}`;
-      const eqMassStones = `\\begin{eqnarray*}
-        q_\\text{stones} & = & m_{\\text{CaCO}_3} c_{\\text{CaCO}_3} (${tFString}\\,^{\\circ}\\text{C} - (${tFreezString}\\,^{\\circ}\\text{C})) \\\\
-        ${Number.parseFloat(qIceString)} \\text{ J} & = & m_{\\text{CaCO}_3} (2.05 \\text{ J g}^{-1}\\,^{\\circ}\\text{C}^{-1})(${tFString}\\,^{\\circ}\\text{C} - (${tFreezString}\\,^{\\circ}\\text{C})) \\\\
-        m_{\\text{CaCO}_3} & = & ${ansString} \\text{ g}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>In the first scenario, when cooling with ice, the beverage was
-            loosing heat and the ice was gaining it, so, </p>
-          <MathJax.Node formula={eqQBev}/>
-            <p>When cooling with stones, the beverage is again loosing heat and
-            the stones are gaining it. Note that the amount of the bevarage, as well as
-            its initial and final temperature are the same with the stones as they
-            are with the ice. Therefore,</p>
-            <MathJax.Node formula={eqQStones}/>
-            <p>Calculate the amount of heat gained by the ice when cooling.
-            The ice is first heated to 0&nbsp;&#176;C, then melted, and the
-            liquid water is finally heated to {tFString}&nbsp;&#176;C.</p>
-            <MathJax.Node formula={eqQIce}/>
-            <p>The heat gained by the stones is equal to the heat gained by the
-            ice. There is no melting with the stones, just the heating, so,</p>
-            <MathJax.Node formula={eqMassStones}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>m</i><sub>stones</sub></React.Fragment>),
-        units: "g"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 305,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 2,
-    "idInExam": 5,
-    "type": "MC",
-    "questionBody": function() {
-      var description = (
-        <p>Which of the following is NOT correct?</p>
-      );
-
-      var options = [
-        {text: (<p>Heat capacity is an extensive property.</p>),
-        correct: false,
-        id: 0},
-        {text: (<p>Specific heat is an intensive property.</p>),
-        correct: false,
-        id: 1},
-        {text: (<p>An open system allows exchange of both heat and matter.</p>),
-        correct: false,
-        id: 2},
-        {text: (<p>A closed system allows exchange of neither heat nor matter.</p>),
-        correct: true,
-        id: 3},
-        {text: (<p>Temperature is an example of a state function.</p>),
-        correct: false,
-        id: 4}
+        {text: <p>The pink colour disappears.</p>, correct: false, id: 0},
+        {text: <p>The solution turns a persistent pink.</p>, correct: true, id: 1},
+        {text: <p>The solution turns white.</p>, correct: false, id: 2},
+        {text: <p>The solution turns purple.</p>, correct: false, id: 3},
+        {text: <p>The solution becomes hot.</p>, correct: false, id: 4}
       ];
 
       var feedback = (
-        <React.Fragment>
-          <p>Intensive properties are properties independent of system size, that is,
-          no matter if we take 1 mole or 100 moles, or 2 liters of something, the
-          property stays the same. Any &#8220;per gram&#8221; or &#8220;per mole&#8221;
-          property, such as specific heat, is intensive.</p>
-          <p>Extensive properties do depend on system size. For example,
-          the heat capacity of a system consisting of 4 moles of water will be 4 times
-          that of the system consisting of only 1 mole of water.</p>
-          <p>In isolated systems, exchange of neither matter nor heat is allowed.
-          Closed systems allow exchange of heat but not matter. Open system allow
-          exchange of both.</p>
-          <p>A state function is a property whose value depends only on the current state
-          of the system. For example, it does not matter if we reach a certain temperature
-          by heating or cooling (or maybe heating and then cooling), this temperature
-          is still the same.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 306,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 2,
-    "idInExam": 6,
-    "type": "numeric",
-    "questionBody": function() {
-      let answer = +3924+(6*(-394) + 6*(-286));
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>The standard enthalpy of combustion of cyclohexane, C<sub>6</sub>H<sub>12</sub>(l),
-          is &#8211;3924&nbsp;kJ&nbsp;mol<sup>&#8211;1</sup>. What is the standard
-          enthalpy of formation of C<sub>6</sub>H<sub>12</sub>(l)?</p>
-        <table className="data-table mb-5 ml-3">
-            <tbody>
-              <tr>
-                <th>Species</th>
-                <th>&#916;<i>H</i>&#176;<sub>f</sub> (kJ&nbsp;mol<sup>&#8211;1</sup>)</th>
-              </tr>
-              <tr>
-                <td>H<sub>2</sub>O(l)</td>
-                <td>&#8211;286</td>
-              </tr>
-              <tr>
-                <td>CO<sub>2</sub>(g)</td>
-                <td>&#8211;394</td>
-              </tr>
-            </tbody>
-          </table>
-        </React.Fragment>
-      );
-
-      const eqHf = `\\begin{eqnarray*}
-        \\Delta H^{\\circ}_\\text{rxn} & = & \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{products})}
-        - \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{reactants})} \\\\
-        -3924 \\text{ kJ mol}^{-1} & = & \\left[ (6)(-394) + (6)(-286) \\right]\\text{ kJ mol}^{-1}
-        - \\left[ \\Delta H^{\\circ}_\\text{f} (\\text{C}_6\\text{H}_{12} (\\text{l})) + (9)(0) \\right]\\text{ kJ mol}^{-1} \\\\
-        \\Delta H^{\\circ}_\\text{f} (\\text{C}_6\\text{H}_{12}(\\text{l})) & = & ${ansString} \\text{ kJ mol}^{-1}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Write down the reaction of combustion of C<sub>6</sub>H<sub>12</sub>(l):</p>
-            <p className="eqn">C<sub>6</sub>H<sub>12</sub>(l) + 9 O<sub>2</sub>(g) &#8594; 6 CO<sub>2</sub>(g) + 6 H<sub>2</sub>O(l)</p>
-            <p>Express the enthalpy of this reaction using the enthalpies of formation
-            of the reactants and products, then solve for &#916;<i>H</i>&#176;<sub>f</sub>(C<sub>6</sub>H<sub>12</sub>(l)).
-            Remember that the entalpy of formation of O<sub>2</sub>(g) is zero since it is in the
-            standard state.</p>
-            <MathJax.Node formula={eqHf}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>&#916;<i>H</i>&#176;<sub>f</sub>(C<sub>6</sub>H<sub>12</sub>(l))</React.Fragment>),
-        units: "kJ/mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 307,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 2,
-    "idInExam": 7,
-    "type": "numeric",
-    "questionBody": function() {
-      var description = (
-        <React.Fragment>
-          <p>C<sub>3</sub>H<sub>6</sub>Cl<sub>2</sub>(g) has the structure shown below.
-          Calculate the C&#8211;Cl bond enthalpy in this molecule.</p>
-          <img className="ml-3 mb-3" src="data:image/png;base64,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" alt="C_3H_6_Cl_2"/>
-          <table className="data-table mb-5 ml-3">
-            <tbody>
-              <tr>
-                <th>Species</th>
-                <th>&#916;<i>H</i>&#176;<sub>f</sub> (kJ&nbsp;mol<sup>&#8211;1</sup>)</th>
-                <th style={{borderLeft: "solid 1px #ddd"}}>Species</th>
-                <th>Bond Enthalpy<br/> (kJ&nbsp;mol<sup>&#8211;1</sup>)</th>
-              </tr>
-              <tr>
-                <td>C<sub>3</sub>H<sub>6</sub>Cl<sub>2</sub>(g)</td>
-                <td>&#8211;137</td>
-                <td style={{borderLeft: "solid 1px #ddd"}}>C&#8211;C</td>
-                <td>347</td>
-              </tr>
-              <tr>
-                <td>H(g, at)</td>
-                <td>218</td>
-                <td style={{borderLeft: "solid 1px #ddd"}}>C&#8211;H</td>
-                <td>414</td>
-              </tr>
-              <tr>
-                <td>C(g, at)</td>
-                <td>717</td>
-                <td style={{borderLeft: "solid 1px #ddd"}}></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Cl(g, at)</td>
-                <td>122</td>
-                <td style={{borderLeft: "solid 1px #ddd"}}></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </React.Fragment>
-      );
-
-      let answer = (3840 - 2*347 - 6*414)/2;
-      let ansString = answer.toPrecision(3);
-
-      const eqTBE = `\\begin{eqnarray*}
-        \\Delta H^{\\circ}_\\text{rxn} & = & TBE = \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{products})}
-        - \\sum{\\Delta H^{\\circ}_\\text{f}(\\text{reactants})} \\\\
-        & = & \\left[ (3)(717) + (6)(218) + (2)(122) \\right] \\text{ kJ mol}^{-1} - (-137 \\text{ kJ mol}^{-1}) \\\\
-        & = & 3840 \\text{ kJ mol}^{-1}
-        \\end{eqnarray*}`;
-      const eqCCl = `\\begin{eqnarray*}
-        TBE & = & \\sum{BE(\\text{reactants})} - \\sum{BE(\\text{products})} \\\\
-        3840 \\text{ kJ mol}^{-1} & = & \\left[ 2 BE(\\text{C}-\\text{Cl}) + (2)(347) + (6)(414) \\right] \\text{ kJ mol}^{-1} - 0 \\text{ kJ mol}^{-1} \\\\
-        BE(\\text{C}-\\text{Cl}) & = & ${ansString} \\text{ kJ mol}^{-1}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Write down the atomization reaction for C<sub>3</sub>H<sub>6</sub>Cl<sub>2</sub> (it
-            corresponds to the TBE):</p>
-            <p className="eqn">C<sub>3</sub>H<sub>6</sub>Cl<sub>2</sub>(g) &#8594; 3 C(g, at) + 6 H(g, at) + 2 Cl(g, at)</p>
-            <p>Express the enthalpy of this reaction using the enthalpies of formation
-            of the reactants and products:</p>
-            <MathJax.Node formula={eqTBE} />
-            <p>Now express the TBE using bond enthalpies and solve for the
-              unknown C&#8211;Cl bond enthalpy. Note that bond enthalpies of the products
-              are zero since they are all in atomic states.</p>
-            <MathJax.Node formula={eqCCl} />
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>BE</i>(C&#8211;Cl)</React.Fragment>),
-        units: "kJ/mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 308,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 2,
-    "idInExam": 8,
-    "type": "MC",
-    "questionBody": function() {
-      var description = (
-        <p>Which one of the following combinations of signs for &#916;<i>H</i> and
-        &#916;<i>S</i> will always result in a spontaneous reaction?</p>
-      );
-
-      var options = [
-        {text: (<p>Positive &#916;<i>H</i> and negative &#916;<i>S</i>.</p>),
-        correct: false,
-        id: 0},
-        {text: (<p>Negative &#916;<i>H</i> and positive &#916;<i>S</i>.</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>Negative &#916;<i>H</i>  and negative &#916;<i>S</i>.</p>),
-        correct: false,
-        id: 2},
-        {text: (<p>Positive &#916;<i>H</i> and positive &#916;<i>S</i>.</p>),
-        correct: false,
-        id: 3},
-        {text: (<p>You need to know the temperature.</p>),
-        correct: false,
-        id: 4}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>A reaction is spontaneous if its &#916;<i>G</i> is negative. Since</p>
-            <MathJax.Node formula={"\\Delta G = \\Delta H - T \\Delta S,"}/>
-            <p>if &#916;<i>H</i>&nbsp;&lt;&nbsp;0 and &#916;<i>S</i>&nbsp;&gt;&nbsp;0,
-            &#916;<i>G</i> is guaranteed to be negative.</p>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 309,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 2,
-    "idInExam": 9,
-    "type": "numeric",
-    "questionBody": function() {
-      let tempCString = (Math.random()*(30 - 20) + 20).toPrecision(2);
-      let tempC = Number.parseFloat(tempCString);
-      let temp = 273.15 + tempC;
-      let tempString = temp.toPrecision(5);
-      let answer = 4.28 - temp*(-0.1023);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>For the reaction:</p>
-          <p className="eqn">2 N<sub>2</sub>O<sub>4</sub>(g) + O<sub>2</sub>(g) &#8594; 2 N<sub>2</sub>O<sub>5</sub>(g)</p>
-          <p>&#916;<i>H</i>&#176; = 4.28&nbsp;kJ and &#916;<i>S</i>&#176; = &#8211;102.3&nbsp;J&nbsp;K<sup>&#8211;1</sup></p>
-          <p>Calculate &#916;<i>G</i> at {tempString}&nbsp;K.</p>
-        </React.Fragment>
-      );
-
-      const eqdG = `\\begin{eqnarray*}
-        \\Delta G & = & \\Delta H - T \\Delta S \\\\
-        & = & (4.28 \\text{ kJ}) - (${tempString} \\text{ K})(-0.1023 \\text{ kJ K}^{-1}) \\\\
-        & = & ${ansString} \\text{ kJ}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Use Gibbs equation, remember to convert the entropy to kJ&nbsp;K<sup>&#8211;1</sup> in
-            order to have consistent units.</p>
-            <MathJax.Node formula={eqdG}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>&#916;<i>G</i></React.Fragment>),
-        units: "kJ"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 310,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 10,
-    "type": "MC",
-    "questionBody": function() {
-      const eqKp = "K_\\text{p} = \\frac{(P_{\\text{CS}_2})(P_{\\text{H}_2})^4}{(P_{\\text{CH}_4})(P_{\\text{H}_2\\text{S}})^2}";
-      var description = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>An equilibrium reaction involving only gases has the equilibrium expression:</p>
-            <MathJax.Node formula={eqKp}/>
-            <p>What is the reaction equation?</p>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>CH<sub>4</sub> + H<sub>2</sub>S &#8644; CS<sub>2</sub> + H<sub>2</sub></p>),
-        correct: false,
-        id: 0},
-        {text: (<p>CS<sub>2</sub> + 4 H<sub>2</sub> &#8644; CH<sub>4</sub> + 2 H<sub>2</sub>S</p>),
-        correct: false,
-        id: 1},
-        {text: (<p>CH<sub>4</sub> + 2 H<sub>2</sub>S &#8644; CS<sub>2</sub> + 4 H<sub>2</sub></p>),
-        correct: true,
-        id: 2},
-        {text: (<p>CS<sub>2</sub> + CH<sub>4</sub> &#8644; H<sub>2</sub> + H<sub>2</sub>S</p>),
-        correct: false,
-        id: 3},
-        {text: (<p>2 CH<sub>4</sub> + H<sub>2</sub>S &#8644; 4 CS<sub>2</sub> + H<sub>2</sub></p>),
-        correct: false,
-        id: 4}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>The compounds that appear in the numerator of the <i>K</i><sub>p</sub> expression
-          are the products, those in the denominator are the reactants. Each compound&#8217;s
-          power in the <i>K</i><sub>p</sub> expression is its stoichiometric coefficient
-          in the equation. Therefore, the reaction is</p>
-          <p className="eqn">CH<sub>4</sub> + 2 H<sub>2</sub>S &#8644; CS<sub>2</sub> + 4 H<sub>2</sub></p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 311,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 11,
-    "type": "MS",
-    "questionBody": function() {
-      var description = (
-        <React.Fragment>
-          <p>Consider the following equilibrium</p>
-          <p className="eqn">2 NO(g) + 2 H<sub>2</sub>(g) &#8644; N<sub>2</sub>(g) + 2 H<sub>2</sub>O(g)
-            &#160;&#160;&#160;<i>K</i><sub>p</sub> = 650</p>
-          <p>Which of the following statements concerning this system is/are correct?</p>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>If the pressure were increased by reducing the volume, the equilibrium would shift to the right.</p>),
-        correct: true,
-        id: 0},
-        {text: (<p>If the volume of the system were doubled, the value of <i>K</i><sub>p</sub> would double.</p>),
-        correct: false,
-        id: 1},
-        {text: (<p>If H<sub>2</sub> is added, but the total volume is unchanged, the equilibrium would shift to the right.</p>),
-        correct: true,
-        id: 2}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>According to the Le Chatelier&#8217;s principle, increasing the pressure of a
-          system shifts the equilibrium to the side with fewer moles of gases (this
-          reduces the pressure back and thus counteracts the initial increase).
-          Since the right-hand side has 3 moles of gases, wherease the left-hand side has 4,
-          the equilibrium will indeed be shifted to the right.</p>
-          <p>Adding more reactant (H<sub>2</sub>) will shift the equilibrium to the right
-          as well. This way the system decreases the amount of the reactant and resists
-          the change.</p>
-          <p>It is important to realize that all these changes (change of volume, addition of
-          a reactant or product) except temperature changes
-          affect the reaction quotient, <i>Q</i>, but <i>not</i> the
-          constant. Therefore, even after doubling the volume, the constant will remain 650.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 312,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 12,
-    "type": "numeric",
-    "questionBody": function() {
-      let pI = Math.floor(Math.random()*(120 - 90) + 90);
-      let dP = Math.floor(Math.random()*(15 - 5) + 5);
-      let pFSO3 = pI - dP;
-      let x = pFSO3/2;
-      let answer = Math.pow(pFSO3, 2)/(Math.pow(pI-2*x, 2)*(pI-x));
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>Consider the following gaseous equilibrium:</p>
-          <p className="eqn">2 SO<sub>2</sub>(g) + O<sub>2</sub>(g) &#8644; 2 SO<sub>3</sub>(g)</p>
-          <p>A system that initially contained only {pI}&nbsp;kPa of
-          SO<sub>2</sub> and {pI}&nbsp;kPa of O<sub>2</sub> in a sealed container
-          was allowed to react. When the system reached equilibrium, it was
-          found that the pressure of SO<sub>3</sub> was {pFSO3}&nbsp;kPa.
-          Calculate <i>K</i><sub>p</sub> for this equilibrium.</p>
-        </React.Fragment>
-      );
-
-      const eqKp = `\\begin{eqnarray*}
-        K_\\text{p} & = & \\frac{(P_{\\text{SO}_3})^2}{(P_{\\text{SO}_2})^2 (P_{\\text{O}_2})} \\\\
-        & = & \\frac{(${pFSO3})^2}{(${pI-2*x})^2(${pI-x})} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Construct and fill in an ICE table for the equilibrium.
-            Since the volume of the container and its temperature do not change,
-            we can use pressure-pressure stiochiometry. Start with the final
-            pressure of SO<sub>3</sub> and figure out what its change must have been.
-            Then use stoichiometry to calculate changes for SO<sub>2</sub> and O<sub>2</sub>.</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>2 SO<sub>2</sub>(g)</th>
-                  <th>+</th>
-                  <th>O<sub>2</sub>(g)</th>
-                  <th>&#8644;</th>
-                  <th>2 SO<sub>3</sub>(g)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{pI}</td>
-                  <td></td>
-                  <td>{pI}</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;{2*x}</td>
-                  <td></td>
-                  <td>&#8211;{x}</td>
-                  <td></td>
-                  <td>+{x*2}</td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({pI} &#8211; {2*x})</td>
-                  <td></td>
-                  <td>({pI} &#8211; {x})</td>
-                  <td></td>
-                  <td>{pFSO3}</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium pressures into the <i>K</i><sub>p</sub> expression:</p>
-            <MathJax.Node formula={eqKp}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>K</i><sub>p</sub></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 313,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 13,
-    "type": "numeric",
-    "questionBody": function() {
-      let dH = Math.floor(Math.random()*(-30 + 70) - 70);
-      let dHString = dH.toPrecision(3);
-      let dHJ = dH*1000;
-      let k1 = Math.floor(Math.random()*(190 - 110) + 110);
-      let t1 = Math.floor(Math.random()*(350 - 270) + 270);
-      let t2 = Math.floor(Math.random()*(650 - 570) + 570);
-      let lnK2K1 = dHJ/8.314*(1.0/t1 - 1.0/t2);
-      let lnK2K1String = lnK2K1.toPrecision(3);
-      let K2K1 = Math.exp(lnK2K1);
-      let K2K1String = K2K1.toPrecision(3);
-      let answer = K2K1*k1;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A reaction has &#916;<i>H</i> = {dHString}&nbsp;kJ&nbsp;mol<sup>&#8211;1</sup>.
-        The equilibrium constant for this reaction is {k1} at {t1}&nbsp;K.
-        Determine the equilibrium constant for this reaction when the temperature
-        is {t2}&nbsp;K.</p>
-      );
-
-      const eqVantHoff = `\\begin{eqnarray*}
-        \\ln{\\left( \\frac{K_2}{K_1} \\right)} & = & \\frac{\\Delta H}{R} \\left( \\frac{1}{T_1} - \\frac{1}{T_2} \\right) \\\\
-        \\ln{\\left( \\frac{K_2}{${k1}} \\right)}
-        & = & \\frac{${dHJ} \\text{ J mol}^{-1}}{8.314 \\text{ J mol}^{-1}\\text{ K}^{-1}}
-        \\left( \\frac{1}{${t1}\\text{ K}} - \\frac{1}{${t2}\\text{ K}} \\right) \\\\
-        & = & ${lnK2K1String} \\\\
-        \\frac{K_2}{${k1}} & = & e^{${lnK2K1String}} \\\\
-        & = & ${K2K1String} \\\\
-        K_2 & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Use the van&#8217;t Hoff equation to calculate the constant at a new
-            temperature. Remember that the enthalpy must be in joules.</p>
-            <MathJax.Node formula={eqVantHoff}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>K</i></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 314,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 14,
-    "type": "numeric",
-    "questionBody": function() {
-      let cString = (Math.random()*(1.45e-6 - 1.35e-6) + 1.35e-6).toPrecision(3);
-      let c = Number.parseFloat(cString);
-      let cAg = 3*c;
-      let cAgString = cAg.toPrecision(3)
-      let answer = Math.pow(cAg, 3)*c;
-      let ansString = answer.toPrecision(2);
-
-      var description = (
-        <p>At 25&nbsp;&#176;C, a saturated solution of Ag<sub>3</sub>AsO<sub>4</sub> has
-        [AsO<sub>4</sub><sup>3&#8211;</sup>] = {cString}&nbsp;M. What is
-        the <i>K</i><sub>sp</sub> for Ag<sub>3</sub>AsO<sub>4</sub>?</p>
-      );
-
-      const eqKsp = `\\begin{eqnarray*}
-        K_\\text{sp} & = & [\\text{Ag}^+]^3 [\\text{AsO}_4^{3-}] \\\\
-        & = & (${cAgString})^3 (${cString}) \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The concentration in a satuarated solution is an equilibrium concentration.
-            Starting with this concentration, fill in an ICE table:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>Ag<sub>3</sub>AsO<sub>4</sub>(s)</th>
-                  <th>&#8644;</th>
-                  <th>3 Ag<sup>+</sup>(aq)</th>
-                  <th>+</th>
-                  <th>AsO<sub>4</sub><sup>3&#8211;</sup>(aq)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;{cString}</td>
-                  <td></td>
-                  <td>+(3)({cString})</td>
-                  <td></td>
-                  <td>+{cString}</td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>(3)({cString})</td>
-                  <td></td>
-                  <td>{cString}</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium concentrations into the expression
-            for <i>K</i><sub>sp</sub>:</p>
-          <MathJax.Node formula={eqKsp}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>K</i><sub>sp</sub></React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 315,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 15,
-    "type": "numeric",
-    "questionBody": function() {
-      let pHString = (Math.random()*(13.00 - 11.00) + 11.00).toPrecision(4);
-      let pH = Number.parseFloat(pHString);
-      let cOH = Math.pow(10, pH-14);
-      let cOHString = cOH.toPrecision(3);
-      let answer = 5.50e-6/Math.pow(cOH, 2);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>What is the solubility of Ca(OH)<sub>2</sub> (<i>K</i><sub>sp</sub> = 5.50e-6)
-        in a solution with pH {pHString}?</p>
-      );
-
-      const eqOH = `\\begin{eqnarray*}
-        [\\text{OH}^-] & = & 10^{-\\text{pOH}} \\\\
-        & = & 10^{-14 + \\text{pH}} \\\\
-        & = & 10^{-14 + ${pHString}} \\\\
-        & = & ${cOHString} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqS = `\\begin{eqnarray*}
-        K_\\text{sp} & = & [\\text{Ca}^{2+}][\\text{OH}^-]^2 \\\\
-        ${5.50e-6} & = & x(${cOHString})^2 \\\\
-        x & = & ${ansString} \\text{ M}
-        \\end{eqnarray*}`;
-
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The solution is basic, hence, the concentration of OH<sup>&#8211;</sup> ions
-            is fairly high and will affect the solubility via the common ion effect.
-            So, first, calculate [OH<sup>&#8211;</sup>]:</p>
-            <MathJax.Node formula={eqOH}/>
-            <p>Now construct an ICE table:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>Ca(OH)<sub>2</sub>(s)</th>
-                  <th>&#8644;</th>
-                  <th>Ca<sup>2+</sup>(aq)</th>
-                  <th>+</th>
-                  <th>2 OH<sup>&#8211;</sup>(aq)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>{cOHString}</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+2<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td>({cOHString} + 2<i>x</i>)<br/>&#8776; {cOHString}</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium concentrations into the expression
-            for <i>K</i><sub>sp</sub> and solve for <i>x</i>, the solubility
-            in mol/L.</p>
-            <MathJax.Node formula={eqS}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>s</i></React.Fragment>),
-        units: "M"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 316,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 16,
-    "type": "numeric",
-    "questionBody": function() {
-      let vol = Math.floor(Math.random()*(80 - 20) + 20);
-      let volString = vol.toPrecision(3);
-      let cIBaString = (Math.random()*(0.0600 - 0.0100) + 0.0100).toPrecision(3);
-      let cIBa = Number.parseFloat(cIBaString);
-      let cISO4String = (Math.random()*(0.000600 - 0.000100) + 0.000100).toPrecision(3);
-      let cISO4 = Number.parseFloat(cISO4String);
-      let cBa = cIBa/2;
-      let cSO4 = cISO4/2;
-      let cBaString = cBa.toPrecision(3);
-      let cSO4String = cSO4.toPrecision(3);
-      let cNewBa = cBa - cSO4;
-      let cNewBaString = cNewBa.toPrecision(3);
-      let answer = 1.1e-8/cNewBa;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>{volString}&nbsp;mL of {cIBaString}&nbsp;M BaCl<sub>2</sub> are mixed
-            with {volString}&nbsp;mL of {cISO4String}&nbsp;M (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>.
-            Calculate the concentration of SO<sub>4</sub><sup>2&#8211;</sup> remaining
-            in solution after precipitation of BaSO<sub>4</sub> is complete.</p>
-          <p><i>K</i><sub>sp</sub> of BaSO<sub>4</sub> = 1.1e-8</p>
-        </React.Fragment>
-      );
-
-      const eqNewC = `\\begin{eqnarray*}
-        c_{\\text{Ba}^{2+}} & = & ${cBaString} \\text{ M} \\\\
-        c_{\\text{SO}_4^{2-}} & = & ${cSO4String} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqX = `\\begin{eqnarray*}
-        K_\\text{sp} & = & [\\text{Ba}^{2+}][\\text{SO}_4^{2-}] \\\\
-        ${1.1e-8} & = & (${cNewBaString})x \\\\
-        [\\text{SO}_4^{2-}] & = & x = ${ansString} \\text{ M}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>First, calculate the concentrations of Ba<sup>2+</sup> from BaCl<sub>2</sub> and
-            SO<sub>4</sub><sup>2&#8211;</sup> from (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub> after
-            mixing: since the volume
-            of the mixture is double the volume of each individual solution, the
-            two concentrations were halved:</p>
-            <MathJax.Node formula={eqNewC}/>
-            <p>We will divide this problem into two steps: first, BaSO<sub>4</sub> is
-            precipitated in a non-equilibrium reaction, then a very small portion of
-            it is dissolved back to form Ba<sup>2+</sup> and SO<sub>4</sub><sup>2&#8211;</sup>.</p>
-            <p>Construct an ICF table for the first step: find that SO<sub>4</sub><sup>2&#8211;</sup> is
-            the limiting reagent and use its amount to calculate the changes for everything in the table.</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>Ba<sup>2+</sup>(aq)</th>
-                  <th>+</th>
-                  <th>SO<sub>4</sub><sup>2&#8211;</sup>(aq)</th>
-                  <th>&#8594;</th>
-                  <th>BaSO<sub>4</sub>(s)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{cBaString}</td>
-                  <td></td>
-                  <td>{cSO4String}</td>
-                  <td></td>
-                  <td>&#10006;</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;{cSO4String}</td>
-                  <td></td>
-                  <td>&#8211;{cSO4String}</td>
-                  <td></td>
-                  <td>+{cSO4String}</td>
-                </tr>
-                <tr>
-                  <td>final</td>
-                  <td>({cBaString} &#8211; {cSO4String})</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>&#10006;</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Now, set up the equilibrium and the ICE table for the second step,
-            dissolution of BaSO<sub>4</sub>. Use the final concentrations from the
-            previous step as the initial ones for the equilibrium.</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>BaSO<sub>4</sub>(s)</th>
-                  <th>&#8644;</th>
-                  <th>Ba<sup>2+</sup>(aq)</th>
-                  <th>+</th>
-                  <th>SO<sub>4</sub><sup>2&#8211;</sup>(aq)</th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>{cNewBaString}</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>&#10006;</td>
-                  <td></td>
-                  <td>({cNewBaString} + <i>x</i>)<br/>&#8776; {cNewBaString}</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium concentrations into the expression
-            for <i>K</i><sub>sp</sub> and solve for <i>x</i>.</p>
-            <MathJax.Node formula={eqX}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>[SO<sub>4</sub><sup>2&#8211;</sup>]</React.Fragment>),
-        units: "M"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 317,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 17,
-    "type": "numeric",
-    "questionBody": function() {
-      let cString = (Math.random()*(0.900 - 0.100) + 0.100).toPrecision(3);
-      let c = Number.parseFloat(cString);
-      let k = 7.2e-4;
-      let cH = Math.sqrt(k*c);
-      let cHString = cH.toPrecision(3);
-      let answer = Math.log10(cH);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>Calculate the pH of a {cString}&nbsp;M solution of nitrous acid,
-        HNO<sub>2</sub>. The <i>K</i><sub>a</sub> for nitrous acid is {k}.</p>
-      );
-
-      const eqX = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^+][\\text{NO}_2^-]}{[\\text{HNO}_2]} \\\\
-        ${k} & = & \\frac{x^2}{${cString}} \\\\
-        x & = & ${cHString} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqpH = `\\begin{eqnarray*}
-        \\text{pH} & = & -\\log{[\\text{H}^+]} \\\\
-        & = & -\\log{(${cHString})} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Write down the dissociation equilibrium for HNO<sub>2</sub> and
-            construct an ICE table:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>HNO<sub>2</sub></th>
-                  <th>&#8644;</th>
-                  <th>H<sup>+</sup></th>
-                  <th>+</th>
-                  <th>NO<sub>2</sub><sup>&#8211;</sup></th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{cString}</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({cString} &#8211; <i>x</i>)<br/>&#8776; {cString}</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium concentrations into the expression
-            for <i>K</i><sub>a</sub> and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>Using the [H<sup>+</sup>] = <i>x</i> = {cHString}&nbsp;M just found,
-            calculate the pH:</p>
-            <MathJax.Node formula={eqpH}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>pH</React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 318,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 18,
-    "type": "MS",
-    "questionBody": function() {
-      let cIString = (Math.random()*(0.190 - 0.100) + 0.100).toPrecision(3);
-      let volFString = (Math.random()*(950 - 600) + 600).toPrecision(3);
-
-      var description = (
-        <p>Consider the weak base methylamine, CH<sub>3</sub>NH<sub>2</sub>. When
-        100&nbsp;mL of a {cIString}&nbsp;M solution of methylamine is diluted to a total
-        volume of {volFString}&nbsp;mL, which of the following statements is/are
-        correct?</p>
-      );
-
-      var options = [
-        {text: (<p>The [OH<sup>&#8211;</sup>] will decrease.</p>),
-        correct: true,
-        id: 0},
-        {text: (<p>The [H<sup>+</sup>] will increase.</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>The [CH<sub>3</sub>NH<sub>3</sub><sup>+</sup>] will increase.</p>),
-        correct: false,
-        id: 2},
-        {text: (<p>The sum of [CH<sub>3</sub>NH<sub>2</sub>] + [CH<sub>3</sub>NH<sub>3</sub><sup>+</sup>] will remain constant.</p>),
-        correct: false,
-        id: 4}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>The concentrations of the products of the dissociation,
-          CH<sub>3</sub>NH<sub>3</sub><sup>+</sup> and OH<sup>&#8211;</sup>, decrease
-          as the initial concentration of the base decreases.</p>
-          <p>In any solution, the product [H<sup>+</sup>][OH<sup>&#8211;</sup>] is a constant,
-          so, since [OH<sup>&#8211;</sup>] will decrease, [H<sup>+</sup>] must increase.</p>
-          <p>When a certain part, say, <i>x</i>, of CH<sub>3</sub>NH<sub>2</sub> dissociates,
-          [CH<sub>3</sub>NH<sub>3</sub><sup>+</sup>] = <i>x</i> and [CH<sub>3</sub>NH<sub>2</sub>] =
-          (<i>c</i><sub>initial</sub> &#8211; <i>x</i>), so that their sum is always equal
-          to the initial concentration. But the initial concentration decreases after dilution, thus,
-          this sum will decrease.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 319,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 19,
-    "type": "numeric",
-    "questionBody": function() {
-      let cString = (Math.random()*(0.750 - 0.100) + 0.100).toPrecision(3);
-      let c = Number.parseFloat(cString);
-      let ka1 = 1.3e-2;
-      let ka2 = 6.2e-8;
-      let kb = 1e-14/ka1;
-      let kbString = kb.toPrecision(2);
-      let cH = Math.sqrt(ka2*c);
-      let cHString = cH.toPrecision(3);
-      let answer = -Math.log10(cH);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>Calculate the pH of a {cString}&nbsp;M solution of KHSO<sub>3</sub>.</p>
-          <p>H<sub>2</sub>SO<sub>3</sub> <i>K</i><sub>a1</sub> = {ka1}, <i>K</i><sub>a2</sub> = {ka2}</p>
-        </React.Fragment>
-      );
-
-      const eqKb = `\\begin{eqnarray*}
-        K_\\text{b} & = & \\frac{K_\\text{w}}{K_\\text{a1}} \\\\
-        & = & \\frac{${1e-14}}{${ka1}} \\\\
-        & = & ${kbString}
-        \\end{eqnarray*}`;
-      const eqX = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^+][\\text{SO}_3^{2-}]}{[\\text{HSO}_3^-]} \\\\
-        ${ka2} & = & \\frac{x^2}{${cString}} \\\\
-        x & = & ${cHString} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqpH = `\\begin{eqnarray*}
-        \\text{pH} & = & -\\log{[\\text{H}^+]} \\\\
-        & = & -\\log{(${cHString})} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>KHSO<sub>3</sub> dissociates into K<sup>+</sup>, which is just a
-            spectator ion and does not affect the pH, and HSO<sub>3</sub><sup>&#8211;</sup>.
-            HSO<sub>3</sub><sup>&#8211;</sup> can dissociate as an acid:</p>
-            <p className="eqn">HSO<sub>3</sub><sup>&#8211;</sup> &#8644; H<sup>+</sup> + SO<sub>3</sub><sup>2&#8211;</sup></p>
-            <p>The <i>K</i><sub>a</sub> value that corresponds to this dissociation
-            is the <i>K</i><sub>a2</sub> of H<sub>2</sub>SO<sub>3</sub>, {ka2}.</p>
-            <p>HSO<sub>3</sub><sup>&#8211;</sup> can also dissociate as a base:</p>
-            <p className="eqn">HSO<sub>3</sub><sup>&#8211;</sup> + H<sub>2</sub>O &#8644; H<sub>2</sub>SO<sub>3</sub> + OH<sup>&#8211;</sup></p>
-            <p>When dissociating as a base, HSO<sub>3</sub><sup>&#8211;</sup> is a conjugate
-            of the H<sub>2</sub>SO<sub>3</sub> acid. Therefore, its <i>K</i><sub>b</sub> is</p>
-            <MathJax.Node formula={eqKb}/>
-            <p>Since <i>K</i><sub>a</sub> of HSO<sub>3</sub><sup>&#8211;</sup> is
-            higher than its <i>K</i><sub>b</sub>, we will treat
-            HSO<sub>3</sub><sup>&#8211;</sup> as an acid.</p>
-            <p>Construct an ICE table for the acidic equilibrium:</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>HSO<sub>3</sub><sup>&#8211;</sup></th>
-                  <th>&#8644;</th>
-                  <th>H<sup>+</sup></th>
-                  <th>+</th>
-                  <th>SO<sub>3</sub><sup>2&#8211;</sup></th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{cString}</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({cString} &#8211; <i>x</i>)<br/>&#8776; {cString}</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td><i>x</i></td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium concentrations into the expression for <i>K</i><sub>a</sub> and
-            solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>Use the [H<sup>+</sup>] = <i>x</i> = {cHString}&nbsp;M to calculate the pH:</p>
-            <MathJax.Node formula={eqpH}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>pH</React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 320,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 20,
-    "type": "MS",
-    "questionBody": function() {
-      var description = (
-        <p>Which of the following combinations will produce a buffer solution?</p>
-      );
-
-      var options = [
-        {text: (<p>A mixture of 50.0&nbsp;mL of 0.100&nbsp;M NH<sub>3</sub> and 50.0&nbsp;mL of 0.100&nbsp;M NH<sub>4</sub>Cl.</p>),
-        correct: true,
-        id: 0},
-        {text: (<p>A mixture of 50.0&nbsp;mL of 0.100&nbsp;M HCl and 100.0&nbsp;mL of 0.100&nbsp;M NH<sub>3</sub>.</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>A mixture of 50.0&nbsp;mL of 0.100&nbsp;M HCl and 50.0&nbsp;mL of 0.0500&nbsp;M NH<sub>4</sub>Cl.</p>),
-        correct: false,
-        id: 2}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>NH<sub>3</sub> and NH<sub>4</sub><sup>+</sup> from NH<sub>4</sub>Cl are a conjugate weak base-acid pair. Thus,
-          when they are mixed together, a buffer is formed.</p>
-          <p>NH<sub>3</sub> and HCl are not a conjugate pair, however, they will neutralize
-          each other:</p>
-          <p className="eqn">NH<sub>3</sub> + HCl &#8594; NH<sub>4</sub>Cl</p>
-          <p>When 50.0&nbsp;mL of 0.100&nbsp;M HCl and 100.0&nbsp;mL of 0.100&nbsp;M NH<sub>3</sub> are mixed,
-          HCl will be the limiting reagent (there is only 0.00500&nbsp;mol of HCl and 0.0100&nbsp;mol
-          of NH<sub>3</sub>). Thus, the resulting solution will contain no HCl,
-          (0.0100 &#8211; 0.00500) = 0.0500&nbsp;mol of NH<sub>3</sub> and 0.0500&nbsp;mol of NH<sub>4</sub>Cl.
-          Once again, the presence of the conjugate pair makes the solution a buffer.</p>
-          <p>NH<sub>4</sub>Cl and HCl are also not a weak acid-base conjugate pair. Moreover,
-          they are both acids, so they will not neutralize each other. The solution will not be a buffer. </p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 321,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 21,
-    "type": "numeric",
-    "questionBody": function() {
-      let vAString = (Math.random()*(9.50 - 4.50) + 4.50).toPrecision(3);
-      let vA = Number.parseFloat(vAString);
-      let vBString = (Math.random()*(4.00 - 1.00) + 1.00).toPrecision(3);
-      let vB = Number.parseFloat(vBString);
-      let cAString = (Math.random()*(0.700 - 0.100) + 0.100).toPrecision(3);
-      let cA = Number.parseFloat(cAString);
-      let cBString = (Math.random()*(0.700 - 0.100) + 0.100).toPrecision(3);
-      let cB = Number.parseFloat(cBString);
-      let ka = 1.8e-5;
-      let nA = cA*vA/1000;
-      let nAString = nA.toPrecision(3);
-      let nB = cB*vB/1000;
-      let nBString = nB.toPrecision(3);
-      let cH = ka*nA/nB;
-      let cHString = cH.toPrecision(3);
-      let answer = -Math.log10(cH);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>What is the pH of a buffer solution prepared by mixing {vAString}&nbsp;mL
-          of {cAString}&nbsp;M CH<sub>3</sub>COOH with {vBString}&nbsp;mL of {cBString}&nbsp;M
-          CH<sub>3</sub>COONa</p>
-          <p><i>K</i><sub>a</sub> for CH<sub>3</sub>COOH = {ka}</p>
-        </React.Fragment>
-      );
-
-      const eqMol = `\\begin{eqnarray*}
-        n_{\\text{CH}_3\\text{COOH}} & = & (${cAString} \\text{ M})(\\frac{${vAString}}{1000} \\text{ L}) = ${nAString} \\text{ mol} \\\\
-        n_{\\text{CH}_3\\text{COO}^-} & = & (${cBString} \\text{ M})(\\frac{${vBString}}{1000} \\text{ L}) = ${nBString} \\text{ mol}
-        \\end{eqnarray*}`;
-      const eqX = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^+][\\text{CH}_3\\text{COO}^-]}{[\\text{CH}_3\\text{COOH}]} \\\\
-        ${ka} & = & \\frac{x(${nBString})}{${nAString}} \\\\
-        x & = & ${cHString} \\text{ M}
-        \\end{eqnarray*}`;
-      const eqpH = `\\begin{eqnarray*}
-        \\text{pH} & = & -\\log{[\\text{H}^+]} \\\\
-        & = & -\\log{(${cHString})} \\\\
-        & = & ${ansString}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>First, calculate the number of moles of the acid, CH<sub>3</sub>COOH, and
-            its conjugate base, CH<sub>3</sub>COO<sup>&#8211;</sup> (from CH<sub>3</sub>COONa):</p>
-            <MathJax.Node formula={eqMol}/>
-            <p>Write down the equilibrium for the buffer and construct an ICE table.
-            Remember that we can use moles instead of concentrations when setting up
-            an equilibrium for a buffer.</p>
-            <table className="ice">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>CH<sub>3</sub>COOH</th>
-                  <th>&#8644;</th>
-                  <th>H<sup>+</sup></th>
-                  <th>+</th>
-                  <th>CH<sub>3</sub>COO<sup>&#8211;</sup></th>
-                </tr>
-                <tr>
-                  <td>initial</td>
-                  <td>{nAString}</td>
-                  <td></td>
-                  <td>0</td>
-                  <td></td>
-                  <td>{nBString}</td>
-                </tr>
-                <tr>
-                  <td>change</td>
-                  <td>&#8211;<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                  <td></td>
-                  <td>+<i>x</i></td>
-                </tr>
-                <tr>
-                  <td>equilibrium</td>
-                  <td>({nAString} &#8211; <i>x</i>)<br/>&#8776; {nAString}</td>
-                  <td></td>
-                  <td><i>x</i></td>
-                  <td></td>
-                  <td>({nBString} &#8211; <i>x</i>)<br/>&#8776; {nBString}</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Substitute the equilibrium concentrations (and moles) into the expression
-            for <i>K</i><sub>a</sub> and solve for <i>x</i>:</p>
-            <MathJax.Node formula={eqX}/>
-            <p>Use the [H<sup>+</sup>] = <i>x</i> = {cHString}&nbsp;M to calculate the pH:</p>
-            <MathJax.Node formula={eqpH}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>pH</React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 322,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 22,
-    "type": "MC",
-    "questionBody": function() {
-      var description = (
-        <React.Fragment>
-          <p>The titration curve shown below was collected upon the titration of
-          an unknown weak acid with a strong base. What is the approximate p<i>K</i><sub>a</sub> of
-          the weak acid?</p>
-          <p className="eqn"><img src="data:image/png;base64,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" alt="titration curve"/></p>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>5.5</p>), correct: true, id: 0},
-        {text: (<p>9.5</p>), correct: false, id: 1},
-        {text: (<p>6.3</p>), correct: false, id: 2},
-        {text: (<p>2.9</p>), correct: false, id: 3},
-        {text: (<p>The p<i>K</i><sub>a</sub> cannot be determined without knowing at least one of the concentration values.</p>),
-          correct: false, id: 4}
-      ];
-
-      const eqpKa = `\\begin{eqnarray*}
-        K_\\text{a} & = & \\frac{[\\text{H}^+]n_\\text{base}}{n_\\text{acid}} & = & [\\text{H}^+] \\\\
-        -\\log{K_\\text{a}} & = & -\\log{[\\text{H}^+]} \\\\
-        \\text{p}K_\\text{a} & = & \\text{pH}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <p>Exactly halfway from the equivalence point, at 50&nbsp;mL of strong base,
-          there is a point called the &ldquo;midpoint&rdquo;. This is where the pH of the solution
-          is approximately equal to the p<i>K</i><sub>a</sub> of the weak acid being titrated.
-          So, the p<i>K</i><sub>a</sub> is 5.5.</p>
-          <p>The explanation for this fact is that at the midpoint the solution is a buffer with
-          equal moles of acid and base. Hence,</p>
-          <MathJax.Provider>
-            <MathJax.Node formula={eqpKa}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 323,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 3,
-    "idInExam": 23,
-    "type": "MS",
-    "questionBody": function() {
-      var description = (
-        <React.Fragment>
-          <p>The titration curve shown below was collected upon the titration of
-          an unknown weak acid with a strong base.</p>
-          <p className="eqn"><img src="data:image/png;base64,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" alt="titration curve"/></p>
-          <p>Which of the following indicators would be suitable for determining the equivalence point of this titration?</p>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>Phenolphthalein (p<i>K</i><sub>a</sub> = 9.0)</p>),
-        correct: true,
-        id: 0},
-        {text: (<p>Thymolphthalein (p<i>K</i><sub>a</sub> = 10.0)</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>Trinitrobenzoic Acid (p<i>K</i><sub>a</sub> = 13.0)</p>),
-        correct: false,
-        id: 2},
-        {text: (<p>Methyl Red (p<i>K</i><sub>a</sub> = 5.5)</p>),
-        correct: false,
-        id: 3},
-        {text: (<p>Bromthymol Blue (p<i>K</i><sub>a</sub> = 6.5)</p>),
-        correct: false,
-        id: 4}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>The equivalence point of this titration occurs when 100&nbsp;mL of the
-          strong base is added. The indicator has to change its color at the pH of the
-          equivalence point or close to it (+/&#8211;1 unit of pH).</p>
-          <p>The pH at wich an
-          indicator changes its color is actually equal to its p<i>K</i><sub>a</sub>.
-          So, a suitable indicator for this titration has p<i>K</i><sub>a</sub> in
-          the range 8 to 10. Only Phenolphthalein (p<i>K</i><sub>a</sub> = 9.0) and
-          Thymolphthalein (p<i>K</i><sub>a</sub> = 10.0) are suitable.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 324,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 24,
-    "type": "MS",
-    "questionBody": function() {
-      let oxNumbers = [
-        {el: "Nitrogen",
-        comp: (<React.Fragment>NO</React.Fragment>),
-        states: [{n: "+2", correct: true}, {n: "+3", correct: false}]},
-        {el: "Chlorine",
-        comp: (<React.Fragment>ClO<sub>3</sub><sup>&#8211;</sup></React.Fragment>),
-        states: [{n: "+5", correct: true}, {n: "+6", correct: false}]},
-        {el: "Nitrogen",
-        comp: (<React.Fragment>N<sub>2</sub>O</React.Fragment>),
-        states: [{n: "-1", correct: false}, {n: "+1", correct: true}]},
-        {el: "Nickel",
-        comp: (<React.Fragment>Ni<sub>2</sub>O<sub>3</sub></React.Fragment>),
-        states: [{n: "+2", correct: false}, {n: "+3", correct: true}]},
-        {el: "Sulfur",
-        comp: (<React.Fragment>SO<sub>3</sub><sup>2&#8211;</sup></React.Fragment>),
-        states: [{n: "+4", correct: true}, {n: "+6", correct: false}]},
-        {el: "Nitrogen",
-        comp: (<React.Fragment>HNO<sub>3</sub></React.Fragment>),
-        states: [{n: "+5", correct: true}, {n: "+6", correct: false}, {n: "+7", correct: false}]}
-      ];
-
-      var options = [];
-      let fB = [];
-      while (options.length < 4) {
-        let i = Math.floor(Math.random()*oxNumbers.length);
-        let j = Math.floor(Math.random()*oxNumbers[i].states.length);
-        options.push({
-          text: (<p>{oxNumbers[i].el} is {oxNumbers[i].states[j].n} in {oxNumbers[i].comp}</p>),
-          correct: oxNumbers[i].states[j].correct,
-          id: options.length
-        });
-        if (oxNumbers[i].states[j].correct) {
-          fB.push(<React.Fragment>{oxNumbers[i].el.toLowerCase()} is indeed {oxNumbers[i].states[j].n} in {oxNumbers[i].comp}</React.Fragment>);
-        } else {
-          fB.push(<React.Fragment>{oxNumbers[i].el.toLowerCase()} is not {oxNumbers[i].states[j].n} in {oxNumbers[i].comp}</React.Fragment>);
-        }
-        oxNumbers.splice(i, 1);
-      }
-
-      var description = (
-        <p>Which of the following four assignments of oxidation numbers is/are correct?</p>
-      );
-
-      var feedback = (
-        <React.Fragment>
-          <p>To calculate an oxidation number, follow the procedure: assign fixed oxidation states
-          to oxygen (&#8211;2), hydrogen (+1); then set up an equation where
-          the sum of the oxidation numbers of all the elements times their indices
-          is equal to the overall charge of the species. If the overall charge is not
-          specified, it is zero.</p>
-        <p>So, {fB.map(item => (<React.Fragment>{item}{fB.indexOf(item) < fB.length-1 ? ", " : ""}</React.Fragment>))}.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 325,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 25,
-    "type": "string",
-    "questionBody": function() {
-      let answer = RegExp('^\\s*2,?\\s*3,?\\s*,?\\s*1\\s*$');
-
-      var description = (
-        <React.Fragment>
-          <p>Balance the following reaction, which occurs in basic solution.</p>
-          <p className="eqn">MnO<sub>4</sub><sup>&#8211;</sup> + SO<sub>3</sub><sup>2&#8211;</sup> &#8594; MnO<sub>2</sub> + SO<sub>4</sub><sup>2&#8211;</sup></p>
-          <p><i>Enter the coefficients for MnO<sub>4</sub><sup>&#8211;</sup>, SO<sub>3</sub><sup>2&#8211;</sup>, and H<sub>2</sub>O separated by commas.</i></p>
-        </React.Fragment>
-      );
-
-      var feedback = (
-        <React.Fragment>
-          <p>Separate the reaction into two half-reactions: one will contain manganese,
-          and the other one will contain sulfur. So, the first half-reaction:</p>
-          <p className="eqn">MnO<sub>4</sub><sup>&#8211;</sup> &#8594; MnO<sub>2</sub></p>
-          <p>Manganese is already balanced. Balance the oxygen by adding water:</p>
-          <p className="eqn">MnO<sub>4</sub><sup>&#8211;</sup> &#8594; MnO<sub>2</sub> + 2 H<sub>2</sub>O</p>
-          <p>Now balance the hydrogen: left-hand side has 4 too few hydrogens, so add 4 H<sub>2</sub>O there,
-          and also add 4 OH<sup>&#8211;</sup> to the right-hand side:</p>
-          <p className="eqn">MnO<sub>4</sub><sup>&#8211;</sup> + 4 H<sub>2</sub>O &#8594; MnO<sub>2</sub> + 2 H<sub>2</sub>O + 4 OH<sup>&#8211;</sup></p>
-          <p>Simplify by cancelling some H<sub>2</sub>O:</p>
-          <p className="eqn">MnO<sub>4</sub><sup>&#8211;</sup> + 2 H<sub>2</sub>O &#8594; MnO<sub>2</sub> + 4 OH<sup>&#8211;</sup></p>
-          <p>Finally, balance the charge: left-hand side has  &#8211;1 charge, right-hand side has &#8211;4,
-          so add 3 electrons to the left-hand side:</p>
-          <p className="eqn">MnO<sub>4</sub><sup>&#8211;</sup> + 2 H<sub>2</sub>O + 3 <i>e</i><sup>&#8211;</sup> &#8594; MnO<sub>2</sub> + 4 OH<sup>&#8211;</sup></p>
-          <p>Repeat the steps for the half-reaction with sulfur. Sulfur itself
-          is already balanced.</p>
-          <p className="eqn">SO<sub>3</sub><sup>2&#8211;</sup> &#8594; SO<sub>4</sub><sup>2&#8211;</sup></p>
-          <p>Balance the oxygen by adding H<sub>2</sub>O:</p>
-          <p className="eqn">SO<sub>3</sub><sup>2&#8211;</sup> + H<sub>2</sub>O &#8594; SO<sub>4</sub><sup>2&#8211;</sup></p>
-          <p>Balance the hydrogen: right-hand side has 2 too few hydrogens, so add 2 H<sub>2</sub>O there
-          and add 2 OH<sup>&#8211;</sup> to the left-hand side:</p>
-          <p className="eqn">SO<sub>3</sub><sup>2&#8211;</sup> + H<sub>2</sub>O + 2 OH<sup>&#8211;</sup> &#8594; SO<sub>4</sub><sup>2&#8211;</sup> + 2 H<sub>2</sub>O</p>
-          <p>Simplify by cancelling water:</p>
-          <p className="eqn">SO<sub>3</sub><sup>2&#8211;</sup> + 2 OH<sup>&#8211;</sup> &#8594; SO<sub>4</sub><sup>2&#8211;</sup> + H<sub>2</sub>O</p>
-          <p>Balance the charge: left-hand side is &#8211;4, right-hand side is &#8211;2, so add 2 electrons
-          to the right-hand side:</p>
-          <p className="eqn">SO<sub>3</sub><sup>2&#8211;</sup> + 2 OH<sup>&#8211;</sup> &#8594; SO<sub>4</sub><sup>2&#8211;</sup> + H<sub>2</sub>O + 2 <i>e</i><sup>&#8211;</sup></p>
-          <p>Now we need to combine the half-reactions. In order to make the number of electrons
-          transferred the same in both half-reactions, the first one must be multiplied by 2 and the second one by 3.</p>
-          <p className="eqn">2 MnO<sub>4</sub><sup>&#8211;</sup> + 4 H<sub>2</sub>O + 6 <i>e</i><sup>&#8211;</sup> +
-            3 SO<sub>3</sub><sup>2&#8211;</sup> + 6 OH<sup>&#8211;</sup> &#8594;
-            2 MnO<sub>2</sub> + 8 OH<sup>&#8211;</sup> + 3 SO<sub>4</sub><sup>2&#8211;</sup> + 3 H<sub>2</sub>O + 6 <i>e</i><sup>&#8211;</sup></p>
-          <p>Cancel electrons, water, and OH<sup>&#8211;</sup>:</p>
-          <p className="eqn">2 MnO<sub>4</sub><sup>&#8211;</sup> + H<sub>2</sub>O + 3 SO<sub>3</sub><sup>2&#8211;</sup> &#8594;
-            2 MnO<sub>2</sub> + 2 OH<sup>&#8211;</sup> + 3 SO<sub>4</sub><sup>2&#8211;</sup></p>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: "",
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 326,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 26,
-    "type": "string",
-    "questionBody": function() {
-      let i = Math.floor(Math.random()*7);
-      let image, ox1, ox2;
-      if (i == 0) {
-        image = "data:image/png;base64,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";
-        ox1 = 1;
-        ox2 = 1;
-      } else if(i == 1) {
-        image = "data:image/png;base64,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";
-        ox1 = 1;
-        ox2 = 3;
-      } else if(i == 2) {
-        image = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACTCAMAAABrngFCAAADAFBMVEX///+AAAAAgACAgAAAAICAAIAAgIDAwMDA3MCmyvD/8NT/4rH/1I7/xmv/uEj/qiX/qgDckgC5egCWYgBzSgBQMgD/49T/x7H/q47/j2v/c0j/VyX/VQDcSQC5PQCWMQBzJQBQGQD/1NT/sbH/jo7/a2v/SEj/JSX+AADcAAC5AACWAABzAABQAAD/1OP/scf/jqv/a4//SHP/JVf/AFXcAEm5AD2WADFzACVQABn/1PD/seL/jtT/a8b/SLj/Jar/AKrcAJK5AHqWAGJzAEpQADL/1P//sf//jv//a///SP//Jf/+AP7cANy5ALmWAJZzAHNQAFDw1P/isf/Ujv/Ga/+4SP+qJf+qAP+SANx6ALliAJZKAHMyAFDj1P/Hsf+rjv+Pa/9zSP9XJf9VAP9JANw9ALkxAJYlAHMZAFDU1P+xsf+Ojv9ra/9ISP8lJf8AAP4AANwAALkAAJYAAHMAAFDU4/+xx/+Oq/9rj/9Ic/8lV/8AVf8ASdwAPbkAMZYAJXMAGVDU8P+x4v+O1P9rxv9IuP8lqv8Aqv8AktwAerkAYpYASnMAMlDU//+x//+O//9r//9I//8l//8A/v4A3NwAubkAlpYAc3MAUFDU//Cx/+KO/9Rr/8ZI/7gl/6oA/6oA3JIAuXoAlmIAc0oAUDLU/+Ox/8eO/6tr/49I/3Ml/1cA/1UA3EkAuT0AljEAcyUAUBnU/9Sx/7GO/45r/2tI/0gl/yUA/gAA3AAAuQAAlgAAcwAAUADj/9TH/7Gr/46P/2tz/0hX/yVV/wBJ3AA9uQAxlgAlcwAZUADw/9Ti/7HU/47G/2u4/0iq/yWq/wCS3AB6uQBilgBKcwAyUAD//9T//7H//47//2v//0j//yX+/gDc3AC5uQCWlgBzcwBQUADy8vLm5uba2trOzs7CwsK2traqqqqenp6SkpKGhoZ6enpubm5iYmJWVlZKSko+Pj4yMjImJiYaGhoODg7/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//8AAABYWvgoAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAT3SURBVHic7ZzdkrMgDIY98/5vEWW1iFJqne5ZPn60qxUEfyjOfL6zO+1srT41IQmQbpJcunTJKlQQksaG6PUCTqq2xbE5pAgU8oHCCWgyIPpJ28YFkXpB/vEkohron+DhFkUUu2AsOpXPZED1kzOMplPFGWmfByHt8xabQwsBIfj3NzZGLzmgLhiTLhibLhibLhibLhibLhibLhibLhibDoPJKsaoKl8LFhumggrjSlX4BJxHh4UhuqZ/yQp/O0wtftNyLwsaJj3NLphjlOo5j1ZsGDKeeZ0QBjVZJJhiBoPuwFEcmPcaGKEaRrAA1GvPQsWbmv1Tbdaq24CAKRjFArBulBZQZRKocB+6rBykiyAu11YI9CzQrVlpyaBSjwx2mzdnwMSPvDqBEnqtcRvaQ+TFAb6GMNbjJ8PJz7OnWeE2Ld/PYFbGexr/1RbYnF/d+l3rNiFhkrRTNK2vB/BgZpLqTdV4Hl4NDrx/bBtFfd1GYgxDu4EsQSzAVk8pTdU5Y2qp9nUKoO+ghzk7fjU45263+eFMxwTcjNJB2dLDcxuqxQWWxklW8x/zO6t2d9E3kzSVdTdAXPHjNfpXeWTMwrlD+QPActK5LdDE3394fXRVJEz1NNk/v8+9tPywKWmro13n1s3HN6pbQ0Bh8LGPgejj6Lgzv9nk01m0hIN93on8fvcc5hjrAzOfAu2d2JP0URvvPu6gm8c7NUfNiL7E8Dg7OQEu7qt8t6o1l1FEPBtKHsot7JUIBJX5pWGHzrJThzhXZ4ZUw9SlmhQiM5QoBpEqBjOT1Xo9ZEW2CYb0G3hy70zCNDc1XZazZXFd9PHh+zL5veNm/HgqfWyCGUZhhmYwbZ7cRLoWNkE3bb98OMeSM946ewm0DJOP/2qG4WmScm2/l892nyrkDWFAQzAiRY0weBUM8YHpVEFmTmW7YWphpkKbyQcG1UUC9868fevymd4VUT6BqQSMiCJoano8FHDZcraBpDZPnBwwTf8RKjGqhqFNrEN7QOfLixTiVbIFpv9z3s9pHertVDi6C6znccCIE7MUv9S8cRlGxRwKFJfVUpjZBSPyBGON8oXFJc6iU1MEXPEndbmxFcaVm/yUP7puyI/uuVHQZS9Ui0Q83NjIMOVTxLF34IgKIyw0mThFhJEWmoZ3N0weqHsG9Ys03V/IjQeT4FJm4W5UuUWEEQmDdZPJbUyY5oa6bjx/iwgjs/hzEpnjwUiWpJxk4GgwjaF6jAVjYokFY2SJBGNmiQNjYfGAwY9vsXjAeKTSg1giwNhZvg+zwPJ1mCWWJHduVhwKs8jioSNh9rIcCbOb5UCY/SzHwbhY/lpsKssi4nEwLpZRiw2zjqri/hWWcYuNHebmu3G3i2XSYhMYxum7kxabsDDucTRZ0wsK4zGmvwbjE1+KL8F4xbpJi004GM+4O26xCQbjmwPGLTahYPzz0ajFJhDMqtz43onLrVsre2AOyNNTVY5l4gUdzrKjz/R4lu0wAVg2w4Rg2QoThGUjTBiWbTCBWDbBpKG+7XiaTn+plTAo6Lfw18GItBsUZo390xbO8U3dRO5W0vQ0MFkmeM4CkyT/E0xOyJpO6aAwFChpW/+2zpAwenC0/m3KIWGwmlut+H5JeAemJ4JB3s3V4aWb584hxOAs/50ndB5eJT0VP4fOxCIiTKN68U7hwQUh54G5dOl/0T/p2vTkbC353wAAAABJRU5ErkJggg==";
-        ox1 = 3;
-        ox2 = 1;
-      } else if(i == 3) {
-        image = "data:image/png;base64,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";
-        ox1 = 3;
-        ox2 = 3;
-      } else if(i == 4) {
-        image = "data:image/png;base64,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";
-        ox1 = -1;
-        ox2 = 1;
-      } else if(i == 5) {
-        image = "data:image/png;base64,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";
-        ox1 = -1;
-        ox2 = 3;
-      } else {
-        image = "data:image/png;base64,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";
-        ox1 = -3;
-        ox2 = 3;
-      }
-      let ox1String = (ox1 > 0 ? "\\+?" : "") + ox1.toString();
-      let ox2String = (ox2 > 0 ? "\\+?" : "") + ox2.toString();
-      let answer = RegExp('^\\s*' + ox1String + ',?\\s*' + ox2String + '\\s*$');
-
-      var description = (
-        <React.Fragment>
-          <p>Determine the oxidation states of the two carbon atoms indicated in the structure.</p>
-          <p className="eqn"><img src={image} alt="structure"/></p>
-          <p><i>Enter the oxidation states of atom 1, then atom 2 separated by a comma.</i></p>
-        </React.Fragment>
-      );
-
-      var feedback = (
-        <React.Fragment>
-          <p>In an organic compound, each bond with an atom more electronegative than carbon
-          (like oxygen and chlorine) pulls one unit of charge away from C, increasing
-          the oxidation state of the carbon by one. If it is a double bond,
-          the oxidation state increases by 2.</p>
-          <p>A bond with another carbon does not affect the oxidation state.</p>
-          <p>A bond with a less electronegative atom (like hydrogen) decreases the
-          oxidation state of the carbon by 1.</p>
-          <p>So, the first carbon has oxidation state {(ox1 > 0 ? "+" : "") + ox1.toString()} and
-          the second one is {(ox2 > 0 ? "+" : "") + ox2.toString()}.</p>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: "",
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 327,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 27,
-    "type": "MS",
-    "questionBody": function() {
-      let statements = [
-        {text: (<p><i>E</i>&#176;<sub>cell</sub> = 0.04&nbsp;V.</p>),
-        correct: false},
-        {text: (<p><i>E</i>&#176;<sub>cell</sub> = &#8211;1.56&nbsp;V.</p>),
-        correct: false},
-        {text: (<p>When the cell operates, the mass of Zn(s) decreases.</p>),
-        correct: true},
-        {text: (<p>When the cell operates, the mass of Ag(s) decreases.</p>),
-        correct: false},
-        {text: (<p>When the cell operates, the concentration of Ag<sup>+</sup>(aq) increases.</p>),
-        correct: false},
-        {text: (<p>When the cell operates, the concentration of Zn<sup>2+</sup>(aq) increases.</p>),
-        correct: true},
-        {text: (<p>When the cell operates, anions are moving from anode to cathode.</p>),
-        correct: false},
-        {text: (<p>When the cell operates, electrons are moving from anode to cathode.</p>),
-        correct: true},
-        {text: (<p>Zn(s) | Zn<sup>2+</sup>(aq) is the anode for the spontaneous reaction.</p>),
-        correct: true}
-      ];
-      var options = [];
-      while (options.length < 5) {
-        let i = Math.floor(Math.random()*statements.length);
-        options.push(
-          {text: statements[i].text, correct: statements[i].correct, id: options.length}
-        );
-        statements.splice(i, 1);
-      }
-
-      var description = (
-        <React.Fragment>
-          <p>Which of the following is/are correct about the cell designated below?</p>
-          <p className="eqn">Zn(s) | Zn<sup>2+</sup>(aq) &#8214; Ag<sup>+</sup>(aq) | Ag(s)&#160;&#160;&#160;(1.0&nbsp;M solutions)</p>
-        </React.Fragment>
-      );
-
-      const eqEcell = `\\begin{eqnarray*}
-        E^{\\circ}_\\text{cell} & = & E^{\\circ}_\\text{cathode} - E^{\\circ}_\\text{anode} \\\\
-        & = & E^{\\circ}_{\\text{Ag}^+/\\text{Ag}} - E^{\\circ}_{\\text{Zn}^{2+}/\\text{Zn}} \\\\
-        & = & (0.80 \\text{ V}) - (-0.76 \\text{ V}) \\\\
-        & = & 1.56 \\text{ V}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <p>In a cell diagram, the anode is always on the left. Thus, zinc is the anode,
-          and silver is the cathode. The cell potential is</p>
-          <MathJax.Provider>
-            <MathJax.Node formula={eqEcell}/>
-          </MathJax.Provider>
-          <p>So, the reaction is spontaneous as written.</p>
-          <p>Zinc, being the anode, is oxidized from Zn(s) to Zn<sup>2+</sup> and dissolved.
-          Silver, being the cathode, is reduced from Ag<sup>+</sup> to Ag(s) and deposited.</p>
-          <p>In general, electrons flow from anode to cathode in galvanic cells.
-          Since this creates a deficit of negative charge at the anode, the negatively charged
-          anions must flow from cathode to anode in order to compensate the charge deficit.
-          Cations will flow in the opposite direction.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 328,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 28,
-    "type": "numeric",
-    "questionBody": function() {
-      let eCellString = (Math.random()*(1.65 - 1.45) + 1.45).toPrecision(3);
-      let eCell = Number.parseFloat(eCellString);
-      let cAgString = (Math.random()*(0.0700 - 0.0300) + 0.0300).toPrecision(3);
-      let cAg = Number.parseFloat(cAgString);
-      let lnQ = -(eCell - 1.56)*2/0.0257;
-      let lnQString = lnQ.toPrecision(3);
-      let q = Math.exp(lnQ);
-      let qString = q.toPrecision(3);
-      let answer = q*Math.pow(cAg, 2);
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <React.Fragment>
-          <p>Calculate [Zn<sup>2+</sup>] for the cell below, which is found to have
-          a cell voltage of {eCellString}&nbsp;V at 25&nbsp;&#176;C, and for
-          which [Ag<sup>+</sup>] is {cAgString}&nbsp;M.</p>
-          <p className="eqn">Zn(s) | Zn<sup>2+</sup>(aq) &#8214; Ag<sup>+</sup>(aq) | Ag(s)</p>
-        </React.Fragment>
-      );
-
-      const eqEcell = `\\begin{eqnarray*}
-        E^{\\circ}_\\text{cell} & = & E^{\\circ}_\\text{cathode} - E^{\\circ}_\\text{anode} \\\\
-        & = & E^{\\circ}_{\\text{Ag}^+/\\text{Ag}} - E^{\\circ}_{\\text{Zn}^{2+}/\\text{Zn}} \\\\
-        & = & (0.80 \\text{ V}) - (-0.76 \\text{ V}) \\\\
-        & = & 1.56 \\text{ V}
-        \\end{eqnarray*}`;
-      const eqNernst = `E_\\text{cell} = E^{\\circ}_\\text{cell} - \\frac{0.0257 \\text{ V}}{n}\\ln{Q},`;
-      const eqQ = `Q = \\frac{[\\text{Zn}^{2+}]}{[\\text{Ag}^+]^2}`;
-      const eqcZn = `\\begin{eqnarray*}
-        ${eCellString} \\text{ V} & = & 1.56 \\text{ V}
-        - \\frac{0.0257 \\text{ V}}{2}\\ln{\\left( \\frac{[\\text{Zn}^{2+}]}{(${cAgString})^2} \\right)} \\\\
-        \\ln{\\left( \\frac{[\\text{Zn}^{2+}]}{(${cAgString})^2} \\right)} & = & ${lnQString} \\\\
-        \\left( \\frac{[\\text{Zn}^{2+}]}{(${cAgString})^2} \\right) & = & e^{${lnQString}} = ${Number.parseFloat(qString)} \\\\
-        [\\text{Zn}^{2+}] & = & ${ansString} \\text{ M}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The balanced overall reaction is</p>
-            <p className="eqn">Zn(s) + 2 Ag<sup>+</sup>(aq) &#8594; Zn<sup>2+</sup>(aq) + 2 Ag(s)</p>
-            <p>The standard cell potential (that is, when all concentrations are 1.0&nbsp;M)
-            for this cell is</p>
-            <MathJax.Node formula={eqEcell}/>
-            <p>The cell potential under non-standard conditions is described by the
-            Nernst equation:</p>
-            <MathJax.Node formula={eqNernst}/>
-            <p>where <i>n</i> is the number of electrons transferred and <i>Q</i> is
-            the reaction quotient (solids are not included):</p>
-            <MathJax.Node formula={eqQ}/>
-            <p>Substitute all the data and solve for [Zn<sup>2+</sup>]:</p>
-            <MathJax.Node formula={eqcZn}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: <React.Fragment>[Zn<sup>2+</sup>]</React.Fragment>,
-        units: "M"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 329,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 29,
-    "type": "MS",
-    "questionBody": function() {
-      let metals = [
-        {name: "Na", dissolves: true},
-        {name: "Fe", dissolves: true},
-        {name: "Cu", dissolves: false},
-        {name: "Hg", dissolves: false},
-        {name: "Mg", dissolves: true},
-        {name: "Cr", dissolves: true},
-        {name: "Sn", dissolves: true},
-        {name: "Ag", dissolves: false},
-        {name: "Au", dissolves: false}
-      ];
-      let metalsSelected = [];
-      let fb = [];
-      while(metalsSelected.length < 4) {
-        let i = Math.floor(Math.random()*metals.length);
-        if (metals[i].dissolves) fb.push(metals[i].name);
-        metalsSelected.push(metals[i]);
-        metals.splice(i, 1);
-      }
-
-      var options = metalsSelected.map(metal => {
-        return {text: (<p>{metal.name}</p>), correct: metal.dissolves, id: metalsSelected.indexOf(metal)};
-      });
-
-      var description = (
-        <p>Which of the following metals would react with (or dissolve in) 1.0&nbsp;M HCl?</p>
-      );
-
-      var feedback = (
-        <React.Fragment>
-          <p>HCl dissociates into H<sup>+</sup> and Cl<sup>&#8211;</sup>. Only H<sup>+</sup> can
-          be reduced and thus oxidize (dissolve) metals. Its standard reduction potential
-          is 0.0&nbsp;V and, since it has to be the cathode, the anode (metal) has
-          to have a negative reduction potential. Only in this case will the cell potential
-          be greater than zero and the reaction will be spontaneous.</p>
-          <p>{fb.length > 0 ? "The metals with negative reduction potentials are: " + fb.join(", ") + "." : ""}</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 330,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 30,
-    "type": "MC",
-    "questionBody": function() {
-      var description = (
-        <p>A 1.0&nbsp;M aqueous solution of CuBr<sub>2</sub> undergoes electrolysis
-        in 1.0&nbsp;M HBr. Ignoring any effects related to overpotential, determine the
-        product that will be formed at the anode.</p>
-      );
-
-      var options = [
-        {text: (<p>Cu(s)</p>),
-        correct: false,
-        id: 0},
-        {text: (<p>Br<sub>2</sub>(l)</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>O<sub>2</sub>(g)</p>),
-        correct: false,
-        id: 2},
-        {text: (<p>H<sub>2</sub>(g)</p>),
-        correct: false,
-        id: 3},
-        {text: (<p>Cu<sup>2+</sup>(aq)</p>),
-        correct: false,
-        id: 4}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>When multiple product are possible during electrolysis,
-          the one that is actually produced is determined by the principle
-          of least effort: we want to have the least negative cell potential,
-          which means that we will need to apply the least voltage to the cell
-          to overcome it. In order to have the highest possible (least negative)
-          cell potential, the anode should have the lowest possible reduction potential.</p>
-          <p>So, let us list all the things in the solution that can be oxidized,
-          together with the corresponding reduction potentials:</p>
-          <ul>
-            <li>Br<sup>&#8211;</sup>, <i>E</i>&#176;<sub>Br<sub>2</sub>/Br<sup>&#8211;</sup></sub> = 1.07&nbsp;V</li>
-            <li>H<sub>2</sub>O, <i>E</i>&#176;<sub>O<sub>2</sub>/H<sub>2</sub>O</sub> = 1.23&nbsp;V</li>
-          </ul>
-          <p>Therefore, Br<sup>&#8211;</sup> will be oxidized to Br<sub>2</sub>(l) (the product) at the anode.</p>
-          <p>Note that we have acidic conditions (due to the HBr in the solution).
-          Also note that both Cu<sup>2+</sup> and H<sup>+</sup> are
-          in their most oxidized forms, so they cannot be oxidized any further. The
-          Cu(s) and H<sub>2</sub>(g) listed in the options are the products of
-          reduction, not oxidation.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 331,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 31,
-    "type": "numeric",
-    "questionBody": function() {
-      let iString = (Math.random()*(1.90 - 1.00) + 1.00).toPrecision(3);
-      let i = Number.parseFloat(iString);
-      let mCrString = (Math.random()*(9.00 - 2.00) + 2.00).toPrecision(3);
-      let mCr = Number.parseFloat(mCrString);
-      let molCr = mCr/52.00;
-      let molCrString = molCr.toPrecision(3);
-      let molEl = molCr*3;
-      let molElString = molEl.toPrecision(3);
-      let tSec = molEl*96485/i;
-      let tSecString = tSec.toPrecision(3);
-      let answer = tSec/3600;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>A solution of CrCl<sub>3</sub> is electrolyzed using a current of {iString}&nbsp;amperes.
-        How long will it take to deposit {mCrString}&nbsp;g of Cr at the cathode?</p>
-      );
-
-      const eqF = `I t = n_e F`;
-      const eqMol = `\\begin{eqnarray}
-        n_\\text{Cr} & = & \\frac{${mCrString} \\text{ g}}{52.00 \\text{g mol}^{-1}} \\\\
-        & = & ${molCrString} \\text{ mol}
-        \\end{eqnarray}`;
-      const eqMolEl = `\\begin{eqnarray}
-        n_e & = & \\frac{${molCrString} \\text{ mol} \\times 3}{1} \\\\
-        & = & ${molElString} \\text{ mol}
-        \\end{eqnarray}`;
-      const eqTime = `\\begin{eqnarray}
-        (${iString} \\text{ A})t & = & (${molElString} \\text{ mol})(96485 \\text{ C mol}^{-1}) \\\\
-        t & = & ${Number.parseFloat(tSecString)} \\text{ s} \\\\
-        & = & ${ansString} \\text{ hr}
-        \\end{eqnarray}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>During the electrolysis, chromium will be reduced at the cathode:</p>
-            <p className="eqn">Cr<sup>3+</sup>(aq) + 3 <i>e</i><sup>&#8211;</sup> &#8594; Cr(s)</p>
-            <p>The number of moles of Cr to be deposited is</p>
-            <MathJax.Node formula={eqMol}/>
-            <p>To calculate for how long the solution has to be electrolyzed,
-            use Faraday&#8217;s First Law of Electrolysis:</p>
-            <MathJax.Node formula={eqF}/>
-            <p>The stoichiometric ratio between moles of chromium and moles of electrons
-            is 1:3, so, the number of moles of electrons is</p>
-            <MathJax.Node formula={eqMolEl}/>
-            <p>Substitute all the data into the Faraday&#8217;s First Law and solve
-            for <i>t</i>:</p>
-          <MathJax.Node formula={eqTime}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: <React.Fragment><i>t</i></React.Fragment>,
-        units: "hr"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 332,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 4,
-    "idInExam": 32,
-    "type": "MS",
-    "questionBody": function() {
-      var description = (
-        <React.Fragment>
-          <p>The lead acid battery involves the following reactions:</p>
-          <table className="mb-3 ml-3 text-left">
-            <tbody>
-              <tr>
-                <td>Pb(s) + SO<sub>4</sub><sup>2&#8211;</sup>(aq) &#8594; PbSO<sub>4</sub>(s) + 2 <i>e</i><sup>&#8211;</sup></td>
-                <td className="pl-3"><i>E</i>&#176;<sub>ox</sub> = +0.31&nbsp;V</td>
-              </tr>
-              <tr>
-                <td>PbO<sub>2</sub>(s) + 4 H<sup>+</sup>(aq) + SO<sub>4</sub><sup>2&#8211;</sup>(aq) + 2 <i>e</i><sup>&#8211;</sup> &#8594;
-                  PbSO<sub>4</sub>(s) + 2 H<sub>2</sub>O(l)</td>
-                <td className="pl-3"><i>E</i>&#176;<sub>red</sub> = +1.70&nbsp;V</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Which of the following statements is/are correct?</p>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>Discharging of the battery involves the oxidation of Pb(s).</p>),
-        correct: true,
-        id: 0},
-        {text: (<p>The pH of the liquid decreases as the battery is discharged.</p>),
-        correct: false,
-        id: 1},
-        {text: (<p>Recharging of the battery involves the disproportionation of Pb<sup>2+</sup>.</p>),
-        correct: true,
-        id: 2},
-        {text: (<p>The battery is dead only when all Pb(s) is exhausted.</p>),
-        correct: false,
-        id: 3}
-      ];
-
-      var feedback = (
-        <React.Fragment>
-          <p>The reactions as written have a positive cell potential and represent
-          a galvanic cell (that is, the discharge of the battery). So, Pb(s) is
-          indeed oxidized during discharge. H<sup>+</sup> is being consumed during
-          discharge, so the solution becomes less acidic, and its pH increases.</p>
-          <p>The battery becomes dead when its cell potential reaches zero. This is not
-          necessarily when all Pb(s) is consumed. For example, consuming virtually all
-          H<sub>2</sub>SO<sub>4</sub> will also make the cell ponetial zero.</p>
-          <p>When recharging the battery, the reactions are reversed.
-          Pb<sup>2+</sup> from PbSO<sub>4</sub> is reduced and oxidized at the same time,
-          i.e. it disproportionates.</p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 333,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 33,
-    "type": "string",
-    "questionBody": function() {
-      let orderQ = Math.floor(Math.random()*3);
-      let orderP = Math.floor(Math.random()*3);
-      let orderR = Math.floor(Math.random()*3);
-      let cQ1 = 0.45;
-      let cQ2 = cQ1*4;
-      let cQ3 = cQ1;
-      let cQ4 = cQ1*8;
-      let cP1 = 0.20;
-      let cP2 = cP1;
-      let cP3 = cP1*4;
-      let cP4 = cP1*6;
-      let cR1 = 0.25;
-      let cR2 = cR1;
-      let cR3 = cR1;
-      let cR4 = cR1*2;
-      let rate1 = 5.0e-6;
-      let rate2 = rate1*Math.pow(4, orderQ);
-      let rate3 = rate1*Math.pow(4, orderP);
-      let rate4 = rate1*Math.pow(8, orderQ)*Math.pow(6, orderP)*Math.pow(2, orderR);
-      let rate1String = rate1.toPrecision(2);
-      let rate2String = rate2.toPrecision(2);
-      let rate3String = rate3.toPrecision(2);
-      let rate4String = rate4.toPrecision(2);
-      let answer = RegExp('^\\s*' + orderQ.toString() + ',?\\s*' + orderP.toString() + ',?\\s*' + orderR.toString() + '\\s*$');
-
-      var description = (
-        <React.Fragment>
-          <p>Using the kinetic data below, find the orders for each of reactants
-          P, Q, and R. All runs were performed under identical conditions.</p>
-        <p className="eqn">Q + P + R &#8594; Products</p>
-          <table className="data-table mb-5">
-            <tbody>
-              <tr>
-                <th>Run</th>
-                <th>Initial [Q]</th>
-                <th>Initial [P]</th>
-                <th>Initial [R]</th>
-                <th>Initial Rate (M<sup>&#8211;1</sup>&nbsp;s<sup>&#8211;1</sup>)</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>{cQ1.toPrecision(2)}</td>
-                <td>{cP1.toPrecision(2)}</td>
-                <td>{cR1.toPrecision(2)}</td>
-                <td>{rate1String}</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>{cQ2.toPrecision(2)}</td>
-                <td>{cP2.toPrecision(2)}</td>
-                <td>{cR2.toPrecision(2)}</td>
-                <td>{rate2String}</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>{cQ3.toPrecision(2)}</td>
-                <td>{cP3.toPrecision(2)}</td>
-                <td>{cR3.toPrecision(2)}</td>
-                <td>{rate3String}</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>{cQ4.toPrecision(2)}</td>
-                <td>{cP4.toPrecision(2)}</td>
-                <td>{cR4.toPrecision(2)}</td>
-                <td>{rate4String}</td>
-              </tr>
-            </tbody>
-          </table>
-          <p><i>Enter the orders for X, Y, Z separated by commas.</i></p>
-        </React.Fragment>
-      );
-
-      const eqRate = `Rate = k [\\text{Q}]^q [\\text{P}]^p [\\text{R}]^r`;
-      const eqQ = `\\begin{eqnarray*}
-        \\Big( \\frac{[\\text{Q}]_2}{[\\text{Q}]_1} \\Big)^q & = & \\frac{Rate_2}{Rate_1} \\\\
-        \\Big( \\frac{${cQ2.toPrecision(2)}}{${cQ1.toPrecision(2)}} \\Big)^q & = & \\frac{${rate2String}}{${rate1String}} \\\\
-        ( ${(cQ2/cQ1).toPrecision(2)} )^q & = & ${(rate2/rate1).toPrecision(2)} \\\\
-        q & = & ${orderQ}
-        \\end{eqnarray*}`;
-      const eqP = `\\begin{eqnarray*}
-        \\Big( \\frac{[\\text{P}]_3}{[\\text{P}]_1} \\Big)^p & = & \\frac{Rate_3}{Rate_1} \\\\
-        \\Big( \\frac{${cP3.toPrecision(2)}}{${cP1.toPrecision(2)}} \\Big)^p & = & \\frac{${rate3String}}{${rate1String}} \\\\
-        ( ${(cP3/cP1).toPrecision(2)} )^p & = & ${(rate3/rate1).toPrecision(2)} \\\\
-        p & = & ${orderP}
-        \\end{eqnarray*}`;
-      const eqR = `\\begin{eqnarray*}
-        \\Big( \\frac{[\\text{Q}]_4}{[\\text{Q}]_1} \\Big)^q \\Big( \\frac{[\\text{P}]_4}{[\\text{P}]_1} \\Big)^p
-        \\Big( \\frac{[\\text{R}]_4}{[\\text{R}]_1} \\Big)^r & = & \\frac{Rate_4}{Rate_1} \\\\
-        \\Big( \\frac{${cQ4.toPrecision(2)}}{${cQ1.toPrecision(2)}} \\Big)^${orderQ}
-        \\Big( \\frac{${cP4.toPrecision(2)}}{${cP1.toPrecision(2)}} \\Big)^${orderP}
-        \\Big( \\frac{${cR4.toPrecision(2)}}{${cR1.toPrecision(2)}} \\Big)^r
-        & = & \\frac{${rate4String}}{${rate1String}} \\\\
-        (${(Math.round(Math.pow(cQ4/cQ1, orderQ)*Math.pow(cP4/cP1, orderP)))})(${(cR4/cR1).toPrecision(2)})^r
-        & = & ${(rate4/rate1).toPrecision(2)} \\\\
-        r & = & ${orderR}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The rate law for this reaction is</p>
-            <MathJax.Node formula={eqRate}/>
-            <p>To find <i>q</i>, the order of the reaction for Q, consider
-            the first two runs: the concentrations of P and R are kept constant,
-            so, the only thing that affects the initial rate is the change of
-            concentration of Q:</p>
-            <MathJax.Node formula={eqQ}/>
-            <p>Similarly, in runs 1 and 3, the concentrations of Q and R are kept
-            constant, so, we can use these runs to find the order for P:</p>
-            <MathJax.Node formula={eqP}/>
-            <p>There are no two runs with the concentrations of Q and P kept
-            constant, but this is fine since we already know the order of the reaction for
-            Q and P. We can use any two runs to find <i>r</i>:</p>
-            <MathJax.Node formula={eqR}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment>orders</React.Fragment>),
-        units: ""
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 334,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 34,
-    "type": "numeric",
-    "questionBody": function() {
-      let kString = (Math.random()*(197 - 105) + 105).toPrecision(3);
-      let k = Number.parseFloat(kString);
-      let cString = (Math.random()*(0.0900 - 0.00500) + 0.00500).toPrecision(3);
-      let c = Number.parseFloat(cString);
-      let answer = k*c;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>For the reaction A &#8594; Products, a plot of ln[A] as a function of time
-        gives a straight line with a slope of &#8211;{kString}&nbsp;s<sup>&#8211;1</sup>.
-        What is the rate of the reaction when [A] = {cString}&nbsp;M?</p>
-      );
-
-      const eqRateLaw = `\\ln{[\\text{A}]_t} = -kt + \\ln{[\\text{A}]_{\\circ}}`;
-      const eqRate = `\\begin{eqnarray*}
-        Rate & = & k[\\text{A}] \\\\
-        & = & (${kString} \\text{ s}^{-1})(${cString} \\text{ M}) \\\\
-        & = & ${ansString} \\text{ mol L}^{-1}\\text{ s}^{-1}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>A straight-line plot of ln[A] as a function of time indicates
-            that the reaction is first order and its integrated rate law is</p>
-            <MathJax.Node formula={eqRateLaw}/>
-            <p>Therefore, the slope is just the negative of the specific rate
-            constant.</p>
-            <p>Given the <i>k</i> value from the slope, use the rate law to find the rate:</p>
-            <MathJax.Node formula={eqRate}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>Rate</i></React.Fragment>),
-        units: "mol/(L s)"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 335,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 35,
-    "type": "numeric",
-    "questionBody": function() {
-      let mIString = (Math.random()*(19.5 - 5.00) + 5.00).toPrecision(3);
-      let mI = Number.parseFloat(mIString);
-      let nTString = (Math.random()*(6.00 - 1.50) + 1.50).toPrecision(3);
-      let nT = Number.parseFloat(nTString);
-      let k = Math.log(2)/271.79;
-      let kString = k.toPrecision(5);
-      let t = nT*271.79;
-      let tString = Math.round(t);
-      let lnM = -k*t + Math.log(mI);
-      let lnMString = lnM.toPrecision(3);
-      let m = Math.exp(lnM);
-      let mString = m.toPrecision(3);
-      let answer = mI - m;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>The half-life of <sup>57</sup>Co is 271.79&nbsp;days. A {mIString}&nbsp;g sample
-        of <sup>57</sup>Co undergoes radioactive decay for {nTString}&nbsp;half-lives.
-        What mass of <sup>57</sup>Co has decayed?</p>
-      );
-
-      const eqK = `\\begin{eqnarray*}
-        k & = & \\frac{\\ln{2}}{t_{1/2}} \\\\
-        & = & \\frac{\\ln{2}}{${271.79} \\text{ days}} \\\\
-        & = & ${kString} \\text{ day}^{-1}
-        \\end{eqnarray*}`;
-      const eqT = `\\begin{eqnarray*}
-        t & = & ${nTString}t_{1/2} \\\\
-        & = & ${tString} \\text{ days}
-        \\end{eqnarray*}`;
-      const eqRemain = `\\begin{eqnarray*}
-        \\ln{m_t(^{57}Cr)} & = & -kt + \\ln{m_{\\circ}(^{57}Cr)} \\\\
-        & = & -(${kString} \\text{ day}^{-1})(${tString} \\text{ days}) + \\ln{(${mIString} \\text{ g})} \\\\
-        & = & ${lnMString} \\\\
-        m_t(^{57}Cr) & = & e^{${lnMString}} = ${mString} \\text{ g}
-        \\end{eqnarray*}`;
-      const eqDec = `\\begin{eqnarray*}
-        m_{\\text{decayed}}(^{57}Cr) & = & ${mIString} \\text{ g} - ${mString} \\text{ g} \\\\
-        & = & ${ansString} \\text{ g}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>Radioactive decay is a first-order reaction. The specific rate
-            constant for it is</p>
-            <MathJax.Node formula={eqK}/>
-            <p>The amount of time for which the sample had been decaying is</p>
-            <MathJax.Node formula={eqT}/>
-            <p>The mass of <sup>57</sup>Co remaining can be found from the integrated
-            rate law (remember that masses can be used instead of concentrations
-            for first-order reactions):</p>
-            <MathJax.Node formula={eqRemain}/>
-            <p>The mass decayed is just the difference between the initial mass
-            and the remaining mass:</p>
-          <MathJax.Node formula={eqDec}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: (<React.Fragment><i>m</i><sub>decayed</sub>(<sup>57</sup>Co)</React.Fragment>),
-        units: "g"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 336,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 36,
-    "type": "MC",
-    "questionBody": function() {
-      let orders = [
-        {order: 0,
-        name: "zero",
-        image: "data:image/png;base64,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",
-        fb: "For a zeroth-order reaction, the plot of concentration versus time should be linear. And since A is being used, its concentration must decrease."},
-        {order: 1,
-        name: "first",
-        image: "data:image/png;base64,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",
-        fb: "For a first-order reaction, the plot of the logarithm of the concentration versus time should be linear."},
-        {order: 2,
-        name: "second",
-        image: "data:image/png;base64,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",
-        fb: "For a second-order reaction, the plot of the inverse concentration (1/[A]) versus time should be linear. Since A is being used, [A] must decrease, but the inverse must increase."}
-      ];
-      let idx = Math.floor(Math.random()*3);
-
-      var description = (
-        <p>For the reaction A &#8594; Products, which of these plots
-          represents {orders[idx].name}-order kinetics?</p>
-      );
-
-      var options = orders.map(order => {
-        return {
-          text: (<p m-3><img src={order.image} alt="plot"/></p>),
-          correct: order.order === idx,
-          id: order.order
-        };
-      }).concat([
-        {
-          text: (<p m-3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAAC1CAYAAAAeEWC8AAAKQUlEQVR4Xu2dSagt5RHHf2oWGiWCImahOAZjBAUXUWJAVBTJJoOoCRrBlYpDeERdxPE5oKLiSoxoVtGgEUwcgkoGN/rULCIGRASVpyIScFqYuBKlQje2h3vuPcPX39dV9W84vHvv6a7hX/V7XX36dPcuTH+5Dtg+/TAVYWQFdnGQ3BeAhzgdSKkQV1XAQwMKlFWrq+2KKSBQikkpQ5EVECiRq6vciikgUIpJKUORFRAokaur3IopIFCKSSlDkRUQKJGrq9yKKSBQikkpQ5EVECiRq6vciikgUIpJKUORFRAokaur3IopIFCKSSlDkRUQKJGrq9yKKSBQikkpQ5EVECiRq6vciikgUIpJKUORFRAokaur3IopIFCKSSlDkRUQKJGrq9yKKSBQikkpQ5EVECiRq6vciikgUIpJKUORFRAokaur3IopIFCKSSlDkRUQKJGrq9yKKSBQikkpQ5EVECiRq6vciikgUIpJKUORFRAokaur3IopIFCKSSlDkRUQKJGrq9yKKSBQikkpQ5EVECiRq6vciikgUIpJKUORFRAokaur3IopIFCKSSlDkRUQKJGrq9yKKSBQikkpQ5EVECiRq5sjt32APYFvDl57zPzevzfv7/b+vPduA7YLlBzN5DXL3YCDZl4Hz/z+GrA38L/B67OZ3/v35v3d3t9sGwSK1xaKEbf9T74ZCN8G3p557Zz5/fMaUgiUGirn9nE4cNScvYKBshkI701FOoEylUrEiMOOF44Dvt/9az9/BLw6Z6/wgZe0BYqXSk0zziEQBoWB8hLwz+5f+9lAcb8IFPclrJaAjVAGQ/8ySIZAGBRvVIumsiOBUllwJ+7mjVAGQ/8ySNIsAiVNqTdN1M5D/Aw4ATgl8gi1arkFyqrK+d9uf+CnHSA/AB4FngBejjxCrVo2gbKqcj63O7QDwwA5DPhTB8hffaZTL2qBUk/rVp6OHuw59urAMEB2tArIo1+B4rFqW8dso1Q/Vn062HP8e+tNtcZGCgiUOH1x6mCsenMAx1txUmyXiUBpp30Jz7bX6PccNkrZAbmNVf8pYVw2vlJAoPjrhiOBi4HvAZ8M9hz/9ZeKn4gFip9andEBYt+ovbt7+YneeaQCZdoFtDPktvew13MdHM9OO+SY0QmUadb1hx0cpw32HjruaFgrgdJQ/A1cnwRcC3yjA+ShaYWXNxqBMo3a2zdybwZ2BX4DvDiNsBRFr4BAadsLdtbcANkPuAr4e9tw5H2eAgKlTW98B7gJ+G4HyJNtwpDXRRUQKIsqVW49u/2NnSS8GvhjObOyNKYCAmVMdb9u+xzgAeAs4JF6buWphAICpYSKm9uwcyEGiF07fu747uRhDAUEyhiqfmXzUuD6DpCnxnUl62MqIFDGUdduxPBgd335ZeO4kNWaCgiU8mpfAvwKsGOSVDdgKC/ldCwKlLK1eBj4F2CfbGkJpIBAKVPMb3WA2Fl1feRbRtNJWREo65fDvp/1Z+BYwK4s1BJQAYGyXlEvB34EnLyeGW09dQUEyuoV+gNgd1u/YnUT2tKLAgJltUrd1V2Xfutqm2srbwoIlOUrZjeLs0+1/rb8ptrCqwICZbnKPQ3Y3uSZ5TbT2t4VECiLV9C+Cn8P8JfFN9GaURQQKItV8jHgd8Dji62utaIpIFC2rqjdVO733f2ztl5ba4RUQKBsXtbbgdeB+0NWX0ktrMCyoFwD3NBZvxfY1j2f2/7UX5hkP9vtdp7v1rMH3dsB8AXd73aXkRsXjhC+gCaP+f458GPgF0vEqlWDKlAKlM1g8AjKAcALwIFB6660llRgVVCGewxzaY80szsZ2l7m4C4G28N8OIinX8fDHmUncGL3yOclJdXqERUoBUo/khlA9r0nG8/mwTR1UOyyXbsa0S680iIF/q9ACVD2HTSV7UXsFjy2d5kFwsMe5ULgGOAi9YcUGCpQApRZAGbB6cevqYNigNv17XYQr0UKfE2BEqAMPwmbldfuOtKPMFMHxb67dYvu1ihCNlJgXVCOAOzyVxtXNlqGHyFPGRT7GPh84CdqEykwBij9uZPZ45F+/LKH3pzdnbSbMijvdJ/cvas2kQKlQbGbKPQnEmc/4TJf/UjWj19TBcUuvLKbZF+pFpEC8xRYd/RaRtkpgrI78DFgJ0W1SIG5CqwKihmc/QrLPCdTPjN/X3eTOn2XS5BsqkBmUA7rnmp1unpECmylwLKgbGVvjPfH+lLkHcD7wJ1jBC2bsRTIDMqnwP6Ans8eq6dHySYrKL8ETgXOG0VVGQ2nQFZQdgC/7r5KH66oSqi8AhlBsQeM2qW9875NUF5lWXSvQEZQ7E4qrwC/dV89JVBNgYyg/EP3Cq7WX2EcZQPlTMBe9sBRLVJgYQWygWLPLrEn8uqpvAu3iFY0BbKBMtbJS3VTcAUygaKxK3gzj5leJlA0do3ZScFtZwJFY1fwZh4zvSygaOwas4sS2M4CisauBM08ZopZQNHYNWYXJbCdARSNXQkaeewUM4CisWvsLkpgPwMoGrsSNPLYKUYHRWPX2B2UxH50UDR2JWnksdOMDorGrrE7KIn9yKBo7ErSxDXSjAyKxq4aHZTER2RQNHYlaeIaaUYFRWNXje5J5CMqKBq7EjVxjVSjgqKxq0b3JPIRERSNXYkauFaqEUHR2FWrexL5iQiKxq5EDVwr1WigaOyq1TnJ/EQDRWNXsgaulW40UDR21eqcZH4igaKxK1nz1kw3Eigau2p2TjJfkUDR2JWseWumGwUUjV01uyahryigaOxK2Lw1U44Cisauml2T0FcEUDR2JWzc2ilHAEVjV+2uSegvAigauxI2bu2UvYOisat2xyT15x0UjV1JG7d22t5B0dhVu2OS+vMMisaupE3bIm3PoGjsatExSX16BkVjV9KmbZG2V1A0drXolsQ+vYKisStx07ZI3SsoGrtadEtinx5B0diVuGFbpe4RFI1drbolsV+PoGjsStywrVL3BorGrladktyvN1A0diVv2FbpewNFY1erTknu1xMoGruSN2vL9D2BorGrZack9+0JFI1dyZu1ZfpeQDkLsNHL/tUiBaor4AWUR4D+VV0kOZQCXkCxSnmIVR0VVAEPzWfHJrY30dgVtAk9pOUFFIPEYNEiBZoo4AGUt4BDmqgjp1IArge2ewBFxZICzRUQKM1LoAA8KCBQPFRJMTZXQKA0L4EC8KCAQPFQJcXYXAGB0rwEVQLYF7gZuAr4sIrHYE4ESrCCbpDOEcDDwIvANuCz+CmXz1CglNd0ShbPAR4YBHSvYFmtPAJlNd28bHUNcMMg2GuBG70EP6U4BcqUqlE+lj2Au4DjgbOB18u7yGFRoMSusx3EP9ilaGOYDuRXrLdAWVE4J5vpQL5QoQRKISEnauYE4Dng3MGeZaKhTjssgTLt+qwb3fBgXp94raGmQFlDPAeb9nsUC1WfeK1RMIGyhnjaNI8CAiVPrZXpGgoIlDXE06Z5FBAoeWqtTNdQQKCsIZ42zaPAl/zjDtSZh+vZAAAAAElFTkSuQmCC"
-          alt="plot"/></p>),
-          correct: false,
-          id: 3
-        },
-        {
-          text: (<p m-3><img src="data:image/png;base64,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"
-          alt="plot"/></p>),
-          correct: false,
-          id: 4
-        }
-      ]);
-
-      var feedback = (
-        <React.Fragment>
-          <p>{orders[idx].fb} Therefore, the only correct plot is</p>
-          <p className="eqn"><img src={orders[idx].image} alt="correct plot"/></p>
-        </React.Fragment>
-      );
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 337,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 37,
-    "type": "MS",
-    "questionBody": function() {
-      let order, fb;
-      let i = Math.floor(Math.random()*3);
-      if (i === 0) {
-        order = "zero";
-        fb = (<React.Fragment>For a zero-order reaction, <i>Rate</i> = <i>k</i>[A]<sup>0</sup> = <i>k</i>.
-              That is, the rate of the reaction is independent of the initial concentration of A.</React.Fragment>);
-      } else if (i === 1) {
-        order = "first";
-        fb = (<React.Fragment>For a first-order reaction, <i>Rate</i> = <i>k</i>[A].
-              That is, the rate of the reaction is directly proportional to the initial
-              concentration of A. If [A]<sub>0</sub> is doubled, the rate is doubled too.
-              If [A]<sub>0</sub> is increased by a factor of five, the rate increases by
-              a factor of five too and so on.</React.Fragment>);
-      } else {
-        order = "second";
-        fb = (<React.Fragment>For a second-order reaction, <i>Rate</i> = <i>k</i>[A]<sup>2</sup>.
-              That is, the rate of the reaction is proportional to the square of the initial
-              concentration of A. If [A]<sub>0</sub> is doubled, the rate increases by
-              a factor of four.</React.Fragment>);
-      }
-
-      var options = [
-        {text: (<p>half as great as when [A]<sub>0</sub> = 1.0&nbsp;M.</p>), correct: i === 1, id: 0},
-        {text: (<p>five times as great as when [A]<sub>0</sub> = 0.10&nbsp;M.</p>), correct: i === 1, id: 1},
-        {text: (<p>ten times as great as when [A]<sub>0</sub> = 0.050&nbsp;M.</p>), correct: i === 1, id: 2},
-        {text: (<p>four times as great as when [A]<sub>0</sub> = 0.25&nbsp;M.</p>), correct: i === 2, id: 3},
-        {text: (<p>the same as the initial rate for any other value of [A]<sub>0</sub>.</p>), correct: i === 0, id: 4}
-      ];
-
-      var description = (
-        <p>The decomposition of substance A is {order} order for the reaction
-        A &#8594; Products. When [A]<sub>0</sub> = 0.50&nbsp;M, the initial rate
-        of decomposition of A is...</p>
-      );
-
-      var feedback = (<p>{fb}</p>);
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 338,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 38,
-    "type": "numeric",
-    "questionBody": function() {
-      let factor = Math.floor(Math.random()*(9 - 3) + 3);
-      let t1 = Math.floor(Math.random()*(48 - 30) + 30);
-      let t2 = Math.floor(Math.random()*(70 - 52) + 52);
-      let eJ = Math.log(factor)*8.314/(1.0/(273.15 + t1) - 1.0/(273.15 + t2));
-      let eJString = eJ.toPrecision(3);
-      let answer = eJ/1000;
-      let ansString = answer.toPrecision(3);
-
-      var description = (
-        <p>For a certain reaction, the rate of the reaction increases by a factor
-        of {factor} when the temperature is increased from {t1}&nbsp;&#176;C
-        to {t2}&nbsp;&#176;C. What is the activation energy, in kJ&nbsp;mol<sup>&#8211;1</sup>,
-        of the reaction?</p>
-      );
-
-      const eqK = `\\begin{eqnarray*}
-        \\ln{\\left( \\frac{Rate_2}{Rate_1} \\right)} & = & \\ln{\\left( \\frac{k_2}{k_1} \\right)} \\\\
-        & = & \\frac{E_\\text{a}}{R} \\left( \\frac{1}{T_1} - \\frac{1}{T_2} \\right)
-        \\end{eqnarray*}`;
-      const eqEa = `\\begin{eqnarray*}
-        \\ln{(${factor})} & = & \\frac{E_\\text{a}}{8.314 \\text{ J mol}^{-1}\\text{K}^{-1}}
-        \\left( \\frac{1}{${273.15 + t1} \\text{ K}} - \\frac{1}{${273.15 + t2} \\text{ K}} \\right) \\\\
-        E_\\text{a} & = & ${Number.parseFloat(eJString)} \\text{ J mol}^{-1} \\\\
-        & = & ${ansString} \\text{ kJ mol}^{-1}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The dependence of the rate of a reaction on temperature is described by
-            the following equation:</p>
-            <MathJax.Node formula={eqK}/>
-            <p>Substitute all the data, remember to convert the temperatures to Kelvins.
-            Solve for <i>E</i><sub>a</sub>.</p>
-            <MathJax.Node formula={eqEa}/>
-          </MathJax.Provider>
-        </React.Fragment>
-      );
-
-      return {description, answer: {
-        answer,
-        label: <React.Fragment><i>E</i><sub>a</sub></React.Fragment>,
-        units: "kJ/mol"
-      }, feedback};
-    }()
-  },
-  {
-    "_id": 339,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 39,
-    "type": "MC",
-    "questionBody": function() {
-      let quantities = [
-        {name: (<React.Fragment>activation energy of the rate-determining step for the overall reaction</React.Fragment>),
-        fb: (<React.Fragment>The rate-determining step is the one with the largest difference between
-              a minimum (reactant or intermediate) and a maximum (the transition state) next to it.
-              In this reaction, the first step is rate determining, labelled I.</React.Fragment>),
-        n: 1},
-        {name: (<React.Fragment>activation energy of the fast (not rate-determining) step for the overall reaction</React.Fragment>),
-        fb: (<React.Fragment>The rate-determining step is the one with the largest difference between
-              a minimum (reactant or intermediate) and a maximum (the transition state) next to it.
-              In this reaction, the first step is rate determining, and the second step is fast,
-              so, its activation energy is III.</React.Fragment>),
-        n: 3},
-        {name: (<React.Fragment>enthalpy change, &#916;<i>H</i>, for the overall reaction</React.Fragment>),
-        fb: (<React.Fragment>The enthalpy of a reaction is the difference between the energy
-          of the products and the energy of the reactants, it is labelled V.</React.Fragment>),
-        n: 5}
-      ];
-      let i = Math.floor(Math.random()*quantities.length);
-
-      var description = (
-        <React.Fragment>
-          <p>The conversion of S to P follows the reaction coordinate below. Which of
-          the indicated energies most likely represents the {quantities[i].name}?</p>
-          <p className="eqn"><img src="data:image/png;base64,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" alt="reaction coordinate"/></p>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>I</p>), correct: quantities[i].n === 1, id: 0},
-        {text: (<p>II</p>), correct: quantities[i].n === 2, id: 1},
-        {text: (<p>III</p>), correct: quantities[i].n === 3, id: 2},
-        {text: (<p>IV</p>), correct: quantities[i].n === 4, id: 3},
-        {text: (<p>V</p>), correct: quantities[i].n === 5, id: 4},
-        {text: (<p>VI</p>), correct: quantities[i].n === 6, id: 5}
-      ];
-
-      var feedback = (<p>{quantities[i].fb}</p>);
-
-      return {description, options, feedback};
-    }()
-  },
-  {
-    "_id": 340,
-    "courseId": "1302",
-    "examName": "Final 2015",
-    "chapterId": 5,
-    "idInExam": 40,
-    "type": "MS",
-    "questionBody": function() {
-      var description = (
-        <React.Fragment>
-          <p>For the reaction:</p>
-          <p className="eqn">CHCl<sub>3</sub> + Cl<sub>2</sub> &#8594; CCl<sub>4</sub> + HCl</p>
-          <p>The mechanism is:</p>
-          <table className="data-table ml-3 mb-3">
-            <tbody>
-              <tr>
-                <td className="text-left">Step 1:</td>
-                <td className="text-left">Cl<sub>2</sub> &#8644; 2 Cl</td>
-                <td className="text-left">(fast equilibrium)</td>
-              </tr>
-              <tr>
-                <td className="text-left">Step 2:</td>
-                <td className="text-left">CHCl<sub>3</sub> + Cl &#8594; CCl<sub>3</sub> + HCl</td>
-                <td className="text-left">(slow)</td>
-              </tr>
-              <tr>
-                <td className="text-left">Step 3:</td>
-                <td className="text-left">CCl<sub>3</sub> + Cl &#8594; CCl<sub>4</sub></td>
-                <td className="text-left">(fast)</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Which of the following statements is/are correct for this proposed mechanism?</p>
-        </React.Fragment>
-      );
-
-      var options = [
-        {text: (<p>The overall reaction would be first order with respect to each of CHCl<sub>3</sub> and Cl<sub>2</sub>.</p>),
-        correct: false,
-        id: 0},
-        {text: (<p>The overall total order of the reaction would be 1.5.</p>),
-        correct: true,
-        id: 1},
-        {text: (<p>If the concentration of CHCl<sub>3</sub> is tripled, the rate will triple.</p>),
-        correct: true,
-        id: 2},
-        {text: (<p>If the concentration of Cl<sub>2</sub> is doubled, the rate will decrease by 1/2.</p>),
-        correct: false,
-        id: 3}
-      ];
-
-      const eqCl = `\\begin{eqnarray*}
-        K_1 & = & \\frac{[\\text{Cl}]^2}{[\\text{Cl}_2]} \\\\
-        [\\text{Cl}] & = & \\sqrt{K_1 [\\text{Cl}_2]}
-        \\end{eqnarray*}`;
-      const eqRate = `\\begin{eqnarray*}
-        Rate & = & k_2[\\text{CHCl}_3]\\sqrt{K_1 [\\text{Cl}_2]} \\\\
-        & = & k [\\text{CHCl}_3] [\\text{Cl}_2]^{0.5}
-        \\end{eqnarray*}`;
-
-      var feedback = (
-        <React.Fragment>
-          <MathJax.Provider>
-            <p>The rate of the overall reaction is determined by the rate of the slow step:</p>
-            <MathJax.Node formula={"Rate = k_2[\\text{CHCl}_3][\\text{Cl}]"}/>
-            <p>However, this rate law contains the concentration of Cl, which is
-            an intermediate (it does not appear in the overall equation and is not
-            a catalyst). The concentration of Cl has to be expressed from the previous
-            step so that only stable species (reactants, products, or catalysts)
-            appear in the rate law. Step 1 is an equilibrium, so we can write the
-            equilibrium constant expression for it and find [Cl]:</p>
-            <MathJax.Node formula={eqCl}/>
-            <p>Substitute this [Cl] into the above rate law, simplify, and
-            absorb the constants (i.e. a product of constants is just another constant):</p>
-            <MathJax.Node formula={eqRate}/>
-            <p>From this rate law, we can see that the reaction is first order with respect to
-            CHCl<sub>3</sub> and 0.5 order with respect to Cl<sub>2</sub>. The overall total order is
-            therefore 1.5.</p>
-            <p>The rate of the reaction is directly proportional to [CHCl<sub>3</sub>], so,
-            if its concentration is tripled, the reaction rate will triple too.</p>
-            <p>Since the rate of the reaction is proportional to the square root of [Cl<sub>2</sub>],
-            doubling [Cl<sub>2</sub>] will lead to the rate increasing by a factor of &#8730;2.</p>
-          </MathJax.Provider>
-        </React.Fragment>
+        <p>The indicator phenolphthalein is colourless in the initial acidic solution.
+          When a drop of the base is added, phenolphthalein will immidiately turn pink in
+          the vicinity of that drop, but this pink will disappear quickly. At the endpoint
+          of the titration, the whole solution will become basic, and the pink colour of phenolphthalein will
+          be persistent.</p>
       );
 
       return {description, options, feedback};
