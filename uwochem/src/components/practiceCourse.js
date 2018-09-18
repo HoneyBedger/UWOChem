@@ -34,7 +34,8 @@ function PracticeCourse(props) {
             {chapters.map(chapter => {
               return (
                 <ListGroupItem key={chapter.id}>
-                  <Link to={`/practice/${courseId}/chapter/${chapter.id}`}>Chapter {chapter.id}: {chapter.name}</Link>
+                  <Link to={`/practice/${courseId}/chapter/${chapter.id}`}>
+                    {chapter.id === -1 ? chapter.name : `Chapter ${chapter.id}: ${chapter.name}`}</Link>
                 </ListGroupItem>
               );
             })}

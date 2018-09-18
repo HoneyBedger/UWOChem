@@ -25,6 +25,11 @@ export const CHAPTERS = [
     "name": "Structure and Shape of Organic Molecules"
   },
   {
+    "courseId": "1301",
+    "id": -1,
+    "name": "Laboratory Experiment"
+  },
+  {
     "courseId": "1302",
     "id": 1,
     "name": "Gases"
