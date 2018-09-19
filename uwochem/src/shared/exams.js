@@ -12,13 +12,13 @@ export const EXAMS = [
   },
   {
     courseId: "1301",
-    name: "Final 2014",
-    examId: "1301_Final2014"
+    name: "Final 2013",
+    examId: "1301_Final2013"
   },
   {
     courseId: "1301",
-    name: "Final 2015",
-    examId: "1301_Final2015"
+    name: "Final 2014",
+    examId: "1301_Final2014"
   },
   {
     courseId: "1302",

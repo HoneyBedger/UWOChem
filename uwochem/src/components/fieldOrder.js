@@ -73,9 +73,9 @@ class FieldOrder extends Component {
     }
   }
 
-  renderTarget(id, targetWidth) {
+  renderTarget(id) {
       return (
-        <Col xs={targetWidth} key={id} className="droppable-target"
+        <Col xs={3} key={id} className="droppable-target"
           style={this.props.answer.height ? {height: this.props.answer.height} : null}
           onDragOver={(event) => this.onDragOver(event)}
           onDrop={(event) => this.onDrop(event, id)}>
@@ -92,14 +92,13 @@ class FieldOrder extends Component {
   }
 
   render() {
-    let itemWidth = Math.floor(12/this.state.items.length);
     return (
       <React.Fragment>
         <p><i>Drag and drop these items in the correct order.</i></p>
         <Row className="mb-5 ml-1 mr-1 draggable-start">
               {this.state.items.map(item => {
                 return (
-                  <Col xs={itemWidth} key={item.id} className="droppable-target"
+                  <Col xs={3} key={item.id} className="droppable-target"
                     style={this.props.answer.height ? {height: this.props.answer.height} : null}
                     onDragOver={(event) => this.onDragOver(event)}
                     onDrop={(event) => this.onDrop(event, -1)}>
@@ -116,7 +115,7 @@ class FieldOrder extends Component {
         </Row>
         <Row className="droppable ml-1 mr-1">
             {this.state.items.map(item => {
-              return this.renderTarget(this.state.items.indexOf(item), itemWidth);
+              return this.renderTarget(this.state.items.indexOf(item));
             })}
         </Row>
         <Button type="button" value="submit" color="primary" className="mt-3"
