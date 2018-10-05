@@ -2,6 +2,10 @@
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const passportJwt = require('passport-jwt');
+const FacebookTokenStrategy = require('passport-facebook-token');
+const graph = require('fbgraph');
+const GoogleTokenStrategy = require('passport-token-google').Strategy;
+const TwitterTokenStrategy = require('passport-twitter-token');
 const User = require('./models/users');
 const config = require('./config');
 //=================//
@@ -16,7 +20,7 @@ const ExtractJwt = passportJwt.ExtractJwt;
 const JwtStrategy = passportJwt.Strategy;
 
 exports.getToken = (user) => {
-  return jwt.sign(user, config.secretKey, {expiresIn: 10800});
+  return jwt.sign(user, config.secretKey, {expiresIn: 60*100});
 };
 
 var jwtOptions = {
@@ -47,4 +51,80 @@ exports.jwtPassport = passport.use(new JwtStrategy(jwtOptions,
       return next(err);
     }
   };
+  //=================//
+
+
+  //===FACEBOOK OAuth===//
+  exports.facebookPassport = passport.use(new FacebookTokenStrategy({
+    clientID: config.oAuth.facebook.clientId,
+    clientSecret: config.oAuth.facebook.clientSecret
+  }, (accessToken, refreshToken, profile, done) => {
+    graph.setAccessToken(accessToken);
+    graph.get(profile.id + "?fields=picture", (err, res) => {
+      let pictureUrl = !err && res.picture.data.url;
+      User.findOne({username: profile.id})
+      .then((user) => {
+        if (user) user.set({pictureUrl: pictureUrl}); //this user was already registered with fb
+        else { //register new user
+          user = new User({
+            username: profile.id,
+            name: profile.displayName,
+            pictureUrl: pictureUrl
+          });
+        }
+        user.save()
+        .then((res) => process.nextTick(() => done(null, user)))
+        .catch((err) => done(err, false));
+      })
+      .catch((err) => next(err, false));
+    });
+  }));
+  //=================//
+  //===GOOGLE OAuth===//
+/*passport.use(new GoogleTokenStrategy({
+    clientID: config.oAuth.google.clientId,
+    clientSecret: config.oAuth.google.clientSecret
+  }, (req, accessToken, refreshToken, profile, done) => {
+    console.log("google auth");
+    let pictureUrl = profile.photos[0].value;
+    User.findOne({username: profile.id})
+    .then((user) => {
+      if (user) user.set({pictureUrl: pictureUrl}); //this user was already registered with fb
+      else { //register new user
+        user = new User({
+          username: profile.id,
+          name: profile.displayName,
+          pictureUrl: pictureUrl
+        });
+      }
+      user.save()
+      .then((user) => {
+        process.nextTick(() => done(null, user))})
+      .catch((err) => done(err, false));
+    })
+    .catch((err) => next(err, false));
+  }));*/
+  //=================//
+  //===TWITTER OAuth===//
+  exports.twitterPassport = passport.use(new TwitterTokenStrategy({
+    consumerKey: config.oAuth.twitter.clientId,
+    consumerSecret: config.oAuth.twitter.clientSecret
+  }, (req, accessToken, refreshToken, profile, done) => {
+    let pictureUrl = profile.photos[0].value;
+    User.findOne({username: profile.username + profile.id})
+    .then((user) => {
+      if (user) user.set({pictureUrl: pictureUrl}); //this user was already registered with fb
+      else { //register new user
+        user = new User({
+          username: profile.username + profile.id,
+          name: profile.displayName,
+          pictureUrl: pictureUrl
+        });
+      }
+      user.save()
+      .then((user) => process.nextTick(() => done(null, user)))
+      .catch((err) => done(err, false));
+    })
+    .catch((err) => next(err, false));
+  }));
   //=================//

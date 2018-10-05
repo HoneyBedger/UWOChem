@@ -10,7 +10,7 @@ const questionRouter = express.Router();
 questionRouter.use(bodyParser.json());
 
 
-//===GET ALL QUESTIONS===//
+//===GET ALL QUESTIONS (OR BASED ON QUERY) ===//
 questionRouter.route('/')
 .get((req, res, next) => {
   Questions.find(req.query)
@@ -21,25 +21,25 @@ questionRouter.route('/')
   .catch((err) => next(err));
 })
 
-//===POST A QUESTION===//
+//===POST A QUESTION OR A LIST OF QUESTIONS ===//
 .post(authentication.verifyUser, authentication.verifyAdmin, (req, res, next) => {
   Questions.create(req.body)
-  .then((question) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(question);
-  })
-  .catch((err) => next(err));
-});
+    .then(questions => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(questions);
+    })
+    .catch((err) => next(err));
+})
 
-//===DELETE ALL QUESTIONS===//
-/*.delete(authentication.verifyUser, authentication.verifyAdmin, (req, res, next) => {
-  Questions.remove({})
+//===DELETE ALL QUESTIONS (OR BASED ON QUERY) ===//
+.delete(authentication.verifyUser, authentication.verifyAdmin, (req, res, next) => {
+  Questions.remove(req.query)
   .then((result) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(result);
   })
   .catch((err) => next(err));
-});*/
+});
 //==========================//
 
 

@@ -25,7 +25,7 @@ const questionSchema = new Schema({
   type: {
     type: String,
     required: true,
-    match: /^(numeric|string|MC|MS|bins)$/
+    match: /^(numeric|string|MC|MS|bins|order)$/
   },
   questionBody: {
     type: String,
