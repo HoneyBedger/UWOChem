@@ -3,8 +3,7 @@ import {Nav, Navbar, NavItem, NavbarBrand, NavbarToggler,
   Collapse, UncontrolledDropdown, DropdownToggle, DropdownMenu,
   DropdownItem, Input, InputGroup,
   InputGroupAddon, Button, Label, FormGroup, Form,
-  Row, Col, Modal, ModalHeader, ModalBody,
-  ModalFooter} from 'reactstrap';
+  Row, Col} from 'reactstrap';
 import {Link, NavLink} from 'react-router-dom';
 
 
@@ -13,11 +12,10 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarIsOpen: false,
-      modalIsOpen: false
+      navbarIsOpen: false
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.toggleModal = this.toggleModal.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   toggleNavbar() {
@@ -26,16 +24,29 @@ class Header extends Component {
     });
   }
 
-  toggleModal() {
-    this.setState({
-      modalIsOpen: !this.state.modalIsOpen
-    });
+  logout() {
+    fetch('/users/logout');
+    window.localStorage.clear();
+    this.setState({loggedIn: false});
+    this.props.logoutMain();
   }
 
   render() {
+    let LoginLogoutButton;
+    if (!this.props.loggedIn) LoginLogoutButton = <Button onClick={this.props.toggleLoginModal}>Login/Sing up</Button>
+    else {
+      let picture = window.localStorage.userPicture && <img src={window.localStorage.userPicture} />;
+      LoginLogoutButton = (
+        <React.Fragment>
+          <NavLink to="/profile">{picture} {window.localStorage.userName || window.localStorage.userUsername}</NavLink>{' | '}
+          <Button onClick={this.logout}>Log out</Button>
+        </React.Fragment>
+      );
+    }
+
     return (
       <React.Fragment>
-        <Navbar expand="md">
+        <Navbar expand="md" fixed="top">
           <NavbarToggler onClick={this.toggleNavbar}><span className="fa fa-angle-double-down fa-lg"></span></NavbarToggler>
 
             <Nav className="mr-auto" navbar>
@@ -45,39 +56,35 @@ class Header extends Component {
                 <NavLink className="nav-link" to="/home">Home</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
-                <NavLink to="/practice">
-                  <DropdownToggle tag="button" nav caret>
-                    Practice
-                  </DropdownToggle>
-                </NavLink>
+                <DropdownToggle nav caret>Practice</DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <Link to="/practice/1301">Chem 1301</Link>
+                    <NavLink to="/practice/1301">Chem 1301</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <Link to="/practice/1302">Chem 1302</Link>
+                    <NavLink to="/practice/1302">Chem 1302</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav inNavbar>
-                <NavLink to="/tutorials">
-                  <DropdownToggle nav caret>
-                    Tutorials
-                  </DropdownToggle>
-                </NavLink>
+                <DropdownToggle nav caret>Tutorials</DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <Link to="/tutorials/1301">Chem 1301</Link>
+                    <NavLink to="/tutorials/1301">Chem 1301</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <Link to="/tutorials/1302">Chem 1302</Link>
+                    <NavLink to="/tutorials/1302">Chem 1302</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink className="nav-link" to="/aboutme">About</NavLink>
+                <button className="nav-link" style={{backgroundColor: "inherit", border: "none"}}
+                  onClick={() => {
+                    let about = document.getElementById("about");
+                    about.scrollIntoView({behavior: "smooth"})
+                  }}>About</button>
               </NavItem>
               </Collapse>
                 <NavItem>
@@ -96,60 +103,10 @@ class Header extends Component {
           <Nav className="ml-auto">
             <NavItem>
               <FormGroup>
-                <Button onClick={this.toggleModal}>Login/Sing up</Button>
+                {LoginLogoutButton}
               </FormGroup>
             </NavItem>
           </Nav>
-          <Modal isOpen={this.state.modalIsOpen} toggle={this.toggleModal} backdrop={true}>
-            <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
-            <ModalBody className="mt-5 mb-5 pl-5 pr-5">
-              <Form>
-                <FormGroup row>
-                  <Label for="email" sm={2}>Email</Label>
-                  <Col sm={10}>
-                    <Input className="input-oneline" type="email" name="email" placeholder="Email" />
-                  </Col>
-                </FormGroup>
-                <FormGroup row>
-                  <Label for="password" sm={2}>Password</Label>
-                  <Col sm={10}>
-                    <Input className="input-oneline" type="password" name="password" placeholder="Password" />
-                  </Col>
-                </FormGroup>
-              </Form>
-              <Row className="mt-5">
-                <Col xs={{size: 10, offset: 2}} className="mb-3">
-                  <p>Or sign in with</p>
-                </Col>
-                <Col xs={{size: 2, offset: 2}} >
-                  <Button className="btn-social-icon btn-facebook btn-lg">
-                    <span class="fa fa-facebook"></span>
-                  </Button>
-                </Col>
-                <Col xs={2}>
-                  <Button className="btn-social-icon btn-twitter btn-lg">
-                    <span class="fa fa-twitter"></span>
-                  </Button>
-                </Col>
-                <Col xs={2}>
-                  <Button className="btn-social-icon btn-google btn-lg">
-                    <span class="fa fa-google"></span>
-                  </Button>
-                </Col>
-              </Row>
-            </ModalBody>
-            <ModalFooter className="pl-5 pr-5">
-              <div className="row">
-                <div className="col-12">
-                  <Button color="primary" onClick={this.toggleModal}>Sign in</Button>{' '}
-                  <Button outline color="secondary" onClick={this.toggleModal}>Cancel</Button>
-                </div>
-                <div className="col-12 mt-3">
-                  <p>Do not have an account? <Link to="#">Sign up</Link></p>
-                </div>
-              </div>
-            </ModalFooter>
-          </Modal>
         </Navbar>
     </React.Fragment>
     );

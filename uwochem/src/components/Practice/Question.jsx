@@ -1,10 +1,10 @@
 import React from 'react';
-import FieldNumeric from './fieldNumeric';
-import FieldString from './fieldString';
-import FieldMC from './fieldMC';
-import FieldMS from './fieldMS';
-import FieldBins from './fieldBins';
-import FieldOrder from './fieldOrder';
+import FieldNumeric from './Field/Numeric';
+import FieldString from './Field/String';
+import FieldMC from './Field/MC';
+import FieldMS from './Field/MS';
+import FieldBins from './Field/Bins';
+import FieldOrder from './Field/Order';
 
 
 function Question(props) {

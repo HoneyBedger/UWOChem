@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Form, FormGroup, Input, Button, Label, InputGroup, InputGroupAddon} from 'reactstrap';
+import {Form, FormGroup, Input, Button, Label, InputGroup,
+  InputGroupAddon} from 'reactstrap';
 
 
 class FieldString extends Component {

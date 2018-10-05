@@ -4,12 +4,15 @@ import {Container, Row, Col, ListGroup, ListGroupItem} from 'reactstrap';
 
 class UserProfile extends Component {
   render() {
+    let user = JSON.parse(window.localStorage.getItem('user'));
+    let name = user.name || user.username;
+
     return (
       <Container className="mt-5">
         <Row>
           <Col xs={12} className="profile-header p-0">
             <div>
-              <h3>Welcome, Username!</h3>
+              <h3>Welcome, {name}!</h3>
             </div>
           </Col>
           <Col md={6} xs={12}>

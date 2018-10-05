@@ -4,9 +4,8 @@ import MathJax from 'react-mathjax';
 import {Link, NavLink} from 'react-router-dom';
 import {Breadcrumb, BreadcrumbItem, ListGroup, ListGroupItem,
   Form, FormGroup, Input, Button, Label} from 'reactstrap';
-import {newQuestions} from '../shared/newQuestions';
-import Question from './question';
-import {Loading} from './loading';
+import Question from './Question';
+import {Loading} from '../Loading';
 
 
 class PracticeExam extends Component {
@@ -21,7 +20,10 @@ class PracticeExam extends Component {
   }
 
   fetchQuestions() {
-    return fetch('/questions')
+    let query = (this.props.type === "exam") ?
+      `/questions?courseId=${this.props.courseId}&examName=${this.props.examName}` :
+      `/questions?courseId=${this.props.courseId}&chapterId=${this.props.id}`;
+    return fetch(query)
     .then(response => {
       return response.json();
     })
@@ -36,23 +38,18 @@ class PracticeExam extends Component {
 
   componentDidMount() {
     //TODO: what is the proper way of error handling here?
-    /*this.fetchQuestions()
+    this.fetchQuestions()
     .then(questions => {
-      //filter the questions and, for each one, execute its guestionBody function so that
+      //execute guestionBody function for each question so that
       //all the random values are set
-      let questionsFiltered = questions.filter((question) => {
-        if (question.courseId === this.props.courseId) {
-          return this.props.type === "exam" ? this.props.examName === question.examName : this.props.id === question.chapterId;
-        }
-        return false;
-      });
-      questionsFiltered.forEach((question => {
+      questions.forEach((question) => {
         question.questionBody = new Function('React', 'MathJax', question.questionBody)(React, MathJax);
-      }))
+      });
+      questions.sort((q1, q2) => (q1.idInExam - q2.idInExam));
       this.setState({
         isLoading: false,
-        questions: questionsFiltered,
-        selectedQuestion: questionsFiltered[0],
+        questions: questions,
+        selectedQuestion: questions[0],
         selectedQuestionCorrect: undefined,
         questionsAnswered: new Map() // key = questionId, value = {correct: true/false, studentAnswer: String}
       });
@@ -63,29 +60,7 @@ class PracticeExam extends Component {
         isLoading: false,
         errorLoading: true
       });
-    }); */
-
-    if (!newQuestions || newQuestions.length === 0) {
-      this.setState({
-        isLoading: false,
-        errorLoading: true,
-        errorMgs: "Sorry, didn&#8217;t find any questions..."
-      });
-    } else { //everything is OK
-      let questionsFiltered = newQuestions.filter((question) => {
-        if (question.courseId === this.props.courseId) {
-          return this.props.type === "exam" ? this.props.examName === question.examName : this.props.id === question.chapterId;
-        }
-        return false;
-      });
-      this.setState({
-        isLoading: false,
-        questions: questionsFiltered,
-        selectedQuestion: questionsFiltered[0],
-        selectedQuestionCorrect: undefined,
-        questionsAnswered: new Map() // key = questionId, value = {correct: true/false, studentAnswer: String}
-      });
-    } 
+    });
   }
 
   selectQuestion(question) {
@@ -121,7 +96,7 @@ class PracticeExam extends Component {
   };
 
   checkNumeric(correctAnswer, studentAnswer) {
-    let error = Math.abs(Number.parseFloat(studentAnswer) - correctAnswer)/correctAnswer;
+    let error = Math.abs((Number.parseFloat(studentAnswer) - correctAnswer)/correctAnswer);
     return (error < 0.03) ? true : false;
   }
 

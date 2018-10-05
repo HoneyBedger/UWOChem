@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import MathJax from 'react-mathjax';
 
-export const newQuestions = [
-  //////////////////////////////////////// 1301 FINAL 2014 ///////////////////////////////////////////////////////////////////////
+export const questions = [
   {
     "_id": 501,
     "courseId": "1301",
