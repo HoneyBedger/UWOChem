@@ -6,9 +6,9 @@ import About from './About';
 function Home() {
   return (
     <React.Fragment>
-      <Jumbotron className="m-0 p-0">
-        <div className="background m-0 p-0">
-          <div className="shade">
+      <Jumbotron className="mt-5 p-0">
+        <Col className="background m-0 p-0">
+          <Col className="shade">
             <Container>
               <Row>
                 <Col xs="12">
@@ -33,8 +33,8 @@ function Home() {
                 </Col>
               </Row>
             </Container>
-          </div>
-        </div>
+          </Col>
+        </Col>
       </Jumbotron>
       <Practice />
       <About />

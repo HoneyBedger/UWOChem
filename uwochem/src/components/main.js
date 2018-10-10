@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer';
 import Home from './Home';
+import About from './About';
 import PracticeCourse from './Practice/Course';
 import PracticeExam from './Practice/Exam';
 import UserProfile from './User/Profile';
@@ -57,6 +59,7 @@ class Main extends Component {
         </Switch>
         <Switch>
           <Route path="/home" component={Home} />
+          <Route path="/about" component={About} />
           <Route exact path="/practice/:courseId"
             component={({match}) => <PracticeCourse courseId={match.params.courseId}
             exams={EXAMS} chapters={CHAPTERS}/>} />
@@ -72,6 +75,7 @@ class Main extends Component {
           <PrivateRoute path="/profile" component={UserProfile} />
           <Redirect to="/home"/>
         </Switch>
+        <Footer />
       </React.Fragment>
     );
   }

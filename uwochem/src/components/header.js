@@ -46,6 +46,7 @@ class Header extends Component {
 
     return (
       <React.Fragment>
+        <div className="header-background">
         <Navbar expand="md" fixed="top">
           <NavbarToggler onClick={this.toggleNavbar}><span className="fa fa-angle-double-down fa-lg"></span></NavbarToggler>
 
@@ -108,6 +109,7 @@ class Header extends Component {
             </NavItem>
           </Nav>
         </Navbar>
+        </div>
     </React.Fragment>
     );
   }

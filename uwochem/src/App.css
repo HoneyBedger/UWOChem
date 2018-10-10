@@ -14,7 +14,6 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 .jumbotron .row {
-  margin: 30px 0px 0px 0px;
   padding: 100px 0px 250px 0px;
   color: #fff;
 }
@@ -43,9 +42,13 @@ a.navbar-brand[href] {
   color: rgba(255,255,255,0.95);
 }
 .navbar {
-  background-color: rgb(41, 43, 44);
+  background-image: url("./images/background_molecules_header.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: solid 1px #000;
   color: rgba(255,255,255,.7);
-  margin-bottom: -48px;
+  margin: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
 }
@@ -68,7 +71,7 @@ a.navbar-brand[href] {
   margin-bottom: 8px;
 }
 .navbar .dropdown-toggle {
-  background-color: rgb(41, 43, 44);
+  background-color: inherit;
   color: rgba(255,255,255,.7);
   border: none;
 }
@@ -104,6 +107,41 @@ a.navbar-brand[href] {
     width: 120px;
   }
 }
+
+
+/**************/
+/* Footer     */
+/**************/
+footer {
+  color: rgb(110,146,120);
+}
+footer a {
+  color: inherit;
+  padding: 0px 10px 0px 10px;
+  font-size: 1.2rem;
+}
+footer a:hover {
+  color: #d57e76;
+  text-decoration: none;
+}
+footer>.nav {
+  background-color: rgb(19, 25, 21);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 10px 15px 10px;
+  color: rgba(255,255,255,.7);
+}
+footer .nav .nav-item {
+  padding: 0px 10px 0px 10px;
+}
+.nav .nav-item a {
+  color: inherit;
+}
+.nav .nav-item a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 /**************/
 /* Breadcrumb */
@@ -178,10 +216,7 @@ button, .btn {
 }
 .btn-primary {
   background-color: rgba(213, 126, 118, 0.6);
-  border-top: solid 1px rgba(213, 126, 118, 0.25);
-  border-left: solid 1px rgba(213, 126, 118, 0.25);
-  border-bottom: solid 1px rgba(191, 80, 69, 0.7);
-  border-right: solid 1px rgba(191, 80, 69, 0.7);
+  border: solid 1px rgba(191, 80, 69, 0.7);
 }
 .btn-primary:hover {
   background-color: rgba(213, 126, 118, 0.8);
@@ -198,12 +233,20 @@ button, .btn {
 .btn.btn-primary:focus {
   box-shadow: none !important;
 }
-.btn-primary.btn-outline {
-  background-color: inherit;
-  border: solid 2px rgba(191, 80, 69, 0.7);
+.btn-background {
+  background-image: url("./images/background_molecules_button.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px #000;
+  color: #E09F9A;
 }
-.btn-primary.btn-outline:hover {
-  background-color: rgba(213, 126, 118, 0.8);
+.btn-background:hover {
+  box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.75);
+  color: #fff;
+}
+.btn-background:active {
+  border: solid 1px #E09F9A;
 }
 
 /**************/
