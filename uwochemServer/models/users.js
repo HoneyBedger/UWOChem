@@ -4,6 +4,18 @@ const passportLocalMongoose = require('passport-local-mongoose');
 //=================//
 
 const Schema = mongoose.Schema;
+
+const QuestionAnswered = new Schema({
+  questionId: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  correct: Boolean,
+  studentAnswer: String
+});
+
+
 const userSchema = new Schema({
   name: {
     type: String,
@@ -16,7 +28,8 @@ const userSchema = new Schema({
   pictureUrl: {
     type: String,
     default: ""
-  }
+  },
+  questionsAnswered: [QuestionAnswered]
 });
 
 //automatically add username and password with hashing and salt

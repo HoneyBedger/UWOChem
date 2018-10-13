@@ -12,8 +12,13 @@ var userRouter = express.Router();
 userRouter.use(bodyParser.json());
 
 //===GET USER LISTINGS===//
-userRouter.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+userRouter.get('/', authentication.verifyUser, authentication.verifyAdmin, (req, res, next) => {
+  User.find(req.query)
+  .then((users) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(users);
+  })
+  .catch((err) => next(err));
 });
 //=================//
 
@@ -82,7 +87,8 @@ userRouter.post('/google',
           let token = authentication.getToken({_id: user._id});
           res.status(200).json({err: null, user, token});
         })
-        .catch((err) => res.send(500, {message: err.message}));
+        .catch((err) => {
+          return res.send(500, {message: err.message});});
       }).catch((err) => res.send(500, {message: err.message}));
     })
   }
@@ -138,6 +144,32 @@ userRouter.post('/twitter',
   }
 );
 //=================//
+
+
+//===SAVE PROGRESS===//
+userRouter.post('/questions', authentication.verifyUser, (req, res, next) => {
+  User.findOne({username: req.body.username}).
+  then(user => {
+    if (!user) return nexr(err);
+    let questions = [...user.questionsAnswered];
+    req.body.questions.forEach(question => {
+      let oldQuestion = questions.filter(q => q.questionId === question.questionId)[0];
+      if (oldQuestion) {
+        let idx = questions.indexOf(oldQuestion);
+        questions.splice(idx, 1, question);
+      } else questions.push(question);
+    });
+    user.questionsAnswered = questions;
+    user.save()
+    .then(user => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(user);
+    })
+    .catch(err => next(err));
+  })
+  .catch(err => next(err));
+});
+//===================//
 
 
 //===LOGOUT===//
