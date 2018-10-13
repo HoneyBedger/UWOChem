@@ -4,7 +4,7 @@ import {Nav, Navbar, NavItem, NavbarBrand, NavbarToggler,
   DropdownItem, Input, InputGroup,
   InputGroupAddon, Button, Label, FormGroup, Form,
   Row, Col} from 'reactstrap';
-import {Link, NavLink} from 'react-router-dom';
+import {Link, NavLink, withRouter} from 'react-router-dom';
 
 
 class Header extends Component {
@@ -32,32 +32,36 @@ class Header extends Component {
   }
 
   render() {
+    let user = window.localStorage.getItem("userToken") && JSON.parse(window.localStorage.getItem("user"));
     let LoginLogoutButton;
-    if (!this.props.loggedIn) LoginLogoutButton = <Button onClick={this.props.toggleLoginModal}>Login/Sing up</Button>
+    if (!this.props.loggedIn) LoginLogoutButton = <Button className="btn-primary" onClick={this.props.toggleLoginModal}>Login/Sing up</Button>
     else {
-      let picture = window.localStorage.userPicture && <img src={window.localStorage.userPicture} />;
+      let picture = user && user.pictureUrl && <img src={user.pictureUrl} style={{maxHeight: "45px"}}/>;
+    let name = user && (user.name || user.username);
       LoginLogoutButton = (
         <React.Fragment>
-          <NavLink to="/profile">{picture} {window.localStorage.userName || window.localStorage.userUsername}</NavLink>{' | '}
-          <Button onClick={this.logout}>Log out</Button>
+          <NavLink to="/profile">{name} {picture}</NavLink>{' | '}
+          <Button className="btn-primary" onClick={this.logout}>Log out</Button>
         </React.Fragment>
       );
     }
 
+    let path = this.props.location.pathname;
+
     return (
       <React.Fragment>
-        <div className="header-background">
         <Navbar expand="md" fixed="top">
           <NavbarToggler onClick={this.toggleNavbar}><span className="fa fa-angle-double-down fa-lg"></span></NavbarToggler>
-
             <Nav className="mr-auto" navbar>
               <Collapse isOpen={this.state.navbarIsOpen} navbar>
               <NavbarBrand href="/home">CHEM 1301 &amp; 1302</NavbarBrand>
               <NavItem>
-                <NavLink className="nav-link" to="/home">Home</NavLink>
+                <NavLink className={"nav-link" + (path.includes("home") ? " active" : "")}
+                  to="/home">Home</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>Practice</DropdownToggle>
+                <DropdownToggle className={path.includes("practice") ? "active" : ""}
+                  nav caret>Practice</DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
                     <NavLink to="/practice/1301">Chem 1301</NavLink>
@@ -69,7 +73,8 @@ class Header extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>Tutorials</DropdownToggle>
+                <DropdownToggle className={path.includes("tutorials") ? "active" : ""}
+                  nav caret>Tutorials</DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
                     <NavLink to="/tutorials/1301">Chem 1301</NavLink>
@@ -81,7 +86,7 @@ class Header extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <button className="nav-link" style={{backgroundColor: "inherit", border: "none"}}
+                <button className={"nav-link" + (path.includes("about") ? " active" : "")} style={{backgroundColor: "inherit"}}
                   onClick={() => {
                     let about = document.getElementById("about");
                     about.scrollIntoView({behavior: "smooth"})
@@ -94,7 +99,7 @@ class Header extends Component {
                       <InputGroup>
                         <Input className="search input-oneline" type="text" placeholder="Search" />
                         <InputGroupAddon addonType="append">
-                          <Button><span className="fa fa-search"></span></Button>
+                          <Button className="btn-primary"><span className="fa fa-search"></span></Button>
                         </InputGroupAddon>
                       </InputGroup>
                     </FormGroup>
@@ -109,10 +114,9 @@ class Header extends Component {
             </NavItem>
           </Nav>
         </Navbar>
-        </div>
     </React.Fragment>
     );
   }
 }
 
-export default Header;
+export default withRouter(Header);

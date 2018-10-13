@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {Breadcrumb, BreadcrumbItem, ListGroup, ListGroupItem} from 'reactstrap';
+import {Container, Row, Col, Breadcrumb, BreadcrumbItem, ListGroup,
+  ListGroupItem} from 'reactstrap';
 
 
 function PracticeCourse(props) {
@@ -9,14 +10,14 @@ function PracticeCourse(props) {
   const chapters = props.chapters.filter(chapter => chapter.courseId === courseId);
 
   return (
-    <div className="container mt-5">
+    <Container className="mt-5 pt-3">
       <Breadcrumb>
         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-        <BreadcrumbItem><Link to="/practice">Practice</Link></BreadcrumbItem>
+        <BreadcrumbItem><Link to="#">Practice</Link></BreadcrumbItem>
         <BreadcrumbItem active>{courseId}</BreadcrumbItem>
       </Breadcrumb>
-      <div className="row">
-        <div className="col-md-6">
+      <Row className="mt-5 mb-5">
+        <Col md={6}>
           <h4>Choose an exam:</h4>
           <ListGroup>
             {exams.map(exam => {
@@ -27,8 +28,8 @@ function PracticeCourse(props) {
               );
             })}
           </ListGroup>
-        </div>
-        <div className="col-md-6">
+        </Col>
+        <Col md={6}>
           <h4>Or a chapter:</h4>
           <ListGroup>
             {chapters.map(chapter => {
@@ -40,9 +41,9 @@ function PracticeCourse(props) {
               );
             })}
           </ListGroup>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

@@ -11,9 +11,8 @@ function Question(props) {
 
   //label the answer as correct/incorrect or nothing
   let correctLabel = null;
-  if (props.correct !== undefined) {
-    correctLabel = props.correct ? (<span className="fa fa-check fa-lg"></span>) : (<span className="fa fa-times fa-lg"></span>);
-  }
+  if (props.correct) correctLabel = <span className="fa fa-check fa-lg"></span>;
+  else if (props.incorrect) correctLabel = <span className="fa fa-times fa-lg"></span>;
 
   //choose the field for the type of question
   let type  = props.questionType;
@@ -56,9 +55,9 @@ function Question(props) {
       <div>{props.questionBody.description}</div>
       {field}
       {correctLabel}
-      {props.correct === undefined ?
+      {!props.correct && !props.incorrect ?
         null :
-        (<div className="mt-5">
+        (<div className="mt-5 mb-5">
           <h4>Solution</h4>
           {props.questionBody.feedback}
         </div>)

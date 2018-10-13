@@ -53,7 +53,10 @@ class LoginModal extends Component {
       model: 'cors'
     };
     fetch('/users/google', options)
-    .then(res => this.login(res));
+    .then(res => {
+      console.log(res);
+      return this.login(res);
+    });
   }
 
   twitterCallback = (res) => {
@@ -72,14 +75,36 @@ class LoginModal extends Component {
     } else if (!res.ok) {
       this.setState({errorMsg: "Sorry, something went wrong. Please try again later."});
     } else {
-      console.log(res);
       res.json()
       .then(res => {
+        console.log(res);
         if (res.err) {
           this.setState({errorMgs: res.err});
         } else {
-          window.localStorage.setItem('user', JSON.stringify(res.user));
-          window.localStorage.setItem('userToken', res.user.token);
+          let user = JSON.stringify(res.user);
+          if (this.props.saveProgress && window.localStorage.getItem('user')) {
+            let questions = JSON.stringify(window.localStorage.getItem('user')).questionsAnswered;
+            //TODO: move logins to a separate file, make accessible by many components?
+            //TODO: how to reset saveProgress back?
+            let username = res.user.username;
+            let jwtToken = res.token;
+            console.log("username", username);
+            console.log("token", jwtToken);
+            fetch('/users/questions', {
+              method: 'post',
+              headers: {'Content-Type':'application/json', 'Authorization': 'bearer ' + jwtToken},
+              body: JSON.stringify({username, questions})})
+            .then(res => {
+              res.json().then(newUser => {
+                console.log(newUser);
+                user = newUser;
+              });
+            })
+            .catch(err => console.log(err));
+          }
+          window.localStorage.setItem('user', user);
+          console.log("token", res.token);
+          window.localStorage.setItem('userToken', res.token.toString());
           this.props.loginMain();
         }
       })

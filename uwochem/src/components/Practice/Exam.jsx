@@ -2,10 +2,12 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import MathJax from 'react-mathjax';
 import {Link, NavLink} from 'react-router-dom';
-import {Breadcrumb, BreadcrumbItem, ListGroup, ListGroupItem,
+import {Container, Row, Col, Breadcrumb, BreadcrumbItem, ListGroup, ListGroupItem,
   Form, FormGroup, Input, Button, Label} from 'reactstrap';
+import Questions from './Questions';
 import Question from './Question';
 import {Loading} from '../Loading';
+import Results from './Results';
 
 
 class PracticeExam extends Component {
@@ -15,8 +17,16 @@ class PracticeExam extends Component {
     this.state = {
         isLoading: true,
         errorLoading: false,
+        resultsModalOpen: false
       };
     this.checkAnswer = this.checkAnswer.bind(this);
+    this.toggleResultsModal = this.toggleResultsModal.bind(this);
+    this.selectQuestion = this.selectQuestion.bind(this);
+    this.saveProgress = this.saveProgress.bind(this);
+  }
+
+  toggleResultsModal() {
+    this.setState({resultsModalOpen: !this.state.resultsModalOpen});
   }
 
   fetchQuestions() {
@@ -30,29 +40,48 @@ class PracticeExam extends Component {
     .catch((err) => {
       this.setState({
         isLoading: false,
-        errorLoading: true,
-        errorMgs: "Something went wrong when loading questions..."
+        errorLoading: true
       });
     });
   }
 
+  getSavedAnswers(questions) {
+    //TODO: do I actually need to fetch a user from DB? or ok to use local obj?
+    let user = window.localStorage.getItem('user') && JSON.parse(window.localStorage.getItem('user'));
+    let savedAnswers = new Map();
+    if (user) {
+      let questionIds = questions.map(q => q._id);
+      for (let question of user.questionsAnswered) {
+        if (questionIds.indexOf(question.questionId) !== -1) {
+            savedAnswers.set(question.questionId, {correct: question.correct, studentAnswer: question.studentAnswer});
+          }
+      }
+    }
+    return savedAnswers;
+  }
+
+  setQuestions(questions) {
+    let savedAnswers = this.getSavedAnswers(questions);
+    console.log(savedAnswers);
+
+
+    //all the random values are set here
+    questions.forEach((question) => {
+      question.questionBody = new Function('React', 'MathJax', question.questionBody)(React, MathJax);
+    });
+    questions.sort((q1, q2) => (q1.idInExam - q2.idInExam));
+    this.setState({
+      isLoading: false,
+      questions: questions,
+      selectedQuestion: questions[0],
+      questionsAnswered: savedAnswers // key = questionId, value = {correct: true/false, studentAnswer: String}
+    });
+  }
+
   componentDidMount() {
-    //TODO: what is the proper way of error handling here?
     this.fetchQuestions()
     .then(questions => {
-      //execute guestionBody function for each question so that
-      //all the random values are set
-      questions.forEach((question) => {
-        question.questionBody = new Function('React', 'MathJax', question.questionBody)(React, MathJax);
-      });
-      questions.sort((q1, q2) => (q1.idInExam - q2.idInExam));
-      this.setState({
-        isLoading: false,
-        questions: questions,
-        selectedQuestion: questions[0],
-        selectedQuestionCorrect: undefined,
-        questionsAnswered: new Map() // key = questionId, value = {correct: true/false, studentAnswer: String}
-      });
+      this.setQuestions(questions);
     })
     .catch((err) => {
       console.log(err);
@@ -63,69 +92,88 @@ class PracticeExam extends Component {
     });
   }
 
-  selectQuestion(question) {
-    //if the selected question was already answered, look up if it was correct,
-    //otherwise correct is undefined
-    let correct = undefined;
-    if (this.state.questionsAnswered.has(question._id)) {
-      correct = this.state.questionsAnswered.get(question._id).correct;
-    }
+
+  selectQuestion(questionId) {
     this.setState({
-      selectedQuestion: question,
-      selectedQuestionCorrect: correct
+      selectedQuestion: this.state.questions.filter(q => q._id === questionId)[0]
     });
   }
 
   checkAnswer(correctAnswer, studentAnswer) {
     let correct;
     if (this.state.selectedQuestion.type === "numeric") {
-      correct = this.checkNumeric(correctAnswer, studentAnswer);
+      let error = Math.abs((Number.parseFloat(studentAnswer) - correctAnswer)/correctAnswer);
+      correct = (error < 0.03) ? true : false;
     } else if (this.state.selectedQuestion.type === "string") {
-      correct = this.checkString(correctAnswer, studentAnswer);
+      correct = !!studentAnswer.match(correctAnswer);
     } else if (this.state.selectedQuestion.type === "MC") {
-      correct = this.checkMC(correctAnswer, studentAnswer);
+      correct = correctAnswer === Number.parseInt(studentAnswer) ? true : false;
     } else if (this.state.selectedQuestion.type === "MS") {
-      correct = this.checkMS(correctAnswer, studentAnswer);
+      correct = true;
+      for (let option of correctAnswer) {
+        if (option.correct && (studentAnswer.indexOf(option.id) === -1) ||
+            !option.correct && (studentAnswer.indexOf(option.id) !== -1)) {
+          correct = false;
+        }
+      }
     } else if (this.state.selectedQuestion.type === "order") {
-      correct = this.checkOrder(correctAnswer, studentAnswer);
-    }
-    this.setState({
-      questionsAnswered: this.state.questionsAnswered.set(this.state.selectedQuestion._id, {correct, studentAnswer}),
-      selectedQuestionCorrect: correct
-    });
-  };
-
-  checkNumeric(correctAnswer, studentAnswer) {
-    let error = Math.abs((Number.parseFloat(studentAnswer) - correctAnswer)/correctAnswer);
-    return (error < 0.03) ? true : false;
-  }
-
-  checkString(correctAnswer, studentAnswer) {
-    return studentAnswer.match(correctAnswer);
-  }
-
-  checkMC(options, studentAnswer) {
-    let correctAnswer = options.filter(option => option.correct)[0].id;
-    return correctAnswer === Number.parseInt(studentAnswer) ? true : false;
-  }
-
-  checkMS(options, studentAnswers) {
-    for (let option of options) {
-      if (option.correct && (studentAnswers.indexOf(option.id) === -1) ||
-          !option.correct && (studentAnswers.indexOf(option.id) !== -1)) {
-        return false;
+      correct = true;
+      for (let i = 0; i < correctAnswer.length; i++) {
+        if (studentAnswer[i] !== correctAnswer[i]) correct = false;
       }
     }
-    return true;
+    this.setState({
+      questionsAnswered: this.state.questionsAnswered.set(this.state.selectedQuestion._id, {correct, studentAnswer})
+    }, () => {
+      if (this.state.questionsAnswered.size === this.state.questions.length) {
+        this.setState({resultsModalOpen: true});}
+    });
+    this.saveUserAnswer(this.state.selectedQuestion._id, correct, studentAnswer.toString());
+  };
+
+  saveUserAnswer(questionId, correct, studentAnswer) {
+    let user = window.localStorage.getItem('user') ?
+      JSON.parse(window.localStorage.getItem('user')) :
+      {};
+    if (!user.questionsAnswered) user.questionsAnswered = [];
+    let questionExists = user.questionsAnswered.filter(q => q.questionId === questionId)[0];
+    if (questionExists) {
+      let idx = user.questionsAnswered.indexOf(questionExists);
+      user.questionsAnswered.splice(idx, 1, {questionId, correct, studentAnswer});
+    } else user.questionsAnswered.push({questionId, correct, studentAnswer});
+    console.log(user.questionsAnswered);
+    window.localStorage.setItem('user', JSON.stringify(user));
+    console.log("set user", window.localStorage.getItem('user'));
+    this.saveToDB([{questionId, correct, studentAnswer}]);
   }
 
-  checkOrder(correctOrder, studentAnswer) {
-    for (let i = 0; i < correctOrder.length; i++) {
-      if (studentAnswer[i] !== correctOrder[i]) return false;
+  saveToDB(questions) {
+    if (window.localStorage.getItem('userToken')) {
+      console.log(window.localStorage.getItem('user'));
+      let username = JSON.parse(window.localStorage.getItem('user')).username;
+      let jwtToken = window.localStorage.getItem('userToken');
+      console.log("username", username);
+      console.log("token", jwtToken);
+      fetch('/users/questions', {
+        method: 'post',
+        headers: {'Content-Type':'application/json', 'Authorization': 'bearer ' + jwtToken},
+        body: JSON.stringify({username, questions})})
+      .then(res => {
+        res.text().then(res => console.log(res));
+        if (!res.ok) {
+          this.setState({
+            saveFailed: true
+          });
+        }
+      });
     }
-    return true;
   }
 
+  saveProgress() {
+    if (window.localStorage.getItem('userToken')) return;
+    this.props.setSaveProgress(true);
+    this.props.toggleLoginModal();
+  }
 
   renderQuestions() {
     if (this.state.isLoading) {
@@ -133,87 +181,42 @@ class PracticeExam extends Component {
     } else if (this.state.errorLoading) {
       return (
         <div className="row">
-          <h4 className="error">{this.state.errorMgs}</h4>
+          <h4 className="error">Something went wrong when loading questions...</h4>
         </div>
       );
     } else { //everything was loaded ok
-      //calculate how many correctly answered questions
       let numCorrect = 0;
-      this.state.questionsAnswered.forEach(ans => {
-        if (ans.correct) numCorrect ++;
-      })
-      //if all the questions are answered, go to results page
-      if (this.state.questionsAnswered.size === this.state.questions.length){
-        return this.renderResults(numCorrect, this.state.questionsAnswered.size);
-      }
+      let questionsAnswered = this.state.questionsAnswered;
+      questionsAnswered.forEach(ans => {
+        if (ans.correct) numCorrect++;
+      });
+      let questionNames = this.state.questions.map(question => {
+        return {
+          _id: question._id,
+          name: `Question ${question.idInExam} ${this.props.type === "chapter" ? "("+question.examName+")" : ""}`
+        };
+      });
 
       return (
         <React.Fragment>
-          <div className="row">
-            <div className="col-12 col-sm-5 col-md-3">
-              <p className="pl-4">Answered: {this.state.questionsAnswered.size}/{this.state.questions.length}</p>
-            </div>
-            <div className="col-12 col-sm-5 col-md-4">
-              <p><span className="correct">correct: {numCorrect}</span> /
-                <span className="incorrect"> incorrect: {this.state.questionsAnswered.size - numCorrect}</span></p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-3">
-              <ListGroup>
-                {this.state.questions.map(question => {
-                  return (<ListGroupItem key={question._id} active={this.state.selectedQuestion._id === question._id}
-                    tag="button" onClick={() => this.selectQuestion(question)}
-                    action>Question {question.idInExam} {this.props.type === "chapter" ? "("+question.examName+")" : ""}
-                  {this.renderCorrectnessLabel(question._id)}</ListGroupItem>);
-                })}
-              </ListGroup>
-            </div>
-            <Question questionBody={this.state.selectedQuestion.questionBody}
-              questionType={this.state.selectedQuestion.type}
-              checkAnswer={this.checkAnswer} correct={this.state.selectedQuestionCorrect}
-              studentAnswer={(this.state.questionsAnswered.has(this.state.selectedQuestion._id) &&
-                      this.state.questionsAnswered.get(this.state.selectedQuestion._id).studentAnswer)
-                      || ""} />
-          </div>
+          <Questions questions={questionNames} questionsAnswered={this.state.questionsAnswered}
+            selectedQuestion={this.state.selectedQuestion} checkAnswer={this.checkAnswer}
+            selectQuestion={this.selectQuestion} loggedIn={this.props.loggedIn}
+            saveProgress={this.saveProgress}/>
+          <Results score={numCorrect/questionsAnswered.size*100}
+            tryAgainLink={`/practice/${this.props.courseId}/${this.props.type}/${this.props.id}`}
+            elseLink={`/practice/${this.props.courseId}`}
+            isOpen={this.state.resultsModalOpen} toggle={this.toggleResultsModal}/>
         </React.Fragment>
       );
     }
   }
 
-  renderCorrectnessLabel(questionId) {
-    if(this.state.questionsAnswered.get(questionId)) {
-      return this.state.questionsAnswered.get(questionId).correct ?
-        <span className="fa fa-check correct"></span> :
-        <span className="fa fa-times incorrect"></span>
-    }
-    return null;
-  }
 
-  renderResults(numCorrect, total) {
-    return (
-      <div className="row">
-        <div className="col-12 mt-5 mb-5">
-          <h4 className="text-center">Congrats! You answered all the questions.</h4>
-          <h4 className="text-center">Score: <b>{numCorrect/total*100}%</b></h4>
-        </div>
-        <div className="col-sm-6 col-12">
-          <div className="link-button">
-            <NavLink to={`/practice/${this.props.courseId}/${this.props.type}/${this.props.id}`}>Try again</NavLink>
-          </div>
-        </div>
-        <div className="col-sm-6 col-12">
-          <div className="link-button">
-            <NavLink to={`/practice/${this.props.courseId}`}>Practice something else</NavLink>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   render() {
     return (
-      <div className="container mt-5">
+      <Container className="mt-5 pt-3 mb-5">
         <Breadcrumb>
           <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
           <BreadcrumbItem><Link to="/practice">Practice</Link></BreadcrumbItem>
@@ -221,7 +224,7 @@ class PracticeExam extends Component {
           <BreadcrumbItem active>{this.props.type === "exam" ? this.props.examName : this.props.chapterName}</BreadcrumbItem>
         </Breadcrumb>
         {this.renderQuestions()}
-      </div>
+      </Container>
     );
   }
 }

@@ -53,7 +53,7 @@ class FieldMC extends Component {
             );
           })}
           <Button type="button" value="submit" color="primary" className="mt-3"
-            onClick={() => this.props.checkAnswer(this.props.options, this.state.studentAnswer)}>Submit</Button>
+            onClick={() => this.props.checkAnswer(this.props.options.filter(option => option.correct)[0].id, this.state.studentAnswer)}>Submit</Button>
       </FormGroup>
     );
   }
