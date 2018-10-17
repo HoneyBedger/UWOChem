@@ -47,10 +47,10 @@ userRouter.post('/signup', (req, res, next) => {
 
 //===LOGIN===//
 userRouter.post('/login', cors.corsWithOptions, passport.authenticate('local'), (req, res, next) => {
-  let user = {...req.user._doc};
-  user.token = authentication.getToken({_id: req.user._id});
+  if (!req.user) res.send(401, 'Not Authorized');
+  let token = authentication.getToken({_id: req.user._id});
   res.setHeader('Content-Type', 'application/json');
-  res.status(200).json({err: null, user});
+  res.status(200).json({err: null, user: req.user, token});
 });
 //=================//
 
@@ -148,6 +148,7 @@ userRouter.post('/twitter',
 
 //===SAVE PROGRESS===//
 userRouter.post('/questions', authentication.verifyUser, (req, res, next) => {
+  console.log("req.body", req.body);
   User.findOne({username: req.body.username}).
   then(user => {
     if (!user) return nexr(err);
@@ -171,6 +172,33 @@ userRouter.post('/questions', authentication.verifyUser, (req, res, next) => {
 });
 //===================//
 
+
+//===DELETE PROGRESS===//
+userRouter.delete('/questions', authentication.verifyUser, (req, res, next) => {
+  console.log("in delete progress req.body", req.body);
+  User.findOne({username: req.body.username}).
+  then(user => {
+    if (!user) return nexr(err);
+    let questions = [...user.questionsAnswered];
+    let questionsToRemove = req.body.questionIds;
+    for (let i = 0; i < questions.length; i++) {
+      let id = questions[i].questionId;
+      if (questionsToRemove.includes(id)){
+        questions.splice(i, 1);
+        i--;
+      }
+    }
+    user.questionsAnswered = questions;
+    user.save()
+    .then(user => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(user);
+    })
+    .catch(err => next(err));
+  })
+  .catch(err => next(err));
+});
+//=====================//
 
 //===LOGOUT===//
 userRouter.get('/logout', (req, res) => {

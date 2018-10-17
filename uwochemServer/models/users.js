@@ -11,6 +11,10 @@ const QuestionAnswered = new Schema({
     required: true,
     unique: true
   },
+  examId: {
+    type: String,
+    required: true
+  },
   correct: Boolean,
   studentAnswer: String
 });
