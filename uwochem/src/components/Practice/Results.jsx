@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import {Container, Row, Col, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import {Container, Row, Col, Modal, ModalHeader, ModalBody, Button} from 'reactstrap';
 
 function PracticeResults(props) {
 
@@ -18,8 +18,8 @@ function PracticeResults(props) {
         <Row id="buttons" className="p-0 m-0">
           <Row className="shade m-0 pt-5 pb-5 pl-0 pr-0">
             <Col sm={6} xs={12}>
-              <NavLink role="button" className="btn btn-primary btn-lg btn-block"
-                to={props.tryAgainLink}>Try again</NavLink>
+              <Button color="primary" className="btn-lg btn-block"
+                onClick={props.tryAgain}>Try again</Button>
             </Col>
             <Col sm={6} xs={12}>
               <NavLink role="button" className="btn btn-primary btn-lg btn-block"

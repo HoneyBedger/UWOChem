@@ -11,6 +11,7 @@ class ValidatedForm extends Component {
   }
 
   validate() {
+    console.log("validating");
     if (this.formEl.checkValidity() === false) {
       for (let el of this.formEl) {
         const errorLabel = el.parentNode.querySelector(".invalid-feedback");

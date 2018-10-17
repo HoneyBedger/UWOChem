@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import {Input, InputGroup, InputGroupAddon, Button, Label, FormGroup, Form,
+import {Input, InputGroup, InputGroupAddon, Button, Label, FormGroup, FormFeedback,
   Row, Col, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import {Link, Redirect} from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import {GoogleLogin} from 'react-google-login';
 import TwitterLogin from 'react-twitter-auth';
 import config from '../../config';
+import login from './login';
+import SignupModal from './SignupModal';
+import ValidatedForm from '../ValidatedForm';
 
 
 class LoginModal extends Component {
@@ -13,6 +16,7 @@ class LoginModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      signUp: false,
       username: '',
       password: '',
       touched: {
@@ -20,20 +24,47 @@ class LoginModal extends Component {
         password: false
       }
     };
-    this.login = this.login.bind(this);
     this.loginWithPassword = this.loginWithPassword.bind(this);
+    this.loginWithGoogle = this.loginWithGoogle.bind(this);
+    this.loginWithFacebook = this.loginWithFacebook.bind(this);
+    this.loginWithTwitter = this.loginWithTwitter.bind(this);
+    this.onLoginFailure = this.onLoginFailure.bind(this);
+    this.afterLogin = this.afterLogin.bind(this);
+    this.signUp = this.signUp.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isOpen !== this.props.isOpen) {
+      this.setState({signUp: false});
+    }
+  }
+
+  alreadyLoggedIn() {
+    if (window.localStorage.getItem('userToken')) {
+      this.afterLogin({success: true, err: null});
+      return true;
+    }
+    return false;
+  }
+
+  afterLogin(result)  {
+    if (result.err) this.setState({errorMsg: result.err.message});
+    else this.props.toggle();
   }
 
   loginWithPassword(username, password) {
+    console.log("logging in with password");
+    if (this.alreadyLoggedIn()) return;
     fetch('/users/login/', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({username, password})})
-    .then(res => this.login(res));
+    .then(res => this.props.login(res, this.afterLogin));
   }
 
-  facebookCallback = (res) => {
-    console.log(res);
+  loginWithFacebook(res) {
+    if (this.alreadyLoggedIn()) return;
+    console.log("facebook login:", res);
     const options = {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -41,11 +72,12 @@ class LoginModal extends Component {
       model: 'cors'
     };
     fetch('/users/facebook', options)
-    .then(res => this.login(res));
+    .then(res => this.props.login(res, this.afterLogin));
   }
 
-  googleCallback = (res) => {
-    console.log(res.tokenObj.id_token);
+  loginWithGoogle(res) {
+    if (this.alreadyLoggedIn()) return;
+    console.log("google login:", res.tokenObj.id_token);
     const options = {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -53,143 +85,105 @@ class LoginModal extends Component {
       model: 'cors'
     };
     fetch('/users/google', options)
-    .then(res => {
-      console.log(res);
-      return this.login(res);
-    });
+    .then(res => this.props.login(res, this.afterLogin));
   }
 
-  twitterCallback = (res) => {
+  loginWithTwitter(res) {
     res.json()
-    .then(res => this.login(res));
+    .then(res => this.props.login(res, this.afterLogin));
+  };
+
+  onLoginFailure(err) {
+    this.setState({errorMsg: err.message});
   }
 
-  onFailure = (err) => {
-    console.log(err);
-    this.setState({errorMgs: err.message});
-  }
-
-  login = (res) => {
-    if (res.status === 401) {
-      this.setState({errorMsg: "Sorry, your credentials do not match our data."});
-    } else if (!res.ok) {
-      this.setState({errorMsg: "Sorry, something went wrong. Please try again later."});
-    } else {
-      res.json()
-      .then(res => {
-        console.log(res);
-        if (res.err) {
-          this.setState({errorMgs: res.err});
-        } else {
-          let user = JSON.stringify(res.user);
-          if (this.props.saveProgress && window.localStorage.getItem('user')) {
-            let questions = JSON.stringify(window.localStorage.getItem('user')).questionsAnswered;
-            //TODO: move logins to a separate file, make accessible by many components?
-            //TODO: how to reset saveProgress back?
-            let username = res.user.username;
-            let jwtToken = res.token;
-            console.log("username", username);
-            console.log("token", jwtToken);
-            fetch('/users/questions', {
-              method: 'post',
-              headers: {'Content-Type':'application/json', 'Authorization': 'bearer ' + jwtToken},
-              body: JSON.stringify({username, questions})})
-            .then(res => {
-              res.json().then(newUser => {
-                console.log(newUser);
-                user = newUser;
-              });
-            })
-            .catch(err => console.log(err));
-          }
-          window.localStorage.setItem('user', user);
-          console.log("token", res.token);
-          window.localStorage.setItem('userToken', res.token.toString());
-          this.props.loginMain();
-        }
-      })
-      .catch(err => {
-        this.setState({errorMgs: err.message});
-      });
-    }
+  signUp() {
+    this.setState({signUp: true});
   }
 
   render() {
-    console.log("redirecting to " + this.props.redirectTo);
-    if (this.props.loggedIn) {
-      console.log("logged in");
-      if (this.props.redirectTo) {
-        console.log("redirecting to " + this.props.redirectTo);
-        return <Redirect to={this.props.redirectTo} />;
-      } else if (this.props.isOpen) {
-        this.props.toggle();
-      }
+    if (this.state.signUp) {
+      return (
+        <SignupModal toggle={this.props.toggle} isOpen={this.props.isOpen}
+          loginWithPassword={this.loginWithPassword}/>
+      );
+    } else {
+      return (
+        <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} backdrop={true}>
+          <ModalHeader toggle={this.props.toggle}>Login</ModalHeader>
+          <ModalBody className="mt-4 mb-4 pl-5 pr-5">
+            <ValidatedForm submit={() => this.loginWithPassword(this.username.value, this.password.value)}>
+              <Row>
+                <Col className="mb-2 pl-0 error pl-3">{this.state.errorMsg}</Col>
+              </Row>
+              <FormGroup row>
+                <Label for="username" sm={2}>Username</Label>
+                <Col sm={10}>
+                  <Input className="input-oneline" type="text" name="username"
+                    placeholder="Username" innerRef={input => {this.username = input}}
+                    required />
+                  <FormFeedback className="ml-2"/>
+                </Col>
+              </FormGroup>
+              <FormGroup row>
+                <Label for="password" sm={2}>Password</Label>
+                <Col sm={10}>
+                  <Input className="input-oneline" type="password" name="password"
+                    placeholder="Password" innerRef={input => {this.password = input}}
+                    required/>
+                  <FormFeedback className="ml-2"/>
+                </Col>
+              </FormGroup>
+              <Row>
+                <Col sm={{size: 10, offset: 2}} xs={{size: 12, offset: 0}} className="mt-4 pl-4">
+                  <Button color="primary" type="submit">Sign in</Button>{' '}
+                  <Button outline color="secondary" onClick={this.props.toggle}>Cancel</Button>
+                </Col>
+              </Row>
+            </ValidatedForm>
+            <Row className="mt-5">
+              <Col xs={{size: 10, offset: 2}} className="mb-3">
+                <p>Or sign in with</p>
+              </Col>
+              <Col xs={{size: 3, offset: 2}} >
+                <FacebookLogin appId={config.oAuth.facebook.clientId} autoload={false}
+                  fields="name,picture" callback={this.loginWithFacebook}
+                  render={renderProps => (
+                    <button className="btn-social-icon btn-facebook btn-lg"
+                      onClick={renderProps.onClick}>
+                      <span className="fa fa-facebook"></span>
+                    </button>)} />
+              </Col>
+              <Col xs={3}>
+                <GoogleLogin clientId={config.oAuth.google.clientId}
+                  onSuccess={this.loginWithGoogle} onFailure={this.onLoginFailure}
+                  scope="profile email"
+                  className="btn-social-icon btn-google btn-lg"
+                  onRequest={()=> console.log("loading...")} offline={false}
+                  approvalPrompt="force" responseType="id_token"
+                  prompt={"consent"}>
+                  <span className="fa fa-google"></span>
+                </GoogleLogin>
+              </Col>
+              <Col xs={3}>
+                <TwitterLogin loginUrl="https://localhost:3363/users/twitter"
+                  requestTokenUrl="https://localhost:3363/users/twitter/reverse"
+                  onSuccess={this.loginWithTwitter} onFailure={this.onLoginFailure}
+                  className="btn-social-icon btn-twitter btn-lg"
+                  text="" children={<span className="fa fa-twitter"></span>}/>
+              </Col>
+            </Row>
+          </ModalBody>
+          <ModalFooter className="pl-5 pr-5">
+            <Row>
+              <Col xs={12}>
+                <p>Do not have an account? <Button color="link" onClick={this.signUp}>Sign up</Button></p>
+              </Col>
+            </Row>
+          </ModalFooter>
+        </Modal>
+      );
     }
-
-    return (
-      <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} backdrop={true}>
-        <ModalHeader toggle={this.props.toggle}>Login</ModalHeader>
-        <ModalBody className="mt-4 mb-5 pl-5 pr-5">
-          <Col style={{height: "1.5em", color: "#d60e0e"}} className="mb-2 pl-0">{this.state.errorMgs}</Col>
-          <Form>
-            <FormGroup row>
-              <Label for="username" sm={2}>Username</Label>
-              <Col sm={10}>
-                <Input className="input-oneline" type="text" name="username"
-                  placeholder="Username" innerRef={input => {this.username = input}} />
-              </Col>
-            </FormGroup>
-            <FormGroup row>
-              <Label for="password" sm={2}>Password</Label>
-              <Col sm={10}>
-                <Input className="input-oneline" type="password" name="password"
-                  placeholder="Password" innerRef={input => {this.password = input}} />
-              </Col>
-            </FormGroup>
-          </Form>
-          <Row className="mt-5">
-            <Col xs={{size: 10, offset: 2}} className="mb-3">
-              <p>Or sign in with</p>
-            </Col>
-            <Col xs={{size: 3, offset: 2}} >
-              <FacebookLogin appId={config.oAuth.facebook.clientId} autoload={false}
-                fields="name,picture" callback={this.facebookCallback}
-                render={renderProps => (
-                  <button className="btn-social-icon btn-facebook btn-lg"
-                    onClick={renderProps.onClick}>
-                    <span className="fa fa-facebook"></span>
-                  </button>)} />
-            </Col>
-            <Col xs={3}>
-              <GoogleLogin clientId={config.oAuth.google.clientId}
-                onSuccess={this.googleCallback} onFailure={this.onFailure}
-                scope="profile email"
-                className="btn-social-icon btn-google btn-lg">
-                <span className="fa fa-google"></span>
-              </GoogleLogin>
-            </Col>
-            <Col xs={3}>
-              <TwitterLogin loginUrl="https://localhost:3363/users/twitter"
-                requestTokenUrl="https://localhost:3363/users/twitter/reverse"
-                onSuccess={this.twitterCallback} onFailure={this.onFailure}
-                className="btn-social-icon btn-twitter btn-lg"
-                text="" children={<span className="fa fa-twitter"></span>}/>
-            </Col>
-          </Row>
-        </ModalBody>
-        <ModalFooter className="pl-5 pr-5">
-          <div className="row">
-            <div className="col-12">
-              <Button color="primary" onClick={() => this.loginWithPassword(this.username.value, this.password.value)}>Sign in</Button>{' '}
-              <Button outline color="secondary" onClick={this.props.toggle}>Cancel</Button>
-            </div>
-            <div className="col-12 mt-3">
-              <p>Do not have an account? <Link to="#">Sign up</Link></p>
-            </div>
-          </div>
-        </ModalFooter>
-      </Modal>
-    );
   }
 
 }

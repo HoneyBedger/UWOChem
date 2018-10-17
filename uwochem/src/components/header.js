@@ -15,7 +15,6 @@ class Header extends Component {
       navbarIsOpen: false
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.logout = this.logout.bind(this);
   }
 
   toggleNavbar() {
@@ -24,24 +23,19 @@ class Header extends Component {
     });
   }
 
-  logout() {
-    fetch('/users/logout');
-    window.localStorage.clear();
-    this.setState({loggedIn: false});
-    this.props.logoutMain();
-  }
-
   render() {
-    let user = window.localStorage.getItem("userToken") && JSON.parse(window.localStorage.getItem("user"));
+    let user = window.localStorage.getItem("userToken") &&
+      JSON.parse(window.localStorage.getItem("user"));
     let LoginLogoutButton;
-    if (!this.props.loggedIn) LoginLogoutButton = <Button className="btn-primary" onClick={this.props.toggleLoginModal}>Login/Sing up</Button>
+    if (!this.props.loggedIn)
+      LoginLogoutButton = <Button color="primary" onClick={this.props.toggleLoginModal}>Login/Sing up</Button>
     else {
       let picture = user && user.pictureUrl && <img src={user.pictureUrl} style={{maxHeight: "45px"}}/>;
-    let name = user && (user.name || user.username);
+      let name = user && (user.name || user.username);
       LoginLogoutButton = (
         <React.Fragment>
           <NavLink to="/profile">{name} {picture}</NavLink>{' | '}
-          <Button className="btn-primary" onClick={this.logout}>Log out</Button>
+          <Button color="primary" onClick={this.props.logout}>Log out</Button>
         </React.Fragment>
       );
     }
@@ -86,11 +80,14 @@ class Header extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <button className={"nav-link" + (path.includes("about") ? " active" : "")} style={{backgroundColor: "inherit"}}
-                  onClick={() => {
-                    let about = document.getElementById("about");
-                    about.scrollIntoView({behavior: "smooth"})
-                  }}>About</button>
+                {path.includes("home") ?
+                  (<Button color="link" className="nav-link"
+                    onClick={() => {
+                      let about = document.getElementById("about");
+                      about.scrollIntoView({behavior: "smooth"});}}>About</Button>) :
+                  <NavLink to="/about"
+                    className={"nav-link" + (path.includes("about") ? " active" : "")}>About</NavLink>
+                }
               </NavItem>
               </Collapse>
                 <NavItem>
@@ -99,7 +96,7 @@ class Header extends Component {
                       <InputGroup>
                         <Input className="search input-oneline" type="text" placeholder="Search" />
                         <InputGroupAddon addonType="append">
-                          <Button className="btn-primary"><span className="fa fa-search"></span></Button>
+                          <Button color="primary"><span className="fa fa-search"></span></Button>
                         </InputGroupAddon>
                       </InputGroup>
                     </FormGroup>

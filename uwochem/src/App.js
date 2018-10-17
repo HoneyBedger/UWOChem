@@ -7,9 +7,9 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-          <React.Fragment>
+        <React.Fragment>
             <Main/>
-          </React.Fragment>
+            </React.Fragment>
       </BrowserRouter>
     );
   }

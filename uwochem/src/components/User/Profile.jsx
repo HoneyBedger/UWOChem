@@ -3,20 +3,36 @@ import {NavLink} from 'react-router-dom';
 import {Container, Row, Col, ListGroup, ListGroupItem, Progress} from 'reactstrap';
 
 function UserProfile(props) {
-  //TODO: do I actually need to fetch a user from DB? or ok to use local obj?
   let user = JSON.parse(window.localStorage.getItem("user"));
   let name = user.name || user.username;
   let completedExams = [], inProgressExams = [], notStartedExams = [];
-  let savedExams = new Map();
-  user.exams.forEach(exam => {
-    savedExams.set(exam.examId, exam.progress);
-  });
+  let questionsAnswered = new Map();
+  if (user.questionsAnswered) {
+    user.questionsAnswered.forEach(q => {
+      for (let exam of props.exams ) {
+        if (exam.examId === q.examId) {
+          let n = questionsAnswered.has(exam.examId) ? (questionsAnswered.get(exam.examId).n + 1) : 1;
+          let addCorrect = q.correct ? 1 : 0;
+          let nCorrect = questionsAnswered.has(exam.examId) ?
+            (questionsAnswered.get(exam.examId).nCorrect + addCorrect) :
+            addCorrect;
+          questionsAnswered.set(exam.examId, {n, nCorrect});
+          break;
+        }
+      }
+    });
+  }
   for (let exam of props.exams) {
     let id = exam.examId;
-    if (savedExams && savedExams.get(id)) {
-      if (savedExams.get(id) < 100) {
-        inProgressExams.push({...exam, progress: savedExams.get(id)});
-      } else completedExams.push(exam);
+    if (questionsAnswered.has(id)) {
+      let q = questionsAnswered.get(id);
+      let progress = Math.round(q.n/exam.numQuestions*100);
+      if (progress < 100) {
+        inProgressExams.push({...exam, progress});
+      } else {
+        let score = Math.round(q.nCorrect/q.n*100);
+        completedExams.push({...exam, score});
+      }
     } else {
       notStartedExams.push(exam);
     }
@@ -73,7 +89,7 @@ function UserProfile(props) {
               completedExams.map(exam => {
               return (
                 <ListGroupItem key={exam.examId}>
-                  <NavLink to={`/practice/${exam.courseId}/exam/${exam.examId}`}>{exam.courseId} {exam.name}</NavLink>
+                  <NavLink to={`/practice/${exam.courseId}/exam/${exam.examId}`}>{exam.courseId} {exam.name} &#8212; Score: {exam.score}%</NavLink>
                 </ListGroupItem>
               );
             })}

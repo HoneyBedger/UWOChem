@@ -23,6 +23,7 @@ class PracticeExam extends Component {
     this.toggleResultsModal = this.toggleResultsModal.bind(this);
     this.selectQuestion = this.selectQuestion.bind(this);
     this.saveProgress = this.saveProgress.bind(this);
+    this.tryAgain = this.tryAgain.bind(this);
   }
 
   toggleResultsModal() {
@@ -49,11 +50,12 @@ class PracticeExam extends Component {
     //TODO: do I actually need to fetch a user from DB? or ok to use local obj?
     let user = window.localStorage.getItem('user') && JSON.parse(window.localStorage.getItem('user'));
     let savedAnswers = new Map();
-    if (user) {
+    if (user && user.questionsAnswered) {
       let questionIds = questions.map(q => q._id);
       for (let question of user.questionsAnswered) {
         if (questionIds.indexOf(question.questionId) !== -1) {
-            savedAnswers.set(question.questionId, {correct: question.correct, studentAnswer: question.studentAnswer});
+            savedAnswers.set(question.questionId,
+              {examId: question.examId, correct: question.correct, studentAnswer: question.studentAnswer});
           }
       }
     }
@@ -122,16 +124,17 @@ class PracticeExam extends Component {
         if (studentAnswer[i] !== correctAnswer[i]) correct = false;
       }
     }
+    let examId = `${this.state.selectedQuestion.courseId}_${this.state.selectedQuestion.examName.replace(/\s/, '')}`;
     this.setState({
-      questionsAnswered: this.state.questionsAnswered.set(this.state.selectedQuestion._id, {correct, studentAnswer})
+      questionsAnswered: this.state.questionsAnswered.set(this.state.selectedQuestion._id, {examId, correct, studentAnswer})
     }, () => {
       if (this.state.questionsAnswered.size === this.state.questions.length) {
         this.setState({resultsModalOpen: true});}
     });
-    this.saveUserAnswer(this.state.selectedQuestion._id, correct, studentAnswer.toString());
+    this.saveUserAnswer(this.state.selectedQuestion._id, examId, correct, studentAnswer.toString());
   };
 
-  saveUserAnswer(questionId, correct, studentAnswer) {
+  saveUserAnswer(questionId, examId, correct, studentAnswer) {
     let user = window.localStorage.getItem('user') ?
       JSON.parse(window.localStorage.getItem('user')) :
       {};
@@ -139,12 +142,12 @@ class PracticeExam extends Component {
     let questionExists = user.questionsAnswered.filter(q => q.questionId === questionId)[0];
     if (questionExists) {
       let idx = user.questionsAnswered.indexOf(questionExists);
-      user.questionsAnswered.splice(idx, 1, {questionId, correct, studentAnswer});
-    } else user.questionsAnswered.push({questionId, correct, studentAnswer});
+      user.questionsAnswered.splice(idx, 1, {questionId, examId, correct, studentAnswer});
+    } else user.questionsAnswered.push({questionId, examId, correct, studentAnswer});
     console.log(user.questionsAnswered);
     window.localStorage.setItem('user', JSON.stringify(user));
     console.log("set user", window.localStorage.getItem('user'));
-    this.saveToDB([{questionId, correct, studentAnswer}]);
+    this.saveToDB([{questionId, examId, correct, studentAnswer}]);
   }
 
   saveToDB(questions) {
@@ -173,6 +176,39 @@ class PracticeExam extends Component {
     if (window.localStorage.getItem('userToken')) return;
     this.props.setSaveProgress(true);
     this.props.toggleLoginModal();
+  }
+
+  tryAgain() {
+    let user = window.localStorage.getItem('user') && JSON.parse(window.localStorage.getItem('user'));
+    let questionsAnswered = user && user.questionsAnswered;
+    if (!questionsAnswered || questionsAnswered.length === 0) {
+      this.toggleResultsModal();
+      return;
+    }
+    //reset locally
+    for (let i = 0; i < questionsAnswered.length; i++) {
+      let q = questionsAnswered[i];
+      if (this.state.questionsAnswered.has(q.questionId))  {
+        questionsAnswered.splice(i, 1);
+        i--;
+      }
+    }
+    console.log("after reset questionsAnswered", questionsAnswered);
+    user.questionsAnswered = questionsAnswered;
+    window.localStorage.setItem('user', JSON.stringify(user));
+    //reset in DB
+    let jwtToken = window.localStorage.getItem('userToken');
+    let questionIds = Array.from(this.state.questionsAnswered.keys());
+    console.log("questionIds", questionIds);
+    fetch('/users/questions', {
+      method: 'delete',
+      headers: {'Content-Type':'application/json', 'Authorization': 'bearer ' + jwtToken},
+      body: JSON.stringify({username: user.username, questionIds})})
+    .then(res => {
+      res.text().then(res => console.log(res));
+    });
+    this.setState({questionsAnswered: new Map()});
+    this.toggleResultsModal();
   }
 
   renderQuestions() {
@@ -204,7 +240,7 @@ class PracticeExam extends Component {
             selectQuestion={this.selectQuestion} loggedIn={this.props.loggedIn}
             saveProgress={this.saveProgress}/>
           <Results score={numCorrect/questionsAnswered.size*100}
-            tryAgainLink={`/practice/${this.props.courseId}/${this.props.type}/${this.props.id}`}
+            tryAgain={this.tryAgain}
             elseLink={`/practice/${this.props.courseId}`}
             isOpen={this.state.resultsModalOpen} toggle={this.toggleResultsModal}/>
         </React.Fragment>

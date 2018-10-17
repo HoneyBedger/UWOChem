@@ -31,7 +31,8 @@ function PracticeQuestions(props) {
         <Col sm={{size: 12, offset: 0}} md={{size: 5, offset: 0}} className="text-right">
           {props.loggedIn ?
             <a>Progress is saved for {name}</a> :
-            <Button color="link" onClick={props.saveProgress}>Save progress</Button>
+            <Button color="link" style={{fontWeight: "bold", fontSize: "1.2rem"}}
+              onClick={props.saveProgress}>Save progress</Button>
           }
         </Col>
       </Row>
