@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {Input, InputGroup, InputGroupAddon, Button, Label, FormGroup, FormFeedback,
+import {Input, Button, Label, FormGroup, FormFeedback,
   FormText, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
-import {NavLink} from 'react-router-dom';
 import ValidatedForm from '../ValidatedForm';
 
 class UserSignupModal extends Component {
@@ -59,7 +58,7 @@ class UserSignupModal extends Component {
       <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} backdrop={true}>
         <ModalHeader toggle={this.props.toggle}>Sign Up</ModalHeader>
         <ValidatedForm submit={this.signUp}>
-          <ModalBody className="mt-4 mb-5 pl-5 pr-5">
+          <ModalBody className="mt-3 mb-3 pl-5 pr-5">
             <Row>
               <Col className="mb-2 pl-0 error">{this.state.errorMsg}</Col>
             </Row>

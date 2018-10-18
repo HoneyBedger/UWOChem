@@ -41,9 +41,10 @@ function PracticeQuestions(props) {
           selectedQuestionId={selectedQuestion._id} selectQuestion={props.selectQuestion}/>
         <Question questionBody={selectedQuestion.questionBody}
           questionType={selectedQuestion.type} checkAnswer={props.checkAnswer}
+          key={selectedQuestion._id}
           correct={questionsAnswered.has(selectedQuestion._id) && questionsAnswered.get(selectedQuestion._id).correct}
           incorrect={questionsAnswered.has(selectedQuestion._id) && !questionsAnswered.get(selectedQuestion._id).correct}
-          studentAnswer={(questionsAnswered.has(selectedQuestion._id) && questionsAnswered.get(selectedQuestion._id).studentAnswer) || ""} />
+          studentAnswer={(questionsAnswered.has(selectedQuestion._id) && questionsAnswered.get(selectedQuestion._id).studentAnswer)} />
       </Row>
     </React.Fragment>
   );

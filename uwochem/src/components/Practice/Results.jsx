@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import {Container, Row, Col, Modal, ModalHeader, ModalBody, Button} from 'reactstrap';
+import {Row, Col, Modal, ModalHeader, ModalBody, Button} from 'reactstrap';
 
 function PracticeResults(props) {
 

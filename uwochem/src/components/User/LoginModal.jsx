@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import {Input, InputGroup, InputGroupAddon, Button, Label, FormGroup, FormFeedback,
+import {Input, Button, Label, FormGroup, FormFeedback,
   Row, Col, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
-import {Link, Redirect} from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import {GoogleLogin} from 'react-google-login';
 import TwitterLogin from 'react-twitter-auth';
 import config from '../../config';
-import login from './login';
 import SignupModal from './SignupModal';
 import ValidatedForm from '../ValidatedForm';
 
@@ -111,7 +109,7 @@ class LoginModal extends Component {
       return (
         <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} backdrop={true}>
           <ModalHeader toggle={this.props.toggle}>Login</ModalHeader>
-          <ModalBody className="mt-4 mb-4 pl-5 pr-5">
+          <ModalBody className="mt-3 mb-3 pl-5 pr-5">
             <ValidatedForm submit={() => this.loginWithPassword(this.username.value, this.password.value)}>
               <Row>
                 <Col className="mb-2 pl-0 error pl-3">{this.state.errorMsg}</Col>
@@ -174,7 +172,7 @@ class LoginModal extends Component {
               </Col>
             </Row>
           </ModalBody>
-          <ModalFooter className="pl-5 pr-5">
+          <ModalFooter className="pt-1 pb-0 pl-5 pr-5">
             <Row>
               <Col xs={12}>
                 <p>Do not have an account? <Button color="link" onClick={this.signUp}>Sign up</Button></p>

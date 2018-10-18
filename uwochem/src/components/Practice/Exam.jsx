@@ -111,10 +111,13 @@ class PracticeExam extends Component {
     } else if (this.state.selectedQuestion.type === "MC") {
       correct = correctAnswer === Number.parseInt(studentAnswer) ? true : false;
     } else if (this.state.selectedQuestion.type === "MS") {
+      console.log("correctAnswer", correctAnswer);
+      console.log("studentAnswer", studentAnswer);
       correct = true;
       for (let option of correctAnswer) {
-        if (option.correct && (studentAnswer.indexOf(option.id) === -1) ||
-            !option.correct && (studentAnswer.indexOf(option.id) !== -1)) {
+        let id = String(option.id);
+        if (option.correct && !studentAnswer.includes(id) ||
+            !option.correct && studentAnswer.includes(id)) {
           correct = false;
         }
       }

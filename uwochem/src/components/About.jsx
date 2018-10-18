@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom';
 import {Container, Row, Col, Card, CardTitle, CardBody, CardText,
   FormGroup, Input, Label, Button, FormFeedback} from 'reactstrap';
 import ValidatedForm from './ValidatedForm';

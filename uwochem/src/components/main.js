@@ -113,7 +113,7 @@ class Main extends Component {
                 && String(chapter.id) === match.params.chapterId)[0].name}
             {...loginProps}/>} />
           <PrivateRoute path="/profile" openLoginModal={this.openLoginModal}
-            render={() => <UserProfile exams={EXAMS}/>} />
+            component={() => <UserProfile exams={EXAMS}/>} />
           <Redirect from="/login" to="/home/login" />
           <Redirect to="/home"/>
         </Switch>

@@ -1,28 +1,17 @@
 import React, {Component} from 'react';
-import {Form, FormGroup, Input, Button, Label, InputGroup, InputGroupAddon} from 'reactstrap';
+import {FormGroup, Input, Label} from 'reactstrap';
+import CheckAnswerButton from './CheckAnswerButton';
 
 class FieldMC extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      studentAnswer: this.props.studentAnswer
-    }
-    this.shuffleOptions();
+    this.state = {};
+    if (!this.props.studentAnswer) this.shuffleOptions();
     this.changeAnswer = this.changeAnswer.bind(this);
   }
 
-  //update the value of the input if a new question is selected
-  componentDidUpdate(prevProps) {
-    if (this.props.studentAnswer === undefined) this.shuffleOptions();
-    if (this.props.studentAnswer !== prevProps.studentAnswer) {
-      this.setState({
-        studentAnswer: this.props.studentAnswer
-      });
-    }
-  }
-
   changeAnswer(id) {
-    this.setState({studentAnswer: id});
+    this.setState({newStudentAnswer: String(id)});
   }
 
   shuffleOptions() { //Fisher-Yates shuffle
@@ -35,25 +24,28 @@ class FieldMC extends Component {
   }
 
   render() {
+    let disabled = !!this.props.studentAnswer;
     return (
       <FormGroup tag="fieldset">
           {this.props.options.map(option => {
+            let checked = this.props.studentAnswer && this.props.studentAnswer === String(option.id);
             return (
-              <FormGroup key={this.props.options.indexOf(option)} check>
+              <FormGroup key={this.props.options.indexOf(option)} check disabled={disabled}>
                 <Label check>
-                  <Input type="radio" name="answer"
-                    value={option.id}
-                    checked={this.state.studentAnswer === option.id}
-                    valid={!(this.props.correct === undefined) && this.props.correct}
-                    invalid={!(this.props.correct === undefined) && !this.props.correct}
-                    onClick={() => this.changeAnswer(option.id)} />{' '}
+                  <Input type="radio" name="answer" disabled={disabled}
+                    value={option.id} defaultChecked={checked}
+                    onClick={() => this.changeAnswer(option.id)} />
+                  <span className={"form-check-input" +
+                    (this.props.correct ? " is-valid" : "") +
+                    (this.props.incorrect ? " is-invalid" : "")} />{' '}
                   {option.text}
                 </Label>
               </FormGroup>
             );
           })}
-          <Button type="button" value="submit" color="primary" className="mt-3"
-            onClick={() => this.props.checkAnswer(this.props.options.filter(option => option.correct)[0].id, this.state.studentAnswer)}>Submit</Button>
+          <CheckAnswerButton
+            submit={() => this.props.checkAnswer(this.props.options.filter(option => option.correct)[0].id, this.state.newStudentAnswer)}
+            disabled={disabled} correct={this.props.correct} incorrect={this.props.incorrect}/>
       </FormGroup>
     );
   }

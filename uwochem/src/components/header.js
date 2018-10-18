@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import {Nav, Navbar, NavItem, NavbarBrand, NavbarToggler,
-  Collapse, UncontrolledDropdown, DropdownToggle, DropdownMenu,
-  DropdownItem, Input, InputGroup,
-  InputGroupAddon, Button, Label, FormGroup, Form,
-  Row, Col} from 'reactstrap';
-import {Link, NavLink, withRouter} from 'react-router-dom';
+import {Nav, Navbar, NavItem, NavbarBrand, NavbarToggler, Collapse,
+  UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Input,
+  InputGroup, InputGroupAddon, Button, FormGroup, Form} from 'reactstrap';
+import {NavLink, withRouter} from 'react-router-dom';
 
 
 class Header extends Component {
@@ -30,8 +28,8 @@ class Header extends Component {
     if (!this.props.loggedIn)
       LoginLogoutButton = <Button color="primary" onClick={this.props.toggleLoginModal}>Login/Sing up</Button>
     else {
-      let picture = user && user.pictureUrl && <img src={user.pictureUrl} style={{maxHeight: "45px"}}/>;
       let name = user && (user.name || user.username);
+      let picture = user && user.pictureUrl && <img src={user.pictureUrl} alt={name} style={{maxHeight: "45px"}}/>;
       LoginLogoutButton = (
         <React.Fragment>
           <NavLink to="/profile">{name} {picture}</NavLink>{' | '}

@@ -9,52 +9,33 @@ import FieldOrder from './Field/Order';
 
 function Question(props) {
 
-  //label the answer as correct/incorrect or nothing
-  let correctLabel = null;
-  if (props.correct) correctLabel = <span className="fa fa-check fa-lg"></span>;
-  else if (props.incorrect) correctLabel = <span className="fa fa-times fa-lg"></span>;
-
-  //choose the field for the type of question
   let type  = props.questionType;
-  let field = null;
+  let fieldProps = {
+    key: props._id,
+    correct: props.correct,
+    incorrect: props.incorrect,
+    studentAnswer: props.studentAnswer,
+    checkAnswer: props.checkAnswer
+  };
+  let field;
   if (type === "numeric") {
-    field = (
-      <FieldNumeric answer={props.questionBody.answer} correct={props.correct}
-        studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
-    );
+    field = <FieldNumeric answer={props.questionBody.answer} {...fieldProps}/>;
   } else if (type === "string") {
-    field = (
-      <FieldString answer={props.questionBody.answer} correct={props.correct}
-        studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
-    );
+    field = <FieldString answer={props.questionBody.answer} {...fieldProps}/>;
   } else if (type === "MC") {
-    //TODO: Add option shuffling
-    field = (
-      <FieldMC options={props.questionBody.options} correct={props.correct}
-        studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
-    );
+    field = <FieldMC options={props.questionBody.options} {...fieldProps}/>;
   } else if (type === "MS") {
-    field = (
-      <FieldMS options={props.questionBody.options} correct={props.correct}
-        studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
-    );
+    field = <FieldMS options={props.questionBody.options} {...fieldProps}/>;
   } else if (type === "bins") {
-    field = (
-      <FieldBins answer={props.questionBody.answer} correct={props.correct}
-        studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
-    );
+    field = <FieldBins answer={props.questionBody.answer} {...fieldProps}/>;
   } else if (type === "order") {
-    field = (
-      <FieldOrder answer={props.questionBody.answer} correct={props.correct}
-        studentAnswer={props.studentAnswer} checkAnswer={props.checkAnswer}/>
-    );
+    field = <FieldOrder answer={props.questionBody.answer} {...fieldProps}/>;
   }
 
   return (
     <div className="col-9">
       <div>{props.questionBody.description}</div>
       {field}
-      {correctLabel}
       {!props.correct && !props.incorrect ?
         null :
         (<div className="mt-5 mb-5">

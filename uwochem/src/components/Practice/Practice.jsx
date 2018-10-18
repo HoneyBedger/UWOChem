@@ -22,8 +22,8 @@ function Practice() {
               <Col sm={5} xs={12} className="pt-4">
                 <NavLink role="button" className="btn btn-background btn-lg btn-block"
                   to="/practice/1301">Go to Chem <b>1301</b></NavLink>
-                <NavLink to="/practice/1302" className="btn btn-background btn-lg btn-block"
-                  to="/practice/1301">Go to Chem <b>1302</b></NavLink>
+                <NavLink role="button" className="btn btn-background btn-lg btn-block"
+                  to="/practice/1302">Go to Chem <b>1302</b></NavLink>
               </Col>
             </Row>
           </CardBody>
