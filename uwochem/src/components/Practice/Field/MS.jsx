@@ -5,6 +5,7 @@ import CheckAnswerButton from './CheckAnswerButton';
 class FieldMS extends Component {
   constructor(props) {
     super(props);
+    console.log("MS studentAnswer", this.props.studentAnswer);
     this.state = {
       newStudentAnswer: []
     };

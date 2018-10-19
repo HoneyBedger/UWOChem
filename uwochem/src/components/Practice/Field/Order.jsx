@@ -1,30 +1,25 @@
 import React, {Component} from 'react';
 import {Row, Col, Button} from 'reactstrap';
+import CheckAnswerButton from './CheckAnswerButton';
 
 class FieldOrder extends Component {
   constructor(props) {
     super(props);
-    this.shuffleOptions();
+    console.log("drag-n-drop studentAnswer", this.props.studentAnswer);
+    let studentAnswer = this.props.studentAnswer;
+    let items = this.props.answer.items;
+    if (!studentAnswer) this.shuffleOptions();
     this.state = {
-      studentAnswer: this.props.studentAnswer,
-      items: this.props.answer.items.map(item => {
+      newStudentAnswer: [],
+      items: items.map(item => {
         return {
           text: item.text,
-          binId: -1,
+          binId: studentAnswer ? studentAnswer.indexOf(String(item.id)) : -1,
           id: item.id
         };
       })
     }
-    this.changeAnswer = this.changeAnswer.bind(this);
-  }
-
-  //update the value of the input if a new question is selected
-  componentDidUpdate(prevProps) {
-    if (this.props.studentAnswer !== prevProps.studentAnswer) {
-      this.setState({
-        studentAnswer: this.props.studentAnswer
-      });
-    }
+    this.isDisabled = this.isDisabled.bind(this);
   }
 
   shuffleOptions() { //Fisher-Yates shuffle
@@ -36,8 +31,8 @@ class FieldOrder extends Component {
     }
   }
 
-  changeAnswer(id) {
-    this.setState({studentAnswer: id});
+  isDisabled() {
+    return !!this.props.studentAnswer;
   }
 
   onDragOver(event) {
@@ -47,18 +42,24 @@ class FieldOrder extends Component {
 
   onDragStart(event, itemId) {
     console.log("onDragStart called, id: ", itemId);
+    if (this.isDisabled()) {
+      event.preventDefault();
+      return;
+    }
     event.dataTransfer.setData("text/plain", itemId);
   }
 
   onDrop(event, binId) {
+    console.log("before drop student answer", this.state.newStudentAnswer);
     event.preventDefault();
+    if (this.isDisabled()) return;
     if (binId !== -1) {
       for (let item of this.state.items) {
         if (item.binId === binId) return;
       }
     }
-    let itemId = event.dataTransfer.getData("text/plain");
-    console.log("onDrop called, id: ", itemId);
+    let itemId = Number.parseInt(event.dataTransfer.getData("text/plain"));
+    console.log("onDrop called, item id, bin id: ", itemId, binId);
     let items = this.state.items.filter((item) => {
       if (item.id === Number.parseInt(itemId)) {
           item.binId = binId;
@@ -66,17 +67,21 @@ class FieldOrder extends Component {
       return true;
     });
     this.setState({items: items});
-    if (binId >= 0) {
-      let studentAnswer = [].concat(this.state.studentAnswer);
-      studentAnswer[binId] = Number.parseInt(itemId);
-      this.setState({studentAnswer: studentAnswer});
+    let studentAnswer = this.state.newStudentAnswer;
+    if (binId >= 0) { //add/replace in the answer
+      studentAnswer[binId] = itemId;
+    } else if (studentAnswer.includes(itemId)){ //remove from the answer
+      studentAnswer.splice(studentAnswer.indexOf(itemId), 1)
     }
+    this.setState({newStudentAnswer: studentAnswer});
+    console.log("new student answer", studentAnswer);
   }
 
   renderTarget(id) {
+    console.log("rendering bin ", id);
       return (
-        <Col xs={3} key={id} className="droppable-target"
-          style={this.props.answer.height ? {height: this.props.answer.height} : null}
+        <Col key={id} className="droppable-target"
+          style={{height: this.props.answer.height ? `calc(${this.props.answer.height} + 1.5rem)` : "3rem"}}
           onDragOver={(event) => this.onDragOver(event)}
           onDrop={(event) => this.onDrop(event, id)}>
             {this.state.items.filter(item => item.binId === id).map(item => {
@@ -92,34 +97,37 @@ class FieldOrder extends Component {
   }
 
   render() {
+    console.log("this.props.studentAnswer", this.props.studentAnswer);
+
     return (
       <React.Fragment>
         <p><i>Drag and drop these items in the correct order.</i></p>
-        <Row className="mb-5 ml-1 mr-1 draggable-start">
+        <Row className="mb-5 ml-1 mr-1">
+          <Col className="draggable-start pt-4 pb-4 mt-2" lg={4} sm={5}>
               {this.state.items.map(item => {
                 return (
-                  <Col xs={3} key={item.id} className="droppable-target"
-                    style={this.props.answer.height ? {height: this.props.answer.height} : null}
+                  <Col key={item.id} className="droppable-target"
+                    style={{height: this.props.answer.height ? `calc(${this.props.answer.height} + 1.5rem)` : "3rem"}}
                     onDragOver={(event) => this.onDragOver(event)}
                     onDrop={(event) => this.onDrop(event, -1)}>
-                      {item.binId === -1 ?
-                        (<Col className="draggable" draggable onDragStart={(event) => this.onDragStart(event, item.id)}>{item.text}</Col>) :
-                        null}
+                      {item.binId === -1 &&
+                        (<Col className="draggable" draggable
+                        onDragStart={(event) => this.onDragStart(event, item.id)}>{item.text}</Col>)}
                   </Col>
                 );
               })}
-        </Row>
-        <Row>
-          <Col xs={6}><p className="m-2 text-left">{this.props.answer.leftLabel}</p></Col>
-          <Col xs={6}><p className="m-2 text-right">{this.props.answer.rightLabel}</p></Col>
-        </Row>
-        <Row className="droppable ml-1 mr-1">
+          </Col>
+          <Col className="droppable mt-2" lg={{size: 4, offset: 1}} sm={{size: 5, offset: 1}} xs={{size: 12, offset: 0}}>
+            <p className="text-center m-0">{this.props.answer.leftLabel}</p>
             {this.state.items.map(item => {
               return this.renderTarget(this.state.items.indexOf(item));
             })}
+            <p className="text-center m-0">{this.props.answer.rightLabel}</p>
+          </Col>
         </Row>
-        <Button type="button" value="submit" color="primary" className="mt-3"
-          onClick={() => this.props.checkAnswer(this.props.answer.correctOrder, this.state.studentAnswer)}>Submit</Button>
+        <CheckAnswerButton
+          submit={() => this.props.checkAnswer(this.props.answer.correctOrder, this.state.newStudentAnswer)}
+          disabled={!!this.props.studentAnswer} correct={this.props.correct} incorrect={this.props.incorrect}/>
       </React.Fragment>
     );
   }

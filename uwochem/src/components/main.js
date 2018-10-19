@@ -68,8 +68,11 @@ class Main extends Component {
     let docHeight = window.innerHeight;
     let footer = document.getElementById("footer");
     let beforeFooter = footer.previousSibling;
+    console.log("before footer: ", beforeFooter);
     let beforeFooterBottom = beforeFooter.getBoundingClientRect().bottom;
-    if (beforeFooterBottom + document.documentElement.scrollTop < docHeight) {
+    console.log("before footer id: ", beforeFooter.id);
+    if (beforeFooterBottom + document.documentElement.scrollTop < docHeight &&
+      beforeFooter.id !== "exam") {
       let footerLeft = footer.getBoundingClientRect().left;
       footer.style.position = "absolute";
       footer.style.left = footerLeft + 'px';

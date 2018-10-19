@@ -1,45 +1,39 @@
 import React, {Component} from 'react';
-import {Form, FormGroup, Input, Button, Label, InputGroup, InputGroupAddon} from 'reactstrap';
+import {Col, FormGroup, Input, Button, Label, InputGroup, InputGroupAddon} from 'reactstrap';
+import CheckAnswerButton from './CheckAnswerButton';
 
 
 class FieldNumeric extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      studentAnswer: this.props.studentAnswer
-    }
-  }
-
-  //update the value of the input if a new question is selected
-  componentDidUpdate(prevProps) {
-    if (this.props.studentAnswer !== prevProps.studentAnswer) {
-      this.setState({
-        studentAnswer: this.props.studentAnswer
-      });
-    }
+    this.state = {};
   }
 
   render() {
+    let answer = this.props.answer;
+    let disabled = !!this.props.studentAnswer;
     return (
-      //TODO: add a prompt about sci notation for tiny number answers
-      <Form inline>
-        <FormGroup className="mr-2">
-          <Label htmlFor="answer">{this.props.answer.label} = </Label>
-          <InputGroup>
-            <Input valid={!(this.props.correct === undefined) && this.props.correct}
-              invalid={!(this.props.correct === undefined) && !this.props.correct}
-              type="number" placeholder="Your answer"
-              value={this.state.studentAnswer}
-              onChange={(event) => this.setState({studentAnswer: event.target.value})}>
-            </Input>
-            {this.props.answer.units ?
-              <InputGroupAddon addonType="append">{this.props.answer.units}</InputGroupAddon>
-              : null}
-          </InputGroup>
-          <Button type="button" value="submit" color="primary"
-            onClick={() => this.props.checkAnswer(this.props.answer.answer, this.state.studentAnswer)}>Submit</Button>
+      <React.Fragment>
+        {(Math.abs(answer.answer) < 1e-4 || Math.abs(answer.answer) > 1e4) &&
+        <p><i>You can enter the answer in scientific notation: 1.0e5 is equivalent to 100000.</i></p>}
+        <FormGroup row>
+          <Label for="answer" lg={2} md={3} xs={4} className="text-right">{answer.label}&#160;=&#160;</Label>
+          <Col lg={4} md={6} xs={8} className="p-0">
+            <InputGroup>
+              <Input valid={this.props.correct} invalid={this.props.incorrect}
+                className="m-0" disabled={disabled} type="number" placeholder="Your answer"
+                value={this.props.studentAnswer || this.state.newStudentAnswer}
+                onChange={(event) => this.setState({newStudentAnswer: event.target.value})}>
+              </Input>
+              {answer.units &&
+                <InputGroupAddon addonType="append">{answer.units}</InputGroupAddon>}
+            </InputGroup>
+          </Col>
         </FormGroup>
-      </Form>
+        <CheckAnswerButton size={{lg: {offset: 2}, md: {offset: 3}, xs: {offset: 4}}}
+          submit={() => this.props.checkAnswer(answer.answer, this.state.newStudentAnswer)}
+          disabled={disabled} correct={this.props.correct} incorrect={this.props.incorrect}/>
+      </React.Fragment>
     );
   }
 }

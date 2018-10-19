@@ -18,6 +18,9 @@ function PracticeQuestions(props) {
     name = user.name || user.username;
   }
 
+  console.log("in Questions questionsAnswered:", props.questionsAnswered);
+  console.log("in Questions student answer should be",
+    questionsAnswered.has(selectedQuestion._id) && questionsAnswered.get(selectedQuestion._id).studentAnswer);
   return (
     <React.Fragment>
       <Row>

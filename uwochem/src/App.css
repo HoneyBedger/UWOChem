@@ -184,6 +184,11 @@ footer .nav .nav-item {
 input, .form-control {
   border-radius: 0px;
   margin-left: 10px;
+  height: calc(2.25rem + 2px);
+}
+input:focus, .form-control:focus {
+  box-shadow: none;
+  outline: none;
 }
 .input-oneline {
   background-color: rgba(255, 255, 255, 0.2);
@@ -284,9 +289,9 @@ button, .btn {
 }
 
 
-/****************/
-/* Radio button */
-/****************/
+/**************************/
+/* Radio and check input  */
+/**************************/
 input[type="radio"], input[type="checkbox"] {
   display: none;
 }
@@ -412,9 +417,18 @@ input[type="radio"] ~ span.form-check-input:after {
   background-color: #d57e76;
   border-color: #c95a4f;
 }
+.droppable p {
+  color: #fff;
+}
 .droppable-target {
   background-color: rgba(255,255,255, 0.3);
-  height: 2.5rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.droppable-target .draggable {
+  max-width: 95%;
 }
 
 
@@ -434,6 +448,18 @@ input[type="radio"] ~ span.form-check-input:after {
 }
 .data-table tr:nth-child(odd){
   background-color: rgba(110,146,120, 0.2);
+}
+.ice {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: solid 1px #000;
+}
+.ice td, .ice th {
+  padding: 3px 10px;
+  text-align: center;
+}
+.ice tr:nth-child(1) {
+  border-bottom: solid 1px #000;
 }
 
 /*************/

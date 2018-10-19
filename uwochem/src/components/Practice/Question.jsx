@@ -14,23 +14,27 @@ function Question(props) {
     key: props._id,
     correct: props.correct,
     incorrect: props.incorrect,
-    studentAnswer: props.studentAnswer,
     checkAnswer: props.checkAnswer
   };
   let field;
   if (type === "numeric") {
-    field = <FieldNumeric answer={props.questionBody.answer} {...fieldProps}/>;
+    field = <FieldNumeric answer={props.questionBody.answer} studentAnswer={Number(props.studentAnswer)} {...fieldProps}/>;
   } else if (type === "string") {
-    field = <FieldString answer={props.questionBody.answer} {...fieldProps}/>;
+    field = <FieldString answer={props.questionBody.answer} studentAnswer={props.studentAnswer} {...fieldProps}/>;
   } else if (type === "MC") {
-    field = <FieldMC options={props.questionBody.options} {...fieldProps}/>;
+    field = <FieldMC options={props.questionBody.options} studentAnswer={props.studentAnswer}{...fieldProps}/>;
   } else if (type === "MS") {
-    field = <FieldMS options={props.questionBody.options} {...fieldProps}/>;
+    field = <FieldMS options={props.questionBody.options} {...fieldProps}
+      studentAnswer={props.studentAnswer && props.studentAnswer.split(',')}/>;
   } else if (type === "bins") {
-    field = <FieldBins answer={props.questionBody.answer} {...fieldProps}/>;
+    field = <FieldBins answer={props.questionBody.answer} {...fieldProps}
+      studentAnswer={props.studentAnswer && props.studentAnswer.split(',')}/>;
   } else if (type === "order") {
-    field = <FieldOrder answer={props.questionBody.answer} {...fieldProps}/>;
+    field = <FieldOrder answer={props.questionBody.answer} {...fieldProps}
+      studentAnswer={props.studentAnswer && props.studentAnswer.split(',')} />;
   }
+
+  console.log("in Question studentAnswer:", props.studentAnswer);
 
   return (
     <div className="col-9">

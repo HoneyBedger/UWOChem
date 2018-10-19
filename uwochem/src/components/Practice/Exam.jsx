@@ -102,17 +102,16 @@ class PracticeExam extends Component {
   }
 
   checkAnswer(correctAnswer, studentAnswer) {
+    let type = this.state.selectedQuestion.type;
     let correct;
-    if (this.state.selectedQuestion.type === "numeric") {
+    if (type === "numeric") {
       let error = Math.abs((Number.parseFloat(studentAnswer) - correctAnswer)/correctAnswer);
       correct = (error < 0.03) ? true : false;
-    } else if (this.state.selectedQuestion.type === "string") {
+    } else if (type === "string") {
       correct = !!studentAnswer.match(correctAnswer);
-    } else if (this.state.selectedQuestion.type === "MC") {
+    } else if (type === "MC") {
       correct = correctAnswer === Number.parseInt(studentAnswer) ? true : false;
-    } else if (this.state.selectedQuestion.type === "MS") {
-      console.log("correctAnswer", correctAnswer);
-      console.log("studentAnswer", studentAnswer);
+    } else if (type === "MS") {
       correct = true;
       for (let option of correctAnswer) {
         let id = String(option.id);
@@ -121,20 +120,34 @@ class PracticeExam extends Component {
           correct = false;
         }
       }
-    } else if (this.state.selectedQuestion.type === "order") {
+    } else if (type === "order") {
       correct = true;
       for (let i = 0; i < correctAnswer.length; i++) {
-        if (studentAnswer[i] !== correctAnswer[i]) correct = false;
+        if (studentAnswer[i] !== correctAnswer[i]) {
+          correct = false;
+          break;
+        }
+      }
+    } else if (type === "bins") {
+      correct = true;
+      for (let i = 0; i < correctAnswer.length; i++) {
+        if (studentAnswer[i] !== correctAnswer[i].binId) {
+          correct = false;
+          break;
+        }
       }
     }
-    let examId = `${this.state.selectedQuestion.courseId}_${this.state.selectedQuestion.examName.replace(/\s/, '')}`;
+    let questionsAnswered = this.state.questionsAnswered;
+    let selectedQuestion = this.state.selectedQuestion;
+    let examId = `${selectedQuestion.courseId}_${selectedQuestion.examName.replace(/\s/, '')}`;
+    studentAnswer = studentAnswer ? studentAnswer.toString() : "";
     this.setState({
-      questionsAnswered: this.state.questionsAnswered.set(this.state.selectedQuestion._id, {examId, correct, studentAnswer})
+      questionsAnswered: questionsAnswered.set(selectedQuestion._id, {examId, correct, studentAnswer})
     }, () => {
-      if (this.state.questionsAnswered.size === this.state.questions.length) {
+      if (questionsAnswered.size === this.state.questions.length) {
         this.setState({resultsModalOpen: true});}
     });
-    this.saveUserAnswer(this.state.selectedQuestion._id, examId, correct, studentAnswer.toString());
+    this.saveUserAnswer(selectedQuestion._id, examId, correct, studentAnswer);
   };
 
   saveUserAnswer(questionId, examId, correct, studentAnswer) {
@@ -255,7 +268,7 @@ class PracticeExam extends Component {
 
   render() {
     return (
-      <Container className="mt-5 pt-3 mb-5">
+      <Container className="mt-5 pt-3 mb-5" id="exam">
         <Breadcrumb>
           <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
           <BreadcrumbItem><Link to="/practice">Practice</Link></BreadcrumbItem>

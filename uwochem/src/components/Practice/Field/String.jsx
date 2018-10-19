@@ -1,42 +1,38 @@
 import React, {Component} from 'react';
-import {Form, FormGroup, Input, Button, Label, InputGroup,
-  InputGroupAddon} from 'reactstrap';
+import {Col, FormGroup, Input, Button, Label, InputGroup, InputGroupAddon} from 'reactstrap';
+import CheckAnswerButton from './CheckAnswerButton';
 
 
 class FieldString extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      studentAnswer: this.props.studentAnswer
-    }
-  }
-
-  //update the value of the input if a new question is selected
-  componentDidUpdate(prevProps) {
-    if (this.props.studentAnswer !== prevProps.studentAnswer) {
-      this.setState({
-        studentAnswer: this.props.studentAnswer
-      });
-    }
+    this.state = {};
   }
 
   render() {
+    let answer = this.props.answer;
+    let disabled = !!this.props.studentAnswer;
     return (
-      <Form inline>
-        <FormGroup className="mr-2">
-          {this.props.answer.label ? <Label htmlFor="answer">{this.props.answer.label} = </Label> : null}
-          <InputGroup>
-            <Input valid={!(this.props.correct === undefined) && this.props.correct}
-              invalid={!(this.props.correct === undefined) && !this.props.correct}
-              type="text" placeholder="Your answer"
-              value={this.state.studentAnswer}
-              onChange={(event) => this.setState({studentAnswer: event.target.value})}>
-            </Input>
-          </InputGroup>
-          <Button type="button" value="submit" color="primary"
-            onClick={() => this.props.checkAnswer(this.props.answer.answer, this.state.studentAnswer)}>Submit</Button>
+      <React.Fragment>
+        <FormGroup row>
+          {answer.label &&
+            <Label for="answer" lg={2} md={3} xs={4} className="text-right">{answer.label} = </Label>}
+          <Col lg={4} md={6} xs={8} className={answer.label && "p-0"}>
+            <InputGroup>
+              <Input valid={this.props.correct} invalid={this.props.incorrect}
+                className="m-0" disabled={disabled} type="text" placeholder="Your answer"
+                value={this.props.studentAnswer || this.state.newStudentAnswer}
+                onChange={(event) => this.setState({newStudentAnswer: event.target.value})}>
+              </Input>
+              {answer.units &&
+                <InputGroupAddon addonType="append">{answer.units}</InputGroupAddon>}
+            </InputGroup>
+          </Col>
         </FormGroup>
-      </Form>
+        <CheckAnswerButton size={answer.label && {lg: {offset: 2}, md: {offset: 3}, xs: {offset: 4}}}
+          submit={() => this.props.checkAnswer(answer.answer, this.state.newStudentAnswer)}
+          disabled={disabled} correct={this.props.correct} incorrect={this.props.incorrect}/>
+      </React.Fragment>
     );
   }
 }
