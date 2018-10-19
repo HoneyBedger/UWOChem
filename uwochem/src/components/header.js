@@ -10,15 +10,35 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarIsOpen: false
+      navbarIsOpen: false,
+      widthAbove600: window.matchMedia( "(min-width: 600px)" ).matches
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
   toggleNavbar() {
     this.setState({
       navbarIsOpen: !this.state.navbarIsOpen
     });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
+  }
+
+  handleResize() {
+    let resizeTimeout;
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        this.setState({widthAbove600: window.matchMedia( "(min-width: 600px)" ).matches});
+      }.bind(this), 66)
+    }
   }
 
   render() {
@@ -38,14 +58,31 @@ class Header extends Component {
       );
     }
 
+    const Search = (
+      <NavItem>
+        <Form>
+          <FormGroup>
+            <InputGroup>
+              <Input className="search input-oneline" type="text" placeholder="Search" />
+              <InputGroupAddon addonType="append">
+                <Button color="primary"><span className="fa fa-search"></span></Button>
+              </InputGroupAddon>
+            </InputGroup>
+          </FormGroup>
+        </Form>
+      </NavItem>
+    );
+
     let path = this.props.location.pathname;
 
     return (
       <React.Fragment>
-        <Navbar expand="md" fixed="top">
-          <NavbarToggler onClick={this.toggleNavbar}><span className="fa fa-angle-double-down fa-lg"></span></NavbarToggler>
-            <Nav className="mr-auto" navbar>
-              <Collapse isOpen={this.state.navbarIsOpen} navbar>
+        <Navbar expand="lg" fixed="top" className={this.state.navbarIsOpen ? "open" : "closed"}>
+          <NavbarToggler onClick={this.toggleNavbar}>
+            {this.state.navbarIsOpen ? <span className="fa fa-angle-double-up fa-lg"/>
+              : <span className="fa fa-angle-double-down fa-lg"/>}</NavbarToggler>
+          <Nav className="mr-auto" navbar>
+            <Collapse isOpen={this.state.navbarIsOpen} navbar>
               <NavbarBrand href="/home">CHEM 1301 &amp; 1302</NavbarBrand>
               <NavItem>
                 <NavLink className={"nav-link" + (path.includes("home") ? " active" : "")}
@@ -87,20 +124,10 @@ class Header extends Component {
                     className={"nav-link" + (path.includes("about") ? " active" : "")}>About</NavLink>
                 }
               </NavItem>
-              </Collapse>
-                <NavItem>
-                  <Form>
-                    <FormGroup>
-                      <InputGroup>
-                        <Input className="search input-oneline" type="text" placeholder="Search" />
-                        <InputGroupAddon addonType="append">
-                          <Button color="primary"><span className="fa fa-search"></span></Button>
-                        </InputGroupAddon>
-                      </InputGroup>
-                    </FormGroup>
-                  </Form>
-                </NavItem>
-            </Nav>
+              {!this.state.widthAbove600 && Search}
+            </Collapse>
+            {this.state.widthAbove600 && Search}
+          </Nav>
           <Nav className="ml-auto">
             <NavItem>
               <FormGroup>
