@@ -512,6 +512,24 @@ button.list-group-item:hover {
     border-radius: 4px;
 }
 
+/*****************/
+/* Question list */
+/*****************/
+.list-group.question-list {
+  overflow: auto;
+  display: block;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .list-group.question-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .list-group.question-list>.list-group-item {
+    min-width: 10rem;
+  }
+}
+
 /***********/
 /* General */
 /***********/

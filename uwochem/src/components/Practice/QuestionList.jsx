@@ -27,30 +27,41 @@ class QuestionList extends Component {
   }
 
   scrollToQuestion(questionId) {
-    let height = window.innerHeight - 200;
     let activeItem = document.getElementById(questionId);
+    let activeItemRect = activeItem.getBoundingClientRect();
     let parent = activeItem.parentNode;
-    let step = Math.round((activeItem.offsetTop - height/2 - parent.scrollTop)/10);
+    let parentRect = parent.getBoundingClientRect();
+    const mq = window.matchMedia( "(min-width: 768px)" );
+    let moveScrollbar = () => {};
+    if (mq.matches) {
+      let height = window.innerHeight - 200;
+      let itemHeight = activeItemRect.top - activeItemRect.bottom;
+      let step = Math.round((activeItem.offsetTop - itemHeight/2 - height/2 - parent.scrollTop)/10);
+      moveScrollbar = () => {parent.scrollTop = activeItem.parentNode.scrollTop + step};
+    } else {
+      let width = parentRect.right - parentRect.left;
+      let itemWidth = activeItemRect.right - activeItemRect.left;
+      let step = Math.round((activeItem.offsetLeft + itemWidth/2 - width/2 - parent.scrollLeft)/10);
+      moveScrollbar = () => {parent.scrollLeft = activeItem.parentNode.scrollLeft + step};
+    }
     let counter = 0
     let scrolling = setInterval(() => {
       counter++;
       if (counter === 11) clearInterval(scrolling);
-      parent.scrollTop = activeItem.parentNode.scrollTop + step;
+      moveScrollbar();
     }, 10);
+
   }
 
   render() {
     let listStyle = {
-      height: (this.state.windowHeight - 200) + 'px',
-      overflow: "auto",
-      display: "block",
-      position: "relative"
+      maxHeight: (this.state.windowHeight - 200) + 'px'
     };
     let questionsAnswered = this.props.questionsAnswered;
 
     return (
-      <Col xs={3}>
-        <ListGroup style={listStyle}>
+      <Col md={3} xs={12} className="mb-5">
+        <ListGroup style={listStyle} className="question-list">
           {this.props.questions.map(question => {
             return (
               <ListGroupItem
