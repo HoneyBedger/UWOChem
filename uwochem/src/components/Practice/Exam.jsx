@@ -6,7 +6,8 @@ import {Container, Row, Col, Breadcrumb, BreadcrumbItem, ListGroup, ListGroupIte
   Form, FormGroup, Input, Button, Label} from 'reactstrap';
 import Questions from './Questions';
 import Question from './Question';
-import {Loading} from '../Loading';
+import Loading from '../Loading.jsx';
+import LoadingError from '../LoadingError.jsx';
 import Results from './Results';
 
 
@@ -231,11 +232,7 @@ class PracticeExam extends Component {
     if (this.state.isLoading) {
       return (<Loading />);
     } else if (this.state.errorLoading) {
-      return (
-        <div className="row">
-          <h4 className="error">Something went wrong when loading questions...</h4>
-        </div>
-      );
+      return (<LoadingError/>);
     } else { //everything was loaded ok
       let numCorrect = 0;
       let questionsAnswered = this.state.questionsAnswered;
