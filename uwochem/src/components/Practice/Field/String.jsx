@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Col, FormGroup, Input, Button, Label, InputGroup, InputGroupAddon} from 'reactstrap';
+import {Col, FormGroup, Input, Label, InputGroup, InputGroupAddon} from 'reactstrap';
 import CheckAnswerButton from './CheckAnswerButton';
 
 

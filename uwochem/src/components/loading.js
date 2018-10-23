@@ -1,10 +1,18 @@
 import React from 'react';
+import {Row, Col} from 'reactstrap';
 
 export const Loading = () => {
+
   return (
-    <div className="col-12">
-      <span className="fa fa-spinner fa-pulse fa-3x fa-fw text-pripary"></span>
-      <p>Loading . . .</p>
-    </div>
+    <React.Fragment>
+    <Row style={{justifyContent: "center"}}>
+      <div className="lds-spinner">
+        {Array(12).fill(<div/>)}
+      </div>
+    </Row>
+    <Row className="mt-4" style={{justifyContent: "center"}}>
+      <h3>Loading...</h3>
+    </Row>
+    </React.Fragment>
   );
 };

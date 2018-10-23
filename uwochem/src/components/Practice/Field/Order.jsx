@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Col, Button} from 'reactstrap';
+import {Row, Col} from 'reactstrap';
 import CheckAnswerButton from './CheckAnswerButton';
 
 class FieldOrder extends Component {
@@ -58,10 +58,10 @@ class FieldOrder extends Component {
         if (item.binId === binId) return;
       }
     }
-    let itemId = Number.parseInt(event.dataTransfer.getData("text/plain"));
+    let itemId = parseInt(event.dataTransfer.getData("text/plain"), 10);
     console.log("onDrop called, item id, bin id: ", itemId, binId);
     let items = this.state.items.filter((item) => {
-      if (item.id === Number.parseInt(itemId)) {
+      if (item.id === parseInt(itemId, 10)) {
           item.binId = binId;
       }
       return true;
