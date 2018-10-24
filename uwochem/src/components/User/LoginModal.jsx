@@ -15,12 +15,7 @@ class LoginModal extends Component {
     super(props);
     this.state = {
       signUp: false,
-      username: '',
-      password: '',
-      touched: {
-        username: false,
-        password: false
-      }
+      errorMsg: ''
     };
     this.loginWithPassword = this.loginWithPassword.bind(this);
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
@@ -33,7 +28,7 @@ class LoginModal extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.isOpen !== this.props.isOpen) {
-      this.setState({signUp: false});
+      this.setState({signUp: false, errorMsg: ''});
     }
   }
 
@@ -144,8 +139,9 @@ class LoginModal extends Component {
                 <p>Or sign in with</p>
               </Col>
               <Col xs={{size: 3, offset: 2}} >
-                <FacebookLogin appId={config.oAuth.facebook.clientId} autoload={false}
+                <FacebookLogin appId={config.oAuth.facebook.clientId} autoLoad={false}
                   fields="name,picture" callback={this.loginWithFacebook}
+                  onClick={() => {}}
                   render={renderProps => (
                     <button className="btn-social-icon btn-facebook btn-lg"
                       onClick={renderProps.onClick}>
