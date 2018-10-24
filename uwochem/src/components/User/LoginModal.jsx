@@ -20,7 +20,6 @@ class LoginModal extends Component {
     this.loginWithPassword = this.loginWithPassword.bind(this);
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
     this.loginWithFacebook = this.loginWithFacebook.bind(this);
-    this.loginWithTwitter = this.loginWithTwitter.bind(this);
     this.onLoginFailure = this.onLoginFailure.bind(this);
     this.afterLogin = this.afterLogin.bind(this);
     this.signUp = this.signUp.bind(this);
@@ -80,11 +79,6 @@ class LoginModal extends Component {
     fetch('/users/google', options)
     .then(res => this.props.login(res, this.afterLogin));
   }
-
-  loginWithTwitter(res) {
-    res.json()
-    .then(res => this.props.login(res, this.afterLogin));
-  };
 
   onLoginFailure(err) {
     this.setState({errorMsg: err.message});
@@ -159,19 +153,12 @@ class LoginModal extends Component {
                   <span className="fa fa-google"></span>
                 </GoogleLogin>
               </Col>
-              <Col xs={3}>
-                <TwitterLogin loginUrl="https://localhost:3363/users/twitter"
-                  requestTokenUrl="https://localhost:3363/users/twitter/reverse"
-                  onSuccess={this.loginWithTwitter} onFailure={this.onLoginFailure}
-                  className="btn-social-icon btn-twitter btn-lg"
-                  text="" children={<span className="fa fa-twitter"></span>}/>
-              </Col>
             </Row>
           </ModalBody>
           <ModalFooter className="pt-1 pb-0 pl-5 pr-5">
             <Row>
               <Col xs={12}>
-                <p>Do not have an account? <Button color="link" onClick={this.signUp}>Sign up</Button></p>
+                <p>Do not have an account? <Button color="link" style={{verticalAlign: "baseline"}} onClick={this.signUp}>Sign up</Button></p>
               </Col>
             </Row>
           </ModalFooter>
