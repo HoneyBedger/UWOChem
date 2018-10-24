@@ -101,19 +101,10 @@ class Header extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle className={path.includes("tutorials") ? "active" : ""}
-                  nav caret>Tutorials</DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>
-                    <NavLink to="/tutorials/1301">Chem 1301</NavLink>
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    <NavLink to="/tutorials/1302">Chem 1302</NavLink>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink to="/tutorials"
+                  className={"nav-link" + (path.includes("tutorials") ? " active" : "")}>Tutorials</NavLink>
+              </NavItem>
               <NavItem>
                 {path.includes("home") ?
                   (<Button color="link" className="nav-link"

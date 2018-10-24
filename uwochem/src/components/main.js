@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import PracticeCourse from './Practice/Course';
 import PracticeExam from './Practice/Exam';
+import Tutorials from './Tutorials';
 import UserProfile from './User/Profile';
 import UserLoginModal from './User/LoginModal';
 import login from './User/login';
@@ -115,6 +116,7 @@ class Main extends Component {
             chapterName={CHAPTERS.filter(chapter => chapter.courseId === match.params.courseId
                 && String(chapter.id) === match.params.chapterId)[0].name}
             {...loginProps}/>} />
+          <Route path="/tutorials" component={Tutorials} />
           <PrivateRoute path="/profile" openLoginModal={this.openLoginModal}
             component={() => <UserProfile exams={EXAMS}/>} />
           <Redirect from="/login" to="/home/login" />
