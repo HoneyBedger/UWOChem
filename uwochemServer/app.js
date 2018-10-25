@@ -11,7 +11,7 @@ const config = require('./config');
 //Routers
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const questionRouter = require('./routes/questionRouter');
+const questionRouter = require('./routes/questions');
 const feedbackRouter = require('./routes/feedback');
 //=================//
 

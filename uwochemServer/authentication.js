@@ -30,7 +30,6 @@ var jwtOptions = {
 
 exports.jwtPassport = passport.use(new JwtStrategy(jwtOptions,
   (jwt_payload, next) => {
-    console.log("JWT payload: ", jwt_payload);
     User.findOne({_id: jwt_payload._id})
     .then((user) => {
       if (user) {

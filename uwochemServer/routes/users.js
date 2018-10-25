@@ -59,7 +59,6 @@ userRouter.post('/login', cors.corsWithOptions, passport.authenticate('local'), 
 userRouter.post('/facebook',
   passport.authenticate('facebook-token', {session: false}),
   (req, res) => {
-    console.log("in facebook auth");
     if (!req.user) res.send(401, 'Not Authorized');
     let token = authentication.getToken({_id: req.user._id});
     res.setHeader('Content-Type', 'application/json');
@@ -97,7 +96,6 @@ userRouter.post('/google',
 
 //===SAVE PROGRESS===//
 userRouter.post('/questions', authentication.verifyUser, (req, res, next) => {
-  console.log("req.body", req.body);
   User.findOne({username: req.body.username}).
   then(user => {
     if (!user) return nexr(err);
@@ -124,7 +122,6 @@ userRouter.post('/questions', authentication.verifyUser, (req, res, next) => {
 
 //===DELETE PROGRESS===//
 userRouter.delete('/questions', authentication.verifyUser, (req, res, next) => {
-  console.log("in delete progress req.body", req.body);
   User.findOne({username: req.body.username}).
   then(user => {
     if (!user) return nexr(err);

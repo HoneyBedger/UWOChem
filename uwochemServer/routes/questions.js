@@ -14,7 +14,6 @@ questionRouter.use(bodyParser.json());
 questionRouter.route('/')
 .get((req, res, next) => {
   if (req.query.search) {
-    console.log("req.query.search", req.query.search);
     Questions.find({$text: {$search: req.query.search}}, { score: { $meta: "textScore" } })
     .sort( { score: { $meta: "textScore" } } )
     .then((questions) => {
