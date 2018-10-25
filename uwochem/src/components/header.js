@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Nav, Navbar, NavItem, NavbarBrand, NavbarToggler, Collapse,
   UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Input,
   InputGroup, InputGroupAddon, Button, FormGroup, Form} from 'reactstrap';
-import {NavLink, withRouter} from 'react-router-dom';
+import {NavLink, withRouter, Redirect} from 'react-router-dom';
 
 
 class Header extends Component {
@@ -15,6 +15,7 @@ class Header extends Component {
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.search = this.search.bind(this);
   }
 
   toggleNavbar() {
@@ -41,12 +42,18 @@ class Header extends Component {
     }
   }
 
+  search() {
+    let searchString = this.searchString && this.searchString.value.trim();
+    if (!searchString || searchString.length === 0) return;
+    else this.props.history.push(`/practice/search/${searchString}`);
+  }
+
   render() {
     let user = window.localStorage.getItem("userToken") &&
       JSON.parse(window.localStorage.getItem("user"));
     let LoginLogoutButton;
     if (!this.props.loggedIn)
-      LoginLogoutButton = <Button color="primary" onClick={this.props.toggleLoginModal}>Login/Sing up</Button>
+      LoginLogoutButton = <Button color="primary" onClick={this.props.toggleLoginModal}>Login/Sign up</Button>
     else {
       let name = user && (user.name || user.username);
       let picture = user && user.pictureUrl && <img src={user.pictureUrl} alt={name} style={{maxHeight: "45px"}}/>;
@@ -63,9 +70,10 @@ class Header extends Component {
         <Form>
           <FormGroup>
             <InputGroup>
-              <Input className="search input-oneline" type="text" placeholder="Search" />
+              <Input className="search input-oneline" type="text" placeholder="Search"
+                innerRef={input => {this.searchString = input}}/>
               <InputGroupAddon addonType="append">
-                <Button color="primary"><span className="fa fa-search"></span></Button>
+                <Button color="primary" onClick={this.search}><span className="fa fa-search"></span></Button>
               </InputGroupAddon>
             </InputGroup>
           </FormGroup>

@@ -25,6 +25,7 @@ class Main extends Component {
     this.toggleLoginModal = this.toggleLoginModal.bind(this);
     this.openLoginModal = this.openLoginModal.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.repositionFooter = this.repositionFooter.bind(this);
     login.attachToComponent(this);
   }
 
@@ -57,40 +58,37 @@ class Main extends Component {
   handleResize(event) {
     event.preventDefault();
     let resizeTimeout;
-    if (!resizeTimeout) {
-      resizeTimeout = setTimeout(function() {
-        resizeTimeout = null;
-        this.repositionFooter();
-      }.bind(this), 66)
-    }
+    this.repositionFooter();
   }
 
-  repositionFooter(){
-    let docHeight = window.innerHeight;
-    let footer = document.getElementById("footer");
-    let beforeFooter = footer.previousSibling;
-    console.log("before footer: ", beforeFooter);
-    let beforeFooterBottom = beforeFooter.getBoundingClientRect().bottom;
-    console.log("before footer id: ", beforeFooter.id);
-    if (beforeFooterBottom + document.documentElement.scrollTop < docHeight &&
-      beforeFooter.id !== "exam") {
-      let footerLeft = footer.getBoundingClientRect().left;
-      footer.style.position = "absolute";
-      footer.style.left = footerLeft + 'px';
-      footer.style.top = (docHeight + 10) + 'px';
-      footer.style.width = "100%";
-    } else {
-      footer.style.position = "relative";
-      footer.style.top = "";
-      footer.style.left = "";
-    }
+  repositionFooter() {
+    setTimeout(function() {
+      let docHeight = window.innerHeight;
+      let footer = document.getElementById("footer");
+      let beforeFooter = footer.previousSibling;
+      console.log("before footer: ", beforeFooter);
+      let beforeFooterBottom = beforeFooter.getBoundingClientRect().bottom;
+      console.log("before footer id: ", beforeFooter.id);
+      if (beforeFooterBottom + document.documentElement.scrollTop < docHeight ) {
+        let footerLeft = footer.getBoundingClientRect().left;
+        footer.style.position = "absolute";
+        footer.style.left = footerLeft + 'px';
+        footer.style.top = (docHeight + 10) + 'px';
+        footer.style.width = "100%";
+      } else {
+        footer.style.position = "relative";
+        footer.style.top = "";
+        footer.style.left = "";
+      }
+    }, 300);
   }
 
   render() {
-    let loginProps = {
+    let examProps = {
       loggedIn: this.state.loggedIn,
       setSaveProgress: login.setSaveProgress,
-      toggleLoginModal: this.toggleLoginModal
+      toggleLoginModal: this.toggleLoginModal,
+      repositionFooter: this.repositionFooter
     };
 
     return (
@@ -105,17 +103,20 @@ class Main extends Component {
           <Route exact path="/practice/:courseId"
             render={({match}) => <PracticeCourse courseId={match.params.courseId}
             exams={EXAMS} chapters={CHAPTERS}/>} />
+          <Route path="/practice/search/:searchString"
+            render={({match}) => <PracticeExam type="search" search={match.params.searchString}
+            {...examProps} />}/>
           <Route path="/practice/:courseId/exam/:examId"
             render={({match}) => <PracticeExam courseId={match.params.courseId}
             type="exam" id={match.params.examId}
             examName={EXAMS.filter(exam => exam.examId === match.params.examId)[0].name}
-            {...loginProps} />}/>
+            {...examProps} />}/>
           <Route path="/practice/:courseId/chapter/:chapterId"
             render={({match}) => <PracticeExam courseId={match.params.courseId}
             type="chapter" id={match.params.chapterId}
             chapterName={CHAPTERS.filter(chapter => chapter.courseId === match.params.courseId
                 && String(chapter.id) === match.params.chapterId)[0].name}
-            {...loginProps}/>} />
+            {...examProps}/>} />
           <Route path="/tutorials" component={Tutorials} />
           <PrivateRoute path="/profile" openLoginModal={this.openLoginModal}
             component={() => <UserProfile exams={EXAMS}/>} />

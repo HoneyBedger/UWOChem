@@ -32,9 +32,15 @@ class PracticeExam extends Component {
   }
 
   fetchQuestions() {
-    let query = (this.props.type === "exam") ?
-      `/questions?courseId=${this.props.courseId}&examName=${this.props.examName}` :
-      `/questions?courseId=${this.props.courseId}&chapterId=${this.props.id}`;
+    let query;
+    if (this.props.type === "exam") {
+      query = `/questions?courseId=${this.props.courseId}&examName=${this.props.examName}`;
+    } else if (this.props.type === "chapter") {
+      query = `/questions?courseId=${this.props.courseId}&chapterId=${this.props.id}`;
+    } else {
+      let searchString = this.props.search;
+      query = `/questions?search=${searchString}`;
+    }
     return fetch(query)
     .then(response => {
       return response.json();
@@ -48,7 +54,7 @@ class PracticeExam extends Component {
   }
 
   getSavedAnswers(questions) {
-    //TODO: do I actually need to fetch a user from DB? or ok to use local obj?
+    //the questions already answered are written to the user object in the DB and also locally
     let user = window.localStorage.getItem('user') && JSON.parse(window.localStorage.getItem('user'));
     let savedAnswers = new Map();
     if (user && user.questionsAnswered) {
@@ -68,11 +74,11 @@ class PracticeExam extends Component {
     console.log(savedAnswers);
 
 
-    //all the random values are set here
+    //all the random variables of the questions are set here
     questions.forEach((question) => {
       question.questionBody = new Function('React', 'MathJax', question.questionBody)(React, MathJax);
     });
-    questions.sort((q1, q2) => (q1.idInExam - q2.idInExam));
+    if (this.props.type !== "search") questions.sort((q1, q2) => (q1.idInExam - q2.idInExam));
     this.setState({
       isLoading: false,
       questions: questions,
@@ -95,6 +101,24 @@ class PracticeExam extends Component {
     });
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.type !== this.props.type || prevProps.search !== this.props.search) {
+      //need different questions, so refetch them
+      this.setState({isLoading: true, errorLoadin: false}, () => {
+        this.fetchQuestions()
+        .then(questions => {
+          this.setQuestions(questions);
+        })
+        .catch((err) => {
+          console.log(err);
+          this.setState({
+            isLoading: false,
+            errorLoading: true
+          });
+        });
+      });
+    }
+  }
 
   selectQuestion(questionId) {
     this.setState({
@@ -190,12 +214,14 @@ class PracticeExam extends Component {
   }
 
   saveProgress() {
+    //make sure to push the answers to DB once the user logs in
     if (window.localStorage.getItem('userToken')) return;
     this.props.setSaveProgress(true);
     this.props.toggleLoginModal();
   }
 
   tryAgain() {
+    //reset all the answers for a given test/chapter
     let user = window.localStorage.getItem('user') && JSON.parse(window.localStorage.getItem('user'));
     let questionsAnswered = user && user.questionsAnswered;
     if (!questionsAnswered || questionsAnswered.length === 0) {
@@ -242,19 +268,26 @@ class PracticeExam extends Component {
       let questionNames = this.state.questions.map(question => {
         return {
           _id: question._id,
-          name: `Question ${question.idInExam} ${this.props.type === "chapter" ? "("+question.examName+")" : ""}`
+          name: `Question ${question.idInExam} ${this.props.type !== "exam" ? "("+question.examName+")" : ""}`
         };
       });
 
       return (
         <React.Fragment>
-          <Questions questions={questionNames} questionsAnswered={this.state.questionsAnswered}
-            selectedQuestion={this.state.selectedQuestion} checkAnswer={this.checkAnswer}
-            selectQuestion={this.selectQuestion} loggedIn={this.props.loggedIn}
-            saveProgress={this.saveProgress}/>
+          {this.state.questions.length === 0 ?
+            (<Row>
+              <Col xs={12}>
+                <h5>Sorry, could not find anything matching your query.</h5>
+              </Col>
+            </Row>) :
+            <Questions questions={questionNames} questionsAnswered={this.state.questionsAnswered}
+              selectedQuestion={this.state.selectedQuestion} checkAnswer={this.checkAnswer}
+              selectQuestion={this.selectQuestion} loggedIn={this.props.loggedIn}
+              saveProgress={this.saveProgress} repositionFooter={this.props.repositionFooter}/>
+          }
           <Results score={numCorrect/questionsAnswered.size*100}
             tryAgain={this.tryAgain}
-            elseLink={`/practice/${this.props.courseId}`}
+            elseLink={this.props.type === "search" ? "/home" : `/practice/${this.props.courseId}`}
             isOpen={this.state.resultsModalOpen} toggle={this.toggleResultsModal}/>
         </React.Fragment>
       );
@@ -267,10 +300,15 @@ class PracticeExam extends Component {
     return (
       <Container className="mt-5 pt-3 mb-5" id="exam">
         <Breadcrumb>
-          <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-          <BreadcrumbItem><Link to="/practice">Practice</Link></BreadcrumbItem>
-          <BreadcrumbItem><Link to={`/practice/${this.props.courseId}`}>{this.props.courseId}</Link></BreadcrumbItem>
-          <BreadcrumbItem active>{this.props.type === "exam" ? this.props.examName : this.props.chapterName}</BreadcrumbItem>
+          {this.props.type === "search" ?
+          <h5>Search Results for <i>{this.props.search}</i>:</h5> :
+          (<React.Fragment>
+              <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+              <BreadcrumbItem><Link to="/practice">Practice</Link></BreadcrumbItem>
+              <BreadcrumbItem><Link to={`/practice/${this.props.courseId}`}>{this.props.courseId}</Link></BreadcrumbItem>
+              <BreadcrumbItem active>{this.props.type === "exam" ? this.props.examName : this.props.chapterName}</BreadcrumbItem>
+            </React.Fragment>)
+          }
         </Breadcrumb>
         {this.renderQuestions()}
       </Container>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import FieldNumeric from './Field/Numeric';
 import FieldString from './Field/String';
 import FieldMC from './Field/MC';
@@ -7,48 +7,60 @@ import FieldBins from './Field/Bins';
 import FieldOrder from './Field/Order';
 
 
-function Question(props) {
+class Question extends Component {
 
-  let type  = props.questionType;
-  let fieldProps = {
-    key: props._id,
-    correct: props.correct,
-    incorrect: props.incorrect,
-    checkAnswer: props.checkAnswer
-  };
-  let field;
-  if (type === "numeric") {
-    field = <FieldNumeric answer={props.questionBody.answer} studentAnswer={Number(props.studentAnswer)} {...fieldProps}/>;
-  } else if (type === "string") {
-    field = <FieldString answer={props.questionBody.answer} studentAnswer={props.studentAnswer} {...fieldProps}/>;
-  } else if (type === "MC") {
-    field = <FieldMC options={props.questionBody.options} studentAnswer={props.studentAnswer}{...fieldProps}/>;
-  } else if (type === "MS") {
-    field = <FieldMS options={props.questionBody.options} {...fieldProps}
-      studentAnswer={props.studentAnswer && props.studentAnswer.split(',')}/>;
-  } else if (type === "bins") {
-    field = <FieldBins answer={props.questionBody.answer} {...fieldProps}
-      studentAnswer={props.studentAnswer && props.studentAnswer.split(',')}/>;
-  } else if (type === "order") {
-    field = <FieldOrder answer={props.questionBody.answer} {...fieldProps}
-      studentAnswer={props.studentAnswer && props.studentAnswer.split(',')} />;
+  componentDidMount() {
+    this.props.repositionFooter();
   }
 
-  console.log("in Question studentAnswer:", props.studentAnswer);
+  componentDidUpdate() {
+    this.props.repositionFooter();
+  }
 
-  return (
-    <div className="col-9">
-      <div>{props.questionBody.description}</div>
-      {field}
-      {!props.correct && !props.incorrect ?
-        null :
-        (<div className="mt-5 mb-5">
-          <h4>Solution</h4>
-          {props.questionBody.feedback}
-        </div>)
-      }
-    </div>
-  );
+  render() {
+    let type  = this.props.questionType;
+    let questionBody = this.props.questionBody;
+    let studentAnswer = this.props.studentAnswer;
+    let fieldProps = {
+      key: this.props._id,
+      correct: this.props.correct,
+      incorrect: this.props.incorrect,
+      checkAnswer: this.props.checkAnswer
+    };
+    let field;
+    if (type === "numeric") {
+      field = <FieldNumeric answer={questionBody.answer} studentAnswer={Number(studentAnswer)} {...fieldProps}/>;
+    } else if (type === "string") {
+      field = <FieldString answer={questionBody.answer} studentAnswer={studentAnswer} {...fieldProps}/>;
+    } else if (type === "MC") {
+      field = <FieldMC options={questionBody.options} studentAnswer={studentAnswer}{...fieldProps}/>;
+    } else if (type === "MS") {
+      field = <FieldMS options={questionBody.options} {...fieldProps}
+        studentAnswer={studentAnswer && studentAnswer.split(',')}/>;
+    } else if (type === "bins") {
+      field = <FieldBins answer={questionBody.answer} {...fieldProps}
+        studentAnswer={studentAnswer && studentAnswer.split(',')}/>;
+    } else if (type === "order") {
+      field = <FieldOrder answer={questionBody.answer} {...fieldProps}
+        studentAnswer={studentAnswer && studentAnswer.split(',')} />;
+    }
+
+    console.log("in Question studentAnswer:", studentAnswer);
+
+    return (
+      <div className="col-9">
+        <div>{questionBody.description}</div>
+        {field}
+        {!this.props.correct && !this.props.incorrect ?
+          null :
+          (<div className="mt-5 mb-5">
+            <h4>Solution</h4>
+            {questionBody.feedback}
+          </div>)
+        }
+      </div>
+    );
+  }
 }
 
 export default Question;

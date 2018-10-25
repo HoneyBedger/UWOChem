@@ -47,7 +47,8 @@ function PracticeQuestions(props) {
           key={selectedQuestion._id}
           correct={questionsAnswered.has(selectedQuestion._id) && questionsAnswered.get(selectedQuestion._id).correct}
           incorrect={questionsAnswered.has(selectedQuestion._id) && !questionsAnswered.get(selectedQuestion._id).correct}
-          studentAnswer={(questionsAnswered.has(selectedQuestion._id) && questionsAnswered.get(selectedQuestion._id).studentAnswer)} />
+          studentAnswer={(questionsAnswered.has(selectedQuestion._id) && questionsAnswered.get(selectedQuestion._id).studentAnswer)}
+          repositionFooter={props.repositionFooter}/>
       </Row>
     </React.Fragment>
   );
