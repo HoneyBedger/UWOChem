@@ -1,6 +1,6 @@
 import React from 'react';
-import {Container, Row, Col, Card, CardTitle, CardBody, CardText,
-  ListGroup, ListGroupItem, ListGroupItemText, ListGroupItemHeading} from 'reactstrap';
+import {Container, Row, Card, CardTitle, CardBody, ListGroup, ListGroupItem,
+  ListGroupItemText, ListGroupItemHeading} from 'reactstrap';
 
 function Tutorials(props) {
 

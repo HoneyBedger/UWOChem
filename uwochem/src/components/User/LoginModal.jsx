@@ -3,7 +3,6 @@ import {Input, Button, Label, FormGroup, FormFeedback,
   Row, Col, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import {GoogleLogin} from 'react-google-login';
-import TwitterLogin from 'react-twitter-auth';
 import config from '../../config';
 import SignupModal from './SignupModal';
 import ValidatedForm from '../ValidatedForm';
@@ -45,7 +44,6 @@ class LoginModal extends Component {
   }
 
   loginWithPassword(username, password) {
-    console.log("logging in with password");
     if (this.alreadyLoggedIn()) return;
     fetch('/users/login/', {
       method: 'post',
@@ -56,7 +54,6 @@ class LoginModal extends Component {
 
   loginWithFacebook(res) {
     if (this.alreadyLoggedIn()) return;
-    console.log("facebook login:", res);
     const options = {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -69,7 +66,6 @@ class LoginModal extends Component {
 
   loginWithGoogle(res) {
     if (this.alreadyLoggedIn()) return;
-    console.log("google login:", res.tokenObj.id_token);
     const options = {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -147,7 +143,7 @@ class LoginModal extends Component {
                   onSuccess={this.loginWithGoogle} onFailure={this.onLoginFailure}
                   scope="profile email"
                   className="btn-social-icon btn-google btn-lg"
-                  onRequest={()=> console.log("loading...")} offline={false}
+                  offline={false}
                   approvalPrompt="force" responseType="id_token"
                   prompt={"consent"}>
                   <span className="fa fa-google"></span>

@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import MathJax from 'react-mathjax';
-import {Link, NavLink} from 'react-router-dom';
-import {Container, Row, Col, Breadcrumb, BreadcrumbItem, ListGroup, ListGroupItem,
-  Form, FormGroup, Input, Button, Label} from 'reactstrap';
+import {Link} from 'react-router-dom';
+import {Container, Row, Col, Breadcrumb, BreadcrumbItem} from 'reactstrap';
 import Questions from './Questions';
-import Question from './Question';
 import Loading from '../Loading.jsx';
 import LoadingError from '../LoadingError.jsx';
 import Results from './Results';
@@ -71,8 +68,6 @@ class PracticeExam extends Component {
 
   setQuestions(questions) {
     let savedAnswers = this.getSavedAnswers(questions);
-    console.log(savedAnswers);
-
 
     //all the random variables of the questions are set here
     questions.forEach((question) => {
@@ -93,7 +88,6 @@ class PracticeExam extends Component {
       this.setQuestions(questions);
     })
     .catch((err) => {
-      console.log(err);
       this.setState({
         isLoading: false,
         errorLoading: true
@@ -110,7 +104,6 @@ class PracticeExam extends Component {
           this.setQuestions(questions);
         })
         .catch((err) => {
-          console.log(err);
           this.setState({
             isLoading: false,
             errorLoading: true
@@ -135,13 +128,13 @@ class PracticeExam extends Component {
     } else if (type === "string") {
       correct = studentAnswer && !!studentAnswer.match(correctAnswer);
     } else if (type === "MC") {
-      correct = correctAnswer === Number.parseInt(studentAnswer) ? true : false;
+      correct = correctAnswer === parseInt(studentAnswer, 10) ? true : false;
     } else if (type === "MS") {
       correct = true;
       for (let option of correctAnswer) {
         let id = String(option.id);
-        if (option.correct && !studentAnswer.includes(id) ||
-            !option.correct && studentAnswer.includes(id)) {
+        if ((option.correct && !studentAnswer.includes(id)) ||
+            (!option.correct && studentAnswer.includes(id))) {
           correct = false;
         }
       }
@@ -185,25 +178,19 @@ class PracticeExam extends Component {
       let idx = user.questionsAnswered.indexOf(questionExists);
       user.questionsAnswered.splice(idx, 1, {questionId, examId, correct, studentAnswer});
     } else user.questionsAnswered.push({questionId, examId, correct, studentAnswer});
-    console.log(user.questionsAnswered);
     window.localStorage.setItem('user', JSON.stringify(user));
-    console.log("set user", window.localStorage.getItem('user'));
     this.saveToDB([{questionId, examId, correct, studentAnswer}]);
   }
 
   saveToDB(questions) {
     if (window.localStorage.getItem('userToken')) {
-      console.log(window.localStorage.getItem('user'));
       let username = JSON.parse(window.localStorage.getItem('user')).username;
       let jwtToken = window.localStorage.getItem('userToken');
-      console.log("username", username);
-      console.log("token", jwtToken);
       fetch('/users/questions', {
         method: 'post',
         headers: {'Content-Type':'application/json', 'Authorization': 'bearer ' + jwtToken},
         body: JSON.stringify({username, questions})})
       .then(res => {
-        res.text().then(res => console.log(res));
         if (!res.ok) {
           this.setState({
             saveFailed: true
@@ -236,20 +223,15 @@ class PracticeExam extends Component {
         i--;
       }
     }
-    console.log("after reset questionsAnswered", questionsAnswered);
     user.questionsAnswered = questionsAnswered;
     window.localStorage.setItem('user', JSON.stringify(user));
     //reset in DB
     let jwtToken = window.localStorage.getItem('userToken');
     let questionIds = Array.from(this.state.questionsAnswered.keys());
-    console.log("questionIds", questionIds);
     fetch('/users/questions', {
       method: 'delete',
       headers: {'Content-Type':'application/json', 'Authorization': 'bearer ' + jwtToken},
-      body: JSON.stringify({username: user.username, questionIds})})
-    .then(res => {
-      res.text().then(res => console.log(res));
-    });
+      body: JSON.stringify({username: user.username, questionIds})});
     this.setState({questionsAnswered: new Map()});
     this.toggleResultsModal();
   }

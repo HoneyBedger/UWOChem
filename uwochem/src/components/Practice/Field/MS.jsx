@@ -5,7 +5,6 @@ import CheckAnswerButton from './CheckAnswerButton';
 class FieldMS extends Component {
   constructor(props) {
     super(props);
-    console.log("MS studentAnswer", this.props.studentAnswer);
     this.state = {
       newStudentAnswer: []
     };
@@ -41,7 +40,6 @@ class FieldMS extends Component {
         <p><i>Select all that apply.</i></p>
         <FormGroup tag="fieldset">
           {this.props.options.map(option => {
-            console.log("this.props.studentAnswer", this.props.studentAnswer);
             let checked = (this.props.studentAnswer && this.props.studentAnswer.includes(String(option.id))) ||
               (this.state.newStudentAnswer.includes(String(option.id)));
             return (

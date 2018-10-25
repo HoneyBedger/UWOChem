@@ -5,7 +5,6 @@ import CheckAnswerButton from './CheckAnswerButton';
 class FieldOrder extends Component {
   constructor(props) {
     super(props);
-    console.log("drag-n-drop studentAnswer", this.props.studentAnswer);
     let studentAnswer = this.props.studentAnswer;
     let items = this.props.answer.items;
     if (!studentAnswer) this.shuffleOptions();
@@ -36,12 +35,10 @@ class FieldOrder extends Component {
   }
 
   onDragOver(event) {
-    console.log("onDragOver called");
     event.preventDefault();
   }
 
   onDragStart(event, itemId) {
-    console.log("onDragStart called, id: ", itemId);
     if (this.isDisabled()) {
       event.preventDefault();
       return;
@@ -50,7 +47,6 @@ class FieldOrder extends Component {
   }
 
   onDrop(event, binId) {
-    console.log("before drop student answer", this.state.newStudentAnswer);
     event.preventDefault();
     if (this.isDisabled()) return;
     if (binId !== -1) {
@@ -59,7 +55,6 @@ class FieldOrder extends Component {
       }
     }
     let itemId = parseInt(event.dataTransfer.getData("text/plain"), 10);
-    console.log("onDrop called, item id, bin id: ", itemId, binId);
     let items = this.state.items.filter((item) => {
       if (item.id === parseInt(itemId, 10)) {
           item.binId = binId;
@@ -74,11 +69,9 @@ class FieldOrder extends Component {
       studentAnswer.splice(studentAnswer.indexOf(itemId), 1)
     }
     this.setState({newStudentAnswer: studentAnswer});
-    console.log("new student answer", studentAnswer);
   }
 
   renderTarget(id) {
-    console.log("rendering bin ", id);
       return (
         <Col key={id} className="droppable-target"
           style={{height: this.props.answer.height ? `calc(${this.props.answer.height} + 1.5rem)` : "3rem"}}
@@ -97,8 +90,6 @@ class FieldOrder extends Component {
   }
 
   render() {
-    console.log("this.props.studentAnswer", this.props.studentAnswer);
-
     return (
       <React.Fragment>
         <p><i>Drag and drop these items in the correct order.</i></p>

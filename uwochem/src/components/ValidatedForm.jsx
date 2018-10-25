@@ -11,7 +11,6 @@ class ValidatedForm extends Component {
   }
 
   validate() {
-    console.log("validating");
     if (this.formEl.checkValidity() === false) {
       for (let el of this.formEl) {
         const errorLabel = el.parentNode.querySelector(".invalid-feedback");
@@ -41,7 +40,6 @@ class ValidatedForm extends Component {
   submitHandler(event) {
     event.preventDefault();
     if (this.validate()) {
-      console.log("validated. submitting");
       this.props.submit();
     }
     this.setState({isValidated: true});

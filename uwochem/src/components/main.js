@@ -57,7 +57,6 @@ class Main extends Component {
 
   handleResize(event) {
     event.preventDefault();
-    let resizeTimeout;
     this.repositionFooter();
   }
 
@@ -66,9 +65,7 @@ class Main extends Component {
       let docHeight = window.innerHeight;
       let footer = document.getElementById("footer");
       let beforeFooter = footer.previousSibling;
-      console.log("before footer: ", beforeFooter);
       let beforeFooterBottom = beforeFooter.getBoundingClientRect().bottom;
-      console.log("before footer id: ", beforeFooter.id);
       if (beforeFooterBottom + document.documentElement.scrollTop < docHeight ) {
         let footerLeft = footer.getBoundingClientRect().left;
         footer.style.position = "absolute";

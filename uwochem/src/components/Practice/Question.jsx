@@ -45,8 +45,6 @@ class Question extends Component {
         studentAnswer={studentAnswer && studentAnswer.split(',')} />;
     }
 
-    console.log("in Question studentAnswer:", studentAnswer);
-
     return (
       <div className="col-9">
         <div>{questionBody.description}</div>

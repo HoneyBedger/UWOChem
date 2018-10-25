@@ -15,7 +15,6 @@ class Feedback extends Component {
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({content: this.feedback.value, email: this.email.value})})
     .then(res => {
-      console.log(res);
       if (res.ok) {
         this.setState({
           feedbackMsg: "Thanks for the feedback!",

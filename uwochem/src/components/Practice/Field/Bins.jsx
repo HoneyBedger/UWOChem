@@ -5,7 +5,6 @@ import CheckAnswerButton from './CheckAnswerButton';
 class FieldBins extends Component {
   constructor(props) {
     super(props);
-    console.log("bins studentAnswer", this.props.studentAnswer);
     let studentAnswer = this.props.studentAnswer;
     let items = this.props.answer.items;
     if (!studentAnswer) this.shuffleOptions();
@@ -36,12 +35,10 @@ class FieldBins extends Component {
   }
 
   onDragOver(event) {
-    console.log("onDragOver called");
     event.preventDefault();
   }
 
   onDragStart(event, itemId) {
-    console.log("onDragStart called, id: ", itemId);
     if (this.isDisabled()) {
       event.preventDefault();
       return;
@@ -52,7 +49,6 @@ class FieldBins extends Component {
   onDrop(event, binId) {
     event.preventDefault();
     let itemId = parseInt(event.dataTransfer.getData("text/plain"), 10);
-    console.log("onDrop called, id: ", itemId);
     let items = this.state.items.filter(item => {
       if (item.id === parseInt(itemId, 10)) {
           item.binId = binId;
@@ -63,7 +59,6 @@ class FieldBins extends Component {
     let studentAnswer = this.state.newStudentAnswer;
     studentAnswer[itemId] = binId;
     this.setState({newStudentAnswer: studentAnswer});
-    console.log("new bin answer", studentAnswer);
   }
 
   render() {
@@ -71,7 +66,6 @@ class FieldBins extends Component {
     let binSize = Math.floor(11/answer.bins.length);
     let itemSize = Math.floor(12/answer.items.length);
 
-    console.log("bins are", answer.bins);
 
     return (
       <React.Fragment>

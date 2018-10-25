@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Nav, Navbar, NavItem, NavbarBrand, NavbarToggler, Collapse,
   UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Input,
   InputGroup, InputGroupAddon, Button, FormGroup, Form} from 'reactstrap';
-import {NavLink, withRouter, Redirect} from 'react-router-dom';
+import {NavLink, withRouter} from 'react-router-dom';
 
 
 class Header extends Component {

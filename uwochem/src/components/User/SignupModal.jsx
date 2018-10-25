@@ -16,7 +16,6 @@ class UserSignupModal extends Component {
   }
 
   signUp() {
-    console.log("signing up");
     if (!(this.password && this.repeatPassword && this.password.value === this.repeatPassword.value)) {
       this.repeatPassword.classList.add("is-invalid");
       this.setState({repeatPasswordErr: 'The passwords do not match.'});
