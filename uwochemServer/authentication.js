@@ -69,7 +69,8 @@ exports.jwtPassport = passport.use(new JwtStrategy(jwtOptions,
           user = new User({
             username: profile.id,
             name: profile.displayName,
-            pictureUrl: pictureUrl
+            pictureUrl: pictureUrl,
+            questionsAnswered: []
           });
         }
         user.save()
@@ -78,53 +79,5 @@ exports.jwtPassport = passport.use(new JwtStrategy(jwtOptions,
       })
       .catch((err) => next(err, false));
     });
-  }));
-  //=================//
-  //===GOOGLE OAuth===//
-/*passport.use(new GoogleTokenStrategy({
-    clientID: config.oAuth.google.clientId,
-    clientSecret: config.oAuth.google.clientSecret
-  }, (req, accessToken, refreshToken, profile, done) => {
-    console.log("google auth");
-    let pictureUrl = profile.photos[0].value;
-    User.findOne({username: profile.id})
-    .then((user) => {
-      if (user) user.set({pictureUrl: pictureUrl}); //this user was already registered with fb
-      else { //register new user
-        user = new User({
-          username: profile.id,
-          name: profile.displayName,
-          pictureUrl: pictureUrl
-        });
-      }
-      user.save()
-      .then((user) => {
-        process.nextTick(() => done(null, user))})
-      .catch((err) => done(err, false));
-    })
-    .catch((err) => next(err, false));
-  }));*/
-  //=================//
-  //===TWITTER OAuth===//
-  exports.twitterPassport = passport.use(new TwitterTokenStrategy({
-    consumerKey: config.oAuth.twitter.clientId,
-    consumerSecret: config.oAuth.twitter.clientSecret
-  }, (req, accessToken, refreshToken, profile, done) => {
-    let pictureUrl = profile.photos[0].value;
-    User.findOne({username: profile.username + profile.id})
-    .then((user) => {
-      if (user) user.set({pictureUrl: pictureUrl}); //this user was already registered with fb
-      else { //register new user
-        user = new User({
-          username: profile.username + profile.id,
-          name: profile.displayName,
-          pictureUrl: pictureUrl
-        });
-      }
-      user.save()
-      .then((user) => process.nextTick(() => done(null, user)))
-      .catch((err) => done(err, false));
-    })
-    .catch((err) => next(err, false));
   }));
   //=================//

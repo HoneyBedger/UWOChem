@@ -8,8 +8,7 @@ const Schema = mongoose.Schema;
 const QuestionAnswered = new Schema({
   questionId: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
   examId: {
     type: String,

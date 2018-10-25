@@ -13,12 +13,23 @@ questionRouter.use(bodyParser.json());
 //===GET ALL QUESTIONS (OR BASED ON QUERY) ===//
 questionRouter.route('/')
 .get((req, res, next) => {
-  Questions.find(req.query)
-  .then((questions) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(questions);
-  })
-  .catch((err) => next(err));
+  if (req.query.search) {
+    console.log("req.query.search", req.query.search);
+    Questions.find({$text: {$search: req.query.search}}, { score: { $meta: "textScore" } })
+    .sort( { score: { $meta: "textScore" } } )
+    .then((questions) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(questions);
+    })
+    .catch((err) => next(err));
+  } else {
+    Questions.find(req.query)
+    .then((questions) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(questions);
+    })
+    .catch((err) => next(err));
+  }
 })
 
 //===POST A QUESTION OR A LIST OF QUESTIONS ===//

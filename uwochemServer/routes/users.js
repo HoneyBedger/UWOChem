@@ -59,6 +59,7 @@ userRouter.post('/login', cors.corsWithOptions, passport.authenticate('local'), 
 userRouter.post('/facebook',
   passport.authenticate('facebook-token', {session: false}),
   (req, res) => {
+    console.log("in facebook auth");
     if (!req.user) res.send(401, 'Not Authorized');
     let token = authentication.getToken({_id: req.user._id});
     res.setHeader('Content-Type', 'application/json');
@@ -93,58 +94,6 @@ userRouter.post('/google',
     })
   }
 );
-
-userRouter.post('/twitter/reverse',
-  (req, res) => {
-    request.post({
-      url: 'https://api.twitter.com/oauth/request_token',
-      oauth: {
-        consumer_key: config.oAuth.twitter.clientId,
-        consumer_secret: config.oAuth.twitter.clientSecret
-      },
-      form: { x_auth_mode: 'reverse_auth' }
-    }, (err, response, body) => {
-      console.log(body);
-      console.log(err);
-      if (err) return res.send(500, {message: err.message});
-      let jsonStr = '{ "' + body.replace(/&/g, '", "').replace(/=/g, '": "') + '"}';
-      console.log(response);
-      res.send(JSON.parse(jsonStr));
-    });
-  }
-);
-userRouter.post('/twitter',
-  (req, res, next) => {
-    request.post({
-      url: 'https://api.twitter.com/oauth/access_token?oauth_verifier',
-      oauth: {
-        consumer_key: config.oAuth.twitter.clientId,
-        consumer_secret: config.oAuth.twitter.clientSecret,
-        token: req.query.oauth_token
-      },
-      form: {oauth_verifier: req.query.oauth_verifier}
-    }, (err, response, body) => {
-      if (err) return res.send(500, {message: err.message});
-      let bodyStr = '{ "' + body.replace(/&/g, '", "').replace(/=/g, '": "') + '"}';
-      let parsedBody = JSON.parse(bodyStr);
-
-      req.body.oauth_token = parsedBody.oauth_token;
-      req.body.oauth_token_secret = parsedBody.oauth_token_secret;
-      req.body.user_id = parsedBody.user_id;
-      next();
-    });
-  },
-  passport.authenticate('twitter-token', {session: false}),
-  (req, res) => {
-    if (!req.user) res.send(401, 'Not Authorized');
-    let user = {...req.user._doc};
-    user.token = authentication.getToken({_id: req.user._id});
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json({err: null, user});
-  }
-);
-//=================//
-
 
 //===SAVE PROGRESS===//
 userRouter.post('/questions', authentication.verifyUser, (req, res, next) => {
