@@ -24,7 +24,7 @@ class FieldMC extends Component {
   }
 
   render() {
-    let disabled = !!this.props.studentAnswer;
+    let disabled = !!this.props.studentAnswer || this.props.correct || this.props.incorrect;
     return (
       <FormGroup tag="fieldset">
           {this.props.options.map(option => {

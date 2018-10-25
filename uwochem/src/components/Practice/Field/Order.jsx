@@ -32,7 +32,7 @@ class FieldOrder extends Component {
   }
 
   isDisabled() {
-    return !!this.props.studentAnswer;
+    return !!this.props.studentAnswer || this.props.correct || this.props.incorrect;
   }
 
   onDragOver(event) {

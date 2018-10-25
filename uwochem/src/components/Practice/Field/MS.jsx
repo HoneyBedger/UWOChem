@@ -35,7 +35,7 @@ class FieldMS extends Component {
   }
 
   render() {
-    let disabled = !!this.props.studentAnswer;
+    let disabled = !!this.props.studentAnswer || this.props.correct || this.props.incorrect;
     return (
       <React.Fragment>
         <p><i>Select all that apply.</i></p>

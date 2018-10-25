@@ -133,7 +133,7 @@ class PracticeExam extends Component {
       let error = Math.abs((Number.parseFloat(studentAnswer) - correctAnswer)/correctAnswer);
       correct = (error < 0.03) ? true : false;
     } else if (type === "string") {
-      correct = !!studentAnswer.match(correctAnswer);
+      correct = studentAnswer && !!studentAnswer.match(correctAnswer);
     } else if (type === "MC") {
       correct = correctAnswer === Number.parseInt(studentAnswer) ? true : false;
     } else if (type === "MS") {

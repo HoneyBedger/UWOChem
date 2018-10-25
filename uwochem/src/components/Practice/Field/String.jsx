@@ -11,7 +11,7 @@ class FieldString extends Component {
 
   render() {
     let answer = this.props.answer;
-    let disabled = !!this.props.studentAnswer;
+    let disabled = !!this.props.studentAnswer || this.props.correct || this.props.incorrect;
     return (
       <React.Fragment>
         <FormGroup row>

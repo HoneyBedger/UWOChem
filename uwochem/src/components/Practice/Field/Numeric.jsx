@@ -11,7 +11,7 @@ class FieldNumeric extends Component {
 
   render() {
     let answer = this.props.answer;
-    let disabled = !!this.props.studentAnswer;
+    let disabled = !!this.props.studentAnswer || this.props.correct || this.props.incorrect;
     return (
       <React.Fragment>
         {(Math.abs(answer.answer) < 1e-4 || Math.abs(answer.answer) > 1e4) &&
