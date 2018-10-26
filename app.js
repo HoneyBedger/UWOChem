@@ -17,7 +17,7 @@ const feedbackRouter = require('./routes/feedback');
 
 
 //===CONNECT TO MONGODB===//
-mongoose.connect(process.env.DB_URL)
+mongoose.connect(process.env.MONGODB_URI)
 .then((db) => {
   console.log("Connection to MongoDB established.");
 }, (err) => {
