@@ -1,0 +1,6 @@
+node_modules
+config.js
+.env
+/bin/privatekey.pem
+/bin/cert.csr
+/bin/certificate.pem
