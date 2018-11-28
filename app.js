@@ -41,14 +41,13 @@ app.use(passport.session());
 
 //===ROUTING===//
 //Secure traffic only
-/*Temporarily undo HTTPS
 app.all('*', (req, res, next) => {
-  if (req.secure) return next();
+  if (req.headers['x-forwarded-proto'] != 'https')
+    res.redirect(302, 'https://' + req.hostname + req.originalUrl);
   else {
-    res.redirect(307, `https://${req.hostname}:${app.get('securePort')}${req.url}`);
+    next();
   }
 });
-*/
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, "client", "build")));
