@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const authentication = require('../authentication');
 const User = require('../models/users');
-const cors = require('./cors');
 //=================//
 
 var userRouter = express.Router();
@@ -46,7 +45,7 @@ userRouter.post('/signup', (req, res, next) => {
 
 
 //===LOGIN===//
-userRouter.post('/login', cors.corsWithOptions, passport.authenticate('local'), (req, res, next) => {
+userRouter.post('/login', passport.authenticate('local'), (req, res, next) => {
   if (!req.user) res.send(401, 'Not Authorized');
   let token = authentication.getToken({_id: req.user._id});
   res.setHeader('Content-Type', 'application/json');
